@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="setting_svrname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.24</Value>
+    </Setting>
+    <Setting Name="setting_dbname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LOGOS_DB</Value>
+    </Setting>
+    <Setting Name="setting_dbuser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="setting_dbpass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Admin@2k!8</Value>
+    </Setting>
+    <Setting Name="setting_printer_register" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UNKOWN</Value>
+    </Setting>
+    <Setting Name="setting_printer_enroll" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UNKOWN</Value>
+    </Setting>
+    <Setting Name="setting_printer_sell" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UNKOWN</Value>
+    </Setting>
+    <Setting Name="default_test_date" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2022-09-09</Value>
+    </Setting>
+    <Setting Name="default_learn_date" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2022-09-09</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

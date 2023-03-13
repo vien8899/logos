@@ -1,0 +1,1092 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE349DC4-6E74-4FB5-8A72-3B1CBBC0D5F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>LOGOS_SYS.My.MyApplication</StartupObject>
+    <RootNamespace>LOGOS_SYS</RootNamespace>
+    <AssemblyName>LOGOS_SYS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>LOGOS_SYS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>LOGOS_SYS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ICO_SCHOLL.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>C:\Users\IT\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="ChreneLib">
+      <HintPath>..\..\..\LogoscollegeManagermentOld\LogoscollegeManagerment\bin\Debug\ChreneLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v14.2.Win, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v14.2.UI, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v14.2.UI, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v14.2.UI, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v14.2.Wizard, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v14.2.Core, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v14.2.Win, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v14.2.Extensions, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v14.2, Version=14.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Guna.UI">
+      <HintPath>..\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\LogoscollegeManagermentOld\LogoscollegeManagerment\bin\Debug\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\LogoscollegeManagermentOld\LogoscollegeManagerment\bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>..\..\AMP_STOCK_703_FINAL\AMP_FLIE\bin\Debug\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="textbox">
+      <HintPath>..\..\..\LogoscollegeManagermentOld\LogoscollegeManagerment\bin\Debug\textbox.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmMain_Report.Designer.vb">
+      <DependentUpon>frmMain_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain_Trainning.Designer.vb">
+      <DependentUpon>frmMain_Trainning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain_Trainning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Reports\BILL_REGISTER_UPGRADE.vb">
+      <DependentUpon>BILL_REGISTER_UPGRADE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Score\FrmScore_Excel_import.designer.vb">
+      <DependentUpon>FrmScore_Excel_import.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Score\FrmScore_Excel_import.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Score\FrmScore_Import.designer.vb">
+      <DependentUpon>FrmScore_Import.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Score\FrmScore_Import.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Score\FrmScore_view.designer.vb">
+      <DependentUpon>FrmScore_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Score\FrmScore_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmReg_Open_Closed_add.Designer.vb">
+      <DependentUpon>FrmReg_Open_Closed_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmReg_Open_Closed_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmReg_Open_Closed_edit .Designer.vb">
+      <DependentUpon>FrmReg_Open_Closed_edit .vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmReg_Open_Closed_edit .vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTerm_select.Designer.vb">
+      <DependentUpon>FrmTerm_select.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTerm_select.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmReg_Open_Closed_view.Designer.vb">
+      <DependentUpon>FrmReg_Open_Closed_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmReg_Open_Closed_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Std_Info\FrmStudent_Detail.Designer.vb">
+      <DependentUpon>FrmStudent_Detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Std_Info\FrmStudent_Detail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_Upgrade_edit.Designer.vb">
+      <DependentUpon>FrmStudentRegister_Upgrade_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_Upgrade_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_RePayment.Designer.vb">
+      <DependentUpon>FrmStudentRegister_RePayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_RePayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_Upgrade_add.Designer.vb">
+      <DependentUpon>FrmStudentRegister_Upgrade_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_Upgrade_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_Second.Designer.vb">
+      <DependentUpon>FrmStudentRegister_Second.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_Second.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_Select.Designer.vb">
+      <DependentUpon>FrmStudentRegister_Select.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_Select.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Std_Info\FrmStudent_view.Designer.vb">
+      <DependentUpon>FrmStudent_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Std_Info\FrmStudent_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentReg_SetDate.Designer.vb">
+      <DependentUpon>FrmStudentReg_SetDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentReg_SetDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmSearch_StdFromEnroll.Designer.vb">
+      <DependentUpon>FrmSearch_StdFromEnroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmSearch_StdFromEnroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_edit.Designer.vb">
+      <DependentUpon>FrmStudentRegister_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_add.Designer.vb">
+      <DependentUpon>FrmStudentRegister_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmStudentEnroll_edit.Designer.vb">
+      <DependentUpon>FrmStudentEnroll_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmStudentEnroll_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmStudentEnroll_SetDate.Designer.vb">
+      <DependentUpon>FrmStudentEnroll_SetDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmStudentEnroll_SetDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_view.Designer.vb">
+      <DependentUpon>FrmStudentRegister_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdRegister\FrmStudentRegister_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdEnroll\Properties.vb" />
+    <Compile Include="Module_Reports\BILL_SELL_BOOK.vb">
+      <DependentUpon>BILL_SELL_BOOK.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Reports\BILL_REGISTER.vb">
+      <DependentUpon>BILL_REGISTER.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Reports\BILL_ENROLL.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BILL_ENROLL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module_Reports\FrmReport_A5.Designer.vb">
+      <DependentUpon>FrmReport_A5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Reports\FrmReport_A5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain_Setting.Designer.vb">
+      <DependentUpon>frmMain_Setting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain_Setting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JsonConvert.vb" />
+    <Compile Include="Module_Connection\Fm_SetSQLDB.Designer.vb">
+      <DependentUpon>Fm_SetSQLDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Connection\Fm_SetSQLDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Connection\OpenDB.vb" />
+    <Compile Include="Module_StdEnroll\FrmStudentEnroll_view.Designer.vb">
+      <DependentUpon>FrmStudentEnroll_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmStudentEnroll_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmClass_add.Designer.vb">
+      <DependentUpon>FrmClass_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmClass_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmClass_edit.Designer.vb">
+      <DependentUpon>FrmClass_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmClass_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmClass_view.Designer.vb">
+      <DependentUpon>FrmClass_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmClass_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmCompanyInfo.Designer.vb">
+      <DependentUpon>FrmCompanyInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmCompanyInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmStudentEnroll_add.Designer.vb">
+      <DependentUpon>FrmStudentEnroll_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmStudentEnroll_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmProduct_add.Designer.vb">
+      <DependentUpon>FrmProduct_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmProduct_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmSetGrade_edit.Designer.vb">
+      <DependentUpon>FrmSetGrade_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmSetGrade_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmProduct_edit.Designer.vb">
+      <DependentUpon>FrmProduct_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmProduct_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmProduct_view.Designer.vb">
+      <DependentUpon>FrmProduct_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmProduct_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmSetGrade_view.Designer.vb">
+      <DependentUpon>FrmSetGrade_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmSetGrade_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmSearch_Course.Designer.vb">
+      <DependentUpon>FrmSearch_Course.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdEnroll\FrmSearch_Course.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTimeLearn_add.Designer.vb">
+      <DependentUpon>FrmTimeLearn_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTimeLearn_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTimeLearn_edit.Designer.vb">
+      <DependentUpon>FrmTimeLearn_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTimeLearn_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTimeLearn_view.Designer.vb">
+      <DependentUpon>FrmTimeLearn_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTimeLearn_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmSubject_add.Designer.vb">
+      <DependentUpon>FrmSubject_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmSubject_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmSubject_edit.Designer.vb">
+      <DependentUpon>FrmSubject_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmSubject_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTermSubject_select.Designer.vb">
+      <DependentUpon>FrmTermSubject_select.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTermSubject_select.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmSubject_view.Designer.vb">
+      <DependentUpon>FrmSubject_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmSubject_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTerm_add.Designer.vb">
+      <DependentUpon>FrmTerm_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTerm_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTermSubject_add.Designer.vb">
+      <DependentUpon>FrmTermSubject_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTermSubject_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTermSubject_edit.Designer.vb">
+      <DependentUpon>FrmTermSubject_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTermSubject_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTerm_edit.Designer.vb">
+      <DependentUpon>FrmTerm_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTerm_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTermSubject_view.Designer.vb">
+      <DependentUpon>FrmTermSubject_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTermSubject_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTerm_view.Designer.vb">
+      <DependentUpon>FrmTerm_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmTerm_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_StdRegister\test_form.designer.vb">
+      <DependentUpon>test_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_StdRegister\test_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_User\FrmUserGroup_add.designer.vb">
+      <DependentUpon>FrmUserGroup_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_User\FrmUserGroup_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_User\FrmUserGroup_edit.Designer.vb">
+      <DependentUpon>FrmUserGroup_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_User\FrmUserGroup_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmScheme_add.Designer.vb">
+      <DependentUpon>FrmScheme_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmScheme_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmScheme_edit.Designer.vb">
+      <DependentUpon>FrmScheme_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmScheme_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmCourse_add.Designer.vb">
+      <DependentUpon>FrmCourse_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmCourse_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_User\FrmUser_edit.Designer.vb">
+      <DependentUpon>FrmUser_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_User\FrmUser_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmCourse_edit.Designer.vb">
+      <DependentUpon>FrmCourse_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmCourse_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_User\FrmUser_add.Designer.vb">
+      <DependentUpon>FrmUser_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_User\FrmUser_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmScheme_view.Designer.vb">
+      <DependentUpon>FrmScheme_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmScheme_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Setting\FrmCourse_view.Designer.vb">
+      <DependentUpon>FrmCourse_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Setting\FrmCourse_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_User\FrmUser_view.Designer.vb">
+      <DependentUpon>FrmUser_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_User\FrmUser_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_User\FrmUserGroup_view.Designer.vb">
+      <DependentUpon>FrmUserGroup_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_User\FrmUserGroup_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmMain_Report.resx">
+      <DependentUpon>frmMain_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain_Trainning.resx">
+      <DependentUpon>frmMain_Trainning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Reports\BILL_REGISTER_UPGRADE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BILL_REGISTER_UPGRADE.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Score\FrmScore_Excel_import.resx">
+      <DependentUpon>FrmScore_Excel_import.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Score\FrmScore_Import.resx">
+      <DependentUpon>FrmScore_Import.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Score\FrmScore_view.resx">
+      <DependentUpon>FrmScore_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdEnroll\FrmReg_Open_Closed_add.resx">
+      <DependentUpon>FrmReg_Open_Closed_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdEnroll\FrmReg_Open_Closed_edit .resx">
+      <DependentUpon>FrmReg_Open_Closed_edit .vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmTerm_select.resx">
+      <DependentUpon>FrmTerm_select.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdEnroll\FrmReg_Open_Closed_view.resx">
+      <DependentUpon>FrmReg_Open_Closed_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Std_Info\FrmStudent_Detail.resx">
+      <DependentUpon>FrmStudent_Detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdRegister\FrmStudentRegister_Upgrade_edit.resx">
+      <DependentUpon>FrmStudentRegister_Upgrade_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdRegister\FrmStudentRegister_RePayment.resx">
+      <DependentUpon>FrmStudentRegister_RePayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdRegister\FrmStudentRegister_Upgrade_add.resx">
+      <DependentUpon>FrmStudentRegister_Upgrade_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdRegister\FrmStudentRegister_Second.resx">
+      <DependentUpon>FrmStudentRegister_Second.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdRegister\FrmStudentRegister_Select.resx">
+      <DependentUpon>FrmStudentRegister_Select.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Std_Info\FrmStudent_view.resx">
+      <DependentUpon>FrmStudent_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdRegister\FrmStudentReg_SetDate.resx">
+      <DependentUpon>FrmStudentReg_SetDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdRegister\FrmSearch_StdFromEnroll.resx">
+      <DependentUpon>FrmSearch_StdFromEnroll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdRegister\FrmStudentRegister_edit.resx">
+      <DependentUpon>FrmStudentRegister_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdRegister\FrmStudentRegister_add.resx">
+      <DependentUpon>FrmStudentRegister_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdEnroll\FrmStudentEnroll_edit.resx">
+      <DependentUpon>FrmStudentEnroll_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdEnroll\FrmStudentEnroll_SetDate.resx">
+      <DependentUpon>FrmStudentEnroll_SetDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Reports\BILL_SELL_BOOK.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BILL_SELL_BOOK.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Reports\BILL_REGISTER.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BILL_REGISTER.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Reports\BILL_ENROLL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BILL_ENROLL.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Reports\FrmReport_A5.resx">
+      <DependentUpon>FrmReport_A5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain_Setting.resx">
+      <DependentUpon>frmMain_Setting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Connection\Fm_SetSQLDB.resx">
+      <DependentUpon>Fm_SetSQLDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdRegister\FrmStudentRegister_view.resx">
+      <DependentUpon>FrmStudentRegister_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdEnroll\FrmStudentEnroll_view.resx">
+      <DependentUpon>FrmStudentEnroll_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmClass_add.resx">
+      <DependentUpon>FrmClass_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmClass_edit.resx">
+      <DependentUpon>FrmClass_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmClass_view.resx">
+      <DependentUpon>FrmClass_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmCompanyInfo.resx">
+      <DependentUpon>FrmCompanyInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdEnroll\FrmStudentEnroll_add.resx">
+      <DependentUpon>FrmStudentEnroll_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmProduct_add.resx">
+      <DependentUpon>FrmProduct_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmSetGrade_edit.resx">
+      <DependentUpon>FrmSetGrade_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmProduct_edit.resx">
+      <DependentUpon>FrmProduct_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmProduct_view.resx">
+      <DependentUpon>FrmProduct_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmSetGrade_view.resx">
+      <DependentUpon>FrmSetGrade_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdEnroll\FrmSearch_Course.resx">
+      <DependentUpon>FrmSearch_Course.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmTimeLearn_add.resx">
+      <DependentUpon>FrmTimeLearn_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmTimeLearn_edit.resx">
+      <DependentUpon>FrmTimeLearn_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmTimeLearn_view.resx">
+      <DependentUpon>FrmTimeLearn_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmSubject_add.resx">
+      <DependentUpon>FrmSubject_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmSubject_edit.resx">
+      <DependentUpon>FrmSubject_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmTermSubject_select.resx">
+      <DependentUpon>FrmTermSubject_select.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmSubject_view.resx">
+      <DependentUpon>FrmSubject_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmTerm_add.resx">
+      <DependentUpon>FrmTerm_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmTermSubject_add.resx">
+      <DependentUpon>FrmTermSubject_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmTermSubject_edit.resx">
+      <DependentUpon>FrmTermSubject_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmTerm_edit.resx">
+      <DependentUpon>FrmTerm_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmTermSubject_view.resx">
+      <DependentUpon>FrmTermSubject_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmTerm_view.resx">
+      <DependentUpon>FrmTerm_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_StdRegister\test_form.resx">
+      <DependentUpon>test_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_User\FrmUserGroup_add.resx">
+      <DependentUpon>FrmUserGroup_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_User\FrmUserGroup_edit.resx">
+      <DependentUpon>FrmUserGroup_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmScheme_add.resx">
+      <DependentUpon>FrmScheme_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmScheme_edit.resx">
+      <DependentUpon>FrmScheme_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmCourse_add.resx">
+      <DependentUpon>FrmCourse_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_User\FrmUser_edit.resx">
+      <DependentUpon>FrmUser_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmCourse_edit.resx">
+      <DependentUpon>FrmCourse_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_User\FrmUser_add.resx">
+      <DependentUpon>FrmUser_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmScheme_view.resx">
+      <DependentUpon>FrmScheme_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Setting\FrmCourse_view.resx">
+      <DependentUpon>FrmCourse_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_User\FrmUser_view.resx">
+      <DependentUpon>FrmUser_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_User\FrmUserGroup_view.resx">
+      <DependentUpon>FrmUserGroup_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folders1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AWARDS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoyGirlStudent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GraduationCap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Studying.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enrollment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switcher28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resources.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graduation20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_Ico50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graduation_Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graduation_Del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pocket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PocketEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Literature.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiteratureEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printYellow55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_Ico55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Permission120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Class11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scheme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resources11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scheme11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subject-InTerm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ViewScore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettingSore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Suite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ICO_SCHOLL.ico" />
+    <None Include="Resources\search_ico_white2.png" />
+    <None Include="Resources\search_ico_white1.png" />
+    <None Include="Resources\back501.png" />
+    <None Include="Resources\back502.png" />
+    <None Include="Resources\Education20.png" />
+    <None Include="Resources\back50_11.png" />
+    <None Include="Resources\back50_1122.png" />
+    <Content Include="Resources\excel_16.png" />
+    <None Include="Resources\excel_161.png" />
+    <None Include="Resources\excel_162.png" />
+    <None Include="Resources\Floppy_disk40.png" />
+    <Content Include="Resources\search_ico.png" />
+    <None Include="Resources\search_ico1.png" />
+    <None Include="Resources\search_ico2.png" />
+    <Content Include="Resources\search_ico_white.png" />
+    <None Include="Resources\Money.png" />
+    <None Include="Resources\T004.png" />
+    <None Include="Resources\T002.png" />
+    <None Include="Resources\T003.png" />
+    <None Include="Resources\T001.png" />
+    <None Include="Resources\Drop.png" />
+    <None Include="Resources\Open_Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
