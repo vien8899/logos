@@ -54,7 +54,6 @@ Public Class FrmLogin
             dbuser = My.Settings.setting_dbuser
             dbpass = My.Settings.setting_dbpass
             StrconSQL = "Data Source=" & servername & ";Initial Catalog=" & dbname & ";User ID=" & dbuser & "; password=" & dbpass & ""
-            MessageBox.Show(StrconSQL)
             With conn
                 If .State = ConnectionState.Open Then .Close()
                 .ConnectionString = StrconSQL
