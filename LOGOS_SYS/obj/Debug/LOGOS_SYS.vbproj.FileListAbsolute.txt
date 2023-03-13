@@ -191,3 +191,8 @@ D:\VB_PROJECT\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.vbproj.ResolveComReference.cac
 D:\VB_PROJECT\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.exe
 D:\VB_PROJECT\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.xml
 D:\VB_PROJECT\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.pdb
+C:\Users\Tik\Desktop\VB Project\logos\LOGOS_SYS\bin\Debug\LOGOS_SYS.exe.config
+C:\Users\Tik\Desktop\VB Project\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.vbproj.ResolveComReference.cache
+C:\Users\Tik\Desktop\VB Project\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.exe
+C:\Users\Tik\Desktop\VB Project\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.xml
+C:\Users\Tik\Desktop\VB Project\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.pdb
