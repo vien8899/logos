@@ -19,7 +19,11 @@ Public Class FrmSubject_edit
         Sql &= " WHERE(subject_id=" & id_edit & ")"
         dt = ExecuteDatable(Sql)
         With dt.Rows(0)
-            txt_subject_id.Text = .Item("subject_code")
+            Dim subject_code = ""
+            If Not IsDBNull(.Item("subject_code")) Then
+                subject_code = .Item("subject_code")
+            End If
+            txt_subject_id.Text = subject_code
             txt_subject_la.Text = .Item("subject_name_la")
             txt_subject_en.Text = .Item("subject_name_en")
             txt_credit.Text = Format(CInt(.Item("subject_credit")), "N0")

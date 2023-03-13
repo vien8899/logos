@@ -186,3 +186,8 @@ H:\LOGOS_PROJECT\LOGOS_SYS\obj\Debug\LOGOS_SYS.vbproj.GenerateResource.Cache
 H:\LOGOS_PROJECT\LOGOS_SYS\obj\Debug\LOGOS_SYS.exe.licenses
 D:\LOGOS_PROJECT\LOGOS_SYS\obj\Debug\LOGOS_SYS.FrmStudent_Detail.resources
 D:\LOGOS_PROJECT\LOGOS_SYS\obj\Debug\LOGOS_SYS.FrmStudent_view.resources
+D:\VB_PROJECT\logos\LOGOS_SYS\bin\Debug\LOGOS_SYS.exe.config
+D:\VB_PROJECT\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.vbproj.ResolveComReference.cache
+D:\VB_PROJECT\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.exe
+D:\VB_PROJECT\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.xml
+D:\VB_PROJECT\logos\LOGOS_SYS\obj\Debug\LOGOS_SYS.pdb
