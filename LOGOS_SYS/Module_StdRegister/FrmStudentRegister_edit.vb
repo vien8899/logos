@@ -8,12 +8,24 @@ Public Class FrmStudentRegister_edit
         End If
     End Sub
 
+    Private Sub getSexList()
+        Sql = "SELECT title_id, title_la, title_en "
+        Sql &= " FROM tbl_student_title "
+        Sql &= " ORDER BY title_id"
+        dt = ExecuteDatable(Sql)
+        cb_sex.DataSource = dt
+        cb_sex.ValueMember = "title_id"
+        cb_sex.DisplayMember = "title_la"
+    End Sub
+
     Dim load_finish As Integer = 1
     Private Sub FrmUserGroup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         had_change_val = 0
         load_finish = 1
         Dim cur_date As String = Format(CDate(getCurrentDate()), "yyyy-MM-dd")
         cur_year = Format(CDate(cur_date), "yyyy")
+
+        Call getSexList()
         Call load_data()
         load_finish = 0
     End Sub
@@ -39,7 +51,7 @@ Public Class FrmStudentRegister_edit
             student_id = CInt(.Item("student_id"))
             std_reg_oldcode = CStr(.Item("student_code"))
             txt_std_code.Text = std_reg_oldcode
-            cb_sex.SelectedIndex = CInt(.Item("student_gender")) - 1
+            cb_sex.SelectedValue = CInt(.Item("student_gender"))
             txt_name.Text = .Item("student_fullname_la")
             txt_name_en.Text = .Item("student_fullname_en")
             DateTimePicker1.Text = .Item("date_of_birth")
@@ -118,7 +130,7 @@ Public Class FrmStudentRegister_edit
             Exit Sub
         End If
 
-        Dim sex As Integer = cb_sex.SelectedIndex + 1
+        Dim sex As Integer = cb_sex.SelectedValue
         Call ConnectDB()
         Sql = "UPDATE tbl_student SET student_code=@student_code ,student_fullname_la=@student_fullname_la ,student_fullname_en=@student_fullname_en ,"
         Sql &= " student_gender=@student_gender ,date_of_birth=@date_of_birth ,phone_number=@phone_number, user_update=@user_update, last_update=getdate() "

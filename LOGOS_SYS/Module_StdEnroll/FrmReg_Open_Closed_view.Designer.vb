@@ -23,7 +23,7 @@ Partial Class FrmReg_Open_Closed_view
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReg_Open_Closed_view))
         Dim TileItemElement1 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
         Dim TileItemElement2 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
@@ -37,14 +37,15 @@ Partial Class FrmReg_Open_Closed_view
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Datagridview1 = New System.Windows.Forms.DataGridView()
         Me.Panel_Top = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.chk_show_disable = New System.Windows.Forms.CheckBox()
-        Me.cb_year = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.chk_enroll_train = New System.Windows.Forms.CheckBox()
+        Me.chk_register_train = New System.Windows.Forms.CheckBox()
+        Me.chk_register = New System.Windows.Forms.CheckBox()
+        Me.chk_enroll = New System.Windows.Forms.CheckBox()
         Me.Panel_Control = New System.Windows.Forms.Panel()
         Me.btn_add = New System.Windows.Forms.Button()
         Me.btn_edit = New System.Windows.Forms.Button()
@@ -64,7 +65,6 @@ Partial Class FrmReg_Open_Closed_view
         Me.BarLargeButtonItem1 = New DevExpress.XtraBars.BarLargeButtonItem()
         Me.id_edit_group = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.no = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.sok_year = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.g_modify = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.u_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.u_loginname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -110,15 +110,15 @@ Partial Class FrmReg_Open_Closed_view
         Me.Datagridview1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Datagridview1.ColumnHeadersHeight = 30
         Me.Datagridview1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.Datagridview1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_edit_group, Me.no, Me.sok_year, Me.g_modify, Me.u_name, Me.u_loginname, Me.RG_ST, Me.g_date_modify, Me.UserUpate, Me.DateUpdate})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Aquamarine
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Datagridview1.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Datagridview1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_edit_group, Me.no, Me.g_modify, Me.u_name, Me.u_loginname, Me.RG_ST, Me.g_date_modify, Me.UserUpate, Me.DateUpdate})
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Aquamarine
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Datagridview1.DefaultCellStyle = DataGridViewCellStyle5
         Me.Datagridview1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Datagridview1.EnableHeadersVisualStyles = False
         Me.Datagridview1.Location = New System.Drawing.Point(0, 63)
@@ -134,6 +134,7 @@ Partial Class FrmReg_Open_Closed_view
         '
         'Panel_Top
         '
+        Me.Panel_Top.Controls.Add(Me.chk_show_disable)
         Me.Panel_Top.Controls.Add(Me.Panel4)
         Me.Panel_Top.Controls.Add(Me.Panel_Control)
         Me.Panel_Top.Controls.Add(Me.Button1)
@@ -143,51 +144,90 @@ Partial Class FrmReg_Open_Closed_view
         Me.Panel_Top.Size = New System.Drawing.Size(1214, 63)
         Me.Panel_Top.TabIndex = 22
         '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel4.Controls.Add(Me.chk_show_disable)
-        Me.Panel4.Controls.Add(Me.cb_year)
-        Me.Panel4.Controls.Add(Me.Label2)
-        Me.Panel4.Location = New System.Drawing.Point(140, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(294, 63)
-        Me.Panel4.TabIndex = 1
-        '
         'chk_show_disable
         '
         Me.chk_show_disable.AutoSize = True
         Me.chk_show_disable.Cursor = System.Windows.Forms.Cursors.Hand
         Me.chk_show_disable.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chk_show_disable.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.chk_show_disable.Location = New System.Drawing.Point(156, 31)
+        Me.chk_show_disable.Location = New System.Drawing.Point(527, 34)
         Me.chk_show_disable.Name = "chk_show_disable"
         Me.chk_show_disable.Size = New System.Drawing.Size(114, 23)
         Me.chk_show_disable.TabIndex = 41
         Me.chk_show_disable.Text = "Show Expired"
         Me.chk_show_disable.UseVisualStyleBackColor = True
         '
-        'cb_year
+        'Panel4
         '
-        Me.cb_year.BackColor = System.Drawing.Color.White
-        Me.cb_year.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cb_year.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cb_year.FormattingEnabled = True
-        Me.cb_year.Location = New System.Drawing.Point(10, 28)
-        Me.cb_year.Name = "cb_year"
-        Me.cb_year.Size = New System.Drawing.Size(132, 29)
-        Me.cb_year.TabIndex = 23
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.chk_enroll_train)
+        Me.Panel4.Controls.Add(Me.chk_register_train)
+        Me.Panel4.Controls.Add(Me.chk_register)
+        Me.Panel4.Controls.Add(Me.chk_enroll)
+        Me.Panel4.Location = New System.Drawing.Point(140, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(379, 63)
+        Me.Panel4.TabIndex = 1
         '
-        'Label2
+        'chk_enroll_train
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Blue
-        Me.Label2.Location = New System.Drawing.Point(36, 1)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 25)
-        Me.Label2.TabIndex = 24
-        Me.Label2.Text = "ສົກຮຽນ-ປີ"
+        Me.chk_enroll_train.AutoSize = True
+        Me.chk_enroll_train.Checked = True
+        Me.chk_enroll_train.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_enroll_train.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.chk_enroll_train.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chk_enroll_train.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.chk_enroll_train.Location = New System.Drawing.Point(171, 6)
+        Me.chk_enroll_train.Name = "chk_enroll_train"
+        Me.chk_enroll_train.Size = New System.Drawing.Size(168, 25)
+        Me.chk_enroll_train.TabIndex = 42
+        Me.chk_enroll_train.Text = "ລົງທະບຽນເສັງທຽບຮຽນບຳລຸງ"
+        Me.chk_enroll_train.UseVisualStyleBackColor = True
+        '
+        'chk_register_train
+        '
+        Me.chk_register_train.AutoSize = True
+        Me.chk_register_train.Checked = True
+        Me.chk_register_train.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_register_train.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.chk_register_train.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chk_register_train.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.chk_register_train.Location = New System.Drawing.Point(171, 34)
+        Me.chk_register_train.Name = "chk_register_train"
+        Me.chk_register_train.Size = New System.Drawing.Size(127, 25)
+        Me.chk_register_train.TabIndex = 42
+        Me.chk_register_train.Text = "ລົງທະບຽນຮຽນບຳລຸງ"
+        Me.chk_register_train.UseVisualStyleBackColor = True
+        '
+        'chk_register
+        '
+        Me.chk_register.AutoSize = True
+        Me.chk_register.Checked = True
+        Me.chk_register.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_register.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.chk_register.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chk_register.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.chk_register.Location = New System.Drawing.Point(29, 34)
+        Me.chk_register.Name = "chk_register"
+        Me.chk_register.Size = New System.Drawing.Size(102, 25)
+        Me.chk_register.TabIndex = 42
+        Me.chk_register.Text = "ລົງທະບຽນຮຽນ"
+        Me.chk_register.UseVisualStyleBackColor = True
+        '
+        'chk_enroll
+        '
+        Me.chk_enroll.AutoSize = True
+        Me.chk_enroll.Checked = True
+        Me.chk_enroll.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_enroll.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.chk_enroll.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chk_enroll.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.chk_enroll.Location = New System.Drawing.Point(29, 6)
+        Me.chk_enroll.Name = "chk_enroll"
+        Me.chk_enroll.Size = New System.Drawing.Size(120, 25)
+        Me.chk_enroll.TabIndex = 42
+        Me.chk_enroll.Text = "ລົງທະບຽນເສັງທຽບ"
+        Me.chk_enroll.UseVisualStyleBackColor = True
         '
         'Panel_Control
         '
@@ -480,41 +520,33 @@ Partial Class FrmReg_Open_Closed_view
         Me.no.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
         Me.no.Width = 55
         '
-        'sok_year
-        '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.sok_year.DefaultCellStyle = DataGridViewCellStyle3
-        Me.sok_year.HeaderText = "ສົກຮຽນ"
-        Me.sok_year.Name = "sok_year"
-        Me.sok_year.ReadOnly = True
-        Me.sok_year.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.sok_year.Width = 120
-        '
         'g_modify
         '
-        Me.g_modify.HeaderText = "ພາກຮຽນ"
+        Me.g_modify.HeaderText = "ປະເພດການລົງທະບຽນ"
         Me.g_modify.Name = "g_modify"
         Me.g_modify.ReadOnly = True
         Me.g_modify.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.g_modify.Width = 110
+        Me.g_modify.Width = 150
         '
         'u_name
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.u_name.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.u_name.DefaultCellStyle = DataGridViewCellStyle3
         Me.u_name.HeaderText = "ແຕ່ວັນທີ"
         Me.u_name.Name = "u_name"
         Me.u_name.ReadOnly = True
         Me.u_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.u_name.Width = 120
         '
         'u_loginname
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.u_loginname.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.u_loginname.DefaultCellStyle = DataGridViewCellStyle4
         Me.u_loginname.HeaderText = "ຫາວັນທີ"
         Me.u_loginname.Name = "u_loginname"
         Me.u_loginname.ReadOnly = True
         Me.u_loginname.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.u_loginname.Width = 120
         '
         'RG_ST
         '
@@ -522,7 +554,7 @@ Partial Class FrmReg_Open_Closed_view
         Me.RG_ST.Name = "RG_ST"
         Me.RG_ST.ReadOnly = True
         Me.RG_ST.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.RG_ST.Width = 120
+        Me.RG_ST.Width = 130
         '
         'g_date_modify
         '
@@ -530,7 +562,7 @@ Partial Class FrmReg_Open_Closed_view
         Me.g_date_modify.Name = "g_date_modify"
         Me.g_date_modify.ReadOnly = True
         Me.g_date_modify.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.g_date_modify.Width = 350
+        Me.g_date_modify.Width = 450
         '
         'UserUpate
         '
@@ -564,6 +596,7 @@ Partial Class FrmReg_Open_Closed_view
         Me.Panel1.ResumeLayout(False)
         CType(Me.Datagridview1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_Top.ResumeLayout(False)
+        Me.Panel_Top.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel_Control.ResumeLayout(False)
@@ -590,13 +623,14 @@ Partial Class FrmReg_Open_Closed_view
     Friend WithEvents Panel_Top As System.Windows.Forms.Panel
     Friend WithEvents Panel_Control As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents cb_year As System.Windows.Forms.ComboBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Public WithEvents Datagridview1 As System.Windows.Forms.DataGridView
     Friend WithEvents chk_show_disable As System.Windows.Forms.CheckBox
+    Friend WithEvents chk_enroll_train As System.Windows.Forms.CheckBox
+    Friend WithEvents chk_register_train As System.Windows.Forms.CheckBox
+    Friend WithEvents chk_register As System.Windows.Forms.CheckBox
+    Friend WithEvents chk_enroll As System.Windows.Forms.CheckBox
     Friend WithEvents id_edit_group As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents no As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents sok_year As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents g_modify As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents u_name As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents u_loginname As System.Windows.Forms.DataGridViewTextBoxColumn

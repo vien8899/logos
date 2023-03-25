@@ -22,49 +22,46 @@ Partial Class FrmStudent_Detail
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmStudent_Detail))
-        Dim TileItemElement10 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement11 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement12 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement13 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement14 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement15 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement16 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement17 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement18 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim TileItemElement1 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
+        Dim TileItemElement2 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
+        Dim TileItemElement3 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
+        Dim TileItemElement4 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
+        Dim TileItemElement5 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
+        Dim TileItemElement6 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
+        Dim TileItemElement7 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
+        Dim TileItemElement8 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
+        Dim TileItemElement9 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel_gender = New System.Windows.Forms.Panel()
-        Me.rdo_male = New System.Windows.Forms.RadioButton()
-        Me.rdo_female = New System.Windows.Forms.RadioButton()
         Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -75,9 +72,9 @@ Partial Class FrmStudent_Detail
         Me.txt_parent_tel = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.txt_parent_name = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.txt_secondary_from = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.txt_national = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.txt_address = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.txt_birth_address = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.txt_national_la = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.txt_address_la = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.txt_birth_address_la = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -121,6 +118,8 @@ Partial Class FrmStudent_Detail
         Me.txt_name = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.txt_std_code = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.Panel_Reg = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.cb_sex = New System.Windows.Forms.ComboBox()
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.school_year2 = New System.Windows.Forms.NumericUpDown()
         Me.school_year1 = New System.Windows.Forms.NumericUpDown()
@@ -136,8 +135,8 @@ Partial Class FrmStudent_Detail
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.btn_edit = New System.Windows.Forms.Button()
         Me.btn_save = New System.Windows.Forms.Button()
+        Me.btn_edit = New System.Windows.Forms.Button()
         Me.TileItem8 = New DevExpress.XtraEditors.TileItem()
         Me.TileItem7 = New DevExpress.XtraEditors.TileItem()
         Me.TileGroup3 = New DevExpress.XtraEditors.TileGroup()
@@ -161,19 +160,6 @@ Partial Class FrmStudent_Detail
         Me.DataGridViewTextBoxColumn47 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn48 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn49 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GroupBox_Droping = New System.Windows.Forms.GroupBox()
-        Me.txt_drop_date = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.rdo_droping = New System.Windows.Forms.RadioButton()
-        Me.rdo_continue = New System.Windows.Forms.RadioButton()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txt_drop_detail = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.txt_drop_sokhien = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.txt_drop_term = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.gridview_drop = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -194,20 +180,41 @@ Partial Class FrmStudent_Detail
         Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn32 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox_Droping = New System.Windows.Forms.GroupBox()
+        Me.txt_drop_date = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.rdo_droping = New System.Windows.Forms.RadioButton()
+        Me.rdo_continue = New System.Windows.Forms.RadioButton()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txt_drop_detail = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.txt_drop_sokhien = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.txt_drop_term = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.BarLargeButtonItem1 = New DevExpress.XtraBars.BarLargeButtonItem()
-        Me.Panel_gender.SuspendLayout()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.txt_birth_address_en = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txt_national_en = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.txt_address_en = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.txt_will_complete = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.Panel6.SuspendLayout()
         Me.Panel_Reg.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.school_year2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.school_year1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.gridview_term, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox_Droping.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         CType(Me.gridview_drop, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridview_score, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridview_upgarde, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox_Droping.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridViewTextBoxColumn2
@@ -226,38 +233,6 @@ Partial Class FrmStudent_Detail
         Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
         Me.DataGridViewTextBoxColumn1.Visible = False
         '
-        'Panel_gender
-        '
-        Me.Panel_gender.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel_gender.Controls.Add(Me.rdo_male)
-        Me.Panel_gender.Controls.Add(Me.rdo_female)
-        Me.Panel_gender.Location = New System.Drawing.Point(344, 65)
-        Me.Panel_gender.Name = "Panel_gender"
-        Me.Panel_gender.Size = New System.Drawing.Size(178, 34)
-        Me.Panel_gender.TabIndex = 2
-        '
-        'rdo_male
-        '
-        Me.rdo_male.AutoSize = True
-        Me.rdo_male.Location = New System.Drawing.Point(8, 1)
-        Me.rdo_male.Name = "rdo_male"
-        Me.rdo_male.Size = New System.Drawing.Size(82, 30)
-        Me.rdo_male.TabIndex = 43
-        Me.rdo_male.TabStop = True
-        Me.rdo_male.Text = "ເພດຊາຍ"
-        Me.rdo_male.UseVisualStyleBackColor = True
-        '
-        'rdo_female
-        '
-        Me.rdo_female.AutoSize = True
-        Me.rdo_female.Location = New System.Drawing.Point(96, 1)
-        Me.rdo_female.Name = "rdo_female"
-        Me.rdo_female.Size = New System.Drawing.Size(73, 30)
-        Me.rdo_female.TabIndex = 43
-        Me.rdo_female.TabStop = True
-        Me.rdo_female.Text = "ເພດຍິງ"
-        Me.rdo_female.UseVisualStyleBackColor = True
-        '
         'DataGridViewCheckBoxColumn1
         '
         Me.DataGridViewCheckBoxColumn1.HeaderText = "##"
@@ -269,9 +244,9 @@ Partial Class FrmStudent_Detail
         '
         'DataGridViewTextBoxColumn3
         '
-        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle29.Format = "N0"
-        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N0"
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewTextBoxColumn3.HeaderText = "ຄ່າລົງທະບຽນ"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.ReadOnly = True
@@ -280,10 +255,10 @@ Partial Class FrmStudent_Detail
         '
         'DataGridViewTextBoxColumn4
         '
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle30.Format = "N0"
-        DataGridViewCellStyle30.NullValue = "Numeric"
-        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N0"
+        DataGridViewCellStyle2.NullValue = "Numeric"
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewTextBoxColumn4.HeaderText = "ສ່ວນຫຼຸດ"
         Me.DataGridViewTextBoxColumn4.MaxInputLength = 12
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
@@ -315,11 +290,11 @@ Partial Class FrmStudent_Detail
         '
         Me.txt_job.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_job.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_job.Location = New System.Drawing.Point(341, 291)
+        Me.txt_job.Location = New System.Drawing.Point(389, 372)
         Me.txt_job.Name = "txt_job"
         Me.txt_job.ReadOnly = True
-        Me.txt_job.Size = New System.Drawing.Size(284, 34)
-        Me.txt_job.TabIndex = 10
+        Me.txt_job.Size = New System.Drawing.Size(236, 34)
+        Me.txt_job.TabIndex = 14
         Me.txt_job.WaterMark = "ອາຊີບປະຈຸບັນ"
         Me.txt_job.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
         Me.txt_job.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -329,11 +304,11 @@ Partial Class FrmStudent_Detail
         '
         Me.txt_parent_tel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_parent_tel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_parent_tel.Location = New System.Drawing.Point(439, 369)
+        Me.txt_parent_tel.Location = New System.Drawing.Point(439, 411)
         Me.txt_parent_tel.Name = "txt_parent_tel"
         Me.txt_parent_tel.ReadOnly = True
         Me.txt_parent_tel.Size = New System.Drawing.Size(186, 34)
-        Me.txt_parent_tel.TabIndex = 13
+        Me.txt_parent_tel.TabIndex = 16
         Me.txt_parent_tel.WaterMark = "ເບີໂທຜູ້ປົກຄອງ"
         Me.txt_parent_tel.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
         Me.txt_parent_tel.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -343,11 +318,11 @@ Partial Class FrmStudent_Detail
         '
         Me.txt_parent_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_parent_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_parent_name.Location = New System.Drawing.Point(139, 369)
+        Me.txt_parent_name.Location = New System.Drawing.Point(139, 411)
         Me.txt_parent_name.Name = "txt_parent_name"
         Me.txt_parent_name.ReadOnly = True
         Me.txt_parent_name.Size = New System.Drawing.Size(294, 34)
-        Me.txt_parent_name.TabIndex = 12
+        Me.txt_parent_name.TabIndex = 15
         Me.txt_parent_name.WaterMark = "ພໍ່ ຫຼື ແມ່"
         Me.txt_parent_name.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
         Me.txt_parent_name.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -357,64 +332,64 @@ Partial Class FrmStudent_Detail
         '
         Me.txt_secondary_from.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_secondary_from.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_secondary_from.Location = New System.Drawing.Point(139, 330)
+        Me.txt_secondary_from.Location = New System.Drawing.Point(139, 372)
         Me.txt_secondary_from.Name = "txt_secondary_from"
         Me.txt_secondary_from.ReadOnly = True
-        Me.txt_secondary_from.Size = New System.Drawing.Size(486, 34)
-        Me.txt_secondary_from.TabIndex = 11
+        Me.txt_secondary_from.Size = New System.Drawing.Size(244, 34)
+        Me.txt_secondary_from.TabIndex = 13
         Me.txt_secondary_from.WaterMark = "ຊື່ໂຮງຮຽນຈົບມັດທະຍົມ"
         Me.txt_secondary_from.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
         Me.txt_secondary_from.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_secondary_from.WaterMarkForeColor = System.Drawing.Color.Gray
         '
-        'txt_national
+        'txt_national_la
         '
-        Me.txt_national.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txt_national.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_national.Location = New System.Drawing.Point(139, 291)
-        Me.txt_national.Name = "txt_national"
-        Me.txt_national.ReadOnly = True
-        Me.txt_national.Size = New System.Drawing.Size(196, 34)
-        Me.txt_national.TabIndex = 9
-        Me.txt_national.WaterMark = "ລາວ ຫຼື ຕ່າງປະເທດ"
-        Me.txt_national.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_national.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_national.WaterMarkForeColor = System.Drawing.Color.Gray
+        Me.txt_national_la.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_national_la.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_national_la.Location = New System.Drawing.Point(139, 333)
+        Me.txt_national_la.Name = "txt_national_la"
+        Me.txt_national_la.ReadOnly = True
+        Me.txt_national_la.Size = New System.Drawing.Size(244, 34)
+        Me.txt_national_la.TabIndex = 11
+        Me.txt_national_la.WaterMark = "ສັນຊາດພາສາລາວ"
+        Me.txt_national_la.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_national_la.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_national_la.WaterMarkForeColor = System.Drawing.Color.Gray
         '
-        'txt_address
+        'txt_address_la
         '
-        Me.txt_address.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txt_address.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_address.Location = New System.Drawing.Point(139, 253)
-        Me.txt_address.Name = "txt_address"
-        Me.txt_address.ReadOnly = True
-        Me.txt_address.Size = New System.Drawing.Size(486, 34)
-        Me.txt_address.TabIndex = 8
-        Me.txt_address.WaterMark = "ບ້ານ ເມືອງ ແຂວງ"
-        Me.txt_address.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_address.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_address.WaterMarkForeColor = System.Drawing.Color.Gray
+        Me.txt_address_la.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_address_la.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_address_la.Location = New System.Drawing.Point(139, 267)
+        Me.txt_address_la.Name = "txt_address_la"
+        Me.txt_address_la.ReadOnly = True
+        Me.txt_address_la.Size = New System.Drawing.Size(486, 34)
+        Me.txt_address_la.TabIndex = 9
+        Me.txt_address_la.WaterMark = "ບ້ານ ເມືອງ ແຂວງ"
+        Me.txt_address_la.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_address_la.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_address_la.WaterMarkForeColor = System.Drawing.Color.Gray
         '
-        'txt_birth_address
+        'txt_birth_address_la
         '
-        Me.txt_birth_address.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txt_birth_address.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_birth_address.Location = New System.Drawing.Point(139, 215)
-        Me.txt_birth_address.Name = "txt_birth_address"
-        Me.txt_birth_address.ReadOnly = True
-        Me.txt_birth_address.Size = New System.Drawing.Size(486, 34)
-        Me.txt_birth_address.TabIndex = 7
-        Me.txt_birth_address.WaterMark = "ບ້ານ ເມືອງ ແຂວງ"
-        Me.txt_birth_address.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_birth_address.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_birth_address.WaterMarkForeColor = System.Drawing.Color.Gray
+        Me.txt_birth_address_la.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_birth_address_la.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_birth_address_la.Location = New System.Drawing.Point(139, 201)
+        Me.txt_birth_address_la.Name = "txt_birth_address_la"
+        Me.txt_birth_address_la.ReadOnly = True
+        Me.txt_birth_address_la.Size = New System.Drawing.Size(486, 34)
+        Me.txt_birth_address_la.TabIndex = 7
+        Me.txt_birth_address_la.WaterMark = "ບ້ານ ເມືອງ ແຂວງ"
+        Me.txt_birth_address_la.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_birth_address_la.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_birth_address_la.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'Label21
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(235, 450)
+        Me.Label21.Location = New System.Drawing.Point(235, 492)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(72, 28)
         Me.Label21.TabIndex = 39
@@ -425,7 +400,7 @@ Partial Class FrmStudent_Detail
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.Black
-        Me.Label20.Location = New System.Drawing.Point(22, 450)
+        Me.Label20.Location = New System.Drawing.Point(22, 492)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(99, 28)
         Me.Label20.TabIndex = 39
@@ -436,7 +411,7 @@ Partial Class FrmStudent_Detail
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.Black
-        Me.Label18.Location = New System.Drawing.Point(19, 371)
+        Me.Label18.Location = New System.Drawing.Point(19, 413)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(81, 28)
         Me.Label18.TabIndex = 39
@@ -447,7 +422,7 @@ Partial Class FrmStudent_Detail
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(18, 332)
+        Me.Label17.Location = New System.Drawing.Point(18, 374)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(117, 28)
         Me.Label17.TabIndex = 39
@@ -458,7 +433,7 @@ Partial Class FrmStudent_Detail
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(19, 292)
+        Me.Label15.Location = New System.Drawing.Point(19, 334)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(60, 28)
         Me.Label15.TabIndex = 39
@@ -469,7 +444,7 @@ Partial Class FrmStudent_Detail
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(19, 255)
+        Me.Label14.Location = New System.Drawing.Point(19, 269)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(81, 28)
         Me.Label14.TabIndex = 39
@@ -480,7 +455,7 @@ Partial Class FrmStudent_Detail
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(18, 217)
+        Me.Label5.Location = New System.Drawing.Point(18, 203)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(94, 28)
         Me.Label5.TabIndex = 39
@@ -624,10 +599,10 @@ Partial Class FrmStudent_Detail
         '
         'DataGridViewTextBoxColumn18
         '
-        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle31.Format = "N0"
-        DataGridViewCellStyle31.NullValue = "Numeric"
-        Me.DataGridViewTextBoxColumn18.DefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle3.Format = "N0"
+        DataGridViewCellStyle3.NullValue = "Numeric"
+        Me.DataGridViewTextBoxColumn18.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridViewTextBoxColumn18.HeaderText = "ສ່ວນຫຼຸດ"
         Me.DataGridViewTextBoxColumn18.MaxInputLength = 12
         Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
@@ -637,9 +612,9 @@ Partial Class FrmStudent_Detail
         '
         'DataGridViewTextBoxColumn17
         '
-        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle32.Format = "N0"
-        Me.DataGridViewTextBoxColumn17.DefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N0"
+        Me.DataGridViewTextBoxColumn17.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewTextBoxColumn17.HeaderText = "ຄ່າລົງທະບຽນ"
         Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
         Me.DataGridViewTextBoxColumn17.ReadOnly = True
@@ -700,10 +675,10 @@ Partial Class FrmStudent_Detail
         '
         'DataGridViewTextBoxColumn11
         '
-        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle33.Format = "N0"
-        DataGridViewCellStyle33.NullValue = "Numeric"
-        Me.DataGridViewTextBoxColumn11.DefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle5.Format = "N0"
+        DataGridViewCellStyle5.NullValue = "Numeric"
+        Me.DataGridViewTextBoxColumn11.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridViewTextBoxColumn11.HeaderText = "ສ່ວນຫຼຸດ"
         Me.DataGridViewTextBoxColumn11.MaxInputLength = 12
         Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
@@ -713,9 +688,9 @@ Partial Class FrmStudent_Detail
         '
         'DataGridViewTextBoxColumn10
         '
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle34.Format = "N0"
-        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Format = "N0"
+        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewTextBoxColumn10.HeaderText = "ຄ່າລົງທະບຽນ"
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
         Me.DataGridViewTextBoxColumn10.ReadOnly = True
@@ -774,9 +749,9 @@ Partial Class FrmStudent_Detail
         '
         'price_register
         '
-        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle35.Format = "N0"
-        Me.price_register.DefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle7.Format = "N0"
+        Me.price_register.DefaultCellStyle = DataGridViewCellStyle7
         Me.price_register.HeaderText = "ຄ່າລົງທະບຽນ"
         Me.price_register.Name = "price_register"
         Me.price_register.ReadOnly = True
@@ -785,10 +760,10 @@ Partial Class FrmStudent_Detail
         '
         'SH
         '
-        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle36.Format = "N0"
-        DataGridViewCellStyle36.NullValue = "Numeric"
-        Me.SH.DefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle8.Format = "N0"
+        DataGridViewCellStyle8.NullValue = "Numeric"
+        Me.SH.DefaultCellStyle = DataGridViewCellStyle8
         Me.SH.HeaderText = "ສ່ວນຫຼຸດ"
         Me.SH.MaxInputLength = 12
         Me.SH.Name = "SH"
@@ -818,11 +793,11 @@ Partial Class FrmStudent_Detail
         '
         'txt_course
         '
-        Me.txt_course.Location = New System.Drawing.Point(139, 408)
+        Me.txt_course.Location = New System.Drawing.Point(139, 450)
         Me.txt_course.Name = "txt_course"
         Me.txt_course.ReadOnly = True
         Me.txt_course.Size = New System.Drawing.Size(486, 34)
-        Me.txt_course.TabIndex = 14
+        Me.txt_course.TabIndex = 17
         Me.txt_course.WaterMark = "ຫຼັກສູດ-ສາຂາຮຽນ"
         Me.txt_course.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
         Me.txt_course.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -833,10 +808,10 @@ Partial Class FrmStudent_Detail
         Me.txt_name_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_name_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.txt_name_en.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_name_en.Location = New System.Drawing.Point(139, 142)
+        Me.txt_name_en.Location = New System.Drawing.Point(139, 128)
         Me.txt_name_en.Name = "txt_name_en"
         Me.txt_name_en.ReadOnly = True
-        Me.txt_name_en.Size = New System.Drawing.Size(486, 29)
+        Me.txt_name_en.Size = New System.Drawing.Size(352, 29)
         Me.txt_name_en.TabIndex = 4
         Me.txt_name_en.WaterMark = "Name & Surname..."
         Me.txt_name_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
@@ -847,10 +822,10 @@ Partial Class FrmStudent_Detail
         '
         Me.txt_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_name.Location = New System.Drawing.Point(139, 103)
+        Me.txt_name.Location = New System.Drawing.Point(207, 89)
         Me.txt_name.Name = "txt_name"
         Me.txt_name.ReadOnly = True
-        Me.txt_name.Size = New System.Drawing.Size(486, 34)
+        Me.txt_name.Size = New System.Drawing.Size(284, 34)
         Me.txt_name.TabIndex = 3
         Me.txt_name.WaterMark = "ຊື່ ແລະ ນາມສະກຸນພາສາລາວ..."
         Me.txt_name.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
@@ -860,7 +835,7 @@ Partial Class FrmStudent_Detail
         'txt_std_code
         '
         Me.txt_std_code.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txt_std_code.Location = New System.Drawing.Point(139, 65)
+        Me.txt_std_code.Location = New System.Drawing.Point(139, 51)
         Me.txt_std_code.Name = "txt_std_code"
         Me.txt_std_code.Size = New System.Drawing.Size(201, 34)
         Me.txt_std_code.TabIndex = 1
@@ -872,19 +847,27 @@ Partial Class FrmStudent_Detail
         'Panel_Reg
         '
         Me.Panel_Reg.BackColor = System.Drawing.Color.Silver
+        Me.Panel_Reg.Controls.Add(Me.Label19)
+        Me.Panel_Reg.Controls.Add(Me.txt_will_complete)
+        Me.Panel_Reg.Controls.Add(Me.txt_address_en)
+        Me.Panel_Reg.Controls.Add(Me.Label16)
+        Me.Panel_Reg.Controls.Add(Me.txt_birth_address_en)
+        Me.Panel_Reg.Controls.Add(Me.Label13)
+        Me.Panel_Reg.Controls.Add(Me.PictureBox1)
+        Me.Panel_Reg.Controls.Add(Me.cb_sex)
         Me.Panel_Reg.Controls.Add(Me.btn_cancel)
         Me.Panel_Reg.Controls.Add(Me.school_year2)
         Me.Panel_Reg.Controls.Add(Me.school_year1)
-        Me.Panel_Reg.Controls.Add(Me.Panel_gender)
         Me.Panel_Reg.Controls.Add(Me.txt_course)
         Me.Panel_Reg.Controls.Add(Me.txt_name_en)
         Me.Panel_Reg.Controls.Add(Me.txt_job)
         Me.Panel_Reg.Controls.Add(Me.txt_parent_tel)
         Me.Panel_Reg.Controls.Add(Me.txt_parent_name)
         Me.Panel_Reg.Controls.Add(Me.txt_secondary_from)
-        Me.Panel_Reg.Controls.Add(Me.txt_national)
-        Me.Panel_Reg.Controls.Add(Me.txt_address)
-        Me.Panel_Reg.Controls.Add(Me.txt_birth_address)
+        Me.Panel_Reg.Controls.Add(Me.txt_national_en)
+        Me.Panel_Reg.Controls.Add(Me.txt_national_la)
+        Me.Panel_Reg.Controls.Add(Me.txt_address_la)
+        Me.Panel_Reg.Controls.Add(Me.txt_birth_address_la)
         Me.Panel_Reg.Controls.Add(Me.txt_name)
         Me.Panel_Reg.Controls.Add(Me.txt_std_code)
         Me.Panel_Reg.Controls.Add(Me.DateTimePicker1)
@@ -915,6 +898,29 @@ Partial Class FrmStudent_Detail
         Me.Panel_Reg.Size = New System.Drawing.Size(641, 675)
         Me.Panel_Reg.TabIndex = 0
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.Image = Global.LOGOS_SYS.My.Resources.Resources._3x4
+        Me.PictureBox1.Location = New System.Drawing.Point(501, 51)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(124, 146)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 60
+        Me.PictureBox1.TabStop = False
+        '
+        'cb_sex
+        '
+        Me.cb_sex.BackColor = System.Drawing.Color.White
+        Me.cb_sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb_sex.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cb_sex.FormattingEnabled = True
+        Me.cb_sex.Items.AddRange(New Object() {"ທ້າວ", "ນາງ"})
+        Me.cb_sex.Location = New System.Drawing.Point(138, 89)
+        Me.cb_sex.Name = "cb_sex"
+        Me.cb_sex.Size = New System.Drawing.Size(66, 34)
+        Me.cb_sex.TabIndex = 59
+        '
         'btn_cancel
         '
         Me.btn_cancel.BackColor = System.Drawing.Color.White
@@ -923,10 +929,10 @@ Partial Class FrmStudent_Detail
         Me.btn_cancel.FlatAppearance.BorderSize = 0
         Me.btn_cancel.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_cancel.Image = Global.LOGOS_SYS.My.Resources.Resources.back50_1122
-        Me.btn_cancel.Location = New System.Drawing.Point(297, 573)
+        Me.btn_cancel.Location = New System.Drawing.Point(297, 594)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(136, 69)
-        Me.btn_cancel.TabIndex = 58
+        Me.btn_cancel.TabIndex = 23
         Me.btn_cancel.Text = "Cancel"
         Me.btn_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_cancel.UseVisualStyleBackColor = False
@@ -934,29 +940,29 @@ Partial Class FrmStudent_Detail
         'school_year2
         '
         Me.school_year2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.school_year2.Location = New System.Drawing.Point(306, 447)
+        Me.school_year2.Location = New System.Drawing.Point(306, 489)
         Me.school_year2.Maximum = New Decimal(New Integer() {2300, 0, 0, 0})
         Me.school_year2.Name = "school_year2"
         Me.school_year2.Size = New System.Drawing.Size(87, 35)
-        Me.school_year2.TabIndex = 56
+        Me.school_year2.TabIndex = 19
         Me.school_year2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.school_year2.Value = New Decimal(New Integer() {2022, 0, 0, 0})
         '
         'school_year1
         '
         Me.school_year1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.school_year1.Location = New System.Drawing.Point(139, 447)
+        Me.school_year1.Location = New System.Drawing.Point(139, 489)
         Me.school_year1.Maximum = New Decimal(New Integer() {2100, 0, 0, 0})
         Me.school_year1.Name = "school_year1"
         Me.school_year1.Size = New System.Drawing.Size(90, 35)
-        Me.school_year1.TabIndex = 57
+        Me.school_year1.TabIndex = 18
         Me.school_year1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.school_year1.Value = New Decimal(New Integer() {2022, 0, 0, 0})
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Enabled = False
-        Me.DateTimePicker1.Location = New System.Drawing.Point(139, 177)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(139, 163)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(137, 34)
         Me.DateTimePicker1.TabIndex = 55
@@ -966,7 +972,7 @@ Partial Class FrmStudent_Detail
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(18, 179)
+        Me.Label4.Location = New System.Drawing.Point(18, 165)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(105, 28)
         Me.Label4.TabIndex = 39
@@ -974,22 +980,23 @@ Partial Class FrmStudent_Detail
         '
         'txt_comment
         '
-        Me.txt_comment.Location = New System.Drawing.Point(139, 487)
+        Me.txt_comment.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_comment.Location = New System.Drawing.Point(139, 528)
         Me.txt_comment.Multiline = True
         Me.txt_comment.Name = "txt_comment"
-        Me.txt_comment.Size = New System.Drawing.Size(486, 72)
-        Me.txt_comment.TabIndex = 17
+        Me.txt_comment.Size = New System.Drawing.Size(486, 56)
+        Me.txt_comment.TabIndex = 21
         Me.txt_comment.WaterMark = "ລາຍລະອຽດເພີ່ມເຕີມ..."
         Me.txt_comment.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_comment.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_comment.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_comment.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_phone
         '
-        Me.txt_phone.Location = New System.Drawing.Point(282, 177)
+        Me.txt_phone.Location = New System.Drawing.Point(282, 163)
         Me.txt_phone.Name = "txt_phone"
         Me.txt_phone.ReadOnly = True
-        Me.txt_phone.Size = New System.Drawing.Size(343, 34)
+        Me.txt_phone.Size = New System.Drawing.Size(209, 34)
         Me.txt_phone.TabIndex = 6
         Me.txt_phone.WaterMark = "ເບີໂທລະສັບ..."
         Me.txt_phone.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
@@ -1011,7 +1018,7 @@ Partial Class FrmStudent_Detail
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(24, 565)
+        Me.Panel1.Location = New System.Drawing.Point(24, 589)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(602, 2)
         Me.Panel1.TabIndex = 24
@@ -1024,10 +1031,10 @@ Partial Class FrmStudent_Detail
         Me.btn_exit.FlatAppearance.BorderSize = 0
         Me.btn_exit.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_exit.Image = CType(resources.GetObject("btn_exit.Image"), System.Drawing.Image)
-        Me.btn_exit.Location = New System.Drawing.Point(506, 573)
+        Me.btn_exit.Location = New System.Drawing.Point(506, 594)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(119, 69)
-        Me.btn_exit.TabIndex = 19
+        Me.btn_exit.TabIndex = 24
         Me.btn_exit.Text = "Exit"
         Me.btn_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_exit.UseVisualStyleBackColor = False
@@ -1037,7 +1044,7 @@ Partial Class FrmStudent_Detail
         Me.lb_title.AutoSize = True
         Me.lb_title.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb_title.ForeColor = System.Drawing.Color.Black
-        Me.lb_title.Location = New System.Drawing.Point(18, 105)
+        Me.lb_title.Location = New System.Drawing.Point(18, 91)
         Me.lb_title.Name = "lb_title"
         Me.lb_title.Size = New System.Drawing.Size(107, 28)
         Me.lb_title.TabIndex = 42
@@ -1048,7 +1055,7 @@ Partial Class FrmStudent_Detail
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(18, 67)
+        Me.Label6.Location = New System.Drawing.Point(18, 53)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(110, 28)
         Me.Label6.TabIndex = 39
@@ -1059,7 +1066,7 @@ Partial Class FrmStudent_Detail
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(18, 410)
+        Me.Label8.Location = New System.Drawing.Point(18, 452)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(115, 28)
         Me.Label8.TabIndex = 39
@@ -1070,7 +1077,7 @@ Partial Class FrmStudent_Detail
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(17, 142)
+        Me.Label3.Location = New System.Drawing.Point(17, 128)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(120, 28)
         Me.Label3.TabIndex = 39
@@ -1081,27 +1088,11 @@ Partial Class FrmStudent_Detail
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(19, 493)
+        Me.Label11.Location = New System.Drawing.Point(19, 534)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(112, 28)
         Me.Label11.TabIndex = 39
         Me.Label11.Text = "ໝາຍເຫດເພີ່ມ..."
-        '
-        'btn_edit
-        '
-        Me.btn_edit.BackColor = System.Drawing.Color.White
-        Me.btn_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_edit.FlatAppearance.BorderSize = 0
-        Me.btn_edit.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_edit.Image = Global.LOGOS_SYS.My.Resources.Resources.PocketEdit
-        Me.btn_edit.Location = New System.Drawing.Point(140, 573)
-        Me.btn_edit.Name = "btn_edit"
-        Me.btn_edit.Size = New System.Drawing.Size(150, 69)
-        Me.btn_edit.TabIndex = 0
-        Me.btn_edit.Text = "Click Edit"
-        Me.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_edit.UseVisualStyleBackColor = False
         '
         'btn_save
         '
@@ -1111,13 +1102,29 @@ Partial Class FrmStudent_Detail
         Me.btn_save.FlatAppearance.BorderSize = 0
         Me.btn_save.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_save.Image = Global.LOGOS_SYS.My.Resources.Resources.Save
-        Me.btn_save.Location = New System.Drawing.Point(139, 573)
+        Me.btn_save.Location = New System.Drawing.Point(139, 594)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(151, 69)
-        Me.btn_save.TabIndex = 18
+        Me.btn_save.TabIndex = 22
         Me.btn_save.Text = "Click Save"
         Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_save.UseVisualStyleBackColor = False
+        '
+        'btn_edit
+        '
+        Me.btn_edit.BackColor = System.Drawing.Color.White
+        Me.btn_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_edit.FlatAppearance.BorderSize = 0
+        Me.btn_edit.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_edit.Image = Global.LOGOS_SYS.My.Resources.Resources.PocketEdit
+        Me.btn_edit.Location = New System.Drawing.Point(140, 594)
+        Me.btn_edit.Name = "btn_edit"
+        Me.btn_edit.Size = New System.Drawing.Size(150, 69)
+        Me.btn_edit.TabIndex = 0
+        Me.btn_edit.Text = "Click Edit"
+        Me.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_edit.UseVisualStyleBackColor = False
         '
         'TileItem8
         '
@@ -1125,16 +1132,16 @@ Partial Class FrmStudent_Detail
         Me.TileItem8.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
         Me.TileItem8.AppearanceItem.Normal.Options.UseBackColor = True
         Me.TileItem8.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement10.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement10.Appearance.Normal.ForeColor = System.Drawing.Color.Red
-        TileItemElement10.Appearance.Normal.Options.UseFont = True
-        TileItemElement10.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement10.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement10.ImageLocation = New System.Drawing.Point(-5, 5)
-        TileItemElement10.Text = "ລຶບຫຼັກສູດ"
-        TileItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement10.TextLocation = New System.Drawing.Point(10, 18)
-        Me.TileItem8.Elements.Add(TileItemElement10)
+        TileItemElement1.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement1.Appearance.Normal.ForeColor = System.Drawing.Color.Red
+        TileItemElement1.Appearance.Normal.Options.UseFont = True
+        TileItemElement1.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement1.ImageLocation = New System.Drawing.Point(-5, 5)
+        TileItemElement1.Text = "ລຶບຫຼັກສູດ"
+        TileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement1.TextLocation = New System.Drawing.Point(10, 18)
+        Me.TileItem8.Elements.Add(TileItemElement1)
         Me.TileItem8.Id = 4
         Me.TileItem8.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
         Me.TileItem8.Name = "TileItem8"
@@ -1145,16 +1152,16 @@ Partial Class FrmStudent_Detail
         Me.TileItem7.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
         Me.TileItem7.AppearanceItem.Normal.Options.UseBackColor = True
         Me.TileItem7.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement11.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement11.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
-        TileItemElement11.Appearance.Normal.Options.UseFont = True
-        TileItemElement11.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement11.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement11.ImageLocation = New System.Drawing.Point(-10, 5)
-        TileItemElement11.Text = "ແກ້ໄຂຫຼັກສູດ"
-        TileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement11.TextLocation = New System.Drawing.Point(10, 18)
-        Me.TileItem7.Elements.Add(TileItemElement11)
+        TileItemElement2.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement2.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
+        TileItemElement2.Appearance.Normal.Options.UseFont = True
+        TileItemElement2.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement2.ImageLocation = New System.Drawing.Point(-10, 5)
+        TileItemElement2.Text = "ແກ້ໄຂຫຼັກສູດ"
+        TileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement2.TextLocation = New System.Drawing.Point(10, 18)
+        Me.TileItem7.Elements.Add(TileItemElement2)
         Me.TileItem7.Id = 3
         Me.TileItem7.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
         Me.TileItem7.Name = "TileItem7"
@@ -1172,16 +1179,16 @@ Partial Class FrmStudent_Detail
         Me.TileItem6.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
         Me.TileItem6.AppearanceItem.Normal.Options.UseBackColor = True
         Me.TileItem6.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement12.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement12.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        TileItemElement12.Appearance.Normal.Options.UseFont = True
-        TileItemElement12.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement12.ImageLocation = New System.Drawing.Point(10, 5)
-        TileItemElement12.Text = "ຫຼັກສູດໃໝ່"
-        TileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement12.TextLocation = New System.Drawing.Point(0, 18)
-        Me.TileItem6.Elements.Add(TileItemElement12)
+        TileItemElement3.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement3.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        TileItemElement3.Appearance.Normal.Options.UseFont = True
+        TileItemElement3.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement3.ImageLocation = New System.Drawing.Point(10, 5)
+        TileItemElement3.Text = "ຫຼັກສູດໃໝ່"
+        TileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement3.TextLocation = New System.Drawing.Point(0, 18)
+        Me.TileItem6.Elements.Add(TileItemElement3)
         Me.TileItem6.Id = 1
         Me.TileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
         Me.TileItem6.Name = "TileItem6"
@@ -1192,16 +1199,16 @@ Partial Class FrmStudent_Detail
         Me.TileItem5.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
         Me.TileItem5.AppearanceItem.Normal.Options.UseBackColor = True
         Me.TileItem5.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement13.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement13.Appearance.Normal.ForeColor = System.Drawing.Color.Red
-        TileItemElement13.Appearance.Normal.Options.UseFont = True
-        TileItemElement13.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement13.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement13.ImageLocation = New System.Drawing.Point(-5, 5)
-        TileItemElement13.Text = "ລຶບຫຼັກສູດ"
-        TileItemElement13.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement13.TextLocation = New System.Drawing.Point(10, 18)
-        Me.TileItem5.Elements.Add(TileItemElement13)
+        TileItemElement4.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement4.Appearance.Normal.ForeColor = System.Drawing.Color.Red
+        TileItemElement4.Appearance.Normal.Options.UseFont = True
+        TileItemElement4.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement4.ImageLocation = New System.Drawing.Point(-5, 5)
+        TileItemElement4.Text = "ລຶບຫຼັກສູດ"
+        TileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement4.TextLocation = New System.Drawing.Point(10, 18)
+        Me.TileItem5.Elements.Add(TileItemElement4)
         Me.TileItem5.Id = 4
         Me.TileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
         Me.TileItem5.Name = "TileItem5"
@@ -1212,16 +1219,16 @@ Partial Class FrmStudent_Detail
         Me.TileItem2.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
         Me.TileItem2.AppearanceItem.Normal.Options.UseBackColor = True
         Me.TileItem2.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement14.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement14.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
-        TileItemElement14.Appearance.Normal.Options.UseFont = True
-        TileItemElement14.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement14.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement14.ImageLocation = New System.Drawing.Point(-10, 5)
-        TileItemElement14.Text = "ແກ້ໄຂຫຼັກສູດ"
-        TileItemElement14.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement14.TextLocation = New System.Drawing.Point(10, 18)
-        Me.TileItem2.Elements.Add(TileItemElement14)
+        TileItemElement5.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement5.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
+        TileItemElement5.Appearance.Normal.Options.UseFont = True
+        TileItemElement5.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement5.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement5.ImageLocation = New System.Drawing.Point(-10, 5)
+        TileItemElement5.Text = "ແກ້ໄຂຫຼັກສູດ"
+        TileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement5.TextLocation = New System.Drawing.Point(10, 18)
+        Me.TileItem2.Elements.Add(TileItemElement5)
         Me.TileItem2.Id = 3
         Me.TileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
         Me.TileItem2.Name = "TileItem2"
@@ -1232,16 +1239,16 @@ Partial Class FrmStudent_Detail
         Me.TileItem1.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
         Me.TileItem1.AppearanceItem.Normal.Options.UseBackColor = True
         Me.TileItem1.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement15.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement15.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        TileItemElement15.Appearance.Normal.Options.UseFont = True
-        TileItemElement15.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement15.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement15.ImageLocation = New System.Drawing.Point(10, 5)
-        TileItemElement15.Text = "ຫຼັກສູດໃໝ່"
-        TileItemElement15.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement15.TextLocation = New System.Drawing.Point(0, 18)
-        Me.TileItem1.Elements.Add(TileItemElement15)
+        TileItemElement6.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement6.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        TileItemElement6.Appearance.Normal.Options.UseFont = True
+        TileItemElement6.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement6.ImageLocation = New System.Drawing.Point(10, 5)
+        TileItemElement6.Text = "ຫຼັກສູດໃໝ່"
+        TileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement6.TextLocation = New System.Drawing.Point(0, 18)
+        Me.TileItem1.Elements.Add(TileItemElement6)
         Me.TileItem1.Id = 1
         Me.TileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
         Me.TileItem1.Name = "TileItem1"
@@ -1259,16 +1266,16 @@ Partial Class FrmStudent_Detail
         Me.tileItem4.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
         Me.tileItem4.AppearanceItem.Normal.Options.UseBackColor = True
         Me.tileItem4.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement16.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement16.Appearance.Normal.ForeColor = System.Drawing.Color.Red
-        TileItemElement16.Appearance.Normal.Options.UseFont = True
-        TileItemElement16.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement16.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement16.ImageLocation = New System.Drawing.Point(-5, 5)
-        TileItemElement16.Text = "ລຶບຫຼັກສູດ"
-        TileItemElement16.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement16.TextLocation = New System.Drawing.Point(10, 18)
-        Me.tileItem4.Elements.Add(TileItemElement16)
+        TileItemElement7.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement7.Appearance.Normal.ForeColor = System.Drawing.Color.Red
+        TileItemElement7.Appearance.Normal.Options.UseFont = True
+        TileItemElement7.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement7.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement7.ImageLocation = New System.Drawing.Point(-5, 5)
+        TileItemElement7.Text = "ລຶບຫຼັກສູດ"
+        TileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement7.TextLocation = New System.Drawing.Point(10, 18)
+        Me.tileItem4.Elements.Add(TileItemElement7)
         Me.tileItem4.Id = 4
         Me.tileItem4.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
         Me.tileItem4.Name = "tileItem4"
@@ -1279,16 +1286,16 @@ Partial Class FrmStudent_Detail
         Me.tileItem3.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
         Me.tileItem3.AppearanceItem.Normal.Options.UseBackColor = True
         Me.tileItem3.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement17.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement17.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
-        TileItemElement17.Appearance.Normal.Options.UseFont = True
-        TileItemElement17.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement17.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement17.ImageLocation = New System.Drawing.Point(-10, 5)
-        TileItemElement17.Text = "ແກ້ໄຂຫຼັກສູດ"
-        TileItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement17.TextLocation = New System.Drawing.Point(10, 18)
-        Me.tileItem3.Elements.Add(TileItemElement17)
+        TileItemElement8.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement8.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
+        TileItemElement8.Appearance.Normal.Options.UseFont = True
+        TileItemElement8.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement8.ImageLocation = New System.Drawing.Point(-10, 5)
+        TileItemElement8.Text = "ແກ້ໄຂຫຼັກສູດ"
+        TileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement8.TextLocation = New System.Drawing.Point(10, 18)
+        Me.tileItem3.Elements.Add(TileItemElement8)
         Me.tileItem3.Id = 3
         Me.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
         Me.tileItem3.Name = "tileItem3"
@@ -1299,16 +1306,16 @@ Partial Class FrmStudent_Detail
         Me.btnNewCur.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
         Me.btnNewCur.AppearanceItem.Normal.Options.UseBackColor = True
         Me.btnNewCur.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement18.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement18.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        TileItemElement18.Appearance.Normal.Options.UseFont = True
-        TileItemElement18.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement18.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement18.ImageLocation = New System.Drawing.Point(10, 5)
-        TileItemElement18.Text = "ຫຼັກສູດໃໝ່"
-        TileItemElement18.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement18.TextLocation = New System.Drawing.Point(0, 18)
-        Me.btnNewCur.Elements.Add(TileItemElement18)
+        TileItemElement9.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement9.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        TileItemElement9.Appearance.Normal.Options.UseFont = True
+        TileItemElement9.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement9.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement9.ImageLocation = New System.Drawing.Point(10, 5)
+        TileItemElement9.Text = "ຫຼັກສູດໃໝ່"
+        TileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement9.TextLocation = New System.Drawing.Point(0, 18)
+        Me.btnNewCur.Elements.Add(TileItemElement9)
         Me.btnNewCur.Id = 1
         Me.btnNewCur.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
         Me.btnNewCur.Name = "btnNewCur"
@@ -1358,25 +1365,25 @@ Partial Class FrmStudent_Detail
         Me.gridview_term.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.gridview_term.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.gridview_term.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle37.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle37.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.gridview_term.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.gridview_term.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.gridview_term.ColumnHeadersHeight = 30
         Me.gridview_term.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.gridview_term.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn43, Me.DataGridViewCheckBoxColumn7, Me.DataGridViewTextBoxColumn44, Me.DataGridViewTextBoxColumn45, Me.DataGridViewTextBoxColumn46, Me.DataGridViewTextBoxColumn47, Me.DataGridViewTextBoxColumn48, Me.DataGridViewTextBoxColumn49})
-        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle40.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle40.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle40.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.Aquamarine
-        DataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.gridview_term.DefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Aquamarine
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gridview_term.DefaultCellStyle = DataGridViewCellStyle12
         Me.gridview_term.EnableHeadersVisualStyles = False
         Me.gridview_term.Location = New System.Drawing.Point(6, 3)
         Me.gridview_term.MultiSelect = False
@@ -1416,9 +1423,9 @@ Partial Class FrmStudent_Detail
         '
         'DataGridViewTextBoxColumn45
         '
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle38.Format = "N0"
-        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle10.Format = "N0"
+        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridViewTextBoxColumn45.HeaderText = "ຄ່າລົງທະບຽນ"
         Me.DataGridViewTextBoxColumn45.Name = "DataGridViewTextBoxColumn45"
         Me.DataGridViewTextBoxColumn45.ReadOnly = True
@@ -1427,10 +1434,10 @@ Partial Class FrmStudent_Detail
         '
         'DataGridViewTextBoxColumn46
         '
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle39.Format = "N0"
-        DataGridViewCellStyle39.NullValue = "Numeric"
-        Me.DataGridViewTextBoxColumn46.DefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle11.Format = "N0"
+        DataGridViewCellStyle11.NullValue = "Numeric"
+        Me.DataGridViewTextBoxColumn46.DefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridViewTextBoxColumn46.HeaderText = "ສ່ວນຫຼຸດ"
         Me.DataGridViewTextBoxColumn46.MaxInputLength = 12
         Me.DataGridViewTextBoxColumn46.Name = "DataGridViewTextBoxColumn46"
@@ -1457,6 +1464,285 @@ Partial Class FrmStudent_Detail
         Me.DataGridViewTextBoxColumn49.Name = "DataGridViewTextBoxColumn49"
         Me.DataGridViewTextBoxColumn49.ReadOnly = True
         Me.DataGridViewTextBoxColumn49.Visible = False
+        '
+        'gridview_drop
+        '
+        Me.gridview_drop.AllowUserToAddRows = False
+        Me.gridview_drop.AllowUserToDeleteRows = False
+        Me.gridview_drop.AllowUserToResizeColumns = False
+        Me.gridview_drop.AllowUserToResizeRows = False
+        Me.gridview_drop.BackgroundColor = System.Drawing.Color.White
+        Me.gridview_drop.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.gridview_drop.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.gridview_drop.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.gridview_drop.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        Me.gridview_drop.ColumnHeadersHeight = 30
+        Me.gridview_drop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.gridview_drop.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn28, Me.SOKHIEN})
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Aquamarine
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gridview_drop.DefaultCellStyle = DataGridViewCellStyle16
+        Me.gridview_drop.EnableHeadersVisualStyles = False
+        Me.gridview_drop.Location = New System.Drawing.Point(6, 3)
+        Me.gridview_drop.MultiSelect = False
+        Me.gridview_drop.Name = "gridview_drop"
+        Me.gridview_drop.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.gridview_drop.RowHeadersVisible = False
+        Me.gridview_drop.RowTemplate.Height = 29
+        Me.gridview_drop.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.gridview_drop.Size = New System.Drawing.Size(644, 273)
+        Me.gridview_drop.TabIndex = 7
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.HeaderText = "#"
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        Me.DataGridViewTextBoxColumn22.ReadOnly = True
+        Me.DataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn22.Width = 35
+        '
+        'DataGridViewTextBoxColumn23
+        '
+        Me.DataGridViewTextBoxColumn23.HeaderText = "ເທີມ-ຮຽນ"
+        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        Me.DataGridViewTextBoxColumn23.ReadOnly = True
+        Me.DataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn23.Width = 140
+        '
+        'DataGridViewTextBoxColumn24
+        '
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle14.Format = "N0"
+        Me.DataGridViewTextBoxColumn24.DefaultCellStyle = DataGridViewCellStyle14
+        Me.DataGridViewTextBoxColumn24.HeaderText = "ວັນທີແຈ້ງ"
+        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
+        Me.DataGridViewTextBoxColumn24.ReadOnly = True
+        Me.DataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn24.Width = 90
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.HeaderText = "ສະຖານະ"
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn25
+        '
+        Me.DataGridViewTextBoxColumn25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle15.Format = "N0"
+        DataGridViewCellStyle15.NullValue = "Numeric"
+        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle15
+        Me.DataGridViewTextBoxColumn25.HeaderText = "ລາຍລະອຽດ"
+        Me.DataGridViewTextBoxColumn25.MaxInputLength = 12
+        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        Me.DataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        '
+        'DataGridViewTextBoxColumn28
+        '
+        Me.DataGridViewTextBoxColumn28.HeaderText = "ST_ID"
+        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.DataGridViewTextBoxColumn28.ReadOnly = True
+        Me.DataGridViewTextBoxColumn28.Visible = False
+        '
+        'SOKHIEN
+        '
+        Me.SOKHIEN.HeaderText = "SOKHIEN"
+        Me.SOKHIEN.Name = "SOKHIEN"
+        Me.SOKHIEN.ReadOnly = True
+        Me.SOKHIEN.Visible = False
+        '
+        'gridview_score
+        '
+        Me.gridview_score.AllowUserToAddRows = False
+        Me.gridview_score.AllowUserToDeleteRows = False
+        Me.gridview_score.AllowUserToResizeColumns = False
+        Me.gridview_score.AllowUserToResizeRows = False
+        Me.gridview_score.BackgroundColor = System.Drawing.Color.White
+        Me.gridview_score.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.gridview_score.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.gridview_score.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.gridview_score.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        Me.gridview_score.ColumnHeadersHeight = 30
+        Me.gridview_score.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.gridview_score.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn39, Me.DataGridViewTextBoxColumn38, Me.subject_credit, Me.DataGridViewTextBoxColumn40, Me.DataGridViewTextBoxColumn37})
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle22.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Aquamarine
+        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gridview_score.DefaultCellStyle = DataGridViewCellStyle22
+        Me.gridview_score.EnableHeadersVisualStyles = False
+        Me.gridview_score.Location = New System.Drawing.Point(6, 3)
+        Me.gridview_score.MultiSelect = False
+        Me.gridview_score.Name = "gridview_score"
+        Me.gridview_score.ReadOnly = True
+        Me.gridview_score.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.gridview_score.RowHeadersVisible = False
+        Me.gridview_score.RowTemplate.Height = 29
+        Me.gridview_score.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.gridview_score.Size = New System.Drawing.Size(644, 624)
+        Me.gridview_score.TabIndex = 9
+        '
+        'DataGridViewTextBoxColumn39
+        '
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle18.NullValue = "Numeric"
+        Me.DataGridViewTextBoxColumn39.DefaultCellStyle = DataGridViewCellStyle18
+        Me.DataGridViewTextBoxColumn39.HeaderText = "ລຳດັບ"
+        Me.DataGridViewTextBoxColumn39.MaxInputLength = 12
+        Me.DataGridViewTextBoxColumn39.Name = "DataGridViewTextBoxColumn39"
+        Me.DataGridViewTextBoxColumn39.ReadOnly = True
+        Me.DataGridViewTextBoxColumn39.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn39.Width = 80
+        '
+        'DataGridViewTextBoxColumn38
+        '
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.Format = "N0"
+        Me.DataGridViewTextBoxColumn38.DefaultCellStyle = DataGridViewCellStyle19
+        Me.DataGridViewTextBoxColumn38.HeaderText = "ວິຊາຮຽນ"
+        Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
+        Me.DataGridViewTextBoxColumn38.ReadOnly = True
+        Me.DataGridViewTextBoxColumn38.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn38.Width = 220
+        '
+        'subject_credit
+        '
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.subject_credit.DefaultCellStyle = DataGridViewCellStyle20
+        Me.subject_credit.HeaderText = "ໜ່ວຍກິດ"
+        Me.subject_credit.Name = "subject_credit"
+        Me.subject_credit.ReadOnly = True
+        Me.subject_credit.Width = 70
+        '
+        'DataGridViewTextBoxColumn40
+        '
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.DataGridViewTextBoxColumn40.DefaultCellStyle = DataGridViewCellStyle21
+        Me.DataGridViewTextBoxColumn40.HeaderText = "ເກຣດ-ຄະແນນ"
+        Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
+        Me.DataGridViewTextBoxColumn40.ReadOnly = True
+        Me.DataGridViewTextBoxColumn40.Width = 130
+        '
+        'DataGridViewTextBoxColumn37
+        '
+        Me.DataGridViewTextBoxColumn37.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn37.HeaderText = "ເທີມ-ຮຽນ"
+        Me.DataGridViewTextBoxColumn37.Name = "DataGridViewTextBoxColumn37"
+        Me.DataGridViewTextBoxColumn37.ReadOnly = True
+        Me.DataGridViewTextBoxColumn37.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        '
+        'gridview_upgarde
+        '
+        Me.gridview_upgarde.AllowUserToAddRows = False
+        Me.gridview_upgarde.AllowUserToDeleteRows = False
+        Me.gridview_upgarde.AllowUserToResizeColumns = False
+        Me.gridview_upgarde.AllowUserToResizeRows = False
+        Me.gridview_upgarde.BackgroundColor = System.Drawing.Color.White
+        Me.gridview_upgarde.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.gridview_upgarde.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.gridview_upgarde.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle23.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
+        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.gridview_upgarde.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
+        Me.gridview_upgarde.ColumnHeadersHeight = 30
+        Me.gridview_upgarde.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.gridview_upgarde.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33})
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.Aquamarine
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gridview_upgarde.DefaultCellStyle = DataGridViewCellStyle28
+        Me.gridview_upgarde.EnableHeadersVisualStyles = False
+        Me.gridview_upgarde.Location = New System.Drawing.Point(6, 3)
+        Me.gridview_upgarde.MultiSelect = False
+        Me.gridview_upgarde.Name = "gridview_upgarde"
+        Me.gridview_upgarde.ReadOnly = True
+        Me.gridview_upgarde.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.gridview_upgarde.RowHeadersVisible = False
+        Me.gridview_upgarde.RowTemplate.Height = 29
+        Me.gridview_upgarde.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.gridview_upgarde.Size = New System.Drawing.Size(644, 624)
+        Me.gridview_upgarde.TabIndex = 12
+        '
+        'DataGridViewTextBoxColumn29
+        '
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle24.NullValue = "Numeric"
+        Me.DataGridViewTextBoxColumn29.DefaultCellStyle = DataGridViewCellStyle24
+        Me.DataGridViewTextBoxColumn29.HeaderText = "ລຳດັບ"
+        Me.DataGridViewTextBoxColumn29.MaxInputLength = 12
+        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
+        Me.DataGridViewTextBoxColumn29.ReadOnly = True
+        Me.DataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn29.Width = 80
+        '
+        'DataGridViewTextBoxColumn30
+        '
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle25.Format = "N0"
+        Me.DataGridViewTextBoxColumn30.DefaultCellStyle = DataGridViewCellStyle25
+        Me.DataGridViewTextBoxColumn30.HeaderText = "ວິຊາຮຽນ"
+        Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
+        Me.DataGridViewTextBoxColumn30.ReadOnly = True
+        Me.DataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn30.Width = 220
+        '
+        'DataGridViewTextBoxColumn31
+        '
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn31.DefaultCellStyle = DataGridViewCellStyle26
+        Me.DataGridViewTextBoxColumn31.HeaderText = "ໜ່ວຍກິດ"
+        Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
+        Me.DataGridViewTextBoxColumn31.ReadOnly = True
+        Me.DataGridViewTextBoxColumn31.Width = 70
+        '
+        'DataGridViewTextBoxColumn32
+        '
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.DataGridViewTextBoxColumn32.DefaultCellStyle = DataGridViewCellStyle27
+        Me.DataGridViewTextBoxColumn32.HeaderText = "ຄະແນນເກົ່າ"
+        Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
+        Me.DataGridViewTextBoxColumn32.ReadOnly = True
+        Me.DataGridViewTextBoxColumn32.Width = 130
+        '
+        'DataGridViewTextBoxColumn33
+        '
+        Me.DataGridViewTextBoxColumn33.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn33.HeaderText = "ຄະແນນອັບເກຣດ"
+        Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
+        Me.DataGridViewTextBoxColumn33.ReadOnly = True
+        Me.DataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
         '
         'GroupBox_Droping
         '
@@ -1615,290 +1901,106 @@ Partial Class FrmStudent_Detail
         Me.Label12.TabIndex = 39
         Me.Label12.Text = "ສະຖານະ"
         '
-        'gridview_drop
-        '
-        Me.gridview_drop.AllowUserToAddRows = False
-        Me.gridview_drop.AllowUserToDeleteRows = False
-        Me.gridview_drop.AllowUserToResizeColumns = False
-        Me.gridview_drop.AllowUserToResizeRows = False
-        Me.gridview_drop.BackgroundColor = System.Drawing.Color.White
-        Me.gridview_drop.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.gridview_drop.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.gridview_drop.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle41.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle41.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.gridview_drop.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle41
-        Me.gridview_drop.ColumnHeadersHeight = 30
-        Me.gridview_drop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.gridview_drop.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn28, Me.SOKHIEN})
-        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle44.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle44.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle44.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.Aquamarine
-        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.gridview_drop.DefaultCellStyle = DataGridViewCellStyle44
-        Me.gridview_drop.EnableHeadersVisualStyles = False
-        Me.gridview_drop.Location = New System.Drawing.Point(6, 3)
-        Me.gridview_drop.MultiSelect = False
-        Me.gridview_drop.Name = "gridview_drop"
-        Me.gridview_drop.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.gridview_drop.RowHeadersVisible = False
-        Me.gridview_drop.RowTemplate.Height = 29
-        Me.gridview_drop.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.gridview_drop.Size = New System.Drawing.Size(644, 273)
-        Me.gridview_drop.TabIndex = 7
-        '
-        'DataGridViewTextBoxColumn22
-        '
-        Me.DataGridViewTextBoxColumn22.HeaderText = "#"
-        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
-        Me.DataGridViewTextBoxColumn22.ReadOnly = True
-        Me.DataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn22.Width = 35
-        '
-        'DataGridViewTextBoxColumn23
-        '
-        Me.DataGridViewTextBoxColumn23.HeaderText = "ເທີມ-ຮຽນ"
-        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
-        Me.DataGridViewTextBoxColumn23.ReadOnly = True
-        Me.DataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn23.Width = 140
-        '
-        'DataGridViewTextBoxColumn24
-        '
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle42.Format = "N0"
-        Me.DataGridViewTextBoxColumn24.DefaultCellStyle = DataGridViewCellStyle42
-        Me.DataGridViewTextBoxColumn24.HeaderText = "ວັນທີແຈ້ງ"
-        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
-        Me.DataGridViewTextBoxColumn24.ReadOnly = True
-        Me.DataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn24.Width = 90
-        '
-        'DataGridViewTextBoxColumn27
-        '
-        Me.DataGridViewTextBoxColumn27.HeaderText = "ສະຖານະ"
-        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
-        Me.DataGridViewTextBoxColumn27.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn25
-        '
-        Me.DataGridViewTextBoxColumn25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle43.Format = "N0"
-        DataGridViewCellStyle43.NullValue = "Numeric"
-        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle43
-        Me.DataGridViewTextBoxColumn25.HeaderText = "ລາຍລະອຽດ"
-        Me.DataGridViewTextBoxColumn25.MaxInputLength = 12
-        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
-        Me.DataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        '
-        'DataGridViewTextBoxColumn28
-        '
-        Me.DataGridViewTextBoxColumn28.HeaderText = "ST_ID"
-        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
-        Me.DataGridViewTextBoxColumn28.ReadOnly = True
-        Me.DataGridViewTextBoxColumn28.Visible = False
-        '
-        'SOKHIEN
-        '
-        Me.SOKHIEN.HeaderText = "SOKHIEN"
-        Me.SOKHIEN.Name = "SOKHIEN"
-        Me.SOKHIEN.ReadOnly = True
-        Me.SOKHIEN.Visible = False
-        '
-        'gridview_score
-        '
-        Me.gridview_score.AllowUserToAddRows = False
-        Me.gridview_score.AllowUserToDeleteRows = False
-        Me.gridview_score.AllowUserToResizeColumns = False
-        Me.gridview_score.AllowUserToResizeRows = False
-        Me.gridview_score.BackgroundColor = System.Drawing.Color.White
-        Me.gridview_score.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.gridview_score.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.gridview_score.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle45.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle45.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle45.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.gridview_score.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle45
-        Me.gridview_score.ColumnHeadersHeight = 30
-        Me.gridview_score.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.gridview_score.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn39, Me.DataGridViewTextBoxColumn38, Me.subject_credit, Me.DataGridViewTextBoxColumn40, Me.DataGridViewTextBoxColumn37})
-        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle50.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle50.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle50.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.Aquamarine
-        DataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.gridview_score.DefaultCellStyle = DataGridViewCellStyle50
-        Me.gridview_score.EnableHeadersVisualStyles = False
-        Me.gridview_score.Location = New System.Drawing.Point(6, 3)
-        Me.gridview_score.MultiSelect = False
-        Me.gridview_score.Name = "gridview_score"
-        Me.gridview_score.ReadOnly = True
-        Me.gridview_score.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.gridview_score.RowHeadersVisible = False
-        Me.gridview_score.RowTemplate.Height = 29
-        Me.gridview_score.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.gridview_score.Size = New System.Drawing.Size(644, 624)
-        Me.gridview_score.TabIndex = 9
-        '
-        'DataGridViewTextBoxColumn39
-        '
-        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle46.NullValue = "Numeric"
-        Me.DataGridViewTextBoxColumn39.DefaultCellStyle = DataGridViewCellStyle46
-        Me.DataGridViewTextBoxColumn39.HeaderText = "ລຳດັບ"
-        Me.DataGridViewTextBoxColumn39.MaxInputLength = 12
-        Me.DataGridViewTextBoxColumn39.Name = "DataGridViewTextBoxColumn39"
-        Me.DataGridViewTextBoxColumn39.ReadOnly = True
-        Me.DataGridViewTextBoxColumn39.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn39.Width = 80
-        '
-        'DataGridViewTextBoxColumn38
-        '
-        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle47.Format = "N0"
-        Me.DataGridViewTextBoxColumn38.DefaultCellStyle = DataGridViewCellStyle47
-        Me.DataGridViewTextBoxColumn38.HeaderText = "ວິຊາຮຽນ"
-        Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
-        Me.DataGridViewTextBoxColumn38.ReadOnly = True
-        Me.DataGridViewTextBoxColumn38.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn38.Width = 220
-        '
-        'subject_credit
-        '
-        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.subject_credit.DefaultCellStyle = DataGridViewCellStyle48
-        Me.subject_credit.HeaderText = "ໜ່ວຍກິດ"
-        Me.subject_credit.Name = "subject_credit"
-        Me.subject_credit.ReadOnly = True
-        Me.subject_credit.Width = 70
-        '
-        'DataGridViewTextBoxColumn40
-        '
-        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.DataGridViewTextBoxColumn40.DefaultCellStyle = DataGridViewCellStyle49
-        Me.DataGridViewTextBoxColumn40.HeaderText = "ເກຣດ-ຄະແນນ"
-        Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
-        Me.DataGridViewTextBoxColumn40.ReadOnly = True
-        Me.DataGridViewTextBoxColumn40.Width = 130
-        '
-        'DataGridViewTextBoxColumn37
-        '
-        Me.DataGridViewTextBoxColumn37.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn37.HeaderText = "ເທີມ-ຮຽນ"
-        Me.DataGridViewTextBoxColumn37.Name = "DataGridViewTextBoxColumn37"
-        Me.DataGridViewTextBoxColumn37.ReadOnly = True
-        Me.DataGridViewTextBoxColumn37.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        '
-        'gridview_upgarde
-        '
-        Me.gridview_upgarde.AllowUserToAddRows = False
-        Me.gridview_upgarde.AllowUserToDeleteRows = False
-        Me.gridview_upgarde.AllowUserToResizeColumns = False
-        Me.gridview_upgarde.AllowUserToResizeRows = False
-        Me.gridview_upgarde.BackgroundColor = System.Drawing.Color.White
-        Me.gridview_upgarde.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.gridview_upgarde.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.gridview_upgarde.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle51.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle51.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle51.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
-        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.gridview_upgarde.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle51
-        Me.gridview_upgarde.ColumnHeadersHeight = 30
-        Me.gridview_upgarde.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.gridview_upgarde.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33})
-        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle56.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle56.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle56.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle56.SelectionBackColor = System.Drawing.Color.Aquamarine
-        DataGridViewCellStyle56.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.gridview_upgarde.DefaultCellStyle = DataGridViewCellStyle56
-        Me.gridview_upgarde.EnableHeadersVisualStyles = False
-        Me.gridview_upgarde.Location = New System.Drawing.Point(6, 3)
-        Me.gridview_upgarde.MultiSelect = False
-        Me.gridview_upgarde.Name = "gridview_upgarde"
-        Me.gridview_upgarde.ReadOnly = True
-        Me.gridview_upgarde.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.gridview_upgarde.RowHeadersVisible = False
-        Me.gridview_upgarde.RowTemplate.Height = 29
-        Me.gridview_upgarde.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.gridview_upgarde.Size = New System.Drawing.Size(644, 624)
-        Me.gridview_upgarde.TabIndex = 12
-        '
-        'DataGridViewTextBoxColumn29
-        '
-        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle52.NullValue = "Numeric"
-        Me.DataGridViewTextBoxColumn29.DefaultCellStyle = DataGridViewCellStyle52
-        Me.DataGridViewTextBoxColumn29.HeaderText = "ລຳດັບ"
-        Me.DataGridViewTextBoxColumn29.MaxInputLength = 12
-        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
-        Me.DataGridViewTextBoxColumn29.ReadOnly = True
-        Me.DataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn29.Width = 80
-        '
-        'DataGridViewTextBoxColumn30
-        '
-        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle53.Format = "N0"
-        Me.DataGridViewTextBoxColumn30.DefaultCellStyle = DataGridViewCellStyle53
-        Me.DataGridViewTextBoxColumn30.HeaderText = "ວິຊາຮຽນ"
-        Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
-        Me.DataGridViewTextBoxColumn30.ReadOnly = True
-        Me.DataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn30.Width = 220
-        '
-        'DataGridViewTextBoxColumn31
-        '
-        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn31.DefaultCellStyle = DataGridViewCellStyle54
-        Me.DataGridViewTextBoxColumn31.HeaderText = "ໜ່ວຍກິດ"
-        Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
-        Me.DataGridViewTextBoxColumn31.ReadOnly = True
-        Me.DataGridViewTextBoxColumn31.Width = 70
-        '
-        'DataGridViewTextBoxColumn32
-        '
-        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.DataGridViewTextBoxColumn32.DefaultCellStyle = DataGridViewCellStyle55
-        Me.DataGridViewTextBoxColumn32.HeaderText = "ຄະແນນເກົ່າ"
-        Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
-        Me.DataGridViewTextBoxColumn32.ReadOnly = True
-        Me.DataGridViewTextBoxColumn32.Width = 130
-        '
-        'DataGridViewTextBoxColumn33
-        '
-        Me.DataGridViewTextBoxColumn33.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn33.HeaderText = "ຄະແນນອັບເກຣດ"
-        Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
-        Me.DataGridViewTextBoxColumn33.ReadOnly = True
-        Me.DataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        '
         'BarLargeButtonItem1
         '
         Me.BarLargeButtonItem1.AllowRightClickInMenu = False
         Me.BarLargeButtonItem1.Id = 1
         Me.BarLargeButtonItem1.Name = "BarLargeButtonItem1"
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'txt_birth_address_en
+        '
+        Me.txt_birth_address_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_birth_address_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_birth_address_en.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_birth_address_en.Location = New System.Drawing.Point(139, 238)
+        Me.txt_birth_address_en.Name = "txt_birth_address_en"
+        Me.txt_birth_address_en.ReadOnly = True
+        Me.txt_birth_address_en.Size = New System.Drawing.Size(486, 26)
+        Me.txt_birth_address_en.TabIndex = 8
+        Me.txt_birth_address_en.WaterMark = "Village, District, Province"
+        Me.txt_birth_address_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_birth_address_en.WaterMarkFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_birth_address_en.WaterMarkForeColor = System.Drawing.Color.Gray
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.Black
+        Me.Label13.Location = New System.Drawing.Point(21, 240)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(86, 19)
+        Me.Label13.TabIndex = 62
+        Me.Label13.Text = "Birth Place"
+        '
+        'txt_national_en
+        '
+        Me.txt_national_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_national_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_national_en.Location = New System.Drawing.Point(389, 333)
+        Me.txt_national_en.Name = "txt_national_en"
+        Me.txt_national_en.ReadOnly = True
+        Me.txt_national_en.Size = New System.Drawing.Size(236, 34)
+        Me.txt_national_en.TabIndex = 12
+        Me.txt_national_en.WaterMark = "ສັນຊາດພາສາອັງກິດ"
+        Me.txt_national_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_national_en.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_national_en.WaterMarkForeColor = System.Drawing.Color.Gray
+        '
+        'txt_address_en
+        '
+        Me.txt_address_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_address_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_address_en.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_address_en.Location = New System.Drawing.Point(139, 304)
+        Me.txt_address_en.Name = "txt_address_en"
+        Me.txt_address_en.ReadOnly = True
+        Me.txt_address_en.Size = New System.Drawing.Size(486, 26)
+        Me.txt_address_en.TabIndex = 10
+        Me.txt_address_en.WaterMark = "Village, District, Province"
+        Me.txt_address_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_address_en.WaterMarkFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_address_en.WaterMarkForeColor = System.Drawing.Color.Gray
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.Black
+        Me.Label16.Location = New System.Drawing.Point(21, 306)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(64, 19)
+        Me.Label16.TabIndex = 64
+        Me.Label16.Text = "Address"
+        '
+        'txt_will_complete
+        '
+        Me.txt_will_complete.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_will_complete.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_will_complete.Location = New System.Drawing.Point(465, 490)
+        Me.txt_will_complete.Name = "txt_will_complete"
+        Me.txt_will_complete.ReadOnly = True
+        Me.txt_will_complete.Size = New System.Drawing.Size(160, 34)
+        Me.txt_will_complete.TabIndex = 20
+        Me.txt_will_complete.WaterMark = "dd/MM/yyyy"
+        Me.txt_will_complete.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_will_complete.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_will_complete.WaterMarkForeColor = System.Drawing.Color.Gray
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.Black
+        Me.Label19.Location = New System.Drawing.Point(403, 493)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(59, 28)
+        Me.Label19.TabIndex = 66
+        Me.Label19.Text = "ຄາດຈົບ"
         '
         'FrmStudent_Detail
         '
@@ -1917,31 +2019,27 @@ Partial Class FrmStudent_Detail
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "STUDENT-REGISTER..."
-        Me.Panel_gender.ResumeLayout(False)
-        Me.Panel_gender.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel_Reg.ResumeLayout(False)
         Me.Panel_Reg.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.school_year2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.school_year1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         CType(Me.gridview_term, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridview_drop, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridview_score, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gridview_upgarde, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox_Droping.ResumeLayout(False)
         Me.GroupBox_Droping.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.gridview_drop, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.gridview_score, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.gridview_upgarde, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Panel_gender As System.Windows.Forms.Panel
-    Friend WithEvents rdo_male As System.Windows.Forms.RadioButton
-    Friend WithEvents rdo_female As System.Windows.Forms.RadioButton
     Friend WithEvents DataGridViewCheckBoxColumn1 As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -1952,9 +2050,9 @@ Partial Class FrmStudent_Detail
     Private WithEvents txt_parent_tel As ChreneLib.Controls.TextBoxes.CTextBox
     Private WithEvents txt_parent_name As ChreneLib.Controls.TextBoxes.CTextBox
     Private WithEvents txt_secondary_from As ChreneLib.Controls.TextBoxes.CTextBox
-    Private WithEvents txt_national As ChreneLib.Controls.TextBoxes.CTextBox
-    Private WithEvents txt_address As ChreneLib.Controls.TextBoxes.CTextBox
-    Private WithEvents txt_birth_address As ChreneLib.Controls.TextBoxes.CTextBox
+    Private WithEvents txt_national_la As ChreneLib.Controls.TextBoxes.CTextBox
+    Private WithEvents txt_address_la As ChreneLib.Controls.TextBoxes.CTextBox
+    Private WithEvents txt_birth_address_la As ChreneLib.Controls.TextBoxes.CTextBox
     Private WithEvents Label21 As System.Windows.Forms.Label
     Private WithEvents Label20 As System.Windows.Forms.Label
     Private WithEvents Label18 As System.Windows.Forms.Label
@@ -2072,4 +2170,14 @@ Partial Class FrmStudent_Detail
     Friend WithEvents DataGridViewTextBoxColumn25 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn28 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents SOKHIEN As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cb_sex As System.Windows.Forms.ComboBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
+    Private WithEvents txt_address_en As ChreneLib.Controls.TextBoxes.CTextBox
+    Private WithEvents Label16 As System.Windows.Forms.Label
+    Private WithEvents txt_birth_address_en As ChreneLib.Controls.TextBoxes.CTextBox
+    Private WithEvents Label13 As System.Windows.Forms.Label
+    Private WithEvents txt_national_en As ChreneLib.Controls.TextBoxes.CTextBox
+    Private WithEvents Label19 As System.Windows.Forms.Label
+    Private WithEvents txt_will_complete As ChreneLib.Controls.TextBoxes.CTextBox
 End Class

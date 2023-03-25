@@ -45,7 +45,7 @@
     End Sub
 
     Private Sub TileItem7_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles TileItem7.ItemClick
-        de_or_se = 1
+        'de_or_se = 1
         FrmReg_Open_Closed_view.ShowDialog()
     End Sub
 

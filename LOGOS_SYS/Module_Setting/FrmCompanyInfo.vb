@@ -12,10 +12,16 @@ Public Class FrmCompanyInfo
 
     Private Sub LoadCompanyInf()
         Sql = " SELECT college_id ,college_name_en ,college_name_la ,college_address ,college_logo ,"
-        Sql &= " print_copy_bill_register ,print_copy_bill_enroll ,print_copy_bill_sell ,last_update ,user_update"
+        Sql &= " print_copy_bill_register ,print_copy_bill_enroll ,print_copy_bill_sell ,last_update ,user_update,"
+        Sql &= " minister_of_la, minister_of_en, only_email, only_tel "
         Sql &= " FROM tbl_college_inf "
         dt = ExecuteDatable(Sql)
-        txt_en.Text = dt.Rows(0).Item("college_name_en")
+        txt_ministry_la.Text = dt.Rows(0).Item("minister_of_la")
+        txt_ministry_en.Text = dt.Rows(0).Item("minister_of_en")
+        txt_telephone.Text = dt.Rows(0).Item("only_tel")
+        txt_email.Text = dt.Rows(0).Item("only_email")
+
+        txt_enname.Text = dt.Rows(0).Item("college_name_en")
         txt_laoname.Text = dt.Rows(0).Item("college_name_la")
         txt_address.Text = dt.Rows(0).Item("college_address")
 
@@ -69,8 +75,11 @@ Public Class FrmCompanyInfo
         sFilePath = ""
         btsave.Enabled = False
         btn_edit.Enabled = True
-        txt_en.ReadOnly = True
-        txt_en.ReadOnly = True
+        txt_ministry_en.ReadOnly = True
+        txt_ministry_la.ReadOnly = True
+        txt_telephone.ReadOnly = True
+        txt_email.ReadOnly = True
+        txt_enname.ReadOnly = True
         txt_laoname.ReadOnly = True
         txt_address.ReadOnly = True
         LinkLabel_Browse.Enabled = False
@@ -87,8 +96,11 @@ Public Class FrmCompanyInfo
         sFilePath = ""
         btsave.Enabled = True
         btn_edit.Enabled = False
-        txt_en.ReadOnly = False
-        txt_en.ReadOnly = False
+        txt_ministry_en.ReadOnly = False
+        txt_ministry_la.ReadOnly = False
+        txt_telephone.ReadOnly = False
+        txt_email.ReadOnly = False
+        txt_enname.ReadOnly = False
         txt_laoname.ReadOnly = False
         txt_address.ReadOnly = False
         LinkLabel_Browse.Enabled = True
@@ -119,14 +131,34 @@ Public Class FrmCompanyInfo
             txt_laoname.Focus()
             Exit Sub
         End If
-        If txt_en.Text.Trim = "" Then
+        If txt_enname.Text.Trim = "" Then
             MessageBox.Show("ກະລຸນາປ້ອນຊື່ສະຖາບັນເປັນພາສາອັງກິດ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-            txt_en.Focus()
+            txt_enname.Focus()
             Exit Sub
         End If
         If txt_address.Text.Trim = "" Then
             MessageBox.Show("ກະລຸນາປ້ອນທີ່ຢູ່ສະຖາບັນ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             txt_address.Focus()
+            Exit Sub
+        End If
+        If txt_ministry_la.Text.Trim = "" Then
+            MessageBox.Show("ກະລຸນາປ້ອນຊື່ກະຊວງສຶກສາ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            txt_ministry_la.Focus()
+            Exit Sub
+        End If
+        If txt_ministry_en.Text.Trim = "" Then
+            MessageBox.Show("ກະລຸນາປ້ອນ Ministry of Education", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            txt_ministry_en.Focus()
+            Exit Sub
+        End If
+        If txt_telephone.Text.Trim = "" Then
+            MessageBox.Show("ກະລຸນາປ້ອນ Telephone", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            txt_telephone.Focus()
+            Exit Sub
+        End If
+        If txt_email.Text.Trim = "" Then
+            MessageBox.Show("ກະລຸນາປ້ອນ Email ", "ຄຳເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            txt_email.Focus()
             Exit Sub
         End If
 
@@ -152,30 +184,40 @@ Public Class FrmCompanyInfo
             Dim binReader As New BinaryReader(fs)
             Dim img As Byte() = binReader.ReadBytes(fs.Length)
             Sql = "UPDATE tbl_college_inf SET college_logo=@pic, college_address= @ad, college_name_en=@en, college_name_la=@la, "
-            Sql &= " print_copy_bill_enroll=@cp1, print_copy_bill_register=@cp2, print_copy_bill_sell=@cp2, user_update=@u, last_update=getdate() "
+            Sql &= " print_copy_bill_enroll=@cp1, print_copy_bill_register=@cp2, print_copy_bill_sell=@cp2, user_update=@u, last_update=getdate(), "
+            Sql &= " minister_of_la=@minister_of_la, minister_of_en=@minister_of_en, only_email=@only_email, only_tel=@only_tel "
             Sql &= " WHERE(college_id=1)"
             cm = New SqlCommand(Sql, conn)
             cm.Parameters.AddWithValue("pic", img)
             cm.Parameters.AddWithValue("ad", txt_address.Text.Trim)
-            cm.Parameters.AddWithValue("en", txt_en.Text.Trim)
+            cm.Parameters.AddWithValue("en", txt_enname.Text.Trim)
             cm.Parameters.AddWithValue("la", txt_laoname.Text.Trim)
             cm.Parameters.AddWithValue("cp1", CDbl(copies_enroll.Text))
             cm.Parameters.AddWithValue("cp2", CDbl(copies_register.Text))
             cm.Parameters.AddWithValue("cp3", CDbl(copies_sell.Text))
+            cm.Parameters.AddWithValue("minister_of_la", txt_ministry_la.Text.Trim)
+            cm.Parameters.AddWithValue("minister_of_en", txt_ministry_en.Text.Trim)
+            cm.Parameters.AddWithValue("only_email", txt_email.Text.Trim)
+            cm.Parameters.AddWithValue("only_tel", txt_telephone.Text.Trim)
             cm.Parameters.AddWithValue("u", User_name)
             cm.ExecuteNonQuery()
             fs.Close()
         Else
             Sql = "UPDATE tbl_college_inf SET college_address= @ad, college_name_en=@en, college_name_la=@la, "
-            Sql &= " print_copy_bill_enroll=@cp1, print_copy_bill_register=@cp2, print_copy_bill_sell=@cp2, user_update=@u, last_update=getdate() "
+            Sql &= " print_copy_bill_enroll=@cp1, print_copy_bill_register=@cp2, print_copy_bill_sell=@cp2, user_update=@u, last_update=getdate(), "
+            Sql &= " minister_of_la=@minister_of_la, minister_of_en=@minister_of_en, only_email=@only_email, only_tel=@only_tel "
             Sql &= " WHERE(college_id=1)"
             cm = New SqlCommand(Sql, conn)
             cm.Parameters.AddWithValue("ad", txt_address.Text.Trim)
-            cm.Parameters.AddWithValue("en", txt_en.Text.Trim)
+            cm.Parameters.AddWithValue("en", txt_enname.Text.Trim)
             cm.Parameters.AddWithValue("la", txt_laoname.Text.Trim)
             cm.Parameters.AddWithValue("cp1", CDbl(copies_enroll.Text))
             cm.Parameters.AddWithValue("cp2", CDbl(copies_register.Text))
             cm.Parameters.AddWithValue("cp3", CDbl(copies_sell.Text))
+            cm.Parameters.AddWithValue("minister_of_la", txt_ministry_la.Text.Trim)
+            cm.Parameters.AddWithValue("minister_of_en", txt_ministry_en.Text.Trim)
+            cm.Parameters.AddWithValue("only_email", txt_email.Text.Trim)
+            cm.Parameters.AddWithValue("only_tel", txt_telephone.Text.Trim)
             cm.Parameters.AddWithValue("u", User_name)
             cm.ExecuteNonQuery()
         End If

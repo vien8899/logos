@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub btn_train_openReg_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles btn_train_openReg.ItemClick
-        de_or_se = 2
+        'de_or_se = 2
         FrmReg_Open_Closed_view.ShowDialog()
     End Sub
 

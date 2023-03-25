@@ -1,6 +1,7 @@
 ﻿Public Class FrmReg_Open_Closed_view
 
     Dim load_finishied As Integer = 1
+    Dim cur_date As String = ""
     Private Sub FrmUserGroup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Permission-Check
         Panel_Control.Enabled = True
@@ -10,44 +11,47 @@
 
         'Load Data
         load_finishied = 1
-        Call getYearList()
+        chk_enroll.Checked = True
+        chk_enroll_train.Checked = True
+        chk_register.Checked = True
+        chk_register_train.Checked = True
+        chk_show_disable.Checked = False
+        cur_date = Format(CDate(getCurrentDate()), "yyyy-MM-dd")
+
         Call LoadData()
         load_finishied = 0
     End Sub
 
-    Dim cur_date As String = ""
-    Private Sub getYearList()
-        cb_year.Items.Clear()
-        cur_date = Format(CDate(getCurrentDate()), "yyyy-MM-dd")
-        Dim cur_year As Integer = CInt(Format(CDate(getCurrentDate()), "yyyy")) - 3
-        Dim i As Integer = 3
-        While i > 0
-            cb_year.Items.Add(cur_year + i & "-" & cur_year + i + 1)
-            i -= 1
-        End While
-        cb_year.SelectedIndex = 0
-    End Sub
-
     Public Sub LoadData()
-        Dim ct_year As String = " AND (year_study='" & cb_year.SelectedItem & "')"
         Dim ct_cloased As String = " AND (close_date >= CAST(GETDATE() AS DATE)) "
-
         If (chk_show_disable.Checked = True) Then
             ct_cloased = ""
         End If
 
-        Sql = " SELECT open_close_id ,year_study ,open_date ,close_date ,seasion_part, open_close_type ,open_close_des ,last_update ,user_update"
+        Dim ct_enroll As String = ""
+        Dim ct_enroll_train As String = ""
+        Dim ct_register As String = ""
+        Dim ct_register_train As String = ""
+
+        If (chk_enroll.Checked = False) Then
+            ct_enroll = " AND (register_type <> 1)"
+        End If
+        If (chk_enroll_train.Checked = False) Then
+            ct_enroll_train = " AND (register_type <> 3)"
+        End If
+        If (chk_register.Checked = False) Then
+            ct_register = " AND (register_type <> 2)"
+        End If
+        If (chk_register_train.Checked = False) Then
+            ct_register_train = " AND (register_type <> 4)"
+        End If
+
+        Sql = " SELECT open_close_id ,open_date ,close_date ,register_type ,open_close_des ,last_update ,user_update"
         Sql &= " FROM tbl_setting_open_close_reg "
-        Sql &= " WHERE(open_close_type = " & de_or_se & ") " & ct_year & ct_cloased
-        Sql &= " ORDER BY close_date"
+        Sql &= " WHERE(open_close_id > 0) " & ct_cloased & ct_enroll & ct_enroll_train & ct_register & ct_register_train
+        Sql &= " ORDER BY register_type, close_date"
         dt = ExecuteDatable(Sql)
         With Datagridview1
-            If (de_or_se = 1) Then
-                .Columns(3).Visible = True
-            Else
-                .Columns(3).Visible = False
-            End If
-
             .Rows.Clear()
             For i As Integer = 0 To dt.Rows.Count - 1
 
@@ -57,19 +61,25 @@
                     st = "ໝົດກຳນົດແລ້ວ. "
                 End If
 
-                'Status: 1 = ຫາກະລົງທະບຽນເສັງ/2 = ລົງທະບຽນຮຽນແລ້ວ
-                Dim type As String = "ພາກຮຽນ I"
-                If (dt.Rows(i).Item("seasion_part") = 2) Then
-                    type = "ພາກຮຽນ II"
+                'Status: 1 = ລົງທະບຽນເສັງທຽບຮຽນ/ 2 = ລົງທະບຽນຮຽນ/ 3 = ລົງທະບຽນເສັງທຽບຮຽນບຳລຸງ/ 4 = ລົງທະບຽນຮຽນບຳລຸງ
+                Dim type As String = ""
+                If (dt.Rows(i).Item("register_type") = 1) Then
+                    type = "ລົງທະບຽນເສັງທຽບຮຽນ"
+                ElseIf (dt.Rows(i).Item("register_type") = 2) Then
+                    type = "ລົງທະບຽນຮຽນ"
+                ElseIf (dt.Rows(i).Item("register_type") = 3) Then
+                    type = "ລົງທະບຽນເສັງທຽບຮຽນບຳລຸງ"
+                Else
+                    type = "ລົງທະບຽນຮຽນບຳລຸງ"
                 End If
 
-                .Rows.Add(dt.Rows(i).Item("open_close_id"), (i + 1), dt.Rows(i).Item("year_study"), type, _
-                         dt.Rows(i).Item("open_date"), dt.Rows(i).Item("close_date"), st, _
+                .Rows.Add(dt.Rows(i).Item("open_close_id"), (i + 1), type, _
+                         Format(CDate(dt.Rows(i).Item("open_date")), "dd/MM/yyyy"), Format(CDate(dt.Rows(i).Item("close_date")), "dd/MM/yyyy"), st, _
                          dt.Rows(i).Item("open_close_des"), dt.Rows(i).Item("user_update"), dt.Rows(i).Item("last_update"))
             Next
 
             btn_add.Enabled = True
-            If (.RowCount > 0) And (cb_year.SelectedIndex = 0) Then
+            If (.RowCount > 0) Then
                 btn_edit.Enabled = True
             Else
                 btn_edit.Enabled = False
@@ -91,13 +101,7 @@
         FrmReg_Open_Closed_edit.ShowDialog()
     End Sub
 
-    Private Sub cb_year_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_year.SelectedIndexChanged
-        If (load_finishied = 0) Then
-            Call LoadData()
-        End If
-    End Sub
-
-    Private Sub chk_show_disable_CheckedChanged(sender As Object, e As EventArgs) Handles chk_show_disable.CheckedChanged
+    Private Sub chk_show_disable_CheckedChanged(sender As Object, e As EventArgs) Handles chk_show_disable.CheckedChanged, chk_enroll.CheckedChanged, chk_enroll_train.CheckedChanged, chk_register.CheckedChanged, chk_register_train.CheckedChanged
         If (load_finishied = 0) Then
             Call LoadData()
         End If

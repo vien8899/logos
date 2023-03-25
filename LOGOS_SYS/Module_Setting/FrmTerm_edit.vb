@@ -123,7 +123,7 @@ Public Class FrmTerm_edit
 
     Private Sub btn_search_enroll_Click(sender As Object, e As EventArgs) Handles btn_search.Click
         filter_term_course = " WHERE(term_list_id NOT IN(SELECT term_list_id FROM tbl_setting_term WHERE(course_id=" & cb_course.SelectedValue & ")))"
-        Dim PS As Point = btn_search.PointToScreen(New Point(btn_search.Width, btn_search.Height))
+        Dim PS As Point = btn_search.PointToScreen(New Point(btn_search.Width - 5, btn_search.Height - 100))
         FrmTerm_select.Location = PS
         If FrmTerm_select.ShowDialog() = Windows.Forms.DialogResult.OK Then
             txt_term_id.Tag = FrmTerm_select.t_id

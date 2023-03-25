@@ -327,37 +327,39 @@ Partial Class FrmMain
         '
         'btnRegister
         '
-        Me.btnRegister.CurrentFrameIndex = 2
         TileItemElement11.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         TileItemElement11.Appearance.Normal.Options.UseFont = True
-        TileItemElement11.Image = Global.LOGOS_SYS.My.Resources.Resources.GraduationCap
+        TileItemElement11.Image = Global.LOGOS_SYS.My.Resources.Resources.register
         TileItemElement11.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter
-        TileItemElement11.ImageLocation = New System.Drawing.Point(0, 40)
+        TileItemElement11.ImageLocation = New System.Drawing.Point(15, 0)
         TileItemElement11.Text = ""
         TileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
         TileItemElement11.TextLocation = New System.Drawing.Point(30, 90)
         TileItemElement12.Appearance.Normal.Font = New System.Drawing.Font("Noto Sans Lao", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement12.Appearance.Normal.ForeColor = System.Drawing.Color.Green
+        TileItemElement12.Appearance.Normal.ForeColor = System.Drawing.Color.Gray
         TileItemElement12.Appearance.Normal.Options.UseFont = True
         TileItemElement12.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement12.Image = Global.LOGOS_SYS.My.Resources.Resources.sent
         TileItemElement12.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
         TileItemElement12.ImageLocation = New System.Drawing.Point(-5, 150)
         TileItemElement12.Text = "ລົງທະບຽນນັກສຶກສາໃໝ່"
         TileItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
         TileItemElement12.TextLocation = New System.Drawing.Point(32, 147)
         TileItemElement13.Appearance.Normal.Font = New System.Drawing.Font("Noto Sans Lao", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement13.Appearance.Normal.ForeColor = System.Drawing.Color.Green
+        TileItemElement13.Appearance.Normal.ForeColor = System.Drawing.Color.Gray
         TileItemElement13.Appearance.Normal.Options.UseFont = True
         TileItemElement13.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement13.Image = Global.LOGOS_SYS.My.Resources.Resources.sent
         TileItemElement13.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
         TileItemElement13.ImageLocation = New System.Drawing.Point(-5, 230)
         TileItemElement13.Text = "ຈ່າຍຄ່າຮຽນ"
         TileItemElement13.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
         TileItemElement13.TextLocation = New System.Drawing.Point(32, 226)
         TileItemElement14.Appearance.Normal.Font = New System.Drawing.Font("Noto Sans Lao", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement14.Appearance.Normal.ForeColor = System.Drawing.Color.Green
+        TileItemElement14.Appearance.Normal.ForeColor = System.Drawing.Color.Gray
         TileItemElement14.Appearance.Normal.Options.UseFont = True
         TileItemElement14.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement14.Image = Global.LOGOS_SYS.My.Resources.Resources.sent
         TileItemElement14.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
         TileItemElement14.ImageLocation = New System.Drawing.Point(-5, 190)
         TileItemElement14.Text = "ລົງທະບຽນອັບເກຣດ"

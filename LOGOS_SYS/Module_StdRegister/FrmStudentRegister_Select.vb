@@ -45,7 +45,7 @@
         Sql &= " parent_name ,parent_contact ,course_id ,current_term_id ,class_id ,start_year ,end_year ,"
         Sql &= " create_date ,student_status ,last_update ,user_update ,course_des_la ,course_des_en ,"
         Sql &= " scheme_id ,scheme_des_la ,scheme_des_en ,max_term_id_reg ,get_current_class_id ,current_sokhien ,"
-        Sql &= " get_current_term_id ,max_term_reg ,current_class ,current_year ,max_term_list_id_reg"
+        Sql &= " get_current_term_id ,max_term_reg ,current_class ,current_year ,max_term_list_id_reg, title_la, title_en"
         Sql &= " FROM view_std_list"
         If (select_student_from = 1) Then 'Student register ຍັງບໍ່ຄົບເທີມທໍ່ນັ້ນ
             Sql &= " WHERE(max_term_list_id_reg < (SELECT MAX(term_list_id) FROM view_term_list WHERE(course_id=view_std_list.course_id) AND (term_status=1))) "
@@ -59,12 +59,10 @@
             .Rows.Clear()
             For i As Integer = 0 To dt.Rows.Count - 1
 
-                Dim sex As String = "ທ້າວ"
-                If (dt.Rows(i).Item("student_gender") = 2) Then
-                    sex = "ນາງ"
-                End If
+               'Sex
+                Dim sex As String = dt.Rows(i).Item("title_la") & ". "
 
-                .Rows.Add(dt.Rows(i).Item("student_id"), (i + 1), dt.Rows(i).Item("student_code"), sex, dt.Rows(i).Item("student_fullname_la"), dt.Rows(i).Item("student_fullname_en"), _
+                .Rows.Add(dt.Rows(i).Item("student_id"), (i + 1), dt.Rows(i).Item("student_code"), sex, sex & dt.Rows(i).Item("student_fullname_la"), dt.Rows(i).Item("student_fullname_en"), _
                           dt.Rows(i).Item("date_of_birth"), dt.Rows(i).Item("phone_number"), (dt.Rows(i).Item("scheme_des_la") & "-[" & dt.Rows(i).Item("course_des_la") & "]"), _
                           dt.Rows(i).Item("max_term_reg"), dt.Rows(i).Item("current_class"), dt.Rows(i).Item("current_sokhien"), dt.Rows(i).Item("current_year"), dt.Rows(i).Item("course_id"))
             Next

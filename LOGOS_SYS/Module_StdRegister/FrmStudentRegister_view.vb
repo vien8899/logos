@@ -93,7 +93,7 @@
         Sql &= " date_of_birth ,birth_address_la ,birth_address_en ,nationality ,address_la ,address_en ,phone_number ,wa_number ,"
         Sql &= " job_des ,hight_school_name ,hight_school_graduate_year ,parent_name ,parent_contact ,start_year ,end_year ,"
         Sql &= " student_status ,term_no ,term_des ,term_register_amt ,course_id ,course_des_la ,course_des_en ,course_test_amount ,"
-        Sql &= " scheme_id ,scheme_des_la ,scheme_des_en ,class_room, dbo.payment_amt(bill_id) AS sum_term_paid "
+        Sql &= " scheme_id ,scheme_des_la ,scheme_des_en ,class_room, dbo.payment_amt(bill_id) AS sum_term_paid, title_la, title_en "
         Sql &= " FROM view_std_register"
         Sql &= " WHERE(term_register_id > 0) " & ct_year & ct_course & ct_term & ct_search
         Sql &= " ORDER BY scheme_id, course_id, student_fullname_la "
@@ -102,10 +102,8 @@
             .Rows.Clear()
             For i As Integer = 0 To dt.Rows.Count - 1
 
-                Dim sex As String = "ທ້າວ. "
-                If (dt.Rows(i).Item("student_gender") = 2) Then
-                    sex = "ນາງ. "
-                End If
+                 'Sex
+                Dim sex As String = dt.Rows(i).Item("title_la") & ". "
 
                 .Rows.Add(dt.Rows(i).Item("term_register_id"), dt.Rows(i).Item("bill_id"), (i + 1), dt.Rows(i).Item("student_code"), sex & dt.Rows(i).Item("student_fullname_la"), _
                           dt.Rows(i).Item("phone_number"), dt.Rows(i).Item("register_year"), _
@@ -159,7 +157,7 @@
         Sql = "SELECT register_upg_id ,bill_id ,register_date ,register_amount ,register_remark ,receive_by ,receive_id ,"
         Sql &= " student_id ,student_code ,student_fullname_la ,student_fullname_en ,student_gender ,phone_number ,"
         Sql &= " course_id ,course_des_la ,course_des_en ,scheme_id ,scheme_des_la ,scheme_des_en ,"
-        Sql &= " subject_id ,subject_code ,subject_name_la ,subject_name_en ,subject_credit"
+        Sql &= " subject_id ,subject_code ,subject_name_la ,subject_name_en ,subject_credit, title_la, title_en "
         Sql &= " FROM view_register_upgrade "
         Sql &= " WHERE(register_upg_id > 0) " & ct_date & ct_course & ct_search
         Sql &= " ORDER BY register_date, student_code  "
@@ -169,10 +167,8 @@
             .Rows.Clear()
             For i As Integer = 0 To dt.Rows.Count - 1
 
-                Dim sex As String = "ທ້າວ. "
-                If (dt.Rows(i).Item("student_gender") = 2) Then
-                    sex = "ນາງ. "
-                End If
+                'Sex
+                Dim sex As String = dt.Rows(i).Item("title_la") & ". "
 
                 .Rows.Add(dt.Rows(i).Item("register_upg_id"), dt.Rows(i).Item("bill_id"), (i + 1), dt.Rows(i).Item("student_code"), sex & dt.Rows(i).Item("student_fullname_la"), _
                           dt.Rows(i).Item("phone_number"), (dt.Rows(i).Item("scheme_des_la") & "-[" & dt.Rows(i).Item("course_des_la") & "]"), _
@@ -197,17 +193,16 @@
     End Sub
 
     Private Sub btn_add_Click(sender As Object, e As EventArgs) Handles btn_reg_new.Click
-        ''Check for open enroll or not?
-        'Dim cur_date As String = Format(CDate(getCurrentDate()), "yyyy-MM-dd")
-        'Dim cur_yyyy As Integer = Format(CDate(cur_date), "yyyy")
-        'Dim sokhien As String = cur_yyyy & "-" & cur_yyyy + 1
-        'Sql = "SELECT year_study FROM tbl_setting_open_close_reg "
-        'Sql &= " WHERE(open_close_type=1) AND (enroll_or_register=2) AND (year_study='" & sokhien & "') AND ((open_date <= CAST(GETDATE() AS DATE)) AND (close_date >= CAST(GETDATE() AS DATE))) "
-        'dt = ExecuteDatable(Sql)
-        'If (dt.Rows.Count <= 0) Then
-        '    MessageBox.Show("ກະລຸນາເປີດການລົງທະບຽນເຂົ້າຮຽນກ່ອນ ດຳເນີນການລົງທະບຽນ.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-        '    Exit Sub
-        'End If
+        'Check for open enroll or not?
+        Dim cur_date As String = Format(CDate(getCurrentDate()), "yyyy-MM-dd")
+        Dim cur_yyyy As Integer = Format(CDate(cur_date), "yyyy")
+        Sql = "SELECT register_type FROM tbl_setting_open_close_reg "
+        Sql &= " WHERE(register_type=2) AND ((open_date <= CAST(GETDATE() AS DATE)) AND (close_date >= CAST(GETDATE() AS DATE))) "
+        dt = ExecuteDatable(Sql)
+        If (dt.Rows.Count <= 0) Then
+            MessageBox.Show("ກະລຸນາເປີດການລົງທະບຽນເຂົ້າຮຽນກ່ອນ ດຳເນີນການລົງທະບຽນ.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Exit Sub
+        End If
 
         FrmStudentRegister_add.ShowDialog()
     End Sub
@@ -274,6 +269,17 @@
     End Sub
 
     Private Sub btn_reg_payment_Click(sender As Object, e As EventArgs) Handles btn_reg_payment.Click
+        'Check for open enroll or not?
+        Dim cur_date As String = Format(CDate(getCurrentDate()), "yyyy-MM-dd")
+        Dim cur_yyyy As Integer = Format(CDate(cur_date), "yyyy")
+        Sql = "SELECT register_type FROM tbl_setting_open_close_reg "
+        Sql &= " WHERE(register_type=2) AND ((open_date <= CAST(GETDATE() AS DATE)) AND (close_date >= CAST(GETDATE() AS DATE))) "
+        dt = ExecuteDatable(Sql)
+        If (dt.Rows.Count <= 0) Then
+            MessageBox.Show("ກະລຸນາເປີດການລົງທະບຽນເຂົ້າຮຽນກ່ອນ ດຳເນີນການລົງທະບຽນຈ່າຍເງິນ.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Exit Sub
+        End If
+
         FrmStudentRegister_Second.ShowDialog()
     End Sub
 
@@ -434,7 +440,7 @@
         Sql = "SELECT register_upg_id ,bill_id ,register_date ,register_amount ,register_remark ,receive_by ,receive_id ,"
         Sql &= " student_id ,student_code ,student_fullname_la ,student_fullname_en ,student_gender ,phone_number ,"
         Sql &= " course_id ,course_des_la ,course_des_en ,scheme_id ,scheme_des_la ,scheme_des_en ,"
-        Sql &= " subject_id ,subject_code ,subject_name_la ,subject_name_en ,subject_credit"
+        Sql &= " subject_id ,subject_code ,subject_name_la ,subject_name_en ,subject_credit, title_la, title_en"
         Sql &= " FROM view_register_upgrade "
         Sql &= " WHERE(register_upg_id > 0) " & ct_date & ct_course & ct_search
         Sql &= " ORDER BY register_date, student_code  "
@@ -444,10 +450,8 @@
             .Rows.Clear()
             For i As Integer = 0 To dt.Rows.Count - 1
 
-                Dim sex As String = "ທ້າວ. "
-                If (dt.Rows(i).Item("student_gender") = 2) Then
-                    sex = "ນາງ. "
-                End If
+                'Sex
+                Dim sex As String = dt.Rows(i).Item("title_la") & ". "
 
                 .Rows.Add(dt.Rows(i).Item("register_upg_id"), dt.Rows(i).Item("bill_id"), (i + 1), dt.Rows(i).Item("student_code"), sex & dt.Rows(i).Item("student_fullname_la"), _
                           dt.Rows(i).Item("phone_number"), (dt.Rows(i).Item("scheme_des_la") & "-[" & dt.Rows(i).Item("course_des_la") & "]"), _

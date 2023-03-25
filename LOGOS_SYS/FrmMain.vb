@@ -79,4 +79,14 @@
         FrmStudent_view.txt_search.Select()
     End Sub
 
+    Private Sub btnSale_Book_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles btnSale_Book.ItemClick
+        FrmSale_view.ShowDialog()
+        FrmSale_view.txt_search.Select()
+    End Sub
+
+    Private Sub btnTestResult_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles btnTestResult.ItemClick
+        FrmStdDrop_view.ShowDialog()
+        FrmStdDrop_view.txt_search.Select()
+    End Sub
+
 End Class

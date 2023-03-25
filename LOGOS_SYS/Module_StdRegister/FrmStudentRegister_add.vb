@@ -8,10 +8,21 @@ Public Class FrmStudentRegister_add
         End If
     End Sub
 
+    Private Sub getSexList()
+        Sql = "SELECT title_id, title_la, title_en "
+        Sql &= " FROM tbl_student_title "
+        Sql &= " ORDER BY title_id"
+        dt = ExecuteDatable(Sql)
+        cb_sex.DataSource = dt
+        cb_sex.ValueMember = "title_id"
+        cb_sex.DisplayMember = "title_la"
+    End Sub
+
     Private Sub FrmUserGroup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_finished = 1
         had_change_val = 0
         Call clear_text()
+        Call getSexList()
         Call LockedRDO()
         load_finished = 0
     End Sub
@@ -61,11 +72,11 @@ Public Class FrmStudentRegister_add
             txt_std_code.Focus()
             Exit Sub
         End If
-        If (cb_sex.SelectedIndex = 0) Then
-            MessageBox.Show("Please select gender.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            cb_sex.Focus()
-            Exit Sub
-        End If
+        'If (cb_sex.SelectedIndex = 0) Then
+        '    MessageBox.Show("Please select gender.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    cb_sex.Focus()
+        '    Exit Sub
+        'End If
         If (txt_name.Text.Trim = "") Then
             MessageBox.Show("Please enter name (la).", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txt_name.Focus()
@@ -92,7 +103,7 @@ Public Class FrmStudentRegister_add
         If (Datagridview1.RowCount > 1) Then
             end_year = CInt(Mid(Datagridview1.Rows(Datagridview1.Rows.Count - 1).Cells(5).Value, 6, 4))
         End If
-        Dim sex As Integer = cb_sex.SelectedIndex
+        Dim sex As Integer = cb_sex.SelectedValue
 
         'check for Student-ID
         Sql = "SELECT student_code FROM tbl_student WHERE(student_code=N'" & txt_std_code.Text.Trim & "')"

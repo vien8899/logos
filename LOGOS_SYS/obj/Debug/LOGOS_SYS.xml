@@ -15,6 +15,10 @@ LOGOS_SYS
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:LOGOS_SYS.My.Resources.Resources._3x4">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:LOGOS_SYS.My.Resources.Resources._Class">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

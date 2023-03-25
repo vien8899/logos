@@ -53,9 +53,9 @@ Partial Class FrmStudentRegister_Select
         Me.cb_course = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel_Control = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Datagridview1 = New System.Windows.Forms.DataGridView()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.id_std = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.no = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.STU_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -352,6 +352,15 @@ Partial Class FrmStudentRegister_Select
         Me.Panel_Control.Size = New System.Drawing.Size(1331, 50)
         Me.Panel_Control.TabIndex = 0
         '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(0, 47)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1331, 3)
+        Me.Panel3.TabIndex = 46
+        '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.Datagridview1)
@@ -404,15 +413,6 @@ Partial Class FrmStudentRegister_Select
         Me.Datagridview1.Size = New System.Drawing.Size(1331, 580)
         Me.Datagridview1.TabIndex = 0
         '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 47)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1331, 3)
-        Me.Panel3.TabIndex = 46
-        '
         'id_std
         '
         Me.id_std.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -446,6 +446,7 @@ Partial Class FrmStudentRegister_Select
         Me.STD_SEX.HeaderText = "ເພດ"
         Me.STD_SEX.Name = "STD_SEX"
         Me.STD_SEX.ReadOnly = True
+        Me.STD_SEX.Visible = False
         Me.STD_SEX.Width = 50
         '
         'student_name

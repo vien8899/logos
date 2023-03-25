@@ -8,10 +8,21 @@ Public Class FrmStudentEnroll_edit
         End If
     End Sub
 
+    Private Sub getSexList()
+        Sql = "SELECT title_id, title_la, title_en "
+        Sql &= " FROM tbl_student_title "
+        Sql &= " ORDER BY title_id"
+        dt = ExecuteDatable(Sql)
+        cb_sex.DataSource = dt
+        cb_sex.ValueMember = "title_id"
+        cb_sex.DisplayMember = "title_la"
+    End Sub
+
     Dim load_finish As Integer = 1
     Private Sub FrmUserGroup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         had_change_val = 0
         load_finish = 1
+        Call getSexList()
         Call load_data()
         load_finish = 0
     End Sub
@@ -29,7 +40,7 @@ Public Class FrmStudentEnroll_edit
         With dt.Rows(0)
             BILL_ID = .Item("enroll_inv_id")
             std_enroll_id = CInt(.Item("std_enroll_id"))
-            cb_sex.SelectedIndex = CInt(.Item("std_enroll_gender")) - 1
+            cb_sex.SelectedValue = CInt(.Item("std_enroll_gender"))
             txt_name.Text = .Item("std_enroll_fullname_la")
             txt_phone.Text = .Item("phone_number")
             txt_phone_parent.Text = .Item("parent_contact")
@@ -95,7 +106,7 @@ Public Class FrmStudentEnroll_edit
         End If
 
         Cursor = Cursors.WaitCursor
-        Dim sex As Integer = cb_sex.SelectedIndex + 1
+        Dim sex As Integer = cb_sex.SelectedValue
 
 
         Call ConnectDB()

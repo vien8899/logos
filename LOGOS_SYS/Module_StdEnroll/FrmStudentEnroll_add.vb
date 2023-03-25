@@ -11,6 +11,7 @@ Public Class FrmStudentEnroll_add
     Private Sub FrmUserGroup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         had_change_val = 0
         Call clear_text()
+        Call getSexList()
     End Sub
 
     Private Sub getLearningShiftList(ByVal c As Integer)
@@ -21,6 +22,16 @@ Public Class FrmStudentEnroll_add
         cb_learning_time.DataSource = dt
         cb_learning_time.ValueMember = "learning_shift_id"
         cb_learning_time.DisplayMember = "learning_shift_des"
+    End Sub
+
+    Private Sub getSexList()
+        Sql = "SELECT title_id, title_la, title_en "
+        Sql &= " FROM tbl_student_title "
+        Sql &= " ORDER BY title_id"
+        dt = ExecuteDatable(Sql)
+        cb_sex.DataSource = dt
+        cb_sex.ValueMember = "title_id"
+        cb_sex.DisplayMember = "title_la"
     End Sub
 
     Private Sub clear_text()
@@ -52,11 +63,11 @@ Public Class FrmStudentEnroll_add
     End Sub
 
     Private Sub add_new_user()
-        If (cb_sex.SelectedIndex = 0) Then
-            MessageBox.Show("Please select gender.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            cb_sex.Focus()
-            Exit Sub
-        End If
+        'If (cb_sex.SelectedIndex = 0) Then
+        '    MessageBox.Show("Please select gender.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '    cb_sex.Focus()
+        '    Exit Sub
+        'End If
         If (txt_name.Text.Trim = "") Then
             MessageBox.Show("Please enter name (la).", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txt_name.Focus()
@@ -84,7 +95,7 @@ Public Class FrmStudentEnroll_add
         End If
 
         Cursor = Cursors.WaitCursor
-        Dim sex As Integer = cb_sex.SelectedIndex
+        Dim sex As Integer = cb_sex.SelectedValue
         Call ConnectDB()
         Sql = "INSERT INTO tbl_std_enroll(std_enroll_fullname_la ,std_enroll_fullname_en ,std_enroll_gender ,phone_number ,parent_contact ,std_enroll_status ,user_update) "
         Sql &= " VALUES(@std_enroll_fullname_la ,@std_enroll_fullname_en ,@std_enroll_gender ,@phone_number ,@parent_contact ,@std_enroll_status ,@user_update)"

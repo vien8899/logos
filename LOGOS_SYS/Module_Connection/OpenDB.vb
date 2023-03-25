@@ -69,9 +69,10 @@ Module Module1
     Public print_copy_bill_enroll As Integer = 1
     Public print_copy_bill_sell As Integer = 1
     Public reg_number_of_term_where As String = ""
-    Public de_or_se As Integer = 1
+    'Public de_or_se As Integer = 1
     Public reg_search_where As String = ""
     Public select_student_from As Integer = 1
+    Public select_term_where As String = ""
 
     Public StrconSQL, servername, dbname, dbuser, dbpass As String
     Public Sub ConnectDB()

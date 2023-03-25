@@ -73,7 +73,7 @@
         Sql &= " hight_school_graduate_year ,parent_name ,parent_contact ,course_id ,current_term_id ,class_id ,start_year ,end_year ,"
         Sql &= " create_date ,student_status ,last_update ,user_update ,course_des_la ,course_des_en ,scheme_id ,scheme_des_la ,scheme_des_en ,"
         Sql &= " max_term_id_reg ,get_current_class_id ,current_sokhien ,get_current_term_id ,max_sokhien ,student_remark,  "
-        Sql &= " (SELECT term_no+' (' + term_no_la + ')' AS maxt FROM dbo.view_term_list WHERE(term_id = dbo.view_std_list_prepare.max_term_id_reg)) AS max_term_reg "
+        Sql &= " (SELECT term_no+' (' + term_no_la + ')' AS maxt FROM dbo.view_term_list WHERE(term_id = dbo.view_std_list_prepare.max_term_id_reg)) AS max_term_reg, title_la, title_en "
         Sql &= " FROM view_std_list_prepare"
         Sql &= ct_year & ct_scheme & ct_course & ct_search
         Sql &= " ORDER BY scheme_id, start_year, course_id, student_fullname_la "
@@ -82,10 +82,7 @@
             .Rows.Clear()
             For i As Integer = 0 To dt.Rows.Count - 1
 
-                Dim sex As String = "ທ້າວ. "
-                If (dt.Rows(i).Item("student_gender") = 2) Then
-                    sex = "ນາງ. "
-                End If
+                Dim sex As String = dt.Rows(i).Item("title_la") & ". "
 
                 Dim rm As String = dt.Rows(i).Item("student_remark")
                 If (dt.Rows(i).Item("student_status") = 0) Then

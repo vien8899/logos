@@ -383,9 +383,9 @@ Partial Class FrmStudentRegister_edit
         '
         Me.txt_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_name.Location = New System.Drawing.Point(146, 123)
+        Me.txt_name.Location = New System.Drawing.Point(222, 123)
         Me.txt_name.Name = "txt_name"
-        Me.txt_name.Size = New System.Drawing.Size(395, 34)
+        Me.txt_name.Size = New System.Drawing.Size(319, 34)
         Me.txt_name.TabIndex = 2
         Me.txt_name.WaterMark = "ພິມຊື່ ແລະ ນາມສະກຸນພາສາລາວ..."
         Me.txt_name.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
@@ -600,9 +600,9 @@ Partial Class FrmStudentRegister_edit
         Me.cb_sex.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_sex.FormattingEnabled = True
         Me.cb_sex.Items.AddRange(New Object() {"ທ້າວ", "ນາງ"})
-        Me.cb_sex.Location = New System.Drawing.Point(76, 123)
+        Me.cb_sex.Location = New System.Drawing.Point(146, 123)
         Me.cb_sex.Name = "cb_sex"
-        Me.cb_sex.Size = New System.Drawing.Size(70, 34)
+        Me.cb_sex.Size = New System.Drawing.Size(73, 34)
         Me.cb_sex.TabIndex = 1
         '
         'Label4
@@ -699,11 +699,11 @@ Partial Class FrmStudentRegister_edit
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(37, 123)
+        Me.Label5.Location = New System.Drawing.Point(37, 125)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(40, 28)
+        Me.Label5.Size = New System.Drawing.Size(107, 28)
         Me.Label5.TabIndex = 70
-        Me.Label5.Text = "ເພດ"
+        Me.Label5.Text = "ຊື່ຂອງນັກສຶກສາ"
         '
         'Label6
         '

@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 
 Public Class FrmStudent_Detail
 
@@ -8,9 +9,20 @@ Public Class FrmStudent_Detail
         End If
     End Sub
 
+    Private Sub getSexList()
+        Sql = "SELECT title_id, title_la, title_en "
+        Sql &= " FROM tbl_student_title "
+        Sql &= " ORDER BY title_id"
+        dt = ExecuteDatable(Sql)
+        cb_sex.DataSource = dt
+        cb_sex.ValueMember = "title_id"
+        cb_sex.DisplayMember = "title_la"
+    End Sub
+
     Private Sub FrmUserGroup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_finished = 1
         had_change_val = 0
+        Call getSexList()
         Call firstLoad()
         load_finished = 0
     End Sub
@@ -24,9 +36,12 @@ Public Class FrmStudent_Detail
         txt_name.Tag = ""
         txt_name_en.Text = ""
         txt_phone.Text = ""
-        txt_birth_address.Text = ""
-        txt_address.Text = ""
-        txt_national.Text = ""
+        txt_birth_address_la.Text = ""
+        txt_birth_address_en.Text = ""
+        txt_address_la.Text = ""
+        txt_address_en.Text = ""
+        txt_national_la.Text = ""
+        txt_national_en.Text = ""
         txt_job.Text = ""
         txt_secondary_from.Text = ""
         txt_parent_name.Text = ""
@@ -53,9 +68,13 @@ Public Class FrmStudent_Detail
         txt_name.ReadOnly = True
         txt_name_en.ReadOnly = True
         txt_phone.ReadOnly = True
-        txt_birth_address.Enabled = False
-        txt_address.ReadOnly = True
-        txt_national.ReadOnly = True
+        DateTimePicker1.Enabled = False
+        txt_birth_address_la.ReadOnly = True
+        txt_address_la.ReadOnly = True
+        txt_national_la.ReadOnly = True
+        txt_birth_address_en.ReadOnly = True
+        txt_address_en.ReadOnly = True
+        txt_national_en.ReadOnly = True
         txt_job.ReadOnly = True
         txt_secondary_from.ReadOnly = True
         txt_parent_name.ReadOnly = True
@@ -64,7 +83,8 @@ Public Class FrmStudent_Detail
         txt_comment.ReadOnly = True
         school_year1.Enabled = False
         school_year2.Enabled = False
-        Panel_gender.Enabled = False
+        cb_sex.Enabled = False
+        PictureBox1.Enabled = False
 
         btn_save.Visible = False
         btn_edit.Visible = True
@@ -76,9 +96,13 @@ Public Class FrmStudent_Detail
         txt_name.ReadOnly = False
         txt_name_en.ReadOnly = False
         txt_phone.ReadOnly = False
-        txt_birth_address.Enabled = True
-        txt_address.ReadOnly = False
-        txt_national.ReadOnly = False
+        DateTimePicker1.Enabled = True
+        txt_birth_address_la.ReadOnly = False
+        txt_address_la.ReadOnly = False
+        txt_national_la.ReadOnly = False
+        txt_birth_address_en.ReadOnly = False
+        txt_address_en.ReadOnly = False
+        txt_national_en.ReadOnly = False
         txt_job.ReadOnly = False
         txt_secondary_from.ReadOnly = False
         txt_parent_name.ReadOnly = False
@@ -87,7 +111,8 @@ Public Class FrmStudent_Detail
         txt_comment.ReadOnly = False
         school_year1.Enabled = True
         school_year2.Enabled = True
-        Panel_gender.Enabled = True
+        cb_sex.Enabled = True
+        PictureBox1.Enabled = True
 
         btn_save.Visible = True
         btn_edit.Visible = False
@@ -111,11 +136,11 @@ Public Class FrmStudent_Detail
     Dim old_std_id As String = ""
     Private Sub getStudent_info()
         Sql = " SELECT student_id ,student_code ,student_fullname_la ,student_fullname_en ,student_gender ,date_of_birth ,"
-        Sql &= " birth_address_la ,birth_address_en ,nationality ,address_la ,address_en ,phone_number ,wa_number ,job_des ,"
+        Sql &= " birth_address_la ,birth_address_en ,nationality ,nationality_en, address_la ,address_en ,phone_number ,wa_number ,job_des ,"
         Sql &= " hight_school_name ,hight_school_graduate_year ,parent_name ,parent_contact ,course_id ,current_term_id ,"
         Sql &= " class_id ,start_year ,end_year ,create_date ,student_status ,last_update ,user_update ,course_des_la ,"
         Sql &= " course_des_en ,scheme_id ,scheme_des_la ,scheme_des_en ,max_term_id_reg ,get_current_class_id ,"
-        Sql &= " current_sokhien ,get_current_term_id ,max_sokhien ,student_remark "
+        Sql &= " current_sokhien ,get_current_term_id ,max_sokhien ,student_remark, std_img, expected_graduate "
         Sql &= " FROM view_std_list_prepare "
         Sql &= " WHERE(student_id = " & id_edit & ")"
         dt = ExecuteDatable(Sql)
@@ -123,25 +148,31 @@ Public Class FrmStudent_Detail
             txt_std_code.Text = CStr(.Item("student_code"))
             old_std_id = txt_std_code.Text
             txt_std_code.Tag = CInt(.Item("student_id"))
-            If (CInt(.Item("student_gender")) = 1) Then
-                rdo_male.Checked = True
-            Else
-                rdo_female.Checked = True
-            End If
-
+            cb_sex.SelectedValue = CInt(.Item("student_gender"))
             txt_name.Text = .Item("student_fullname_la")
             txt_name_en.Text = .Item("student_fullname_en")
             txt_phone.Text = .Item("phone_number")
             DateTimePicker1.Text = .Item("date_of_birth")
             If Not IsDBNull(.Item("birth_address_la")) Then
-                txt_birth_address.Text = .Item("birth_address_la")
+                txt_birth_address_la.Text = .Item("birth_address_la")
             End If
             If Not IsDBNull(.Item("address_la")) Then
-                txt_address.Text = .Item("address_la")
+                txt_address_la.Text = .Item("address_la")
             End If
             If Not IsDBNull(.Item("nationality")) Then
-                txt_national.Text = .Item("nationality")
+                txt_national_la.Text = .Item("nationality")
             End If
+
+            If Not IsDBNull(.Item("birth_address_en")) Then
+                txt_birth_address_en.Text = .Item("birth_address_en")
+            End If
+            If Not IsDBNull(.Item("address_en")) Then
+                txt_address_en.Text = .Item("address_en")
+            End If
+            If Not IsDBNull(.Item("nationality_en")) Then
+                txt_national_en.Text = .Item("nationality_en")
+            End If
+
             If Not IsDBNull(.Item("job_des")) Then
                 txt_job.Text = .Item("job_des")
             End If
@@ -154,6 +185,9 @@ Public Class FrmStudent_Detail
             If Not IsDBNull(.Item("parent_contact")) Then
                 txt_parent_tel.Text = .Item("parent_contact")
             End If
+            If Not IsDBNull(.Item("expected_graduate")) Then
+                txt_will_complete.Text = .Item("expected_graduate")
+            End If
 
             school_year1.Value = .Item("start_year")
             school_year2.Value = .Item("end_year")
@@ -161,9 +195,20 @@ Public Class FrmStudent_Detail
             txt_course.Tag = .Item("course_id")
             txt_course.Text = .Item("course_des_la")
             txt_comment.Text = .Item("student_remark")
+
+            'IMG
+            have_img = False
+            If Not IsDBNull(.Item("std_img")) Then
+                have_img = True
+                Dim picture() As Byte = .Item("std_img")
+                Dim streampic As New MemoryStream(picture)
+                PictureBox1.Image = Image.FromStream(streampic)
+            End If
         End With
     End Sub
 
+    Dim have_img As Boolean = False
+    Dim sFilePath As String = ""
     Private Sub Save_Student_Edited()
         If (txt_std_code.Text.Trim = "") Then
             MessageBox.Show("ກະລຸນາເລືອກ ຫຼື ຄົ້ນຫານັກສຶກສາ.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -191,22 +236,39 @@ Public Class FrmStudent_Detail
             Exit Sub
         End If
 
-        Dim sex As Integer = 0
-        If (rdo_male.Checked = True) Then
-            sex = 1
-        End If
-
+        Dim sex As Integer = cb_sex.SelectedValue
         Dim cmt As String = "--"
         If (txt_comment.Text.Trim <> "") Then
             cmt = txt_comment.Text.Trim
         End If
 
-       'UPDATE Student Info
+        'IMG
+        Dim go_update_img As Integer = 0
+        Dim img As Byte()
+        If (sFilePath <> "") Then
+            go_update_img = 1
+            Dim fs As FileStream = New FileStream(sFilePath.ToString(), FileMode.Open, FileAccess.Read)
+            Dim binReader As New BinaryReader(fs)
+            img = binReader.ReadBytes(fs.Length)
+        End If
+
+        If (sFilePath = "") And (have_img = False) Then
+            go_update_img = 1
+            sFilePath = "std_icon.jpg"
+            Dim fs As FileStream = New FileStream(sFilePath.ToString(), FileMode.Open, FileAccess.Read)
+            Dim binReader As New BinaryReader(fs)
+            img = binReader.ReadBytes(fs.Length)
+        End If
+
+        'UPDATE Student Info
         'Dim bod As String = Format(CDate(DateTimePicker1.Text), "yyyy-MM-dd")
         Call ConnectDB()
         Sql = "UPDATE tbl_student SET student_code=@student_code ,student_fullname_la=@student_fullname_la ,student_fullname_en=@student_fullname_en ,"
         Sql &= " student_gender=@student_gender, date_of_birth=@date_of_birth, phone_number=@phone_number, "
-        Sql &= " start_year=@start_year ,end_year=@end_year ,user_update=@user_update, last_update=getdate() "
+        Sql &= " start_year=@start_year ,end_year=@end_year ,user_update=@user_update, last_update=getdate(), "
+        Sql &= " parent_name=@parent_name, parent_contact=@parent_contact, student_remark=@student_remark, hight_school_name=@hight_school_name, "
+        Sql &= " nationality=@nationality, job_des=@job_des, birth_address_la=@birth_address_la, address_la=@address_la, std_img=@std_img, "
+        Sql &= " nationality_en=@nationality_en, birth_address_en=@birth_address_en, address_en=@address_en, expected_graduate=@expected_graduate "
         Sql &= " WHERE(student_id=" & id_edit & ")"
         cm = New SqlCommand(Sql, conn)
         cm.Parameters.AddWithValue("student_code", txt_std_code.Text.Trim)
@@ -214,10 +276,25 @@ Public Class FrmStudent_Detail
         cm.Parameters.AddWithValue("student_fullname_en", txt_name_en.Text.Trim)
         cm.Parameters.AddWithValue("student_gender", sex)
         cm.Parameters.AddWithValue("date_of_birth", CDate(DateTimePicker1.Text))
-        cm.Parameters.AddWithValue("phone_number", CStr(txt_phone.Text.Trim))  
+        cm.Parameters.AddWithValue("phone_number", CStr(txt_phone.Text.Trim))
         cm.Parameters.AddWithValue("start_year", school_year1.Value)
         cm.Parameters.AddWithValue("end_year", school_year2.Value)
         cm.Parameters.AddWithValue("user_update", User_name)
+        cm.Parameters.AddWithValue("parent_name", txt_parent_name.Text.Trim)
+        cm.Parameters.AddWithValue("parent_contact", txt_parent_tel.Text.Trim)
+        cm.Parameters.AddWithValue("student_remark", cmt)
+        cm.Parameters.AddWithValue("hight_school_name", txt_secondary_from.Text.Trim)
+        cm.Parameters.AddWithValue("nationality", txt_national_la.Text.Trim)
+        cm.Parameters.AddWithValue("job_des", txt_job.Text.Trim)
+        cm.Parameters.AddWithValue("birth_address_la", txt_birth_address_la.Text.Trim)
+        cm.Parameters.AddWithValue("address_la", txt_address_la.Text.Trim)
+        cm.Parameters.AddWithValue("nationality_en", txt_national_en.Text.Trim)
+        cm.Parameters.AddWithValue("birth_address_en", txt_birth_address_en.Text.Trim)
+        cm.Parameters.AddWithValue("address_en", txt_address_en.Text.Trim)
+        cm.Parameters.AddWithValue("expected_graduate", txt_will_complete.Text.Trim)
+        If (go_update_img = 1) Then
+            cm.Parameters.AddWithValue("std_img", img)
+        End If
         cm.ExecuteNonQuery()
 
         MessageBox.Show("Save completed.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -391,6 +468,17 @@ Public Class FrmStudent_Detail
 
     Private Sub btn_cancel_Click(sender As Object, e As EventArgs) Handles btn_cancel.Click
         Call firstLoad()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        OpenFileDialog1.Filter = "Image Files|*.jpg;*.gif;*.png;*.bmp"
+        If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            OpenFileDialog1.Title = "ເລືອກຮູບ"
+            sFilePath = OpenFileDialog1.FileName
+            'MsgBox(sFilePath)
+            PictureBox1.Image = Image.FromFile(sFilePath)
+        Else : Exit Sub
+        End If
     End Sub
 
 End Class

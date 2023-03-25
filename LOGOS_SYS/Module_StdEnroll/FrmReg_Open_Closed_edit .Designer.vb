@@ -46,21 +46,21 @@ Partial Class FrmReg_Open_Closed_edit
         Me.TileItem8 = New DevExpress.XtraEditors.TileItem()
         Me.BarLargeButtonItem1 = New DevExpress.XtraBars.BarLargeButtonItem()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btn_save = New System.Windows.Forms.Button()
-        Me.btn_disable = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.rdo_register = New System.Windows.Forms.RadioButton()
-        Me.rdo_enroll = New System.Windows.Forms.RadioButton()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.txt_comment = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txt_sokhien = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.btn_save = New System.Windows.Forms.Button()
+        Me.btn_disable = New System.Windows.Forms.Button()
+        Me.rdo_register = New System.Windows.Forms.RadioButton()
+        Me.rdo_enroll_train = New System.Windows.Forms.RadioButton()
+        Me.rdo_register_train = New System.Windows.Forms.RadioButton()
+        Me.rdo_enroll = New System.Windows.Forms.RadioButton()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -285,7 +285,6 @@ Partial Class FrmReg_Open_Closed_edit
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.txt_sokhien)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Controls.Add(Me.DateTimePicker2)
         Me.Panel2.Controls.Add(Me.DateTimePicker1)
@@ -293,7 +292,6 @@ Partial Class FrmReg_Open_Closed_edit
         Me.Panel2.Controls.Add(Me.Panel4)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.btn_save)
@@ -302,8 +300,95 @@ Partial Class FrmReg_Open_Closed_edit
         Me.Panel2.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(456, 323)
+        Me.Panel2.Size = New System.Drawing.Size(456, 381)
         Me.Panel2.TabIndex = 0
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.rdo_register)
+        Me.Panel3.Controls.Add(Me.rdo_enroll_train)
+        Me.Panel3.Controls.Add(Me.rdo_register_train)
+        Me.Panel3.Controls.Add(Me.rdo_enroll)
+        Me.Panel3.Location = New System.Drawing.Point(118, 84)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(320, 127)
+        Me.Panel3.TabIndex = 34
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.CalendarFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker2.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker2.Location = New System.Drawing.Point(118, 49)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(137, 29)
+        Me.DateTimePicker2.TabIndex = 35
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(118, 14)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 29)
+        Me.DateTimePicker1.TabIndex = 33
+        '
+        'txt_comment
+        '
+        Me.txt_comment.Location = New System.Drawing.Point(118, 217)
+        Me.txt_comment.Multiline = True
+        Me.txt_comment.Name = "txt_comment"
+        Me.txt_comment.Size = New System.Drawing.Size(320, 63)
+        Me.txt_comment.TabIndex = 36
+        Me.txt_comment.WaterMark = "ລາຍລະອຽດເພີ່ມເຕີມ..."
+        Me.txt_comment.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_comment.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_comment.WaterMarkForeColor = System.Drawing.Color.Gray
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.Blue
+        Me.Panel4.Location = New System.Drawing.Point(27, 288)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(411, 2)
+        Me.Panel4.TabIndex = 42
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(32, 214)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(82, 26)
+        Me.Label5.TabIndex = 37
+        Me.Label5.Text = "ລາຍລະອຽດ"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(42, 131)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(72, 26)
+        Me.Label4.TabIndex = 38
+        Me.Label4.Text = "ເປີດສຳລັບ"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(19, 49)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(95, 26)
+        Me.Label2.TabIndex = 40
+        Me.Label2.Text = "ປິດລົງທະບຽນ"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(16, 15)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(100, 26)
+        Me.Label1.TabIndex = 41
+        Me.Label1.Text = "ເປີດລົງທະບຽນ"
         '
         'btn_save
         '
@@ -313,7 +398,7 @@ Partial Class FrmReg_Open_Closed_edit
         Me.btn_save.FlatAppearance.BorderSize = 0
         Me.btn_save.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_save.Image = Global.LOGOS_SYS.My.Resources.Resources.Save
-        Me.btn_save.Location = New System.Drawing.Point(118, 248)
+        Me.btn_save.Location = New System.Drawing.Point(118, 296)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(117, 55)
         Me.btn_save.TabIndex = 7
@@ -329,7 +414,7 @@ Partial Class FrmReg_Open_Closed_edit
         Me.btn_disable.FlatAppearance.BorderSize = 0
         Me.btn_disable.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_disable.Image = CType(resources.GetObject("btn_disable.Image"), System.Drawing.Image)
-        Me.btn_disable.Location = New System.Drawing.Point(246, 248)
+        Me.btn_disable.Location = New System.Drawing.Point(246, 296)
         Me.btn_disable.Name = "btn_disable"
         Me.btn_disable.Size = New System.Drawing.Size(117, 55)
         Me.btn_disable.TabIndex = 8
@@ -337,145 +422,63 @@ Partial Class FrmReg_Open_Closed_edit
         Me.btn_disable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_disable.UseVisualStyleBackColor = False
         '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Controls.Add(Me.rdo_register)
-        Me.Panel3.Controls.Add(Me.rdo_enroll)
-        Me.Panel3.Location = New System.Drawing.Point(118, 127)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(320, 37)
-        Me.Panel3.TabIndex = 34
-        '
         'rdo_register
         '
         Me.rdo_register.AutoSize = True
-        Me.rdo_register.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdo_register.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rdo_register.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.rdo_register.Location = New System.Drawing.Point(175, 3)
+        Me.rdo_register.Location = New System.Drawing.Point(16, 63)
         Me.rdo_register.Name = "rdo_register"
-        Me.rdo_register.Size = New System.Drawing.Size(132, 30)
-        Me.rdo_register.TabIndex = 1
+        Me.rdo_register.Size = New System.Drawing.Size(122, 30)
+        Me.rdo_register.TabIndex = 9
         Me.rdo_register.TabStop = True
         Me.rdo_register.Text = "ລົງທະບຽນຮຽນ"
         Me.rdo_register.UseVisualStyleBackColor = True
         '
+        'rdo_enroll_train
+        '
+        Me.rdo_enroll_train.AutoSize = True
+        Me.rdo_enroll_train.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdo_enroll_train.ForeColor = System.Drawing.Color.Green
+        Me.rdo_enroll_train.Location = New System.Drawing.Point(16, 34)
+        Me.rdo_enroll_train.Name = "rdo_enroll_train"
+        Me.rdo_enroll_train.Size = New System.Drawing.Size(205, 30)
+        Me.rdo_enroll_train.TabIndex = 8
+        Me.rdo_enroll_train.TabStop = True
+        Me.rdo_enroll_train.Text = "ລົງທະບຽນເສັງທຽບຮຽນບຳລຸງ"
+        Me.rdo_enroll_train.UseVisualStyleBackColor = True
+        '
+        'rdo_register_train
+        '
+        Me.rdo_register_train.AutoSize = True
+        Me.rdo_register_train.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdo_register_train.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.rdo_register_train.Location = New System.Drawing.Point(16, 93)
+        Me.rdo_register_train.Name = "rdo_register_train"
+        Me.rdo_register_train.Size = New System.Drawing.Size(153, 30)
+        Me.rdo_register_train.TabIndex = 7
+        Me.rdo_register_train.TabStop = True
+        Me.rdo_register_train.Text = "ລົງທະບຽນຮຽນບຳລຸງ"
+        Me.rdo_register_train.UseVisualStyleBackColor = True
+        '
         'rdo_enroll
         '
         Me.rdo_enroll.AutoSize = True
-        Me.rdo_enroll.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdo_enroll.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rdo_enroll.ForeColor = System.Drawing.Color.Green
-        Me.rdo_enroll.Location = New System.Drawing.Point(6, 3)
+        Me.rdo_enroll.Location = New System.Drawing.Point(16, 3)
         Me.rdo_enroll.Name = "rdo_enroll"
-        Me.rdo_enroll.Size = New System.Drawing.Size(158, 30)
-        Me.rdo_enroll.TabIndex = 0
+        Me.rdo_enroll.Size = New System.Drawing.Size(145, 30)
+        Me.rdo_enroll.TabIndex = 6
         Me.rdo_enroll.TabStop = True
         Me.rdo_enroll.Text = "ລົງທະບຽນເສັງທຽບ"
         Me.rdo_enroll.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.CalendarFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Location = New System.Drawing.Point(118, 93)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(137, 29)
-        Me.DateTimePicker2.TabIndex = 35
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(118, 58)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 29)
-        Me.DateTimePicker1.TabIndex = 33
-        '
-        'txt_comment
-        '
-        Me.txt_comment.Location = New System.Drawing.Point(118, 169)
-        Me.txt_comment.Multiline = True
-        Me.txt_comment.Name = "txt_comment"
-        Me.txt_comment.Size = New System.Drawing.Size(320, 63)
-        Me.txt_comment.TabIndex = 36
-        Me.txt_comment.WaterMark = "ລາຍລະອຽດເພີ່ມເຕີມ..."
-        Me.txt_comment.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_comment.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_comment.WaterMarkForeColor = System.Drawing.Color.Gray
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.Blue
-        Me.Panel4.Location = New System.Drawing.Point(27, 240)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(411, 2)
-        Me.Panel4.TabIndex = 42
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(32, 166)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 26)
-        Me.Label5.TabIndex = 37
-        Me.Label5.Text = "ລາຍລະອຽດ"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(42, 131)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 26)
-        Me.Label4.TabIndex = 38
-        Me.Label4.Text = "ເປີດສຳລັບ"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(54, 24)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 26)
-        Me.Label3.TabIndex = 39
-        Me.Label3.Text = "ສົກຮຽນ"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(19, 93)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 26)
-        Me.Label2.TabIndex = 40
-        Me.Label2.Text = "ປິດລົງທະບຽນ"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 59)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 26)
-        Me.Label1.TabIndex = 41
-        Me.Label1.Text = "ເປີດລົງທະບຽນ"
-        '
-        'txt_sokhien
-        '
-        Me.txt_sokhien.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txt_sokhien.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_sokhien.Location = New System.Drawing.Point(118, 23)
-        Me.txt_sokhien.Name = "txt_sokhien"
-        Me.txt_sokhien.ReadOnly = True
-        Me.txt_sokhien.Size = New System.Drawing.Size(137, 29)
-        Me.txt_sokhien.TabIndex = 43
-        Me.txt_sokhien.WaterMark = ""
-        Me.txt_sokhien.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_sokhien.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_sokhien.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'FrmReg_Open_Closed_edit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 27.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(456, 323)
+        Me.ClientSize = New System.Drawing.Size(456, 381)
         Me.Controls.Add(Me.Panel2)
         Me.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -511,16 +514,16 @@ Partial Class FrmReg_Open_Closed_edit
     Friend WithEvents btn_save As System.Windows.Forms.Button
     Friend WithEvents btn_disable As System.Windows.Forms.Button
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents rdo_register As System.Windows.Forms.RadioButton
-    Friend WithEvents rdo_enroll As System.Windows.Forms.RadioButton
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Private WithEvents txt_comment As ChreneLib.Controls.TextBoxes.CTextBox
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Private WithEvents txt_sokhien As ChreneLib.Controls.TextBoxes.CTextBox
+    Friend WithEvents rdo_register As System.Windows.Forms.RadioButton
+    Friend WithEvents rdo_enroll_train As System.Windows.Forms.RadioButton
+    Friend WithEvents rdo_register_train As System.Windows.Forms.RadioButton
+    Friend WithEvents rdo_enroll As System.Windows.Forms.RadioButton
 End Class

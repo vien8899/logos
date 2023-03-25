@@ -76,7 +76,7 @@
         Sql &= " enroll_discount ,test_date ,year_register ,last_update ,user_update ,learning_shift_des ,"
         Sql &= " course_des_la ,course_des_en ,course_test_amount ,scheme_id ,scheme_des_la ,scheme_des_en ,"
         Sql &= " std_enroll_fullname_la ,std_enroll_fullname_en ,std_enroll_gender ,date_of_birth ,birth_address ,"
-        Sql &= " location_address ,phone_number ,wa_number ,parent_contact, enroll_inv_id, reg_first_term_st "
+        Sql &= " location_address ,phone_number ,wa_number ,parent_contact, enroll_inv_id, reg_first_term_st, title_la, title_en "
         Sql &= " FROM view_std_enroll "
         Sql &= " WHERE(enroll_id > 0) " & ct_year & ct_course & ct_time_learn & ct_search
         Sql &= " ORDER BY scheme_id, course_id, std_enroll_fullname_la "
@@ -86,10 +86,7 @@
             For i As Integer = 0 To dt.Rows.Count - 1
 
                 'Sex
-                Dim sex As String = "ທ້າວ. "
-                If (dt.Rows(i).Item("std_enroll_gender") = 2) Then
-                    sex = "ນາງ. "
-                End If
+                Dim sex As String = dt.Rows(i).Item("title_la") & ". "
 
                 'Status: 1 = ຫາກະລົງທະບຽນເສັງ/2 = ລົງທະບຽນຮຽນແລ້ວ
                 Dim st As String = "---"
@@ -121,9 +118,8 @@
         'Check for open enroll or not?
         Dim cur_date As String = Format(CDate(getCurrentDate()), "yyyy-MM-dd")
         Dim cur_yyyy As Integer = Format(CDate(cur_date), "yyyy")
-        Dim sokhien As String = cur_yyyy & "-" & cur_yyyy + 1
-        Sql = "SELECT year_study FROM tbl_setting_open_close_reg "
-        Sql &= " WHERE(open_close_type=1) AND (enroll_or_register=1) AND (year_study='" & sokhien & "') AND ((open_date <= CAST(GETDATE() AS DATE)) AND (close_date >= CAST(GETDATE() AS DATE))) "
+        Sql = "SELECT register_type FROM tbl_setting_open_close_reg "
+        Sql &= " WHERE(register_type=1) AND ((open_date <= CAST(GETDATE() AS DATE)) AND (close_date >= CAST(GETDATE() AS DATE))) "
         dt = ExecuteDatable(Sql)
         If (dt.Rows.Count <= 0) Then
             MessageBox.Show("ກະລຸນາເປີດການລົງທະບຽນເສັງທຽບກ່ອນ ດຳເນີນການລົງທະບຽນ.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Stop)

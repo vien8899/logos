@@ -8,21 +8,24 @@ Public Class FrmReg_Open_Closed_edit
     End Sub
 
     Private Sub load_data()
-        Sql = " SELECT open_close_id ,year_study ,open_date ,close_date ,open_close_des ,enroll_or_register ,open_close_type ,last_update ,user_update "
+        Sql = " SELECT open_close_id ,open_date ,close_date ,open_close_des ,register_type ,last_update ,user_update "
         Sql &= " FROM tbl_setting_open_close_reg "
         Sql &= " WHERE(open_close_id=" & id_edit & ")"
         dt = ExecuteDatable(Sql)
         With dt.Rows(0)
-            txt_sokhien.Text = .Item("year_study")
             txt_comment.Text = .Item("open_close_des")
             DateTimePicker1.Text = CDate(.Item("open_date"))
             DateTimePicker2.Text = CDate(.Item("close_date"))
 
             'User Status
-            If (.Item("enroll_or_register") = 1) Then
+            If (.Item("register_type") = 1) Then
                 rdo_enroll.Checked = True
-            Else
+            ElseIf (.Item("register_type") = 2) Then
                 rdo_register.Checked = True
+            ElseIf (.Item("register_type") = 3) Then
+                rdo_enroll_train.Checked = True
+            ElseIf (.Item("register_type") = 4) Then
+                rdo_register_train.Checked = True
             End If
         End With
     End Sub
@@ -36,22 +39,30 @@ Public Class FrmReg_Open_Closed_edit
         End If
 
         'Enroll/Register
-        Dim enr_or_reg As Integer = 1
-        If (rdo_register.Checked = True) Then
-            enr_or_reg = 2
+        Dim enroll_or_register As Integer = 1
+        If (rdo_enroll.Checked = True) Then
+            enroll_or_register = 1
+        ElseIf (rdo_enroll_train.Checked = True) Then
+            enroll_or_register = 3
+        ElseIf (rdo_register.Checked = True) Then
+            enroll_or_register = 2
+        ElseIf (rdo_register_train.Checked = True) Then
+            enroll_or_register = 4
         End If
 
+        MsgBox(enroll_or_register)
+        'Exit Sub
 
         Call ConnectDB()
         Sql = "UPDATE tbl_setting_open_close_reg "
-        Sql &= " SET open_date=@open_date ,close_date=@close_date ,open_close_des=@open_close_des ,enroll_or_register=@enroll_or_register ,user_update=@user_update, last_update=getdate() "
+        Sql &= " SET open_date=@open_date ,close_date=@close_date ,open_close_des=@open_close_des ,register_type=@register_type ,user_update=@user_update, last_update=getdate() "
         Sql &= " WHERE(open_close_id = @id_edit)"
         cm = New SqlCommand(Sql, conn)
         cm.Parameters.AddWithValue("id_edit", id_edit)
         cm.Parameters.AddWithValue("open_date", st_date)
         cm.Parameters.AddWithValue("close_date", end_date)
         cm.Parameters.AddWithValue("open_close_des", cmt)
-        cm.Parameters.AddWithValue("enroll_or_register", enr_or_reg)
+        cm.Parameters.AddWithValue("register_type", enroll_or_register)
         cm.Parameters.AddWithValue("user_update", User_name)
         cm.ExecuteNonQuery()
         conn.Close()

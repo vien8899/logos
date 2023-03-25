@@ -8,5 +8,8 @@
         'FrmUserGroup_view.ShowDialog()
     End Sub
 
+    Private Sub btn_receive_enroll_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles btn_receive_enroll.ItemClick
+
+    End Sub
 
 End Class
