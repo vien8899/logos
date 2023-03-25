@@ -71,6 +71,18 @@ LOGOS_SYS
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:LOGOS_SYS.My.Resources.Resources.Deb3">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LOGOS_SYS.My.Resources.Resources.Debt">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LOGOS_SYS.My.Resources.Resources.Debt2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:LOGOS_SYS.My.Resources.Resources.Del">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -223,6 +235,10 @@ LOGOS_SYS
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:LOGOS_SYS.My.Resources.Resources.SaleBook">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:LOGOS_SYS.My.Resources.Resources.Save">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -320,6 +336,10 @@ LOGOS_SYS
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:LOGOS_SYS.My.Resources.Resources.Untitled_1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LOGOS_SYS.My.Resources.Resources.Upgrade">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
