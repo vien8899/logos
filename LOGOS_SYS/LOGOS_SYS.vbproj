@@ -172,6 +172,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_Register_Upgrade.vb">
+      <DependentUpon>Rpt_Register_Upgrade.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Module_Report\CrystalReport\Rpt_Register_train.vb">
       <DependentUpon>Rpt_Register_train.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -716,6 +722,10 @@
     <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_Register.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_Register.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_Register_Upgrade.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Register_Upgrade.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_Register_train.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
