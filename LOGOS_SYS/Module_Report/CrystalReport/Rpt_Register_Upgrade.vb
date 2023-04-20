@@ -99,6 +99,7 @@ Public Class Rpt_Register_Upgrade
             Return Me.DataDefinition.ParameterFields(0)
         End Get
     End Property
+<<<<<<< HEAD
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
@@ -107,6 +108,8 @@ Public Class Rpt_Register_Upgrade
             Return Me.DataDefinition.ParameterFields(1)
         End Get
     End Property
+=======
+>>>>>>> ca7e08508430e037b5d00fe9de9e20d26c72c28a
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
