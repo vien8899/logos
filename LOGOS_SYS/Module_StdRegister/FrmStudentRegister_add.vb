@@ -8,6 +8,17 @@ Public Class FrmStudentRegister_add
         End If
     End Sub
 
+    Private Sub getLearningShiftList(ByVal c As Integer)
+        Sql = "SELECT learning_shift_des, learning_shift_id "
+        Sql &= " FROM tbl_setting_learning_shift WHERE((learning_shift_status <> 0) AND (course_id=" & c & ")) OR (course_id=0) "
+        Sql &= " ORDER BY course_id, learning_shift_id "
+        dt = ExecuteDatable(Sql)
+        cb_learning_time.DataSource = dt
+        cb_learning_time.ValueMember = "learning_shift_id"
+        cb_learning_time.DisplayMember = "learning_shift_des"
+        cb_learning_time.SelectedIndex = 0
+    End Sub
+
     Private Sub getSexList()
         Sql = "SELECT title_id, title_la, title_en "
         Sql &= " FROM tbl_student_title "
@@ -118,9 +129,9 @@ Public Class FrmStudentRegister_add
         Cursor = Cursors.WaitCursor
         Call ConnectDB()
         Sql = "INSERT INTO tbl_student(student_code ,student_fullname_la ,student_fullname_en ,student_gender ,date_of_birth ,phone_number, "
-        Sql &= "                       course_id ,current_term_id ,start_year ,end_year ,student_status ,user_update) "
+        Sql &= "                       course_id ,current_term_id ,start_year ,end_year ,student_status ,user_update, learning_shift_id) "
         Sql &= " VALUES(@student_code ,@student_fullname_la ,@student_fullname_en ,@student_gender ,@date_of_birth ,@phone_number, "
-        Sql &= "        @course_id ,@current_term_id ,@start_year ,@end_year ,@student_status ,@user_update)"
+        Sql &= "        @course_id ,@current_term_id ,@start_year ,@end_year ,@student_status ,@user_update, @learning_shift_id)"
         cm = New SqlCommand(Sql, conn)
         cm.Parameters.AddWithValue("student_code", txt_std_code.Text.Trim)
         cm.Parameters.AddWithValue("student_fullname_la", txt_name.Text.Trim)
@@ -134,6 +145,7 @@ Public Class FrmStudentRegister_add
         cm.Parameters.AddWithValue("end_year", end_year)
         cm.Parameters.AddWithValue("student_status", 1)
         cm.Parameters.AddWithValue("user_update", User_name)
+        cm.Parameters.AddWithValue("learning_shift_id", CInt(cb_learning_time.SelectedValue))
         cm.ExecuteNonQuery()
 
         'Get Max-ID
@@ -165,8 +177,8 @@ Public Class FrmStudentRegister_add
                 max_bill = BILL_ID
 
                 Dim learn_date As String = Format(CDate(lb_test_date.Text), "yyyy-MM-dd")
-                Sql = "INSERT INTO tbl_term_register(bill_id ,student_id ,term_id ,register_amount ,register_discount ,register_year ,start_learn_date ,register_comment, user_update) "
-                Sql &= " VALUES(@bill_id ,@student_id ,@term_id ,@register_amount ,@register_discount ,@register_year ,@start_learn_date ,@register_comment, @user_update)"
+                Sql = "INSERT INTO tbl_term_register(bill_id ,student_id ,term_id ,register_amount ,register_discount ,register_year ,start_learn_date ,register_comment, user_update, learning_shift_id) "
+                Sql &= " VALUES(@bill_id ,@student_id ,@term_id ,@register_amount ,@register_discount ,@register_year ,@start_learn_date ,@register_comment, @user_update, @learning_shift_id)"
                 cm = New SqlCommand(Sql, conn)
                 cm.Parameters.AddWithValue("bill_id", BILL_ID)
                 cm.Parameters.AddWithValue("student_id", std_register_id)
@@ -177,6 +189,7 @@ Public Class FrmStudentRegister_add
                 cm.Parameters.AddWithValue("start_learn_date", learn_date)
                 cm.Parameters.AddWithValue("register_comment", cmt)
                 cm.Parameters.AddWithValue("user_update", User_name)
+                cm.Parameters.AddWithValue("learning_shift_id", CInt(cb_learning_time.SelectedValue))
                 cm.ExecuteNonQuery()
 
                 Sql = "INSERT INTO tbl_term_payment(bill_id ,paid_amount ,payment_type ,receive_by ,receive_id) "
@@ -188,6 +201,10 @@ Public Class FrmStudentRegister_add
                 cm.Parameters.AddWithValue("receive_by", User_name)
                 cm.Parameters.AddWithValue("receive_id", User_ID)
                 cm.ExecuteNonQuery()
+
+                'StudentLog
+                Dim action_detail As String = "ລົງທະບຽນເຂົ້າຮຽນ " & CStr(Datagridview1.Rows(i).Cells(1).Value)
+                Call AddStudentLog(std_register_id, action_detail)
             End If
         Next
 
@@ -281,6 +298,7 @@ Public Class FrmStudentRegister_add
         If (txt_course.Text <> "") Then
             Call getTermListInCourse(txt_course.Tag)
             Call EnableDisbleTerm()
+            Call getLearningShiftList(txt_course.Tag)
         End If
     End Sub
 

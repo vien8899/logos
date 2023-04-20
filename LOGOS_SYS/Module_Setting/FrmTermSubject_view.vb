@@ -88,7 +88,7 @@
             For i As Integer = 0 To dt.Rows.Count - 1
                 .Rows.Add(dt.Rows(i).Item("term_subject_id"), (i + 1), (dt.Rows(i).Item("scheme_des_la") & "-[" & dt.Rows(i).Item("course_des_la") & "]"), _
                           dt.Rows(i).Item("term_no") & " (" & dt.Rows(i).Item("term_des") & ")", _
-                          dt.Rows(i).Item("subject_code") & " (" & dt.Rows(i).Item("subject_name_la") & ")", _
+                          dt.Rows(i).Item("subject_name_la"), _
                           dt.Rows(i).Item("user_update"), dt.Rows(i).Item("last_update"))
             Next
 

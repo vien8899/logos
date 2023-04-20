@@ -518,10 +518,9 @@ Partial Class FrmMain
         '
         'btnSetScore
         '
-        Me.btnSetScore.CurrentFrameIndex = 1
         TileItemElement27.Appearance.Normal.Font = New System.Drawing.Font("Noto Sans Lao", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         TileItemElement27.Appearance.Normal.Options.UseFont = True
-        TileItemElement27.Image = Global.LOGOS_SYS.My.Resources.Resources.score
+        TileItemElement27.Image = Global.LOGOS_SYS.My.Resources.Resources.resources
         TileItemElement27.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
         TileItemElement27.ImageLocation = New System.Drawing.Point(-5, 0)
         TileItemElement27.Text = "ເຂົ້າຄະແນນ"

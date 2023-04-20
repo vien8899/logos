@@ -89,4 +89,8 @@
         FrmStdDrop_view.txt_search.Select()
     End Sub
 
+    Private Sub btnScholaship_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles btnScholaship.ItemClick
+        Frm_Updating.ShowDialog()
+    End Sub
+
 End Class

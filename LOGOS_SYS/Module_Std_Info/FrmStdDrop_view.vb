@@ -31,11 +31,11 @@
             ct_search = " AND ((student_code LIKE N'%" & txt_search.Text.Trim & "%') OR (student_fullname_en LIKE N'%" & txt_search.Text.Trim & "%') OR (student_fullname_la LIKE N'%" & txt_search.Text.Trim & "%')) "
         End If
 
-        Sql = "SELECT drop_id ,student_id ,term_id ,drop_year ,drop_des ,drop_status ,user_update ,last_update ,"
-        Sql &= " term_no ,term_no_la ,term_des ,term_list_id ,term_study_year ,student_code ,student_fullname_la ,"
-        Sql &= " student_fullname_en ,phone_number ,job_des ,scheme_des_la ,scheme_des_en ,course_des_la ,course_des_en, title_la, title_en "
+        Sql = "SELECT student_code ,student_fullname_la ,student_fullname_en ,phone_number ,job_des ,title_la ,title_en ,sex_id ,"
+        Sql &= " course_id, course_des_la, course_des_en, scheme_id, scheme_des_la, scheme_des_en, drop_id, student_id,"
+        Sql &= " class_room, year_study, drop_des, drop_reson, drop_remark, drop_status, user_update, last_update"
         Sql &= " FROM view_std_drop"
-        Sql &= " WHERE(drop_id>0) " & ct_search & ct_droping & ct_undrop
+        Sql &= " WHERE(student_status > 0) " & ct_search & ct_droping & ct_undrop   'student_status=0 ແມ່ນນັກສຶກສາອອກແລ້ວ
         Sql &= " ORDER BY drop_id"
         dt = ExecuteDatable(Sql)
         With Datagridview1
@@ -49,7 +49,7 @@
                 End If
 
                 .Rows.Add(dt.Rows(i).Item("drop_id"), (i + 1), dt.Rows(i).Item("title_la") & ". " & dt.Rows(i).Item("student_fullname_la"), (dt.Rows(i).Item("scheme_des_la") & "-[" & dt.Rows(i).Item("course_des_la") & "]"), _
-                         dt.Rows(i).Item("term_no"), dt.Rows(i).Item("drop_year"), st, dt.Rows(i).Item("user_update"), dt.Rows(i).Item("drop_des"))
+                         dt.Rows(i).Item("drop_des"), st, dt.Rows(i).Item("user_update"), dt.Rows(i).Item("drop_reson"))
             Next
 
             btn_add.Enabled = True
@@ -83,10 +83,21 @@
     End Sub
 
     Private Sub btn_print_Click(sender As Object, e As EventArgs) Handles btn_print.Click
-        'BILL_ID = Datagridview1.CurrentRow.Cells(2).Value
-        'rpt_status = 6
-        'Rpt_OnlyView = 1
-        'FrmReport_A5.ShowDialog()
+        Cursor = Cursors.WaitCursor
+        BILL_ID = Datagridview1.CurrentRow.Cells(0).Value
+        Sql = "SELECT * FROM view_std_drop "
+        Sql &= " WHERE(drop_id = " & BILL_ID & ") "
+        dt = ExecuteDatable(Sql)
+        Dim crt As New Rpt_StudentDrop_LA
+        crt.SetDataSource(dt)
+
+        'crt.SetParameterValue("user_print", User_name)
+        crt.PrintOptions.PaperSize = CrystalDecisions.Shared.PaperSize.PaperA4
+
+        'Show Report
+        FrmReport_A4.CrystalReportViewer1.ReportSource = crt
+        FrmReport_A4.ShowDialog()
+        Cursor = Cursors.Default
     End Sub
 
     Private Sub chk_active_CheckedChanged(sender As Object, e As EventArgs) Handles chk_undrop.CheckedChanged

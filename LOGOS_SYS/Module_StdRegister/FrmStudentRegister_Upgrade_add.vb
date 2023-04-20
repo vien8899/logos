@@ -103,6 +103,10 @@ Public Class FrmStudentRegister_Upgrade_add
         cm.Parameters.AddWithValue("user_update", User_name)
         cm.ExecuteNonQuery()
 
+        'StudentLog
+        Dim action_detail As String = "ລົງທະບຽນອັບເກດ (ວິຊາ: " & txt_subject.Text & ") ຈຳນວນເງິນ: " & txt_total.Text
+        Call AddStudentLog(CInt(txt_std_code.Tag), action_detail)
+
         'MessageBox.Show("Save completed.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Information)
         reg_number_of_term_where = " WHERE(bill_id = '" & BILL_ID & "')"
         had_change_val = 1

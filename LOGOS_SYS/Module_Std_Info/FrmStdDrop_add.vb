@@ -22,13 +22,15 @@ Public Class FrmStdDrop_add
         txt_std_code.Text = ""
         txt_name.Text = ""
         txt_name.Tag = ""
-        txt_term.Text = ""
-        txt_term.Tag = ""
+        txt_desc.Text = ""
+        txt_desc.Tag = ""
         txt_course.Tag = ""
         txt_course.Text = ""
+        txt_year.Text = ""
+        txt_class.Text = ""
         txt_sokhien.Text = ""
-        txt_comment.Text = ""
-        btn_search_term.Enabled = False
+        txt_seasion.Text = ""
+        txt_reason.Text = ""
         Dim cur_yyyy As Integer = Format(CDate(cur_date), "yyyy")
         start_year = cur_yyyy
         txt_std_code.Select()
@@ -45,48 +47,74 @@ Public Class FrmStdDrop_add
             btn_search_std.Focus()
             Exit Sub
         End If
-        If (txt_term.Text.Trim = "") Then
-            MessageBox.Show("Please term need to drop.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            btn_search_term.Focus()
+
+        If (txt_class.Text.Trim = "") Then
+            MessageBox.Show("Please enter class room.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txt_class.Focus()
             Exit Sub
         End If
 
-        'Remark
-        If (txt_comment.Text.Trim = "") Then
+        If (txt_year.Text.Trim = "") Then
+            MessageBox.Show("Please enter year studying...", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txt_year.Focus()
+            Exit Sub
+        End If
+
+        If (txt_desc.Text.Trim = "") Then
+            MessageBox.Show("Please enter drop detail.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txt_desc.Focus()
+            Exit Sub
+        End If
+        If (txt_reason.Text.Trim = "") Then
             MessageBox.Show("Please enter drop reason.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            txt_comment.Focus()
+            txt_reason.Focus()
             Exit Sub
         End If
 
-        'check for dupplicate drop
-        Sql = "SELECT student_id FROM tbl_student_drop WHERE(student_id=" & txt_name.Tag & ") AND (term_id=" & txt_term.Tag & ")"
-        dt = ExecuteDatable(Sql)
-        If (dt.Rows.Count > 0) Then
-            MessageBox.Show("ນັກສຶກສາໄດ້ຢຸດຮຽນເທີມນີ້ແລ້ວ.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            txt_std_code.Focus()
+        If (txt_sokhien.Text.Trim = "") Then
+            MessageBox.Show("ກະລຸນາປ້ອນສົກຮຽນ.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txt_sokhien.Focus()
             Exit Sub
+        End If
+        If (txt_seasion.Text.Trim = "") Then
+            MessageBox.Show("ກະລຸນາປ້ອນພາກຮຽນ.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txt_seasion.Focus()
+            Exit Sub
+        End If
+
+        Dim rm As String = "--"
+        If (txt_remark.Text.Trim <> "") Then
+            rm = txt_remark.Text.Trim
         End If
 
         'check for dupplicate drop
         Sql = "SELECT student_id FROM tbl_student_drop WHERE(student_id=" & txt_name.Tag & ") AND (drop_status=1)"
         dt = ExecuteDatable(Sql)
-        If (dt.Rows.Count > 1) Then
-            MessageBox.Show("ນັກສຶກສາບໍ່ສາມາດຢຸດຮຽນຫຼາຍກວ່າ 2 ເທີມ.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        If (dt.Rows.Count > 0) Then
+            MessageBox.Show("ນັກສຶກສາກຳລັງຢູ່ໃນການໂຈະຮຽນຢູ່, ບໍ່ສາມາດເພີ່ມການໂຈະຮຽນຕື່ມໄດ້.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txt_std_code.Focus()
             Exit Sub
         End If
 
-        'For New Studen
+        'For New Student
         Call ConnectDB()
-        Sql = "INSERT INTO tbl_student_drop(student_id ,term_id ,drop_year ,drop_des ,user_update) "
-        Sql &= "                     VALUES(@student_id ,@term_id ,@drop_year ,@drop_des ,@user_update)"
+        Sql = "INSERT INTO tbl_student_drop(student_id ,class_room ,year_study ,drop_des ,drop_reson ,drop_remark ,user_update, at_seasion, at_sokhien) "
+        Sql &= "                     VALUES(@student_id ,@class_room ,@year_study ,@drop_des ,@drop_reson ,@drop_remark ,@user_update, @at_seasion, @at_sokhien)"
         cm = New SqlCommand(Sql, conn)
         cm.Parameters.AddWithValue("student_id", txt_name.Tag)
-        cm.Parameters.AddWithValue("term_id", txt_term.Tag)
-        cm.Parameters.AddWithValue("drop_year", txt_sokhien.Text)
-        cm.Parameters.AddWithValue("drop_des", CStr(txt_comment.Text.Trim))
+        cm.Parameters.AddWithValue("class_room", txt_class.Text.Trim)
+        cm.Parameters.AddWithValue("year_study", txt_year.Text.Trim)
+        cm.Parameters.AddWithValue("drop_des", txt_desc.Text.Trim)
+        cm.Parameters.AddWithValue("drop_reson", txt_reason.Text.Trim)
+        cm.Parameters.AddWithValue("drop_remark", rm)
         cm.Parameters.AddWithValue("user_update", User_name)
+        cm.Parameters.AddWithValue("at_seasion", txt_seasion.Text.Trim)
+        cm.Parameters.AddWithValue("at_sokhien", txt_sokhien.Text.Trim)
         cm.ExecuteNonQuery()
+
+        'StudentLog
+        Dim action_detail As String = "Drop ການຮຽນຊົ່ວຄາວ (" & txt_desc.Text & ")"
+        Call AddStudentLog(CInt(txt_std_code.Tag), action_detail)
 
         MessageBox.Show("Save completed.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Information)
         had_change_val = 1
@@ -99,60 +127,6 @@ Public Class FrmStdDrop_add
 
     Private Sub btn_disable_Click_1(sender As Object, e As EventArgs) Handles btn_cancel.Click
         Me.Close()
-    End Sub
-
-    Private Sub btn_Search_Click(sender As Object, e As EventArgs) Handles btn_search_term.Click
-        select_term_where = " WHERE(term_id IN(SELECT term_id FROM tbl_term_register WHERE(student_id=" & txt_name.Tag & "))) "
-
-        Dim PS As Point = btn_search_term.PointToScreen(New Point(btn_search_term.Width - 5, btn_search_term.Height - 230))
-        FrmStdDropTerm_select.Location = PS
-        If FrmStdDropTerm_select.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            txt_term.Tag = FrmStdDropTerm_select.t_id
-            txt_term.Text = FrmStdDropTerm_select.t_code
-        End If
-    End Sub
-
-    Private Sub getTermListInCourse(ByVal c As Integer)
-        'Sql = "SELECT term_id ,term_no ,term_des ,register_amount ,course_id ,term_status, term_study_year "
-        'Sql &= " FROM view_term_table WHERE(term_status <> 0) AND (course_id=" & c & ") "
-        'Sql &= " ORDER BY term_list_id "
-        'dt = ExecuteDatable(Sql)
-        'Datagridview1.Rows.Clear()
-        'If (dt.Rows.Count > 0) Then
-        '    With Datagridview1
-        '        For i As Integer = 0 To dt.Rows.Count - 1
-        '            Dim money_dis As Double = 0
-        '            Dim first As Boolean = True
-        '            If (i > 0) Then
-        '                first = False
-        '            End If
-
-        '            .Rows.Add(dt.Rows(i).Item("term_id"), first, (dt.Rows(i).Item("term_no") & "-[" & dt.Rows(i).Item("term_des") & "]"), _
-        '                      dt.Rows(i).Item("register_amount"), CInt(money_dis), (start_year - 1 + CInt(dt.Rows(i).Item("term_study_year"))) & "-" & (start_year + CInt(dt.Rows(i).Item("term_study_year"))))
-        '        Next
-
-        '    End With
-
-        '    Dim max_enable As Integer = 6
-        '    If (Datagridview1.Rows.Count < 6) Then
-        '        max_enable = Datagridview1.Rows.Count
-        '    End If
-        '    For i As Integer = 2 To max_enable
-        '        For Each btn As Control In Me.Panel_Reg.Controls
-        '            If TypeOf btn Is RadioButton And btn.Name = "rdo" & i Then
-        '                CType(btn, RadioButton).Enabled = True
-        '            End If
-        '        Next
-        '    Next
-
-        '    rdo1.Enabled = True
-        '    rdo1.Checked = True
-        '    rdo7.Enabled = True
-        '    btn_save.Enabled = True
-        'Else
-        '    btn_save.Enabled = False
-        '    Call LockedRDO()
-        'End If
     End Sub
 
     Private Sub btn_search_enroll_Click(sender As Object, e As EventArgs) Handles btn_search_std.Click
@@ -168,14 +142,10 @@ Public Class FrmStdDrop_add
             txt_name.Tag = FrmStdDrop_StudentSelect.get_student_id
             txt_name.Text = FrmStdDrop_StudentSelect.get_sex & ". " & FrmStdDrop_StudentSelect.get_student_name_la
             txt_parent.Text = FrmStdDrop_StudentSelect.get_parent_name & " [ໂທລະສັບ: " & FrmStdDrop_StudentSelect.get_parent_contact & "]"
-        End If
-    End Sub
-
-    Private Sub txt_name_TextChanged(sender As Object, e As EventArgs) Handles txt_name.TextChanged
-        If (txt_name.Text.Trim <> "") Then
-            btn_search_term.Enabled = True
-        Else
-            btn_search_term.Enabled = False
+            txt_class.Text = FrmStdDrop_StudentSelect.get_class
+            txt_year.Text = FrmStdDrop_StudentSelect.get_year
+            txt_sokhien.Text = FrmStdDrop_StudentSelect.get_sokhien
+            txt_seasion.Text = FrmStdDrop_StudentSelect.get_seasion
         End If
     End Sub
 

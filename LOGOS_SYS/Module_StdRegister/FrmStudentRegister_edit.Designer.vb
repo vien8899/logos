@@ -45,6 +45,7 @@ Partial Class FrmStudentRegister_edit
         Me.TileItem7 = New DevExpress.XtraEditors.TileItem()
         Me.TileItem8 = New DevExpress.XtraEditors.TileItem()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.cb_learning_time = New System.Windows.Forms.ComboBox()
         Me.cb_sokhien = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txt_course = New ChreneLib.Controls.TextBoxes.CTextBox()
@@ -56,17 +57,16 @@ Partial Class FrmStudentRegister_edit
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txt_total = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txt_paid = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.txt_remain = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.txt_discount = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.txt_receive = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.cb_sex = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.lb_test_date = New System.Windows.Forms.Label()
         Me.label2 = New System.Windows.Forms.Label()
         Me.calendar_test = New System.Windows.Forms.MonthCalendar()
@@ -74,14 +74,16 @@ Partial Class FrmStudentRegister_edit
         Me.txt_phone = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.label1 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.txt_scheme_id = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.btn_save = New System.Windows.Forms.Button()
         Me.btn_save_print = New System.Windows.Forms.Button()
         Me.btn_cancel = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.BarLargeButtonItem1 = New DevExpress.XtraBars.BarLargeButtonItem()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -300,6 +302,7 @@ Partial Class FrmStudentRegister_edit
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.cb_learning_time)
         Me.Panel2.Controls.Add(Me.cb_sokhien)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.txt_course)
@@ -309,7 +312,6 @@ Partial Class FrmStudentRegister_edit
         Me.Panel2.Controls.Add(Me.GroupBox1)
         Me.Panel2.Controls.Add(Me.DateTimePicker1)
         Me.Panel2.Controls.Add(Me.cb_sex)
-        Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.lb_test_date)
         Me.Panel2.Controls.Add(Me.label2)
         Me.Panel2.Controls.Add(Me.calendar_test)
@@ -317,14 +319,16 @@ Partial Class FrmStudentRegister_edit
         Me.Panel2.Controls.Add(Me.txt_phone)
         Me.Panel2.Controls.Add(Me.label1)
         Me.Panel2.Controls.Add(Me.Panel6)
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.txt_scheme_id)
-        Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.btn_save)
         Me.Panel2.Controls.Add(Me.btn_save_print)
         Me.Panel2.Controls.Add(Me.btn_cancel)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.Label15)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
@@ -332,13 +336,24 @@ Partial Class FrmStudentRegister_edit
         Me.Panel2.Size = New System.Drawing.Size(809, 596)
         Me.Panel2.TabIndex = 0
         '
+        'cb_learning_time
+        '
+        Me.cb_learning_time.BackColor = System.Drawing.Color.White
+        Me.cb_learning_time.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb_learning_time.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cb_learning_time.FormattingEnabled = True
+        Me.cb_learning_time.Location = New System.Drawing.Point(146, 257)
+        Me.cb_learning_time.Name = "cb_learning_time"
+        Me.cb_learning_time.Size = New System.Drawing.Size(395, 33)
+        Me.cb_learning_time.TabIndex = 75
+        '
         'cb_sokhien
         '
         Me.cb_sokhien.BackColor = System.Drawing.Color.White
         Me.cb_sokhien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_sokhien.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_sokhien.FormattingEnabled = True
-        Me.cb_sokhien.Location = New System.Drawing.Point(549, 123)
+        Me.cb_sokhien.Location = New System.Drawing.Point(549, 118)
         Me.cb_sokhien.Name = "cb_sokhien"
         Me.cb_sokhien.Size = New System.Drawing.Size(225, 34)
         Me.cb_sokhien.TabIndex = 73
@@ -348,7 +363,7 @@ Partial Class FrmStudentRegister_edit
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Blue
-        Me.Label11.Location = New System.Drawing.Point(621, 97)
+        Me.Label11.Location = New System.Drawing.Point(621, 92)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(80, 25)
         Me.Label11.TabIndex = 74
@@ -356,23 +371,24 @@ Partial Class FrmStudentRegister_edit
         '
         'txt_course
         '
-        Me.txt_course.Location = New System.Drawing.Point(146, 235)
+        Me.txt_course.Location = New System.Drawing.Point(146, 219)
         Me.txt_course.Name = "txt_course"
         Me.txt_course.ReadOnly = True
         Me.txt_course.Size = New System.Drawing.Size(395, 34)
         Me.txt_course.TabIndex = 62
         Me.txt_course.WaterMark = "ເລືອກຫຼັກສູດ-ສາຂາຮຽນ"
         Me.txt_course.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_course.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_name_en
         '
         Me.txt_name_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_name_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_name_en.Location = New System.Drawing.Point(146, 160)
+        Me.txt_name_en.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_name_en.Location = New System.Drawing.Point(146, 155)
         Me.txt_name_en.Name = "txt_name_en"
-        Me.txt_name_en.Size = New System.Drawing.Size(395, 34)
+        Me.txt_name_en.Size = New System.Drawing.Size(395, 29)
         Me.txt_name_en.TabIndex = 3
         Me.txt_name_en.WaterMark = "Enter name & Surname..."
         Me.txt_name_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
@@ -383,25 +399,26 @@ Partial Class FrmStudentRegister_edit
         '
         Me.txt_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_name.Location = New System.Drawing.Point(222, 123)
+        Me.txt_name.Location = New System.Drawing.Point(222, 118)
         Me.txt_name.Name = "txt_name"
         Me.txt_name.Size = New System.Drawing.Size(319, 34)
         Me.txt_name.TabIndex = 2
         Me.txt_name.WaterMark = "ພິມຊື່ ແລະ ນາມສະກຸນພາສາລາວ..."
         Me.txt_name.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_name.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_std_code
         '
         Me.txt_std_code.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txt_std_code.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_std_code.Location = New System.Drawing.Point(146, 86)
         Me.txt_std_code.Name = "txt_std_code"
-        Me.txt_std_code.Size = New System.Drawing.Size(235, 34)
+        Me.txt_std_code.Size = New System.Drawing.Size(235, 29)
         Me.txt_std_code.TabIndex = 0
         Me.txt_std_code.WaterMark = "ພິມລະຫັດນັກສຶກສາ"
         Me.txt_std_code.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_std_code.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_std_code.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_std_code.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'GroupBox1
@@ -411,18 +428,18 @@ Partial Class FrmStudentRegister_edit
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.txt_total)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.txt_paid)
         Me.GroupBox1.Controls.Add(Me.txt_remain)
         Me.GroupBox1.Controls.Add(Me.txt_discount)
-        Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.txt_receive)
+        Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(40, 272)
+        Me.GroupBox1.Location = New System.Drawing.Point(40, 295)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(501, 144)
+        Me.GroupBox1.Size = New System.Drawing.Size(501, 132)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Payment Info"
@@ -430,7 +447,7 @@ Partial Class FrmStudentRegister_edit
         'txt_term
         '
         Me.txt_term.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_term.Location = New System.Drawing.Point(106, 24)
+        Me.txt_term.Location = New System.Drawing.Point(106, 22)
         Me.txt_term.Name = "txt_term"
         Me.txt_term.ReadOnly = True
         Me.txt_term.Size = New System.Drawing.Size(134, 32)
@@ -446,7 +463,7 @@ Partial Class FrmStudentRegister_edit
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(18, 24)
+        Me.Label14.Location = New System.Drawing.Point(18, 22)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(75, 28)
         Me.Label14.TabIndex = 39
@@ -455,7 +472,7 @@ Partial Class FrmStudentRegister_edit
         'txt_total
         '
         Me.txt_total.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_total.Location = New System.Drawing.Point(106, 61)
+        Me.txt_total.Location = New System.Drawing.Point(106, 57)
         Me.txt_total.Name = "txt_total"
         Me.txt_total.ReadOnly = True
         Me.txt_total.Size = New System.Drawing.Size(134, 32)
@@ -472,29 +489,18 @@ Partial Class FrmStudentRegister_edit
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(18, 61)
+        Me.Label7.Location = New System.Drawing.Point(18, 57)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(84, 28)
         Me.Label7.TabIndex = 39
         Me.Label7.Text = "ເງິນຄ່າເທີມ"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(263, 65)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(74, 28)
-        Me.Label13.TabIndex = 39
-        Me.Label13.Text = "ຈ່າຍແລ້ວ"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(18, 97)
+        Me.Label9.Location = New System.Drawing.Point(18, 92)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(71, 28)
         Me.Label9.TabIndex = 39
@@ -504,7 +510,7 @@ Partial Class FrmStudentRegister_edit
         '
         Me.txt_paid.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_paid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.txt_paid.Location = New System.Drawing.Point(341, 65)
+        Me.txt_paid.Location = New System.Drawing.Point(341, 60)
         Me.txt_paid.Name = "txt_paid"
         Me.txt_paid.ReadOnly = True
         Me.txt_paid.Size = New System.Drawing.Size(134, 32)
@@ -521,7 +527,7 @@ Partial Class FrmStudentRegister_edit
         Me.txt_remain.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.txt_remain.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_remain.ForeColor = System.Drawing.Color.White
-        Me.txt_remain.Location = New System.Drawing.Point(341, 101)
+        Me.txt_remain.Location = New System.Drawing.Point(341, 95)
         Me.txt_remain.Name = "txt_remain"
         Me.txt_remain.ReadOnly = True
         Me.txt_remain.Size = New System.Drawing.Size(134, 32)
@@ -536,7 +542,7 @@ Partial Class FrmStudentRegister_edit
         'txt_discount
         '
         Me.txt_discount.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_discount.Location = New System.Drawing.Point(106, 97)
+        Me.txt_discount.Location = New System.Drawing.Point(106, 92)
         Me.txt_discount.Name = "txt_discount"
         Me.txt_discount.Size = New System.Drawing.Size(134, 32)
         Me.txt_discount.TabIndex = 0
@@ -547,23 +553,12 @@ Partial Class FrmStudentRegister_edit
         Me.txt_discount.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_discount.WaterMarkForeColor = System.Drawing.Color.Gray
         '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(263, 102)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(71, 28)
-        Me.Label12.TabIndex = 39
-        Me.Label12.Text = "ຍັງຕິດໜີ້"
-        '
         'txt_receive
         '
         Me.txt_receive.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txt_receive.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_receive.ForeColor = System.Drawing.Color.White
-        Me.txt_receive.Location = New System.Drawing.Point(341, 27)
+        Me.txt_receive.Location = New System.Drawing.Point(341, 25)
         Me.txt_receive.Name = "txt_receive"
         Me.txt_receive.ReadOnly = True
         Me.txt_receive.Size = New System.Drawing.Size(134, 32)
@@ -575,22 +570,45 @@ Partial Class FrmStudentRegister_edit
         Me.txt_receive.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_receive.WaterMarkForeColor = System.Drawing.Color.Gray
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(263, 97)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(71, 28)
+        Me.Label12.TabIndex = 39
+        Me.Label12.Text = "ຍັງຕິດໜີ້"
+        '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(253, 28)
+        Me.Label10.Location = New System.Drawing.Point(253, 26)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(89, 28)
         Me.Label10.TabIndex = 39
         Me.Label10.Text = "ເງິນຕ້ອງຮັບ"
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(263, 61)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(74, 28)
+        Me.Label13.TabIndex = 39
+        Me.Label13.Text = "ຈ່າຍແລ້ວ"
+        '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(146, 197)
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(146, 187)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 34)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 29)
         Me.DateTimePicker1.TabIndex = 4
         '
         'cb_sex
@@ -600,21 +618,10 @@ Partial Class FrmStudentRegister_edit
         Me.cb_sex.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_sex.FormattingEnabled = True
         Me.cb_sex.Items.AddRange(New Object() {"ທ້າວ", "ນາງ"})
-        Me.cb_sex.Location = New System.Drawing.Point(146, 123)
+        Me.cb_sex.Location = New System.Drawing.Point(146, 118)
         Me.cb_sex.Name = "cb_sex"
         Me.cb_sex.Size = New System.Drawing.Size(73, 34)
         Me.cb_sex.TabIndex = 1
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(36, 200)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(105, 28)
-        Me.Label4.TabIndex = 66
-        Me.Label4.Text = "ວັນເດືອນປີເກີດ"
         '
         'lb_test_date
         '
@@ -622,9 +629,9 @@ Partial Class FrmStudentRegister_edit
         Me.lb_test_date.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lb_test_date.Font = New System.Drawing.Font("Times New Roman", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb_test_date.ForeColor = System.Drawing.Color.Red
-        Me.lb_test_date.Location = New System.Drawing.Point(548, 349)
+        Me.lb_test_date.Location = New System.Drawing.Point(548, 341)
         Me.lb_test_date.Name = "lb_test_date"
-        Me.lb_test_date.Size = New System.Drawing.Size(227, 55)
+        Me.lb_test_date.Size = New System.Drawing.Size(227, 84)
         Me.lb_test_date.TabIndex = 64
         Me.lb_test_date.Text = "12/10/2017"
         Me.lb_test_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -634,7 +641,7 @@ Partial Class FrmStudentRegister_edit
         Me.label2.BackColor = System.Drawing.Color.White
         Me.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.label2.ForeColor = System.Drawing.Color.Red
-        Me.label2.Location = New System.Drawing.Point(549, 160)
+        Me.label2.Location = New System.Drawing.Point(549, 155)
         Me.label2.Name = "label2"
         Me.label2.Size = New System.Drawing.Size(225, 31)
         Me.label2.TabIndex = 65
@@ -644,7 +651,7 @@ Partial Class FrmStudentRegister_edit
         'calendar_test
         '
         Me.calendar_test.BackColor = System.Drawing.Color.White
-        Me.calendar_test.Location = New System.Drawing.Point(548, 172)
+        Me.calendar_test.Location = New System.Drawing.Point(548, 167)
         Me.calendar_test.MaxSelectionCount = 1
         Me.calendar_test.Name = "calendar_test"
         Me.calendar_test.ShowToday = False
@@ -653,10 +660,10 @@ Partial Class FrmStudentRegister_edit
         '
         'txt_comment
         '
-        Me.txt_comment.Location = New System.Drawing.Point(39, 419)
+        Me.txt_comment.Location = New System.Drawing.Point(39, 430)
         Me.txt_comment.Multiline = True
         Me.txt_comment.Name = "txt_comment"
-        Me.txt_comment.Size = New System.Drawing.Size(735, 71)
+        Me.txt_comment.Size = New System.Drawing.Size(735, 62)
         Me.txt_comment.TabIndex = 7
         Me.txt_comment.WaterMark = "ລາຍລະອຽດເພີ່ມເຕີມ..."
         Me.txt_comment.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
@@ -665,13 +672,14 @@ Partial Class FrmStudentRegister_edit
         '
         'txt_phone
         '
-        Me.txt_phone.Location = New System.Drawing.Point(289, 197)
+        Me.txt_phone.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_phone.Location = New System.Drawing.Point(289, 187)
         Me.txt_phone.Name = "txt_phone"
-        Me.txt_phone.Size = New System.Drawing.Size(252, 34)
+        Me.txt_phone.Size = New System.Drawing.Size(252, 29)
         Me.txt_phone.TabIndex = 5
         Me.txt_phone.WaterMark = "ເບີໂທນັກສຶກສາ..."
         Me.txt_phone.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_phone.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'label1
@@ -694,12 +702,84 @@ Partial Class FrmStudentRegister_edit
         Me.Panel6.Size = New System.Drawing.Size(735, 3)
         Me.Panel6.TabIndex = 61
         '
+        'txt_scheme_id
+        '
+        Me.txt_scheme_id.Location = New System.Drawing.Point(488, 219)
+        Me.txt_scheme_id.Name = "txt_scheme_id"
+        Me.txt_scheme_id.ReadOnly = True
+        Me.txt_scheme_id.Size = New System.Drawing.Size(10, 34)
+        Me.txt_scheme_id.TabIndex = 72
+        Me.txt_scheme_id.Visible = False
+        Me.txt_scheme_id.WaterMark = "ເລືອກຫຼັກສູດ-ສາຂາຮຽນ"
+        Me.txt_scheme_id.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_scheme_id.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_scheme_id.WaterMarkForeColor = System.Drawing.Color.Gray
+        '
+        'btn_save
+        '
+        Me.btn_save.BackColor = System.Drawing.Color.White
+        Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_save.FlatAppearance.BorderSize = 0
+        Me.btn_save.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_save.Image = Global.LOGOS_SYS.My.Resources.Resources.Pocket
+        Me.btn_save.Location = New System.Drawing.Point(197, 505)
+        Me.btn_save.Name = "btn_save"
+        Me.btn_save.Size = New System.Drawing.Size(128, 69)
+        Me.btn_save.TabIndex = 9
+        Me.btn_save.Text = "ບັນທຶກ"
+        Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_save.UseVisualStyleBackColor = False
+        '
+        'btn_save_print
+        '
+        Me.btn_save_print.BackColor = System.Drawing.Color.White
+        Me.btn_save_print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btn_save_print.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_save_print.FlatAppearance.BorderSize = 0
+        Me.btn_save_print.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_save_print.Image = Global.LOGOS_SYS.My.Resources.Resources.printYellow55
+        Me.btn_save_print.Location = New System.Drawing.Point(333, 505)
+        Me.btn_save_print.Name = "btn_save_print"
+        Me.btn_save_print.Size = New System.Drawing.Size(201, 69)
+        Me.btn_save_print.TabIndex = 10
+        Me.btn_save_print.Text = "ບັນທຶກ-ພິມບິນ"
+        Me.btn_save_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_save_print.UseVisualStyleBackColor = False
+        '
+        'btn_cancel
+        '
+        Me.btn_cancel.BackColor = System.Drawing.Color.White
+        Me.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_cancel.FlatAppearance.BorderSize = 0
+        Me.btn_cancel.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancel.Image = CType(resources.GetObject("btn_cancel.Image"), System.Drawing.Image)
+        Me.btn_cancel.Location = New System.Drawing.Point(542, 505)
+        Me.btn_cancel.Name = "btn_cancel"
+        Me.btn_cancel.Size = New System.Drawing.Size(125, 69)
+        Me.btn_cancel.TabIndex = 11
+        Me.btn_cancel.Text = "ຍົກເລີກ"
+        Me.btn_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_cancel.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(36, 190)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(105, 28)
+        Me.Label4.TabIndex = 66
+        Me.Label4.Text = "ວັນເດືອນປີເກີດ"
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(37, 125)
+        Me.Label5.Location = New System.Drawing.Point(37, 120)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(107, 28)
         Me.Label5.TabIndex = 70
@@ -716,88 +796,38 @@ Partial Class FrmStudentRegister_edit
         Me.Label6.TabIndex = 67
         Me.Label6.Text = "ລະຫັດນັກສຶກສາ"
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.Black
+        Me.Label15.Location = New System.Drawing.Point(36, 257)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(111, 28)
+        Me.Label15.TabIndex = 68
+        Me.Label15.Text = "ເລືອກເວລາຮຽນ"
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(35, 237)
+        Me.Label8.Location = New System.Drawing.Point(35, 221)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(115, 28)
         Me.Label8.TabIndex = 68
         Me.Label8.Text = "ຫຼັກສູດສາຂາວິຊາ"
-        '
-        'txt_scheme_id
-        '
-        Me.txt_scheme_id.Location = New System.Drawing.Point(488, 235)
-        Me.txt_scheme_id.Name = "txt_scheme_id"
-        Me.txt_scheme_id.ReadOnly = True
-        Me.txt_scheme_id.Size = New System.Drawing.Size(10, 34)
-        Me.txt_scheme_id.TabIndex = 72
-        Me.txt_scheme_id.Visible = False
-        Me.txt_scheme_id.WaterMark = "ເລືອກຫຼັກສູດ-ສາຂາຮຽນ"
-        Me.txt_scheme_id.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_scheme_id.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_scheme_id.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(34, 163)
+        Me.Label3.Location = New System.Drawing.Point(34, 158)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(117, 28)
         Me.Label3.TabIndex = 69
         Me.Label3.Text = "ພິມຊື່ພາສາອັງກິດ"
-        '
-        'btn_save
-        '
-        Me.btn_save.BackColor = System.Drawing.Color.White
-        Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_save.FlatAppearance.BorderSize = 0
-        Me.btn_save.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_save.Image = Global.LOGOS_SYS.My.Resources.Resources.Pocket
-        Me.btn_save.Location = New System.Drawing.Point(206, 505)
-        Me.btn_save.Name = "btn_save"
-        Me.btn_save.Size = New System.Drawing.Size(128, 69)
-        Me.btn_save.TabIndex = 9
-        Me.btn_save.Text = "Save"
-        Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_save.UseVisualStyleBackColor = False
-        '
-        'btn_save_print
-        '
-        Me.btn_save_print.BackColor = System.Drawing.Color.White
-        Me.btn_save_print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btn_save_print.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_save_print.FlatAppearance.BorderSize = 0
-        Me.btn_save_print.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_save_print.Image = Global.LOGOS_SYS.My.Resources.Resources.printYellow55
-        Me.btn_save_print.Location = New System.Drawing.Point(349, 505)
-        Me.btn_save_print.Name = "btn_save_print"
-        Me.btn_save_print.Size = New System.Drawing.Size(173, 69)
-        Me.btn_save_print.TabIndex = 10
-        Me.btn_save_print.Text = "Save && Print"
-        Me.btn_save_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_save_print.UseVisualStyleBackColor = False
-        '
-        'btn_cancel
-        '
-        Me.btn_cancel.BackColor = System.Drawing.Color.White
-        Me.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_cancel.FlatAppearance.BorderSize = 0
-        Me.btn_cancel.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cancel.Image = CType(resources.GetObject("btn_cancel.Image"), System.Drawing.Image)
-        Me.btn_cancel.Location = New System.Drawing.Point(540, 505)
-        Me.btn_cancel.Name = "btn_cancel"
-        Me.btn_cancel.Size = New System.Drawing.Size(125, 69)
-        Me.btn_cancel.TabIndex = 11
-        Me.btn_cancel.Text = "Cancel"
-        Me.btn_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_cancel.UseVisualStyleBackColor = False
         '
         'BarLargeButtonItem1
         '
@@ -880,4 +910,6 @@ Partial Class FrmStudentRegister_edit
     Private WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents cb_sokhien As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Private WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents cb_learning_time As System.Windows.Forms.ComboBox
 End Class

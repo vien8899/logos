@@ -1,0 +1,12 @@
+1. Edit Student-Detail form		OK
+2. Report StudentList		OK
+3. Report Student training List	OK
+4. ID-Card Student		OK
+5. Certificate Training		OK
+6. Score Print
+7. Score Result inform
+8. Schorlaship
+9. Add Form Report Filter
+10. User Manual
+11. Import Student Data
+12. Testing

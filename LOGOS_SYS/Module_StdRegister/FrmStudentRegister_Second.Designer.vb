@@ -22,11 +22,6 @@ Partial Class FrmStudentRegister_Second
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmStudentRegister_Second))
         Dim TileItemElement1 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
         Dim TileItemElement2 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
         Dim TileItemElement3 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
@@ -36,10 +31,27 @@ Partial Class FrmStudentRegister_Second
         Dim TileItemElement7 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
         Dim TileItemElement8 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
         Dim TileItemElement9 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmStudentRegister_Second))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tileGroup1 = New DevExpress.XtraEditors.TileGroup()
+        Me.btnNewCur = New DevExpress.XtraEditors.TileItem()
+        Me.tileItem3 = New DevExpress.XtraEditors.TileItem()
+        Me.tileItem4 = New DevExpress.XtraEditors.TileItem()
         Me.TileGroup2 = New DevExpress.XtraEditors.TileGroup()
+        Me.TileItem1 = New DevExpress.XtraEditors.TileItem()
+        Me.TileItem2 = New DevExpress.XtraEditors.TileItem()
+        Me.TileItem5 = New DevExpress.XtraEditors.TileItem()
         Me.TileGroup3 = New DevExpress.XtraEditors.TileGroup()
+        Me.TileItem6 = New DevExpress.XtraEditors.TileItem()
+        Me.TileItem7 = New DevExpress.XtraEditors.TileItem()
+        Me.TileItem8 = New DevExpress.XtraEditors.TileItem()
         Me.Panel_Reg = New System.Windows.Forms.Panel()
+        Me.cb_learning_time = New System.Windows.Forms.ComboBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.btn_search = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.txt_course = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.txt_name_en = New ChreneLib.Controls.TextBoxes.CTextBox()
@@ -78,24 +90,14 @@ Partial Class FrmStudentRegister_Second
         Me.txt_phone = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btn_save = New System.Windows.Forms.Button()
+        Me.btn_cancel = New System.Windows.Forms.Button()
         Me.lb_title = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txt_scheme_id = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.btn_search = New System.Windows.Forms.Button()
-        Me.btn_save = New System.Windows.Forms.Button()
-        Me.btn_cancel = New System.Windows.Forms.Button()
-        Me.btnNewCur = New DevExpress.XtraEditors.TileItem()
-        Me.tileItem3 = New DevExpress.XtraEditors.TileItem()
-        Me.tileItem4 = New DevExpress.XtraEditors.TileItem()
-        Me.TileItem1 = New DevExpress.XtraEditors.TileItem()
-        Me.TileItem2 = New DevExpress.XtraEditors.TileItem()
-        Me.TileItem5 = New DevExpress.XtraEditors.TileItem()
-        Me.TileItem6 = New DevExpress.XtraEditors.TileItem()
-        Me.TileItem7 = New DevExpress.XtraEditors.TileItem()
-        Me.TileItem8 = New DevExpress.XtraEditors.TileItem()
         Me.BarLargeButtonItem1 = New DevExpress.XtraBars.BarLargeButtonItem()
         Me.Panel_Reg.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -110,12 +112,138 @@ Partial Class FrmStudentRegister_Second
         Me.tileGroup1.Items.Add(Me.tileItem4)
         Me.tileGroup1.Name = "tileGroup1"
         '
+        'btnNewCur
+        '
+        Me.btnNewCur.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
+        Me.btnNewCur.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
+        Me.btnNewCur.AppearanceItem.Normal.Options.UseBackColor = True
+        Me.btnNewCur.AppearanceItem.Normal.Options.UseBorderColor = True
+        TileItemElement1.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement1.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        TileItemElement1.Appearance.Normal.Options.UseFont = True
+        TileItemElement1.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement1.Image = Global.LOGOS_SYS.My.Resources.Resources.new_Ico50
+        TileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement1.ImageLocation = New System.Drawing.Point(10, 5)
+        TileItemElement1.Text = "ຫຼັກສູດໃໝ່"
+        TileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement1.TextLocation = New System.Drawing.Point(0, 18)
+        Me.btnNewCur.Elements.Add(TileItemElement1)
+        Me.btnNewCur.Id = 1
+        Me.btnNewCur.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
+        Me.btnNewCur.Name = "btnNewCur"
+        '
+        'tileItem3
+        '
+        Me.tileItem3.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
+        Me.tileItem3.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
+        Me.tileItem3.AppearanceItem.Normal.Options.UseBackColor = True
+        Me.tileItem3.AppearanceItem.Normal.Options.UseBorderColor = True
+        TileItemElement2.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement2.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
+        TileItemElement2.Appearance.Normal.Options.UseFont = True
+        TileItemElement2.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement2.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Edit
+        TileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement2.ImageLocation = New System.Drawing.Point(-10, 5)
+        TileItemElement2.Text = "ແກ້ໄຂຫຼັກສູດ"
+        TileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement2.TextLocation = New System.Drawing.Point(10, 18)
+        Me.tileItem3.Elements.Add(TileItemElement2)
+        Me.tileItem3.Id = 3
+        Me.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
+        Me.tileItem3.Name = "tileItem3"
+        '
+        'tileItem4
+        '
+        Me.tileItem4.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
+        Me.tileItem4.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
+        Me.tileItem4.AppearanceItem.Normal.Options.UseBackColor = True
+        Me.tileItem4.AppearanceItem.Normal.Options.UseBorderColor = True
+        TileItemElement3.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement3.Appearance.Normal.ForeColor = System.Drawing.Color.Red
+        TileItemElement3.Appearance.Normal.Options.UseFont = True
+        TileItemElement3.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement3.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Del
+        TileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement3.ImageLocation = New System.Drawing.Point(-5, 5)
+        TileItemElement3.Text = "ລຶບຫຼັກສູດ"
+        TileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement3.TextLocation = New System.Drawing.Point(10, 18)
+        Me.tileItem4.Elements.Add(TileItemElement3)
+        Me.tileItem4.Id = 4
+        Me.tileItem4.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
+        Me.tileItem4.Name = "tileItem4"
+        '
         'TileGroup2
         '
         Me.TileGroup2.Items.Add(Me.TileItem1)
         Me.TileGroup2.Items.Add(Me.TileItem2)
         Me.TileGroup2.Items.Add(Me.TileItem5)
         Me.TileGroup2.Name = "TileGroup2"
+        '
+        'TileItem1
+        '
+        Me.TileItem1.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
+        Me.TileItem1.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
+        Me.TileItem1.AppearanceItem.Normal.Options.UseBackColor = True
+        Me.TileItem1.AppearanceItem.Normal.Options.UseBorderColor = True
+        TileItemElement4.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement4.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        TileItemElement4.Appearance.Normal.Options.UseFont = True
+        TileItemElement4.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement4.Image = Global.LOGOS_SYS.My.Resources.Resources.new_Ico50
+        TileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement4.ImageLocation = New System.Drawing.Point(10, 5)
+        TileItemElement4.Text = "ຫຼັກສູດໃໝ່"
+        TileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement4.TextLocation = New System.Drawing.Point(0, 18)
+        Me.TileItem1.Elements.Add(TileItemElement4)
+        Me.TileItem1.Id = 1
+        Me.TileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
+        Me.TileItem1.Name = "TileItem1"
+        '
+        'TileItem2
+        '
+        Me.TileItem2.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
+        Me.TileItem2.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
+        Me.TileItem2.AppearanceItem.Normal.Options.UseBackColor = True
+        Me.TileItem2.AppearanceItem.Normal.Options.UseBorderColor = True
+        TileItemElement5.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement5.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
+        TileItemElement5.Appearance.Normal.Options.UseFont = True
+        TileItemElement5.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement5.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Edit
+        TileItemElement5.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement5.ImageLocation = New System.Drawing.Point(-10, 5)
+        TileItemElement5.Text = "ແກ້ໄຂຫຼັກສູດ"
+        TileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement5.TextLocation = New System.Drawing.Point(10, 18)
+        Me.TileItem2.Elements.Add(TileItemElement5)
+        Me.TileItem2.Id = 3
+        Me.TileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
+        Me.TileItem2.Name = "TileItem2"
+        '
+        'TileItem5
+        '
+        Me.TileItem5.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
+        Me.TileItem5.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
+        Me.TileItem5.AppearanceItem.Normal.Options.UseBackColor = True
+        Me.TileItem5.AppearanceItem.Normal.Options.UseBorderColor = True
+        TileItemElement6.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement6.Appearance.Normal.ForeColor = System.Drawing.Color.Red
+        TileItemElement6.Appearance.Normal.Options.UseFont = True
+        TileItemElement6.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement6.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Del
+        TileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement6.ImageLocation = New System.Drawing.Point(-5, 5)
+        TileItemElement6.Text = "ລຶບຫຼັກສູດ"
+        TileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement6.TextLocation = New System.Drawing.Point(10, 18)
+        Me.TileItem5.Elements.Add(TileItemElement6)
+        Me.TileItem5.Id = 4
+        Me.TileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
+        Me.TileItem5.Name = "TileItem5"
         '
         'TileGroup3
         '
@@ -124,9 +252,74 @@ Partial Class FrmStudentRegister_Second
         Me.TileGroup3.Items.Add(Me.TileItem8)
         Me.TileGroup3.Name = "TileGroup3"
         '
+        'TileItem6
+        '
+        Me.TileItem6.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
+        Me.TileItem6.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
+        Me.TileItem6.AppearanceItem.Normal.Options.UseBackColor = True
+        Me.TileItem6.AppearanceItem.Normal.Options.UseBorderColor = True
+        TileItemElement7.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement7.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        TileItemElement7.Appearance.Normal.Options.UseFont = True
+        TileItemElement7.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement7.Image = Global.LOGOS_SYS.My.Resources.Resources.new_Ico50
+        TileItemElement7.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement7.ImageLocation = New System.Drawing.Point(10, 5)
+        TileItemElement7.Text = "ຫຼັກສູດໃໝ່"
+        TileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement7.TextLocation = New System.Drawing.Point(0, 18)
+        Me.TileItem6.Elements.Add(TileItemElement7)
+        Me.TileItem6.Id = 1
+        Me.TileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
+        Me.TileItem6.Name = "TileItem6"
+        '
+        'TileItem7
+        '
+        Me.TileItem7.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
+        Me.TileItem7.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
+        Me.TileItem7.AppearanceItem.Normal.Options.UseBackColor = True
+        Me.TileItem7.AppearanceItem.Normal.Options.UseBorderColor = True
+        TileItemElement8.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement8.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
+        TileItemElement8.Appearance.Normal.Options.UseFont = True
+        TileItemElement8.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement8.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Edit
+        TileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement8.ImageLocation = New System.Drawing.Point(-10, 5)
+        TileItemElement8.Text = "ແກ້ໄຂຫຼັກສູດ"
+        TileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement8.TextLocation = New System.Drawing.Point(10, 18)
+        Me.TileItem7.Elements.Add(TileItemElement8)
+        Me.TileItem7.Id = 3
+        Me.TileItem7.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
+        Me.TileItem7.Name = "TileItem7"
+        '
+        'TileItem8
+        '
+        Me.TileItem8.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
+        Me.TileItem8.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
+        Me.TileItem8.AppearanceItem.Normal.Options.UseBackColor = True
+        Me.TileItem8.AppearanceItem.Normal.Options.UseBorderColor = True
+        TileItemElement9.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileItemElement9.Appearance.Normal.ForeColor = System.Drawing.Color.Red
+        TileItemElement9.Appearance.Normal.Options.UseFont = True
+        TileItemElement9.Appearance.Normal.Options.UseForeColor = True
+        TileItemElement9.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Del
+        TileItemElement9.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileItemElement9.ImageLocation = New System.Drawing.Point(-5, 5)
+        TileItemElement9.Text = "ລຶບຫຼັກສູດ"
+        TileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
+        TileItemElement9.TextLocation = New System.Drawing.Point(10, 18)
+        Me.TileItem8.Elements.Add(TileItemElement9)
+        Me.TileItem8.Id = 4
+        Me.TileItem8.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
+        Me.TileItem8.Name = "TileItem8"
+        '
         'Panel_Reg
         '
         Me.Panel_Reg.BackColor = System.Drawing.Color.Silver
+        Me.Panel_Reg.Controls.Add(Me.cb_learning_time)
+        Me.Panel_Reg.Controls.Add(Me.Label16)
         Me.Panel_Reg.Controls.Add(Me.btn_search)
         Me.Panel_Reg.Controls.Add(Me.Panel5)
         Me.Panel_Reg.Controls.Add(Me.txt_course)
@@ -159,6 +352,48 @@ Partial Class FrmStudentRegister_Second
         Me.Panel_Reg.Size = New System.Drawing.Size(856, 658)
         Me.Panel_Reg.TabIndex = 0
         '
+        'cb_learning_time
+        '
+        Me.cb_learning_time.BackColor = System.Drawing.Color.White
+        Me.cb_learning_time.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb_learning_time.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cb_learning_time.FormattingEnabled = True
+        Me.cb_learning_time.Location = New System.Drawing.Point(154, 246)
+        Me.cb_learning_time.Name = "cb_learning_time"
+        Me.cb_learning_time.Size = New System.Drawing.Size(431, 33)
+        Me.cb_learning_time.TabIndex = 83
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.Black
+        Me.Label16.Location = New System.Drawing.Point(34, 246)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(111, 28)
+        Me.Label16.TabIndex = 82
+        Me.Label16.Text = "ເລືອກເວລາຮຽນ"
+        '
+        'btn_search
+        '
+        Me.btn_search.BackColor = System.Drawing.Color.LightGray
+        Me.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btn_search.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_search.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btn_search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
+        Me.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_search.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_search.ForeColor = System.Drawing.Color.White
+        Me.btn_search.Image = CType(resources.GetObject("btn_search.Image"), System.Drawing.Image)
+        Me.btn_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_search.Location = New System.Drawing.Point(386, 71)
+        Me.btn_search.Name = "btn_search"
+        Me.btn_search.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
+        Me.btn_search.Size = New System.Drawing.Size(44, 34)
+        Me.btn_search.TabIndex = 50
+        Me.btn_search.UseVisualStyleBackColor = False
+        '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.Black
@@ -169,24 +404,25 @@ Partial Class FrmStudentRegister_Second
         '
         'txt_course
         '
-        Me.txt_course.Location = New System.Drawing.Point(154, 220)
+        Me.txt_course.Location = New System.Drawing.Point(154, 209)
         Me.txt_course.Name = "txt_course"
         Me.txt_course.ReadOnly = True
         Me.txt_course.Size = New System.Drawing.Size(431, 34)
         Me.txt_course.TabIndex = 10
         Me.txt_course.WaterMark = "ເລືອກຫຼັກສູດ-ສາຂາຮຽນ"
         Me.txt_course.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_course.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_name_en
         '
         Me.txt_name_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_name_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_name_en.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_name_en.Location = New System.Drawing.Point(154, 145)
         Me.txt_name_en.Name = "txt_name_en"
         Me.txt_name_en.ReadOnly = True
-        Me.txt_name_en.Size = New System.Drawing.Size(431, 34)
+        Me.txt_name_en.Size = New System.Drawing.Size(431, 29)
         Me.txt_name_en.TabIndex = 10
         Me.txt_name_en.WaterMark = "Name & Surname..."
         Me.txt_name_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
@@ -204,7 +440,7 @@ Partial Class FrmStudentRegister_Second
         Me.txt_name.TabIndex = 10
         Me.txt_name.WaterMark = "ຊື່ ແລະ ນາມສະກຸນພາສາລາວ..."
         Me.txt_name.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_name.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_std_code
@@ -216,7 +452,7 @@ Partial Class FrmStudentRegister_Second
         Me.txt_std_code.TabIndex = 0
         Me.txt_std_code.WaterMark = "ຄົ້ນຫາລະຫັດນັກສຶກສາ"
         Me.txt_std_code.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_std_code.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_std_code.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_std_code.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'Panel4
@@ -538,9 +774,10 @@ Partial Class FrmStudentRegister_Second
         'DateTimePicker1
         '
         Me.DateTimePicker1.Enabled = False
-        Me.DateTimePicker1.Location = New System.Drawing.Point(154, 182)
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(154, 177)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 34)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 29)
         Me.DateTimePicker1.TabIndex = 3
         '
         'Label4
@@ -548,7 +785,7 @@ Partial Class FrmStudentRegister_Second
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(33, 185)
+        Me.Label4.Location = New System.Drawing.Point(33, 180)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(105, 28)
         Me.Label4.TabIndex = 39
@@ -591,26 +828,28 @@ Partial Class FrmStudentRegister_Second
         '
         'txt_comment
         '
-        Me.txt_comment.Location = New System.Drawing.Point(154, 258)
+        Me.txt_comment.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_comment.Location = New System.Drawing.Point(154, 284)
         Me.txt_comment.Multiline = True
         Me.txt_comment.Name = "txt_comment"
-        Me.txt_comment.Size = New System.Drawing.Size(431, 72)
+        Me.txt_comment.Size = New System.Drawing.Size(431, 47)
         Me.txt_comment.TabIndex = 1
         Me.txt_comment.WaterMark = "ລາຍລະອຽດເພີ່ມເຕີມ..."
         Me.txt_comment.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_comment.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_comment.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_comment.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_phone
         '
-        Me.txt_phone.Location = New System.Drawing.Point(297, 182)
+        Me.txt_phone.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_phone.Location = New System.Drawing.Point(297, 177)
         Me.txt_phone.Name = "txt_phone"
         Me.txt_phone.ReadOnly = True
-        Me.txt_phone.Size = New System.Drawing.Size(288, 34)
+        Me.txt_phone.Size = New System.Drawing.Size(288, 29)
         Me.txt_phone.TabIndex = 10
         Me.txt_phone.WaterMark = "ເບີໂທນັກສຶກສາ..."
         Me.txt_phone.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_phone.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'label1
@@ -632,6 +871,38 @@ Partial Class FrmStudentRegister_Second
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(777, 3)
         Me.Panel1.TabIndex = 24
+        '
+        'btn_save
+        '
+        Me.btn_save.BackColor = System.Drawing.Color.White
+        Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_save.FlatAppearance.BorderSize = 0
+        Me.btn_save.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_save.Image = Global.LOGOS_SYS.My.Resources.Resources.printYellow55
+        Me.btn_save.Location = New System.Drawing.Point(237, 576)
+        Me.btn_save.Name = "btn_save"
+        Me.btn_save.Size = New System.Drawing.Size(196, 69)
+        Me.btn_save.TabIndex = 7
+        Me.btn_save.Text = "ບັນທຶກ-ພິມບິນ"
+        Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_save.UseVisualStyleBackColor = False
+        '
+        'btn_cancel
+        '
+        Me.btn_cancel.BackColor = System.Drawing.Color.White
+        Me.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_cancel.FlatAppearance.BorderSize = 0
+        Me.btn_cancel.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancel.Image = CType(resources.GetObject("btn_cancel.Image"), System.Drawing.Image)
+        Me.btn_cancel.Location = New System.Drawing.Point(451, 576)
+        Me.btn_cancel.Name = "btn_cancel"
+        Me.btn_cancel.Size = New System.Drawing.Size(136, 69)
+        Me.btn_cancel.TabIndex = 8
+        Me.btn_cancel.Text = "ຍົກເລີກ"
+        Me.btn_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_cancel.UseVisualStyleBackColor = False
         '
         'lb_title
         '
@@ -660,7 +931,7 @@ Partial Class FrmStudentRegister_Second
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(33, 222)
+        Me.Label8.Location = New System.Drawing.Point(33, 211)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(115, 28)
         Me.Label8.TabIndex = 39
@@ -668,7 +939,7 @@ Partial Class FrmStudentRegister_Second
         '
         'txt_scheme_id
         '
-        Me.txt_scheme_id.Location = New System.Drawing.Point(496, 220)
+        Me.txt_scheme_id.Location = New System.Drawing.Point(496, 209)
         Me.txt_scheme_id.Name = "txt_scheme_id"
         Me.txt_scheme_id.ReadOnly = True
         Me.txt_scheme_id.Size = New System.Drawing.Size(10, 34)
@@ -695,252 +966,11 @@ Partial Class FrmStudentRegister_Second
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(32, 260)
+        Me.Label11.Location = New System.Drawing.Point(32, 284)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(126, 28)
         Me.Label11.TabIndex = 39
         Me.Label11.Text = "ໝາຍເຫດເພີ່ມເຕີມ"
-        '
-        'btn_search
-        '
-        Me.btn_search.BackColor = System.Drawing.Color.LightGray
-        Me.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btn_search.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_search.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btn_search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke
-        Me.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
-        Me.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_search.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_search.ForeColor = System.Drawing.Color.White
-        Me.btn_search.Image = CType(resources.GetObject("btn_search.Image"), System.Drawing.Image)
-        Me.btn_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_search.Location = New System.Drawing.Point(386, 71)
-        Me.btn_search.Name = "btn_search"
-        Me.btn_search.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.btn_search.Size = New System.Drawing.Size(44, 34)
-        Me.btn_search.TabIndex = 50
-        Me.btn_search.UseVisualStyleBackColor = False
-        '
-        'btn_save
-        '
-        Me.btn_save.BackColor = System.Drawing.Color.White
-        Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_save.FlatAppearance.BorderSize = 0
-        Me.btn_save.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_save.Image = Global.LOGOS_SYS.My.Resources.Resources.printYellow55
-        Me.btn_save.Location = New System.Drawing.Point(260, 576)
-        Me.btn_save.Name = "btn_save"
-        Me.btn_save.Size = New System.Drawing.Size(173, 69)
-        Me.btn_save.TabIndex = 7
-        Me.btn_save.Text = "Save && Print"
-        Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_save.UseVisualStyleBackColor = False
-        '
-        'btn_cancel
-        '
-        Me.btn_cancel.BackColor = System.Drawing.Color.White
-        Me.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_cancel.FlatAppearance.BorderSize = 0
-        Me.btn_cancel.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cancel.Image = CType(resources.GetObject("btn_cancel.Image"), System.Drawing.Image)
-        Me.btn_cancel.Location = New System.Drawing.Point(451, 576)
-        Me.btn_cancel.Name = "btn_cancel"
-        Me.btn_cancel.Size = New System.Drawing.Size(136, 69)
-        Me.btn_cancel.TabIndex = 8
-        Me.btn_cancel.Text = "Cancel"
-        Me.btn_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_cancel.UseVisualStyleBackColor = False
-        '
-        'btnNewCur
-        '
-        Me.btnNewCur.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
-        Me.btnNewCur.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
-        Me.btnNewCur.AppearanceItem.Normal.Options.UseBackColor = True
-        Me.btnNewCur.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement1.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement1.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        TileItemElement1.Appearance.Normal.Options.UseFont = True
-        TileItemElement1.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement1.Image = Global.LOGOS_SYS.My.Resources.Resources.new_Ico50
-        TileItemElement1.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement1.ImageLocation = New System.Drawing.Point(10, 5)
-        TileItemElement1.Text = "ຫຼັກສູດໃໝ່"
-        TileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement1.TextLocation = New System.Drawing.Point(0, 18)
-        Me.btnNewCur.Elements.Add(TileItemElement1)
-        Me.btnNewCur.Id = 1
-        Me.btnNewCur.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
-        Me.btnNewCur.Name = "btnNewCur"
-        '
-        'tileItem3
-        '
-        Me.tileItem3.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
-        Me.tileItem3.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
-        Me.tileItem3.AppearanceItem.Normal.Options.UseBackColor = True
-        Me.tileItem3.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement2.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement2.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
-        TileItemElement2.Appearance.Normal.Options.UseFont = True
-        TileItemElement2.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement2.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Edit
-        TileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement2.ImageLocation = New System.Drawing.Point(-10, 5)
-        TileItemElement2.Text = "ແກ້ໄຂຫຼັກສູດ"
-        TileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement2.TextLocation = New System.Drawing.Point(10, 18)
-        Me.tileItem3.Elements.Add(TileItemElement2)
-        Me.tileItem3.Id = 3
-        Me.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
-        Me.tileItem3.Name = "tileItem3"
-        '
-        'tileItem4
-        '
-        Me.tileItem4.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
-        Me.tileItem4.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
-        Me.tileItem4.AppearanceItem.Normal.Options.UseBackColor = True
-        Me.tileItem4.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement3.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement3.Appearance.Normal.ForeColor = System.Drawing.Color.Red
-        TileItemElement3.Appearance.Normal.Options.UseFont = True
-        TileItemElement3.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement3.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Del
-        TileItemElement3.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement3.ImageLocation = New System.Drawing.Point(-5, 5)
-        TileItemElement3.Text = "ລຶບຫຼັກສູດ"
-        TileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement3.TextLocation = New System.Drawing.Point(10, 18)
-        Me.tileItem4.Elements.Add(TileItemElement3)
-        Me.tileItem4.Id = 4
-        Me.tileItem4.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
-        Me.tileItem4.Name = "tileItem4"
-        '
-        'TileItem1
-        '
-        Me.TileItem1.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
-        Me.TileItem1.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
-        Me.TileItem1.AppearanceItem.Normal.Options.UseBackColor = True
-        Me.TileItem1.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement4.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement4.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        TileItemElement4.Appearance.Normal.Options.UseFont = True
-        TileItemElement4.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement4.Image = Global.LOGOS_SYS.My.Resources.Resources.new_Ico50
-        TileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement4.ImageLocation = New System.Drawing.Point(10, 5)
-        TileItemElement4.Text = "ຫຼັກສູດໃໝ່"
-        TileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement4.TextLocation = New System.Drawing.Point(0, 18)
-        Me.TileItem1.Elements.Add(TileItemElement4)
-        Me.TileItem1.Id = 1
-        Me.TileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
-        Me.TileItem1.Name = "TileItem1"
-        '
-        'TileItem2
-        '
-        Me.TileItem2.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
-        Me.TileItem2.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
-        Me.TileItem2.AppearanceItem.Normal.Options.UseBackColor = True
-        Me.TileItem2.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement5.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement5.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
-        TileItemElement5.Appearance.Normal.Options.UseFont = True
-        TileItemElement5.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement5.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Edit
-        TileItemElement5.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement5.ImageLocation = New System.Drawing.Point(-10, 5)
-        TileItemElement5.Text = "ແກ້ໄຂຫຼັກສູດ"
-        TileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement5.TextLocation = New System.Drawing.Point(10, 18)
-        Me.TileItem2.Elements.Add(TileItemElement5)
-        Me.TileItem2.Id = 3
-        Me.TileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
-        Me.TileItem2.Name = "TileItem2"
-        '
-        'TileItem5
-        '
-        Me.TileItem5.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
-        Me.TileItem5.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
-        Me.TileItem5.AppearanceItem.Normal.Options.UseBackColor = True
-        Me.TileItem5.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement6.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement6.Appearance.Normal.ForeColor = System.Drawing.Color.Red
-        TileItemElement6.Appearance.Normal.Options.UseFont = True
-        TileItemElement6.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement6.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Del
-        TileItemElement6.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement6.ImageLocation = New System.Drawing.Point(-5, 5)
-        TileItemElement6.Text = "ລຶບຫຼັກສູດ"
-        TileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement6.TextLocation = New System.Drawing.Point(10, 18)
-        Me.TileItem5.Elements.Add(TileItemElement6)
-        Me.TileItem5.Id = 4
-        Me.TileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
-        Me.TileItem5.Name = "TileItem5"
-        '
-        'TileItem6
-        '
-        Me.TileItem6.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
-        Me.TileItem6.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
-        Me.TileItem6.AppearanceItem.Normal.Options.UseBackColor = True
-        Me.TileItem6.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement7.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement7.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        TileItemElement7.Appearance.Normal.Options.UseFont = True
-        TileItemElement7.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement7.Image = Global.LOGOS_SYS.My.Resources.Resources.new_Ico50
-        TileItemElement7.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement7.ImageLocation = New System.Drawing.Point(10, 5)
-        TileItemElement7.Text = "ຫຼັກສູດໃໝ່"
-        TileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement7.TextLocation = New System.Drawing.Point(0, 18)
-        Me.TileItem6.Elements.Add(TileItemElement7)
-        Me.TileItem6.Id = 1
-        Me.TileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
-        Me.TileItem6.Name = "TileItem6"
-        '
-        'TileItem7
-        '
-        Me.TileItem7.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
-        Me.TileItem7.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
-        Me.TileItem7.AppearanceItem.Normal.Options.UseBackColor = True
-        Me.TileItem7.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement8.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement8.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue
-        TileItemElement8.Appearance.Normal.Options.UseFont = True
-        TileItemElement8.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement8.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Edit
-        TileItemElement8.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement8.ImageLocation = New System.Drawing.Point(-10, 5)
-        TileItemElement8.Text = "ແກ້ໄຂຫຼັກສູດ"
-        TileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement8.TextLocation = New System.Drawing.Point(10, 18)
-        Me.TileItem7.Elements.Add(TileItemElement8)
-        Me.TileItem7.Id = 3
-        Me.TileItem7.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
-        Me.TileItem7.Name = "TileItem7"
-        '
-        'TileItem8
-        '
-        Me.TileItem8.AppearanceItem.Normal.BackColor = System.Drawing.Color.White
-        Me.TileItem8.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White
-        Me.TileItem8.AppearanceItem.Normal.Options.UseBackColor = True
-        Me.TileItem8.AppearanceItem.Normal.Options.UseBorderColor = True
-        TileItemElement9.Appearance.Normal.Font = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileItemElement9.Appearance.Normal.ForeColor = System.Drawing.Color.Red
-        TileItemElement9.Appearance.Normal.Options.UseFont = True
-        TileItemElement9.Appearance.Normal.Options.UseForeColor = True
-        TileItemElement9.Image = Global.LOGOS_SYS.My.Resources.Resources.Graduation_Del
-        TileItemElement9.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileItemElement9.ImageLocation = New System.Drawing.Point(-5, 5)
-        TileItemElement9.Text = "ລຶບຫຼັກສູດ"
-        TileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight
-        TileItemElement9.TextLocation = New System.Drawing.Point(10, 18)
-        Me.TileItem8.Elements.Add(TileItemElement9)
-        Me.TileItem8.Id = 4
-        Me.TileItem8.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
-        Me.TileItem8.Name = "TileItem8"
         '
         'BarLargeButtonItem1
         '
@@ -1035,4 +1065,6 @@ Partial Class FrmStudentRegister_Second
     Friend WithEvents sokhien_yyyy As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents REG_ST As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ST_ID As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cb_learning_time As System.Windows.Forms.ComboBox
+    Private WithEvents Label16 As System.Windows.Forms.Label
 End Class

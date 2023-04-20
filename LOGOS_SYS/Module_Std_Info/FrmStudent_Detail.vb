@@ -86,6 +86,10 @@ Public Class FrmStudent_Detail
         cb_sex.Enabled = False
         PictureBox1.Enabled = False
 
+        rdo_studying.Enabled = False
+        rdo_outed.Enabled = False
+        rdo_completed.Enabled = False
+
         btn_save.Visible = False
         btn_edit.Visible = True
         btn_cancel.Enabled = False
@@ -114,6 +118,12 @@ Public Class FrmStudent_Detail
         cb_sex.Enabled = True
         PictureBox1.Enabled = True
 
+        rdo_studying.Enabled = True
+        rdo_outed.Enabled = True
+        If (haveTermNotRegister = False) Then
+            rdo_completed.Enabled = True
+        End If
+
         btn_save.Visible = True
         btn_edit.Visible = False
         btn_cancel.Enabled = True
@@ -134,6 +144,7 @@ Public Class FrmStudent_Detail
     End Sub
     '
     Dim old_std_id As String = ""
+    Dim old_std_status As String = ""
     Private Sub getStudent_info()
         Sql = " SELECT student_id ,student_code ,student_fullname_la ,student_fullname_en ,student_gender ,date_of_birth ,"
         Sql &= " birth_address_la ,birth_address_en ,nationality ,nationality_en, address_la ,address_en ,phone_number ,wa_number ,job_des ,"
@@ -196,6 +207,16 @@ Public Class FrmStudent_Detail
             txt_course.Text = .Item("course_des_la")
             txt_comment.Text = .Item("student_remark")
 
+            'Status
+            old_std_status = .Item("student_status")
+            If (old_std_status = 0) Then
+                rdo_outed.Checked = True
+            ElseIf (old_std_status = 1) Then
+                rdo_studying.Checked = True
+            Else
+                rdo_completed.Checked = True '=2
+            End If
+
             'IMG
             have_img = False
             If Not IsDBNull(.Item("std_img")) Then
@@ -242,6 +263,14 @@ Public Class FrmStudent_Detail
             cmt = txt_comment.Text.Trim
         End If
 
+        Dim student_status As Integer = 0
+        If (rdo_studying.Checked = True) Then
+            student_status = 1
+        End If
+        If (rdo_completed.Checked = True) Then
+            student_status = 2
+        End If
+
         'IMG
         Dim go_update_img As Integer = 0
         Dim img As Byte()
@@ -268,7 +297,7 @@ Public Class FrmStudent_Detail
         Sql &= " start_year=@start_year ,end_year=@end_year ,user_update=@user_update, last_update=getdate(), "
         Sql &= " parent_name=@parent_name, parent_contact=@parent_contact, student_remark=@student_remark, hight_school_name=@hight_school_name, "
         Sql &= " nationality=@nationality, job_des=@job_des, birth_address_la=@birth_address_la, address_la=@address_la, std_img=@std_img, "
-        Sql &= " nationality_en=@nationality_en, birth_address_en=@birth_address_en, address_en=@address_en, expected_graduate=@expected_graduate "
+        Sql &= " nationality_en=@nationality_en, birth_address_en=@birth_address_en, address_en=@address_en, expected_graduate=@expected_graduate, student_status=@student_status "
         Sql &= " WHERE(student_id=" & id_edit & ")"
         cm = New SqlCommand(Sql, conn)
         cm.Parameters.AddWithValue("student_code", txt_std_code.Text.Trim)
@@ -292,10 +321,22 @@ Public Class FrmStudent_Detail
         cm.Parameters.AddWithValue("birth_address_en", txt_birth_address_en.Text.Trim)
         cm.Parameters.AddWithValue("address_en", txt_address_en.Text.Trim)
         cm.Parameters.AddWithValue("expected_graduate", txt_will_complete.Text.Trim)
+        cm.Parameters.AddWithValue("student_status", student_status)
         If (go_update_img = 1) Then
             cm.Parameters.AddWithValue("std_img", img)
         End If
         cm.ExecuteNonQuery()
+
+        If (old_std_status = 1) And (student_status = 0) Then
+            'StudentLog
+            Dim action_detail As String = "ກຳນົດໃຫ້ນັກສຶກສາ ສິ້ນສຸດສະຖານະພາບເປັນນັກສຶກສາ"
+            Call AddStudentLog(CInt(txt_std_code.Tag), action_detail)
+        End If
+        If (old_std_status = 1) And (student_status = 2) Then
+            'StudentLog
+            Dim action_detail As String = "ປ່ຽນສະຖານະນັກສຶກສາ ໃຫ້ຈົບການສຶກສາແລ້ວ"
+            Call AddStudentLog(CInt(txt_std_code.Tag), action_detail)
+        End If
 
         MessageBox.Show("Save completed.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Information)
         had_change_val = 1
@@ -310,7 +351,9 @@ Public Class FrmStudent_Detail
         Me.Close()
     End Sub
 
+    Dim haveTermNotRegister As Boolean = False
     Private Sub getTermListInCourse(ByVal c As Integer, ByVal student_id As Integer)
+        haveTermNotRegister = False
         Sql = "SELECT term_id ,term_no ,term_des ,course_id ,term_status, term_study_year, "
         Sql &= " ISNULL((SELECT 0 FROM tbl_term_register WHERE (student_id = " & student_id & ") AND (term_id=view_term_table.term_id)), 1) AS register_st,"
         Sql &= " ISNULL((SELECT register_amount FROM tbl_term_register WHERE (student_id = " & student_id & ") AND (term_id=view_term_table.term_id)), view_term_table.register_amount) AS register_amount, "
@@ -331,11 +374,12 @@ Public Class FrmStudent_Detail
 
             With gridview_term
                 For i As Integer = 0 To dt.Rows.Count - 1
-                    Dim registed_text As String = "ຍັງບໍ່ລົງທະບຽນ"
-                    Dim chked As Integer = 0
-                    If (dt.Rows(i).Item("register_st") = 0) Then
-                        registed_text = "ລົງທະບຽນແລ້ວ"
-                        chked = 1
+                    Dim registed_text As String = "ລົງທະບຽນແລ້ວ"
+                    Dim chked As Integer = 1
+                    If (dt.Rows(i).Item("register_st") = 1) Then
+                        registed_text = "ຍັງບໍ່ລົງທະບຽນ"
+                        chked = 0
+                        haveTermNotRegister = True
                     End If
 
                     Dim sokhien As String = dt.Rows(i).Item("register_year")
@@ -395,8 +439,9 @@ Public Class FrmStudent_Detail
     End Sub
 
     Private Sub getStudentDrop(ByVal student_id As Integer)
-        Sql = "SELECT drop_id ,student_id ,term_id ,drop_year ,drop_des ,drop_status ,user_update ,last_update ,"
-        Sql &= " term_no, term_no_la, term_des, term_list_id, term_study_year"
+        Sql = "SELECT student_code ,course_id ,course_des_la ,course_des_en ,scheme_id ,scheme_des_la ,scheme_des_en ,"
+        Sql &= " drop_id ,student_id ,class_room ,year_study ,drop_des ,drop_reson ,drop_remark ,drop_status ,"
+        Sql &= " at_sokhien ,at_seasion ,user_update ,last_update ,std_img ,time_learn ,drop_date "
         Sql &= " FROM view_std_drop"
         Sql &= " WHERE(student_id =" & student_id & ") "
         Sql &= " ORDER BY drop_id DESC "
@@ -405,7 +450,8 @@ Public Class FrmStudent_Detail
         If (dt.Rows.Count > 0) Then
             With gridview_drop
                 For i As Integer = 0 To dt.Rows.Count - 1
-                    .Rows.Add((i + 1), dt.Rows(i).Item("term_no"), dt.Rows(i).Item("last_update"), dt.Rows(i).Item("drop_des"), dt.Rows(i).Item("drop_status"), dt.Rows(i).Item("term_study_year"))
+                    .Rows.Add((i + 1), dt.Rows(i).Item("drop_date"), dt.Rows(i).Item("drop_des"), dt.Rows(i).Item("drop_reson"), dt.Rows(i).Item("drop_status"), dt.Rows(i).Item("drop_remark"), _
+                              "ປີ " & dt.Rows(i).Item("year_study") & ", ພາກຮຽນ: " & dt.Rows(i).Item("at_seasion") & "(ສົກຮຽນ: " & dt.Rows(i).Item("at_sokhien") & ")")
                 Next
 
                 Call click_std_drop_row(0)
@@ -421,22 +467,24 @@ Public Class FrmStudent_Detail
 
     Private Sub click_std_drop_row(ByVal r As Integer)
         txt_drop_date.Text = ""
-        txt_drop_term.Text = ""
-        txt_drop_sokhien.Text = ""
-        txt_drop_detail.Text = ""
+        txt_drop_at.Text = ""
+        txt_drop_desc.Text = ""
+        txt_drop_reason.Text = ""
+        txt_drop_remark.Text = ""
         rdo_droping.Checked = False
         rdo_continue.Checked = False
 
         With gridview_drop
-            txt_drop_date.Text = Format(CDate(.Rows(r).Cells(2).Value), "dd/MM/yyyy")
-            txt_drop_term.Text = .Rows(r).Cells(2).Value
-            txt_drop_sokhien.Text = .Rows(r).Cells(5).Value
-            txt_drop_detail.Text = .Rows(r).Cells(3).Value
+            txt_drop_date.Text = Format(CDate(.Rows(r).Cells(1).Value), "dd/MM/yyyy")
+            txt_drop_at.Text = .Rows(r).Cells(6).Value
+            txt_drop_desc.Text = .Rows(r).Cells(2).Value
+            txt_drop_reason.Text = .Rows(r).Cells(3).Value
+            txt_drop_remark.Text = .Rows(r).Cells(5).Value
 
             If (.Rows(r).Cells(4).Value = 1) Then
                 rdo_droping.Checked = True
             End If
-            If (.Rows(r).Cells(4).Value = 1) Then
+            If (.Rows(r).Cells(4).Value = 0) Then
                 rdo_continue.Checked = True
             End If
         End With
@@ -481,4 +529,7 @@ Public Class FrmStudent_Detail
         End If
     End Sub
 
+    Private Sub gridview_drop_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gridview_drop.CellContentClick
+
+    End Sub
 End Class

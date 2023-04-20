@@ -127,8 +127,8 @@ Public Class FrmStudentEnroll_add
         End If
 
         Dim test_date As String = Format(CDate(lb_test_date.Text), "yyyy-MM-dd")
-        Sql = "INSERT INTO tbl_std_enroll_test(std_enroll_id ,enroll_inv_id ,course_id ,learning_shift_id ,enroll_amount ,enroll_discount ,enroll_comment ,test_date ,payment_type, user_update) "
-        Sql &= " VALUES(@std_enroll_id ,@enroll_inv_id ,@course_id ,@lerning_shift_id ,@enroll_amount ,@enroll_discount ,@enroll_comment ,@test_date ,@payment_type, @user_update)"
+        Sql = "INSERT INTO tbl_std_enroll_test(std_enroll_id ,enroll_inv_id ,course_id ,learning_shift_id ,enroll_amount ,enroll_discount ,enroll_comment ,test_date ,payment_type, user_update, user_id, user_receive) "
+        Sql &= " VALUES(@std_enroll_id ,@enroll_inv_id ,@course_id ,@lerning_shift_id ,@enroll_amount ,@enroll_discount ,@enroll_comment ,@test_date ,@payment_type, @user_update, @user_id, @user_receive)"
         cm = New SqlCommand(Sql, conn)
         cm.Parameters.AddWithValue("std_enroll_id", std_enroll_id)
         cm.Parameters.AddWithValue("enroll_inv_id", BILL_ID)
@@ -140,6 +140,8 @@ Public Class FrmStudentEnroll_add
         cm.Parameters.AddWithValue("test_date", test_date)
         cm.Parameters.AddWithValue("payment_type", payment_type)
         cm.Parameters.AddWithValue("user_update", User_name)
+        cm.Parameters.AddWithValue("user_id", User_ID)
+        cm.Parameters.AddWithValue("user_receive", User_name)
         cm.ExecuteNonQuery()
         conn.Close()
 

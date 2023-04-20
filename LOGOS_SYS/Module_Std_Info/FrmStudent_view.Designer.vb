@@ -46,11 +46,11 @@ Partial Class FrmStudent_view
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmStudent_view))
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmStudent_view))
         Me.tileGroup1 = New DevExpress.XtraEditors.TileGroup()
         Me.btnNewCur = New DevExpress.XtraEditors.TileItem()
         Me.tileItem3 = New DevExpress.XtraEditors.TileItem()
@@ -95,6 +95,24 @@ Partial Class FrmStudent_view
         Me.TileGroup6 = New DevExpress.XtraEditors.TileGroup()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Panel_Top = New System.Windows.Forms.Panel()
+        Me.chk_completed = New System.Windows.Forms.CheckBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.cb_course = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.cb_scheme = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel_Control_Reg = New System.Windows.Forms.Panel()
+        Me.btn_print_score = New System.Windows.Forms.Button()
+        Me.btn_edit = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.txt_search = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.chk_outed = New System.Windows.Forms.CheckBox()
+        Me.chk_studying = New System.Windows.Forms.CheckBox()
+        Me.BarLargeButtonItem1 = New DevExpress.XtraBars.BarLargeButtonItem()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -107,22 +125,7 @@ Partial Class FrmStudent_view
         Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Std_Update = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel_Top = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.cb_course = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.cb_scheme = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel_Control_Reg = New System.Windows.Forms.Panel()
-        Me.btn_print_score = New System.Windows.Forms.Button()
-        Me.btn_print_cer = New System.Windows.Forms.Button()
-        Me.btn_edit = New System.Windows.Forms.Button()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.txt_search = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.BarLargeButtonItem1 = New DevExpress.XtraBars.BarLargeButtonItem()
+        Me.number_of_term = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel4.SuspendLayout()
         CType(Me.school_year2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.school_year1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -736,7 +739,7 @@ Partial Class FrmStudent_view
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.ColumnHeadersHeight = 30
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.CreditSubject, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn13, Me.Std_Update, Me.DataGridViewTextBoxColumn12})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.CreditSubject, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn13, Me.Std_Update, Me.DataGridViewTextBoxColumn12, Me.number_of_term})
         DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle10.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -757,6 +760,224 @@ Partial Class FrmStudent_view
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1433, 560)
         Me.DataGridView1.TabIndex = 1
+        '
+        'Panel_Top
+        '
+        Me.Panel_Top.Controls.Add(Me.chk_completed)
+        Me.Panel_Top.Controls.Add(Me.Panel3)
+        Me.Panel_Top.Controls.Add(Me.Panel2)
+        Me.Panel_Top.Controls.Add(Me.Button1)
+        Me.Panel_Top.Controls.Add(Me.Panel4)
+        Me.Panel_Top.Controls.Add(Me.Panel_Control_Reg)
+        Me.Panel_Top.Controls.Add(Me.Panel5)
+        Me.Panel_Top.Controls.Add(Me.chk_outed)
+        Me.Panel_Top.Controls.Add(Me.chk_studying)
+        Me.Panel_Top.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel_Top.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_Top.Name = "Panel_Top"
+        Me.Panel_Top.Size = New System.Drawing.Size(1433, 70)
+        Me.Panel_Top.TabIndex = 5
+        '
+        'chk_completed
+        '
+        Me.chk_completed.AutoSize = True
+        Me.chk_completed.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.chk_completed.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chk_completed.ForeColor = System.Drawing.Color.Green
+        Me.chk_completed.Location = New System.Drawing.Point(884, 24)
+        Me.chk_completed.Name = "chk_completed"
+        Me.chk_completed.Size = New System.Drawing.Size(115, 25)
+        Me.chk_completed.TabIndex = 70
+        Me.chk_completed.Text = "ຈົບການສຶກສາແລ້ວ"
+        Me.chk_completed.UseVisualStyleBackColor = True
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.cb_course)
+        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Location = New System.Drawing.Point(489, 3)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(213, 63)
+        Me.Panel3.TabIndex = 24
+        '
+        'cb_course
+        '
+        Me.cb_course.BackColor = System.Drawing.Color.White
+        Me.cb_course.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb_course.Font = New System.Drawing.Font("Phetsarath OT", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cb_course.FormattingEnabled = True
+        Me.cb_course.Location = New System.Drawing.Point(11, 26)
+        Me.cb_course.Name = "cb_course"
+        Me.cb_course.Size = New System.Drawing.Size(193, 32)
+        Me.cb_course.TabIndex = 23
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Blue
+        Me.Label1.Location = New System.Drawing.Point(57, 1)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(101, 25)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "ສາຂາວິຊາຮຽນ"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.cb_scheme)
+        Me.Panel2.Controls.Add(Me.Label12)
+        Me.Panel2.Location = New System.Drawing.Point(288, 3)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(196, 63)
+        Me.Panel2.TabIndex = 25
+        '
+        'cb_scheme
+        '
+        Me.cb_scheme.BackColor = System.Drawing.Color.White
+        Me.cb_scheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cb_scheme.Font = New System.Drawing.Font("Phetsarath OT", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cb_scheme.FormattingEnabled = True
+        Me.cb_scheme.Location = New System.Drawing.Point(6, 26)
+        Me.cb_scheme.Name = "cb_scheme"
+        Me.cb_scheme.Size = New System.Drawing.Size(184, 32)
+        Me.cb_scheme.TabIndex = 23
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.Blue
+        Me.Label12.Location = New System.Drawing.Point(58, 1)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(86, 25)
+        Me.Label12.TabIndex = 24
+        Me.Label12.Text = "ຫຼັກສູດຮຽນ"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = Global.LOGOS_SYS.My.Resources.Resources.back50_11
+        Me.Button1.Location = New System.Drawing.Point(3, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(61, 61)
+        Me.Button1.TabIndex = 21
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Panel_Control_Reg
+        '
+        Me.Panel_Control_Reg.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel_Control_Reg.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel_Control_Reg.Controls.Add(Me.btn_print_score)
+        Me.Panel_Control_Reg.Controls.Add(Me.btn_edit)
+        Me.Panel_Control_Reg.Location = New System.Drawing.Point(1089, 3)
+        Me.Panel_Control_Reg.Name = "Panel_Control_Reg"
+        Me.Panel_Control_Reg.Size = New System.Drawing.Size(341, 63)
+        Me.Panel_Control_Reg.TabIndex = 4
+        '
+        'btn_print_score
+        '
+        Me.btn_print_score.BackColor = System.Drawing.Color.White
+        Me.btn_print_score.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btn_print_score.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_print_score.FlatAppearance.BorderSize = 0
+        Me.btn_print_score.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_print_score.Image = Global.LOGOS_SYS.My.Resources.Resources.Printer
+        Me.btn_print_score.Location = New System.Drawing.Point(175, 0)
+        Me.btn_print_score.Name = "btn_print_score"
+        Me.btn_print_score.Size = New System.Drawing.Size(139, 63)
+        Me.btn_print_score.TabIndex = 25
+        Me.btn_print_score.Text = "ພິມຂໍ້ມູນ ນັກສຶກສາ"
+        Me.btn_print_score.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_print_score.UseVisualStyleBackColor = False
+        '
+        'btn_edit
+        '
+        Me.btn_edit.BackColor = System.Drawing.Color.White
+        Me.btn_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_edit.FlatAppearance.BorderSize = 0
+        Me.btn_edit.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_edit.Image = CType(resources.GetObject("btn_edit.Image"), System.Drawing.Image)
+        Me.btn_edit.Location = New System.Drawing.Point(17, 0)
+        Me.btn_edit.Name = "btn_edit"
+        Me.btn_edit.Size = New System.Drawing.Size(140, 63)
+        Me.btn_edit.TabIndex = 21
+        Me.btn_edit.Text = "ແກ້ໄຂຂໍ້ມູນ" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ນັກສຶກສາ"
+        Me.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_edit.UseVisualStyleBackColor = False
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.txt_search)
+        Me.Panel5.Controls.Add(Me.Label3)
+        Me.Panel5.Location = New System.Drawing.Point(708, 3)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(170, 63)
+        Me.Panel5.TabIndex = 0
+        '
+        'txt_search
+        '
+        Me.txt_search.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_search.Location = New System.Drawing.Point(7, 29)
+        Me.txt_search.MaxLength = 200
+        Me.txt_search.Name = "txt_search"
+        Me.txt_search.Size = New System.Drawing.Size(156, 29)
+        Me.txt_search.TabIndex = 0
+        Me.txt_search.WaterMark = "Search..."
+        Me.txt_search.WaterMarkActiveForeColor = System.Drawing.Color.LightGray
+        Me.txt_search.WaterMarkFont = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_search.WaterMarkForeColor = System.Drawing.Color.DarkGray
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Blue
+        Me.Label3.Location = New System.Drawing.Point(28, 3)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(115, 25)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "ຄົ້ນຫາ-ນັກສຶກສາ"
+        '
+        'chk_outed
+        '
+        Me.chk_outed.AutoSize = True
+        Me.chk_outed.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.chk_outed.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chk_outed.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.chk_outed.Location = New System.Drawing.Point(884, 46)
+        Me.chk_outed.Name = "chk_outed"
+        Me.chk_outed.Size = New System.Drawing.Size(143, 25)
+        Me.chk_outed.TabIndex = 70
+        Me.chk_outed.Text = "ອອກຈາກການສຶກສາແລ້ວ"
+        Me.chk_outed.UseVisualStyleBackColor = True
+        '
+        'chk_studying
+        '
+        Me.chk_studying.AutoSize = True
+        Me.chk_studying.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.chk_studying.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chk_studying.ForeColor = System.Drawing.Color.Blue
+        Me.chk_studying.Location = New System.Drawing.Point(884, 1)
+        Me.chk_studying.Name = "chk_studying"
+        Me.chk_studying.Size = New System.Drawing.Size(90, 25)
+        Me.chk_studying.TabIndex = 70
+        Me.chk_studying.Text = "ກຳລັງສຶກສາຢູ່"
+        Me.chk_studying.UseVisualStyleBackColor = True
+        '
+        'BarLargeButtonItem1
+        '
+        Me.BarLargeButtonItem1.AllowRightClickInMenu = False
+        Me.BarLargeButtonItem1.Glyph = Global.LOGOS_SYS.My.Resources.Resources.back50
+        Me.BarLargeButtonItem1.Id = 1
+        Me.BarLargeButtonItem1.Name = "BarLargeButtonItem1"
         '
         'DataGridViewTextBoxColumn1
         '
@@ -853,201 +1074,17 @@ Partial Class FrmStudent_view
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle9.Format = "N0"
         Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle9
-        Me.DataGridViewTextBoxColumn12.HeaderText = "ໝາຍເຫດ"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "ສະຖານະນັກສຶກສາ"
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
         Me.DataGridViewTextBoxColumn12.ReadOnly = True
         Me.DataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
         '
-        'Panel_Top
+        'number_of_term
         '
-        Me.Panel_Top.Controls.Add(Me.Panel3)
-        Me.Panel_Top.Controls.Add(Me.Panel2)
-        Me.Panel_Top.Controls.Add(Me.Button1)
-        Me.Panel_Top.Controls.Add(Me.Panel4)
-        Me.Panel_Top.Controls.Add(Me.Panel_Control_Reg)
-        Me.Panel_Top.Controls.Add(Me.Panel5)
-        Me.Panel_Top.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel_Top.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_Top.Name = "Panel_Top"
-        Me.Panel_Top.Size = New System.Drawing.Size(1433, 70)
-        Me.Panel_Top.TabIndex = 5
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.cb_course)
-        Me.Panel3.Controls.Add(Me.Label1)
-        Me.Panel3.Location = New System.Drawing.Point(489, 3)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(213, 63)
-        Me.Panel3.TabIndex = 24
-        '
-        'cb_course
-        '
-        Me.cb_course.BackColor = System.Drawing.Color.White
-        Me.cb_course.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cb_course.FormattingEnabled = True
-        Me.cb_course.Location = New System.Drawing.Point(11, 25)
-        Me.cb_course.Name = "cb_course"
-        Me.cb_course.Size = New System.Drawing.Size(193, 35)
-        Me.cb_course.TabIndex = 23
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Blue
-        Me.Label1.Location = New System.Drawing.Point(57, 1)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 25)
-        Me.Label1.TabIndex = 24
-        Me.Label1.Text = "ສາຂາວິຊາຮຽນ"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.cb_scheme)
-        Me.Panel2.Controls.Add(Me.Label12)
-        Me.Panel2.Location = New System.Drawing.Point(288, 3)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(196, 63)
-        Me.Panel2.TabIndex = 25
-        '
-        'cb_scheme
-        '
-        Me.cb_scheme.BackColor = System.Drawing.Color.White
-        Me.cb_scheme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cb_scheme.FormattingEnabled = True
-        Me.cb_scheme.Location = New System.Drawing.Point(6, 25)
-        Me.cb_scheme.Name = "cb_scheme"
-        Me.cb_scheme.Size = New System.Drawing.Size(184, 35)
-        Me.cb_scheme.TabIndex = 23
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.Blue
-        Me.Label12.Location = New System.Drawing.Point(58, 1)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(86, 25)
-        Me.Label12.TabIndex = 24
-        Me.Label12.Text = "ຫຼັກສູດຮຽນ"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = Global.LOGOS_SYS.My.Resources.Resources.back50_11
-        Me.Button1.Location = New System.Drawing.Point(3, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(61, 61)
-        Me.Button1.TabIndex = 21
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Panel_Control_Reg
-        '
-        Me.Panel_Control_Reg.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel_Control_Reg.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel_Control_Reg.Controls.Add(Me.btn_print_score)
-        Me.Panel_Control_Reg.Controls.Add(Me.btn_print_cer)
-        Me.Panel_Control_Reg.Controls.Add(Me.btn_edit)
-        Me.Panel_Control_Reg.Location = New System.Drawing.Point(901, 3)
-        Me.Panel_Control_Reg.Name = "Panel_Control_Reg"
-        Me.Panel_Control_Reg.Size = New System.Drawing.Size(529, 63)
-        Me.Panel_Control_Reg.TabIndex = 4
-        '
-        'btn_print_score
-        '
-        Me.btn_print_score.BackColor = System.Drawing.Color.White
-        Me.btn_print_score.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btn_print_score.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_print_score.FlatAppearance.BorderSize = 0
-        Me.btn_print_score.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_print_score.Image = Global.LOGOS_SYS.My.Resources.Resources.Printer
-        Me.btn_print_score.Location = New System.Drawing.Point(217, 0)
-        Me.btn_print_score.Name = "btn_print_score"
-        Me.btn_print_score.Size = New System.Drawing.Size(123, 63)
-        Me.btn_print_score.TabIndex = 25
-        Me.btn_print_score.Text = "ພິມໃບ" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ຄະແນນ"
-        Me.btn_print_score.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_print_score.UseVisualStyleBackColor = False
-        '
-        'btn_print_cer
-        '
-        Me.btn_print_cer.BackColor = System.Drawing.Color.White
-        Me.btn_print_cer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btn_print_cer.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_print_cer.FlatAppearance.BorderSize = 0
-        Me.btn_print_cer.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_print_cer.Image = Global.LOGOS_SYS.My.Resources.Resources.printYellow55
-        Me.btn_print_cer.Location = New System.Drawing.Point(345, 0)
-        Me.btn_print_cer.Name = "btn_print_cer"
-        Me.btn_print_cer.Size = New System.Drawing.Size(118, 63)
-        Me.btn_print_cer.TabIndex = 22
-        Me.btn_print_cer.Text = "ພິມໃບ" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ຢັ້ງຢືນ"
-        Me.btn_print_cer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_print_cer.UseVisualStyleBackColor = False
-        '
-        'btn_edit
-        '
-        Me.btn_edit.BackColor = System.Drawing.Color.White
-        Me.btn_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_edit.FlatAppearance.BorderSize = 0
-        Me.btn_edit.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_edit.Image = CType(resources.GetObject("btn_edit.Image"), System.Drawing.Image)
-        Me.btn_edit.Location = New System.Drawing.Point(3, 0)
-        Me.btn_edit.Name = "btn_edit"
-        Me.btn_edit.Size = New System.Drawing.Size(140, 63)
-        Me.btn_edit.TabIndex = 21
-        Me.btn_edit.Text = "ແກ້ໄຂຂໍ້ມູນ" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ນັກສຶກສາ"
-        Me.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_edit.UseVisualStyleBackColor = False
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.txt_search)
-        Me.Panel5.Controls.Add(Me.Label3)
-        Me.Panel5.Location = New System.Drawing.Point(708, 3)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(170, 63)
-        Me.Panel5.TabIndex = 0
-        '
-        'txt_search
-        '
-        Me.txt_search.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_search.Location = New System.Drawing.Point(7, 29)
-        Me.txt_search.MaxLength = 200
-        Me.txt_search.Name = "txt_search"
-        Me.txt_search.Size = New System.Drawing.Size(156, 29)
-        Me.txt_search.TabIndex = 0
-        Me.txt_search.WaterMark = "Search..."
-        Me.txt_search.WaterMarkActiveForeColor = System.Drawing.Color.LightGray
-        Me.txt_search.WaterMarkFont = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_search.WaterMarkForeColor = System.Drawing.Color.DarkGray
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Blue
-        Me.Label3.Location = New System.Drawing.Point(28, 3)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(115, 25)
-        Me.Label3.TabIndex = 24
-        Me.Label3.Text = "ຄົ້ນຫາ-ນັກສຶກສາ"
-        '
-        'BarLargeButtonItem1
-        '
-        Me.BarLargeButtonItem1.AllowRightClickInMenu = False
-        Me.BarLargeButtonItem1.Glyph = Global.LOGOS_SYS.My.Resources.Resources.back50
-        Me.BarLargeButtonItem1.Id = 1
-        Me.BarLargeButtonItem1.Name = "BarLargeButtonItem1"
+        Me.number_of_term.HeaderText = "number_of_term"
+        Me.number_of_term.Name = "number_of_term"
+        Me.number_of_term.ReadOnly = True
+        Me.number_of_term.Visible = False
         '
         'FrmStudent_view
         '
@@ -1071,6 +1108,7 @@ Partial Class FrmStudent_view
         Me.Panel1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_Top.ResumeLayout(False)
+        Me.Panel_Top.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -1115,7 +1153,6 @@ Partial Class FrmStudent_view
     Private WithEvents TileItem15 As DevExpress.XtraEditors.TileItem
     Private WithEvents TileItem16 As DevExpress.XtraEditors.TileItem
     Private WithEvents TileItem17 As DevExpress.XtraEditors.TileItem
-    Friend WithEvents btn_print_cer As System.Windows.Forms.Button
     Friend WithEvents BarLargeButtonItem2 As DevExpress.XtraBars.BarLargeButtonItem
     Friend WithEvents no As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Button1 As System.Windows.Forms.Button
@@ -1141,6 +1178,9 @@ Partial Class FrmStudent_view
     Public WithEvents school_year2 As System.Windows.Forms.NumericUpDown
     Public WithEvents school_year1 As System.Windows.Forms.NumericUpDown
     Public WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents chk_studying As System.Windows.Forms.CheckBox
+    Friend WithEvents chk_outed As System.Windows.Forms.CheckBox
+    Friend WithEvents chk_completed As System.Windows.Forms.CheckBox
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -1153,4 +1193,5 @@ Partial Class FrmStudent_view
     Friend WithEvents DataGridViewTextBoxColumn13 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Std_Update As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents number_of_term As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

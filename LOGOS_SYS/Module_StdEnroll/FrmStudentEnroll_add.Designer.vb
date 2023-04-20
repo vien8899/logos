@@ -45,6 +45,8 @@ Partial Class FrmStudentEnroll_add
         Me.TileItem7 = New DevExpress.XtraEditors.TileItem()
         Me.TileItem8 = New DevExpress.XtraEditors.TileItem()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.rdo_BT = New System.Windows.Forms.RadioButton()
+        Me.rdo_cash = New System.Windows.Forms.RadioButton()
         Me.cb_sex = New System.Windows.Forms.ComboBox()
         Me.cb_learning_time = New System.Windows.Forms.ComboBox()
         Me.txt_detail = New System.Windows.Forms.Label()
@@ -64,8 +66,6 @@ Partial Class FrmStudentEnroll_add
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.txt_amt_regis = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.BarLargeButtonItem1 = New DevExpress.XtraBars.BarLargeButtonItem()
-        Me.rdo_BT = New System.Windows.Forms.RadioButton()
-        Me.rdo_cash = New System.Windows.Forms.RadioButton()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -309,6 +309,32 @@ Partial Class FrmStudentEnroll_add
         Me.Panel2.Size = New System.Drawing.Size(809, 604)
         Me.Panel2.TabIndex = 0
         '
+        'rdo_BT
+        '
+        Me.rdo_BT.AutoSize = True
+        Me.rdo_BT.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdo_BT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.rdo_BT.Location = New System.Drawing.Point(655, 344)
+        Me.rdo_BT.Name = "rdo_BT"
+        Me.rdo_BT.Size = New System.Drawing.Size(105, 32)
+        Me.rdo_BT.TabIndex = 42
+        Me.rdo_BT.TabStop = True
+        Me.rdo_BT.Text = "ຮັບເງິນໂອນ"
+        Me.rdo_BT.UseVisualStyleBackColor = True
+        '
+        'rdo_cash
+        '
+        Me.rdo_cash.AutoSize = True
+        Me.rdo_cash.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdo_cash.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.rdo_cash.Location = New System.Drawing.Point(537, 344)
+        Me.rdo_cash.Name = "rdo_cash"
+        Me.rdo_cash.Size = New System.Drawing.Size(100, 32)
+        Me.rdo_cash.TabIndex = 41
+        Me.rdo_cash.TabStop = True
+        Me.rdo_cash.Text = "ຮັບເງິນສົດ"
+        Me.rdo_cash.UseVisualStyleBackColor = True
+        '
         'cb_sex
         '
         Me.cb_sex.BackColor = System.Drawing.Color.White
@@ -342,7 +368,7 @@ Partial Class FrmStudentEnroll_add
         Me.txt_detail.Name = "txt_detail"
         Me.txt_detail.Size = New System.Drawing.Size(459, 112)
         Me.txt_detail.TabIndex = 33
-        Me.txt_detail.Text = "Detail:"
+        Me.txt_detail.Text = "..."
         '
         'label3
         '
@@ -409,7 +435,7 @@ Partial Class FrmStudentEnroll_add
         Me.txt_phone_parent.TabIndex = 3
         Me.txt_phone_parent.WaterMark = "ເບີໂທຜູ້ປົກຄອງ..."
         Me.txt_phone_parent.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_phone_parent.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_phone_parent.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_phone_parent.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_phone
@@ -420,7 +446,7 @@ Partial Class FrmStudentEnroll_add
         Me.txt_phone.TabIndex = 2
         Me.txt_phone.WaterMark = "ເບີໂທນັກສຶກສາ..."
         Me.txt_phone.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_phone.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_name
@@ -433,7 +459,7 @@ Partial Class FrmStudentEnroll_add
         Me.txt_name.TabIndex = 1
         Me.txt_name.WaterMark = "ພິມຊື່ ແລະ ນາມສະກຸນ..."
         Me.txt_name.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_name.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_course
@@ -445,7 +471,7 @@ Partial Class FrmStudentEnroll_add
         Me.txt_course.TabIndex = 31
         Me.txt_course.WaterMark = "ເລືອກສາຂາຮຽນ"
         Me.txt_course.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_course.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'label1
@@ -494,13 +520,13 @@ Partial Class FrmStudentEnroll_add
         Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_save.FlatAppearance.BorderSize = 0
-        Me.btn_save.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_save.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_save.Image = Global.LOGOS_SYS.My.Resources.Resources.printYellow55
-        Me.btn_save.Location = New System.Drawing.Point(265, 501)
+        Me.btn_save.Location = New System.Drawing.Point(235, 501)
         Me.btn_save.Name = "btn_save"
-        Me.btn_save.Size = New System.Drawing.Size(173, 69)
+        Me.btn_save.Size = New System.Drawing.Size(219, 69)
         Me.btn_save.TabIndex = 7
-        Me.btn_save.Text = "Save && Print"
+        Me.btn_save.Text = "ບັນທຶກ && ພິມບິນ"
         Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_save.UseVisualStyleBackColor = False
         '
@@ -510,13 +536,13 @@ Partial Class FrmStudentEnroll_add
         Me.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_cancel.FlatAppearance.BorderSize = 0
-        Me.btn_cancel.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancel.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_cancel.Image = CType(resources.GetObject("btn_cancel.Image"), System.Drawing.Image)
-        Me.btn_cancel.Location = New System.Drawing.Point(457, 501)
+        Me.btn_cancel.Location = New System.Drawing.Point(473, 501)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(125, 69)
         Me.btn_cancel.TabIndex = 8
-        Me.btn_cancel.Text = "Cancel"
+        Me.btn_cancel.Text = "ຍົກເລີກ"
         Me.btn_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_cancel.UseVisualStyleBackColor = False
         '
@@ -539,32 +565,6 @@ Partial Class FrmStudentEnroll_add
         Me.BarLargeButtonItem1.Glyph = Global.LOGOS_SYS.My.Resources.Resources.back50
         Me.BarLargeButtonItem1.Id = 1
         Me.BarLargeButtonItem1.Name = "BarLargeButtonItem1"
-        '
-        'rdo_BT
-        '
-        Me.rdo_BT.AutoSize = True
-        Me.rdo_BT.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdo_BT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.rdo_BT.Location = New System.Drawing.Point(655, 344)
-        Me.rdo_BT.Name = "rdo_BT"
-        Me.rdo_BT.Size = New System.Drawing.Size(105, 32)
-        Me.rdo_BT.TabIndex = 42
-        Me.rdo_BT.TabStop = True
-        Me.rdo_BT.Text = "ຮັບເງິນໂອນ"
-        Me.rdo_BT.UseVisualStyleBackColor = True
-        '
-        'rdo_cash
-        '
-        Me.rdo_cash.AutoSize = True
-        Me.rdo_cash.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdo_cash.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.rdo_cash.Location = New System.Drawing.Point(537, 344)
-        Me.rdo_cash.Name = "rdo_cash"
-        Me.rdo_cash.Size = New System.Drawing.Size(100, 32)
-        Me.rdo_cash.TabIndex = 41
-        Me.rdo_cash.TabStop = True
-        Me.rdo_cash.Text = "ຮັບເງິນສົດ"
-        Me.rdo_cash.UseVisualStyleBackColor = True
         '
         'FrmStudentEnroll_add
         '

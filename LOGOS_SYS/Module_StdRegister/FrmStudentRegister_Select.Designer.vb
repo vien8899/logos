@@ -70,6 +70,7 @@ Partial Class FrmStudentRegister_Select
         Me.SH = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Y_HIEN = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.course_id_g = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimeLearningShift_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel_Control.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.Datagridview1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -391,7 +392,7 @@ Partial Class FrmStudentRegister_Select
         Me.Datagridview1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Datagridview1.ColumnHeadersHeight = 30
         Me.Datagridview1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.Datagridview1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_std, Me.no, Me.STU_ID, Me.STD_SEX, Me.student_name, Me.STD_NAME_EN, Me.STD_DOB, Me.tel_stu, Me.t_ttt, Me.u_name, Me.Class_Room, Me.SH, Me.Y_HIEN, Me.course_id_g})
+        Me.Datagridview1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_std, Me.no, Me.STU_ID, Me.STD_SEX, Me.student_name, Me.STD_NAME_EN, Me.STD_DOB, Me.tel_stu, Me.t_ttt, Me.u_name, Me.Class_Room, Me.SH, Me.Y_HIEN, Me.course_id_g, Me.TimeLearningShift_ID})
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -524,6 +525,13 @@ Partial Class FrmStudentRegister_Select
         Me.course_id_g.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
         Me.course_id_g.Visible = False
         '
+        'TimeLearningShift_ID
+        '
+        Me.TimeLearningShift_ID.HeaderText = "TimeLearningShift_ID"
+        Me.TimeLearningShift_ID.Name = "TimeLearningShift_ID"
+        Me.TimeLearningShift_ID.ReadOnly = True
+        Me.TimeLearningShift_ID.Visible = False
+        '
         'FrmStudentRegister_Select
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 27.0!)
@@ -583,4 +591,5 @@ Partial Class FrmStudentRegister_Select
     Friend WithEvents SH As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Y_HIEN As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents course_id_g As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TimeLearningShift_ID As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

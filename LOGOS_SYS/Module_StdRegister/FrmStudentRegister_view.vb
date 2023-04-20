@@ -95,7 +95,7 @@
         Sql &= " student_status ,term_no ,term_des ,term_register_amt ,course_id ,course_des_la ,course_des_en ,course_test_amount ,"
         Sql &= " scheme_id ,scheme_des_la ,scheme_des_en ,class_room, dbo.payment_amt(bill_id) AS sum_term_paid, title_la, title_en "
         Sql &= " FROM view_std_register"
-        Sql &= " WHERE(term_register_id > 0) " & ct_year & ct_course & ct_term & ct_search
+        Sql &= " WHERE(student_status <> 0) " & ct_year & ct_course & ct_term & ct_search
         Sql &= " ORDER BY scheme_id, course_id, student_fullname_la "
         dt = ExecuteDatable(Sql)
         With Datagridview1
@@ -120,9 +120,9 @@
             btn_reg_new.Enabled = True
             btn_debt_payment.Enabled = False
             If (.RowCount > 0) Then
-                If (IsDBNull(dt.Rows(0).Item("class_room"))) Then
-                    btn_edit.Enabled = True
-                End If
+                'If (IsDBNull(dt.Rows(0).Item("class_room"))) Then
+                btn_edit.Enabled = True
+                'End If
                 If ((CInt(dt.Rows(0).Item("register_amount")) - CInt(dt.Rows(0).Item("register_discount"))) > CInt(dt.Rows(0).Item("sum_term_paid"))) Then
                     btn_debt_payment.Enabled = True
                 End If
@@ -256,9 +256,9 @@
             btn_edit.Enabled = False
             btn_debt_payment.Enabled = False
             If (.RowCount > 0) Then
-                If (IsDBNull(.CurrentRow.Cells(9).Value)) Then
-                    btn_edit.Enabled = True
-                End If
+                'If (IsDBNull(.CurrentRow.Cells(9).Value)) Then
+                btn_edit.Enabled = True
+                'End If
                 If (CInt(.CurrentRow.Cells(10).Value) > CInt(.CurrentRow.Cells(11).Value)) Then
                     btn_debt_payment.Enabled = True
                 End If
@@ -327,6 +327,7 @@
     End Sub
 
     Private Sub getCourseListSetClass()
+        load_course_setclass_fn = 1
         Sql = "SELECT (scheme_des_la+' -['+course_des_la+']') AS full_course, course_id "
         Sql &= " FROM view_course_list"
         Sql &= " ORDER BY course_id "
@@ -335,6 +336,8 @@
         cb_SetClass_course.ValueMember = "course_id"
         cb_SetClass_course.DisplayMember = "full_course"
         cb_SetClass_course.SelectedIndex = 0
+        cb_SetClass_Term.DataSource = Nothing
+        load_course_setclass_fn = 0
     End Sub
 
     Private Sub getTermListSetClass(ByVal sch As Integer)
@@ -347,6 +350,14 @@
         cb_SetClass_Term.DataSource = dt
         cb_SetClass_Term.ValueMember = "term_id"
         cb_SetClass_Term.DisplayMember = "full_term"
+
+        If (cb_SetClass_Term.Items.Count > 0) Then
+            cb_SetClass_Term.SelectedIndex = 0
+            Call getClassListSetClass(cb_SetClass_Term.SelectedValue)
+        Else
+            cb_SetClass_Class.DataSource = Nothing
+        End If
+
         load_class = 0
     End Sub
 
@@ -363,18 +374,28 @@
     End Sub
 
     Private Sub ResetStdFilterSetClass()
-        DataGridView3.Rows.Clear()
+        DataGridView_SetClass.Rows.Clear()
         txt_SetClass_Sokhien.Text = cb_year.Items(1)
         Call getCourseListSetClass()
         Call getTermListSetClass(cb_SetClass_course.SelectedValue)
         Call getClassListSetClass(cb_SetClass_Term.SelectedValue)
+        Panel_Control_SetClass.Enabled = False
+        btn_SetClass_Search.Enabled = True
+        btn_SetClass_Clear.Enabled = False
+        cb_SetClass_course.Enabled = True
+        cb_SetClass_Term.Enabled = True
+        txt_SetClass_Search.ReadOnly = False
+        chk_haveClass.Checked = False
         txt_SetClass_Search.Text = ""
         txt_SetClass_Search.Select()
     End Sub
 
     Private Sub cb_SetClass_Term_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_SetClass_Term.SelectedIndexChanged
+        'MsgBox(cb_SetClass_Term.Items.Count)
         If (load_finishied = 0) And (load_class = 0) Then
-            Call getClassListSetClass(cb_SetClass_Term.SelectedValue)
+            If (cb_SetClass_Term.Items.Count > 0) Then
+                Call getClassListSetClass(cb_SetClass_Term.SelectedValue)
+            End If
         End If
     End Sub
 
@@ -418,56 +439,129 @@
     End Sub
 
     Private Sub btn_SetClass_Search_Click(sender As Object, e As EventArgs) Handles btn_SetClass_Search.Click
-        btn_upg_new.Enabled = True
-        Dim s_d As String = Convert.ToDateTime(DateTimePicker1.Value.Date).ToString("yyyy-MM-dd")
-        Dim e_d As String = Convert.ToDateTime(DateTimePicker2.Value.Date).ToString("yyyy-MM-dd")
-        Dim ct_date As String = " AND (register_date BETWEEN '" & s_d & "' AND '" & e_d & "')"
-        Dim ct_course As String = ""
+        Dim ct_year As String = " AND (register_year='" & txt_SetClass_Sokhien.Text & "')"
+        Dim ct_course As String = " AND (course_id = " & cb_SetClass_course.SelectedValue & ")"
+        Dim ct_term As String = " AND (term_id = " & cb_SetClass_Term.SelectedValue & ")"
         Dim ct_search As String = ""
-
-        If (cb_course_upg.SelectedValue <> 0) Then
-            ct_course = " AND (course_id = " & cb_course.SelectedValue & ")"
-        End If
         If (txt_search.Text.Trim <> "") Then
-            ct_search = " AND ((student_code LIKE N'%" & txt_search.Text.Trim & "%') "
-            ct_search &= " OR (student_fullname_la LIKE N'%" & txt_search.Text.Trim & "%') "
-            ct_search &= " OR (student_fullname_en LIKE N'%" & txt_search.Text.Trim & "%') "
-            ct_search &= " OR (subject_name_la LIKE N'%" & txt_search.Text.Trim & "%') "
-            ct_search &= " OR (subject_name_en LIKE N'%" & txt_search.Text.Trim & "%') "
-            ct_search &= " OR (phone_number LIKE '" & txt_search.Text.Trim & "%')) "
+            ct_search = " AND ((student_code LIKE N'%" & txt_SetClass_Search.Text.Trim & "%') "
+            ct_search &= " OR (student_fullname_la LIKE N'%" & txt_SetClass_Search.Text.Trim & "%') "
+            ct_search &= " OR (student_fullname_en LIKE N'%" & txt_SetClass_Search.Text.Trim & "%') "
+            ct_search &= " OR (phone_number LIKE '" & txt_SetClass_Search.Text.Trim & "%')) "
         End If
 
-        Sql = "SELECT register_upg_id ,bill_id ,register_date ,register_amount ,register_remark ,receive_by ,receive_id ,"
-        Sql &= " student_id ,student_code ,student_fullname_la ,student_fullname_en ,student_gender ,phone_number ,"
-        Sql &= " course_id ,course_des_la ,course_des_en ,scheme_id ,scheme_des_la ,scheme_des_en ,"
-        Sql &= " subject_id ,subject_code ,subject_name_la ,subject_name_en ,subject_credit, title_la, title_en"
-        Sql &= " FROM view_register_upgrade "
-        Sql &= " WHERE(register_upg_id > 0) " & ct_date & ct_course & ct_search
-        Sql &= " ORDER BY register_date, student_code  "
+        Dim ct_haveClass As String = ""
+        If (chk_haveClass.Checked = False) Then
+            ct_haveClass = " AND (class_room IS NULL)"
+        End If
+
+        Sql = "SELECT term_register_id ,bill_id ,student_id ,term_id ,class_id ,register_amount ,register_discount ,register_year ,"
+        Sql &= " register_date ,last_update ,user_update ,student_code ,student_fullname_la ,student_fullname_en ,student_gender ,"
+        Sql &= " date_of_birth , phone_number ,parent_contact ,start_year ,end_year ,"
+        Sql &= " student_status ,term_no ,term_des ,term_register_amt ,course_id ,course_des_la ,course_des_en ,course_test_amount ,"
+        Sql &= " scheme_id ,scheme_des_la ,scheme_des_en ,class_room, title_la, title_en "
+        Sql &= " FROM view_std_register"
+        Sql &= " WHERE(term_register_id > 0) " & ct_year & ct_course & ct_term & ct_search & ct_haveClass
+        Sql &= " ORDER BY class_room, scheme_id, course_id, student_fullname_la "
         dt = ExecuteDatable(Sql)
 
-        With DataGridView2
+        With DataGridView_SetClass
             .Rows.Clear()
-            For i As Integer = 0 To dt.Rows.Count - 1
+            If (dt.Rows.Count > 0) Then
+                Panel_Control_SetClass.Enabled = True
+                btn_SetClass_Search.Enabled = False
+                btn_SetClass_Clear.Enabled = True
+                cb_SetClass_course.Enabled = False
+                cb_SetClass_Term.Enabled = False
+                txt_SetClass_Search.ReadOnly = False
 
-                'Sex
-                Dim sex As String = dt.Rows(i).Item("title_la") & ". "
+                For i As Integer = 0 To dt.Rows.Count - 1
 
-                .Rows.Add(dt.Rows(i).Item("register_upg_id"), dt.Rows(i).Item("bill_id"), (i + 1), dt.Rows(i).Item("student_code"), sex & dt.Rows(i).Item("student_fullname_la"), _
-                          dt.Rows(i).Item("phone_number"), (dt.Rows(i).Item("scheme_des_la") & "-[" & dt.Rows(i).Item("course_des_la") & "]"), _
-                          dt.Rows(i).Item("register_date"), dt.Rows(i).Item("subject_name_la"), dt.Rows(i).Item("subject_credit"), CInt(dt.Rows(i).Item("register_amount")), _
-                          dt.Rows(i).Item("receive_by"), dt.Rows(i).Item("register_remark"))
+                    'Sex
+                    Dim sex As String = dt.Rows(i).Item("title_la") & ". "
+
+                    'Class
+                    Dim class_no As String = ""
+                    Dim default_checked As Boolean = True
+                    If Not IsDBNull(dt.Rows(i).Item("class_room")) Then
+                        class_no = dt.Rows(i).Item("class_room")
+                        default_checked = False
+                    End If
+
+                    .Rows.Add(dt.Rows(i).Item("term_register_id"), dt.Rows(i).Item("student_id"), default_checked, dt.Rows(i).Item("student_code"), sex & dt.Rows(i).Item("student_fullname_la"), _
+                              dt.Rows(i).Item("phone_number"), (dt.Rows(i).Item("scheme_des_la") & "-[" & dt.Rows(i).Item("course_des_la") & "]"), _
+                              dt.Rows(i).Item("register_year"), (dt.Rows(i).Item("term_no") & "-[" & dt.Rows(i).Item("term_des") & "]"), class_no)
+
+                    'Color Font
+                    If (default_checked = False) Then
+                        .Rows(i).Cells(9).Style.ForeColor = Color.Blue
+                    End If
+                Next
+            Else
+                Panel_Control_SetClass.Enabled = False
+                btn_SetClass_Search.Enabled = True
+                btn_SetClass_Clear.Enabled = False
+                cb_SetClass_course.Enabled = True
+                cb_SetClass_Term.Enabled = True
+                txt_SetClass_Search.ReadOnly = False
+            End If
+
+        End With
+
+    End Sub
+
+    Dim load_course_setclass_fn As Integer = 1
+    Private Sub cb_SetClass_course_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_SetClass_course.SelectedIndexChanged
+        If (load_course_setclass_fn = 0) Then
+            Call getTermListSetClass(CInt(cb_SetClass_course.SelectedValue))
+        End If
+    End Sub
+
+    Private Sub btn_SetClass_Clear_Click(sender As Object, e As EventArgs) Handles btn_SetClass_Clear.Click
+        Call ResetStdFilterSetClass()
+    End Sub
+
+    Private Sub btn_SetClass_Confirm_Click(sender As Object, e As EventArgs) Handles btn_SetClass_Confirm.Click
+        'check class
+        If cb_SetClass_Class.Items.Count = 0 Then
+            MessageBox.Show("Please select class.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            cb_SetClass_Class.Focus()
+            Exit Sub
+        End If
+
+        'Check have checked box
+        Dim can_continue As Boolean = False
+        With DataGridView_SetClass
+            For i As Integer = 0 To .Rows.Count - 1
+                If (.Rows(i).Cells(2).Value) = True Then
+                    can_continue = True
+                    Exit For
+                End If
+            Next
+        End With
+
+        If can_continue = False Then
+            MessageBox.Show("ກະລຸນາເລືອກນັກສຶກສາທີ່ຕ້ອງການຈັດຫ້ອງຮຽນກ່ອນ.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            DataGridView_SetClass.Focus()
+            Exit Sub
+        End If
+
+        With DataGridView_SetClass
+            For i As Integer = 0 To .Rows.Count - 1
+                If (.Rows(i).Cells(2).Value) = True Then
+                    Sql = "UPDATE tbl_term_register SET class_id=" & cb_SetClass_Class.SelectedValue & " "
+                    Sql &= " WHERE(term_register_id= " & .Rows(i).Cells(0).Value & ")"
+                    Call ExecuteUpdate(Sql)
+
+                    'Current_Class
+                    Sql = "UPDATE tbl_student SET class_id=" & cb_SetClass_Class.SelectedValue & " "
+                    Sql &= " WHERE(student_id= " & .Rows(i).Cells(1).Value & ")"
+                    Call ExecuteUpdate(Sql)
+                End If
             Next
 
-            If (.RowCount > 0) Then
-                btn_upg_delete.Enabled = True
-                btn_upg_edit.Enabled = True
-                btn_upg_print.Enabled = True
-            Else
-                btn_upg_delete.Enabled = False
-                btn_upg_edit.Enabled = False
-                btn_upg_print.Enabled = False
-            End If
+            MessageBox.Show("ບັນທຶກການຈັດຫ້ອງຮຽນໃຫ້ນັກສຶກສາສຳເລັດ.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call ResetStdFilterSetClass()
         End With
     End Sub
 

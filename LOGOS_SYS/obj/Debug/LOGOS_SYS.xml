@@ -211,6 +211,14 @@ LOGOS_SYS
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:LOGOS_SYS.My.Resources.Resources.print222">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:LOGOS_SYS.My.Resources.Resources.print22444">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:LOGOS_SYS.My.Resources.Resources.Printer">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -160,14 +160,146 @@
     <Compile Include="frmMain_Trainning.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_Updating.Designer.vb">
+      <DependentUpon>Frm_Updating.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Updating.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Module_BILL\BILL_REGISTER_UPGRADE.vb">
       <DependentUpon>BILL_REGISTER_UPGRADE.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_Student_Log.vb">
+      <DependentUpon>Rpt_Student_Log.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\Print_Score_Report\Rpt_PrintScore_8Term_LA.vb">
+      <DependentUpon>Rpt_PrintScore_8Term_LA.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\Print_Score_Report\Rpt_PrintScore_6Term_LA.vb">
+      <DependentUpon>Rpt_PrintScore_6Term_LA.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\Print_Score_Report\Rpt_PrintScore_6Term_EN.vb">
+      <DependentUpon>Rpt_PrintScore_6Term_EN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\Print_Score_Report\Rpt_SubReport_Term_LA8.vb">
+      <DependentUpon>Rpt_SubReport_Term_LA8.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\Print_Score_Report\Rpt_SubReport_Term_LA6.vb">
+      <DependentUpon>Rpt_SubReport_Term_LA6.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\Print_Score_Report\Rpt_SubReport_Term_EN.vb">
+      <DependentUpon>Rpt_SubReport_Term_EN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_SaleBook_ByQTY.vb">
+      <DependentUpon>Rpt_SaleBook_ByQTY.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_SaleBook_ByPrice.vb">
+      <DependentUpon>Rpt_SaleBook_ByPrice.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\Print_Score_Report\Rpt_PrintScore_8Term_EN.vb">
+      <DependentUpon>Rpt_PrintScore_8Term_EN.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\Form\FrmReport_A4.Designer.vb">
+      <DependentUpon>FrmReport_A4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Report\Form\FrmReport_A4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\ID_CARD_BACK.vb">
+      <DependentUpon>ID_CARD_BACK.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\ID_CARD_FONT.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ID_CARD_FONT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_StudentDebt.vb">
+      <DependentUpon>Rpt_StudentDebt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_StudentDrop_LA.vb">
+      <DependentUpon>Rpt_StudentDrop_LA.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_StudentList_Train_Certificate.vb">
+      <DependentUpon>Rpt_StudentList_Train_Certificate.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_StudentList_Train.vb">
+      <DependentUpon>Rpt_StudentList_Train.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_StudentList_Normal.vb">
+      <DependentUpon>Rpt_StudentList_Normal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_SaleBook_ByBill.vb">
+      <DependentUpon>Rpt_SaleBook_ByBill.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_StudentDrop_List.vb">
+      <DependentUpon>Rpt_StudentDrop_List.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Module_Report\CrystalReport\Rpt_Register.vb">
       <DependentUpon>Rpt_Register.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_Register_Upgrade.vb">
+      <DependentUpon>Rpt_Register_Upgrade.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
@@ -184,26 +316,8 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Module_Report\CrystalReport\Rpt_SaleBook.vb">
-      <DependentUpon>Rpt_SaleBook.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Module_Report\CrystalReport\Rpt_Enroll.vb">
       <DependentUpon>Rpt_Enroll.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Module_Report\CrystalReport\Rpt_StudentDebt.vb">
-      <DependentUpon>Rpt_StudentDebt.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Module_Report\CrystalReport\Rpt_StudentInfo_Training.vb">
-      <DependentUpon>Rpt_StudentInfo_Training.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
@@ -214,28 +328,82 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Module_Report\CrystalReport\Rpt_StudentEndStatus_LA.vb">
+      <DependentUpon>Rpt_StudentEndStatus_LA.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Module_Report\CrystalReport\Rpt_StudentReference_LA.vb">
       <DependentUpon>Rpt_StudentReference_LA.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Module_Report\CrystalReport\Rpt_StudentDrop.vb">
-      <DependentUpon>Rpt_StudentDrop.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
+    <Compile Include="Module_Report\Form\Frm_Report_DropList.Designer.vb">
+      <DependentUpon>Frm_Report_DropList.vb</DependentUpon>
     </Compile>
-    <Compile Include="Module_Report\CrystalReport\Rpt_StudentInfo.vb">
-      <DependentUpon>Rpt_StudentInfo.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
+    <Compile Include="Module_Report\Form\Frm_Report_DropList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_BookSale.Designer.vb">
+      <DependentUpon>Frm_Report_BookSale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_BookSale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Register_train.Designer.vb">
+      <DependentUpon>Frm_Report_Register_train.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Register_train.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Student_PrintOption.Designer.vb">
+      <DependentUpon>Frm_Report_Student_PrintOption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Student_PrintOption.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Student_Normal.Designer.vb">
+      <DependentUpon>Frm_Report_Student_Normal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Student_Normal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Register_Upgrade.Designer.vb">
+      <DependentUpon>Frm_Report_Register_Upgrade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Register_Upgrade.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Student_Train.Designer.vb">
+      <DependentUpon>Frm_Report_Student_Train.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Student_Train.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Enroll_train.Designer.vb">
+      <DependentUpon>Frm_Report_Enroll_train.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Enroll_train.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Enroll.Designer.vb">
+      <DependentUpon>Frm_Report_Enroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Enroll.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module_Sale\FrmSale.designer.vb">
       <DependentUpon>FrmSale.vb</DependentUpon>
     </Compile>
     <Compile Include="Module_Sale\FrmSale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Register.Designer.vb">
+      <DependentUpon>Frm_Report_Register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module_Report\Form\Frm_Report_Register.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module_Std_Info\FrmStdDrop_StudentSelect.Designer.vb">
@@ -709,13 +877,99 @@
     <EmbeddedResource Include="frmMain_Trainning.resx">
       <DependentUpon>frmMain_Trainning.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Updating.resx">
+      <DependentUpon>Frm_Updating.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Module_BILL\BILL_REGISTER_UPGRADE.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BILL_REGISTER_UPGRADE.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_Student_Log.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Student_Log.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Print_Score_Report\Rpt_PrintScore_8Term_LA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_PrintScore_8Term_LA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Print_Score_Report\Rpt_PrintScore_6Term_LA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_PrintScore_6Term_LA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Print_Score_Report\Rpt_PrintScore_6Term_EN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_PrintScore_6Term_EN.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Print_Score_Report\Rpt_SubReport_Term_LA8.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_SubReport_Term_LA8.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Print_Score_Report\Rpt_SubReport_Term_LA6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_SubReport_Term_LA6.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Print_Score_Report\Rpt_SubReport_Term_EN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_SubReport_Term_EN.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_SaleBook_ByQTY.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_SaleBook_ByQTY.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_SaleBook_ByPrice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_SaleBook_ByPrice.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Print_Score_Report\Rpt_PrintScore_8Term_EN.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_PrintScore_8Term_EN.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Form\FrmReport_A4.resx">
+      <DependentUpon>FrmReport_A4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\ID_CARD_BACK.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ID_CARD_BACK.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\ID_CARD_FONT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ID_CARD_FONT.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentDebt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_StudentDebt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentDrop_LA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_StudentDrop_LA.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentList_Train_Certificate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_StudentList_Train_Certificate.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentList_Train.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_StudentList_Train.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentList_Normal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_StudentList_Normal.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_SaleBook_ByBill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_SaleBook_ByBill.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentDrop_List.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_StudentDrop_List.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_Register.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_Register.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_Register_Upgrade.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Register_Upgrade.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_Register_train.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -725,40 +979,54 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_Enroll_train.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_SaleBook.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Rpt_SaleBook.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_Enroll.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_Enroll.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentDebt.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Rpt_StudentDebt.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentInfo_Training.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Rpt_StudentInfo_Training.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentReference_EN.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_StudentReference_EN.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentEndStatus_LA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_StudentEndStatus_LA.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentReference_LA.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_StudentReference_LA.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentDrop.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Rpt_StudentDrop.vb</LastGenOutput>
+    <EmbeddedResource Include="Module_Report\Form\Frm_Report_DropList.resx">
+      <DependentUpon>Frm_Report_DropList.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Module_Report\CrystalReport\Rpt_StudentInfo.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Rpt_StudentInfo.vb</LastGenOutput>
+    <EmbeddedResource Include="Module_Report\Form\Frm_Report_BookSale.resx">
+      <DependentUpon>Frm_Report_BookSale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Form\Frm_Report_Register_train.resx">
+      <DependentUpon>Frm_Report_Register_train.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Form\Frm_Report_Student_PrintOption.resx">
+      <DependentUpon>Frm_Report_Student_PrintOption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Form\Frm_Report_Student_Normal.resx">
+      <DependentUpon>Frm_Report_Student_Normal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Form\Frm_Report_Register_Upgrade.resx">
+      <DependentUpon>Frm_Report_Register_Upgrade.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Form\Frm_Report_Student_Train.resx">
+      <DependentUpon>Frm_Report_Student_Train.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Form\Frm_Report_Enroll_train.resx">
+      <DependentUpon>Frm_Report_Enroll_train.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Form\Frm_Report_Enroll.resx">
+      <DependentUpon>Frm_Report_Enroll.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module_Sale\FrmSale.resx">
       <DependentUpon>FrmSale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module_Report\Form\Frm_Report_Register.resx">
+      <DependentUpon>Frm_Report_Register.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module_Std_Info\FrmStdDrop_StudentSelect.resx">
       <DependentUpon>FrmStdDrop_StudentSelect.vb</DependentUpon>
@@ -1239,6 +1507,8 @@
     <None Include="Resources\excel_162.png" />
     <None Include="Resources\Floppy_disk40.png" />
     <None Include="Resources\SaleBook.png" />
+    <None Include="Resources\print222.png" />
+    <None Include="Resources\print22444.png" />
     <Content Include="Resources\search_ico.png" />
     <None Include="Resources\search_ico1.png" />
     <None Include="Resources\search_ico2.png" />
@@ -1268,9 +1538,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Module_Report\Form\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

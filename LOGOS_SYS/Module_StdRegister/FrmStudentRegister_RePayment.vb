@@ -8,6 +8,17 @@ Public Class FrmStudentRegister_RePayment
         End If
     End Sub
 
+    Private Sub getLearningShiftList(ByVal c As Integer)
+        Sql = "SELECT learning_shift_des, learning_shift_id "
+        Sql &= " FROM tbl_setting_learning_shift WHERE((learning_shift_status <> 0) AND (course_id=" & c & ")) OR (course_id=0) "
+        Sql &= " ORDER BY course_id, learning_shift_id "
+        dt = ExecuteDatable(Sql)
+        cb_learning_time.DataSource = dt
+        cb_learning_time.ValueMember = "learning_shift_id"
+        cb_learning_time.DisplayMember = "learning_shift_des"
+        cb_learning_time.SelectedIndex = 0
+    End Sub
+
     Dim load_finish As Integer = 1
     Private Sub FrmUserGroup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         had_change_val = 0
@@ -22,13 +33,14 @@ Public Class FrmStudentRegister_RePayment
     Dim cur_year As Integer = 0
 
     Dim old_sokhien As String = ""
+    Dim old_learning_id As Integer = 0
     Private Sub load_data()
         Sql = "SELECT term_register_id ,bill_id ,student_id ,term_id ,class_id ,register_amount ,register_discount ,register_year ,"
         Sql &= " register_date ,last_update ,user_update ,student_code ,student_fullname_la ,student_fullname_en ,student_gender ,"
         Sql &= " date_of_birth ,birth_address_la ,birth_address_en ,nationality ,address_la ,address_en ,phone_number ,wa_number ,"
         Sql &= " job_des ,hight_school_name ,hight_school_graduate_year ,parent_name ,parent_contact ,start_year ,end_year ,student_status ,"
         Sql &= " term_no ,term_des ,term_register_amt ,course_id ,course_des_la ,course_des_en ,course_test_amount ,scheme_id ,"
-        Sql &= " scheme_des_la ,scheme_des_en ,class_room, sum_term_paid ,start_learn_date ,register_comment "
+        Sql &= " scheme_des_la ,scheme_des_en ,class_room, sum_term_paid ,start_learn_date ,register_comment, learning_shift_id "
         Sql &= " FROM view_std_register"
         Sql &= " WHERE(term_register_id=" & id_edit & ")"
         dt = ExecuteDatable(Sql)
@@ -56,9 +68,15 @@ Public Class FrmStudentRegister_RePayment
             txt_comment.Text = "--"
             txt_course.Tag = .Item("course_id")
             txt_course.Text = .Item("scheme_des_la") & "(" & .Item("course_des_la") & ")"
+            old_learning_id = .Item("learning_shift_id")
 
             calendar_test.SetSelectionRange(CDate(getCurrentDate()), CDate(getCurrentDate()))
             lb_test_date.Text = calendar_test.SelectionStart.Date.ToString("dd/MM/yyyy")
+
+
+            Call getLearningShiftList(txt_course.Tag)
+            cb_learning_time.SelectedValue = old_learning_id
+
 
             txt_payment2.Select()
         End With
@@ -102,6 +120,16 @@ Public Class FrmStudentRegister_RePayment
         cm.Parameters.AddWithValue("receive_by", User_name)
         cm.Parameters.AddWithValue("receive_id", User_ID)
         cm.ExecuteNonQuery()
+
+        'TimeLearning
+        Sql = "UPDATE tbl_term_payment SET learning_shift_id=" & CInt(cb_learning_time.SelectedValue) & " "
+        Sql &= " WHERE(term_register_id=" & id_edit & ")"
+        cm = New SqlCommand(Sql, conn)
+        cm.ExecuteNonQuery()
+
+        'StudentLog
+        Dim action_detail As String = "ຊຳລະຄ່າເທີມຕິດໜີ້ (" & txt_term.Text & ") ຈຳນວນ: " & txt_payment2.Text
+        Call AddStudentLog(CInt(txt_std_code.Tag), action_detail)
         conn.Close()
 
         had_change_val = 1
@@ -153,5 +181,6 @@ Public Class FrmStudentRegister_RePayment
         txt_payment2.Text = Format(CDbl(txt_payment2.Text), "N0")
         txt_remain2.Text = Format(CDbl(txt_remain.Text) - CDbl(txt_payment2.Text), "N0")
     End Sub
+
 
 End Class

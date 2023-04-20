@@ -18,6 +18,16 @@ Public Class FrmStudentRegister_edit
         cb_sex.DisplayMember = "title_la"
     End Sub
 
+    Private Sub getLearningShiftList(ByVal c As Integer)
+        Sql = "SELECT learning_shift_des, learning_shift_id "
+        Sql &= " FROM tbl_setting_learning_shift WHERE((learning_shift_status <> 0) AND (course_id=" & c & ")) OR (course_id=0) "
+        Sql &= " ORDER BY course_id, learning_shift_id "
+        dt = ExecuteDatable(Sql)
+        cb_learning_time.DataSource = dt
+        cb_learning_time.ValueMember = "learning_shift_id"
+        cb_learning_time.DisplayMember = "learning_shift_des"
+    End Sub
+
     Dim load_finish As Integer = 1
     Private Sub FrmUserGroup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         had_change_val = 0
@@ -36,13 +46,14 @@ Public Class FrmStudentRegister_edit
     Dim cur_year As Integer = 0
 
     Dim old_sokhien As String = ""
+    Dim old_learning_id As Integer = 0
     Private Sub load_data()
         Sql = "SELECT term_register_id ,bill_id ,student_id ,term_id ,class_id ,register_amount ,register_discount ,register_year ,"
         Sql &= " register_date ,last_update ,user_update ,student_code ,student_fullname_la ,student_fullname_en ,student_gender ,"
         Sql &= " date_of_birth ,birth_address_la ,birth_address_en ,nationality ,address_la ,address_en ,phone_number ,wa_number ,"
         Sql &= " job_des ,hight_school_name ,hight_school_graduate_year ,parent_name ,parent_contact ,start_year ,end_year ,student_status ,"
         Sql &= " term_no ,term_des ,term_register_amt ,course_id ,course_des_la ,course_des_en ,course_test_amount ,scheme_id ,"
-        Sql &= " scheme_des_la ,scheme_des_en ,class_room, sum_term_paid ,start_learn_date ,register_comment "
+        Sql &= " scheme_des_la ,scheme_des_en ,class_room, sum_term_paid ,start_learn_date ,register_comment, learning_shift_id "
         Sql &= " FROM view_std_register"
         Sql &= " WHERE(term_register_id=" & id_edit & ")"
         dt = ExecuteDatable(Sql)
@@ -62,6 +73,7 @@ Public Class FrmStudentRegister_edit
             txt_discount.Text = Format(CDbl(.Item("register_discount")), "N0")
             txt_receive.Text = Format(CDbl(txt_total.Text) - CDbl(txt_discount.Text), "N0")
             txt_paid.Text = Format(CDbl(.Item("sum_term_paid")), "N0")
+            old_learning_id = CInt(.Item("learning_shift_id"))
 
             'If have payment cannot edit discount
             If (CDbl(.Item("sum_term_paid")) > 0) Then
@@ -90,6 +102,11 @@ Public Class FrmStudentRegister_edit
                 cb_sokhien.Items.Add(old_sokhien)
             End If
             cb_sokhien.SelectedIndex = 0
+
+            'Learning-Shift
+            Call getLearningShiftList(txt_course.Tag)
+            cb_learning_time.SelectedValue = old_learning_id
+
             txt_name.Select()
         End With
     End Sub
@@ -153,7 +170,7 @@ Public Class FrmStudentRegister_edit
         End If
         Dim learn_date As String = Format(CDate(lb_test_date.Text), "yyyy-MM-dd")
         Sql = "UPDATE tbl_term_register SET register_amount=@register_amount ,register_discount=@register_discount ,register_year=@register_year ,"
-        Sql &= " start_learn_date=@start_learn_date ,register_comment=@register_comment, user_update=@user_update, last_update=getdate() "
+        Sql &= " start_learn_date=@start_learn_date ,register_comment=@register_comment, user_update=@user_update, last_update=getdate(), learning_shift_id=@learning_shift_id "
         Sql &= " WHERE(bill_id=@bill_id)"
         cm = New SqlCommand(Sql, conn)
         cm.Parameters.AddWithValue("bill_id", BILL_ID)
@@ -163,6 +180,7 @@ Public Class FrmStudentRegister_edit
         cm.Parameters.AddWithValue("start_learn_date", learn_date)
         cm.Parameters.AddWithValue("register_comment", cmt)
         cm.Parameters.AddWithValue("user_update", User_name)
+        cm.Parameters.AddWithValue("learning_shift_id", CInt(cb_learning_time.SelectedValue))
         cm.ExecuteNonQuery()
         conn.Close()
 

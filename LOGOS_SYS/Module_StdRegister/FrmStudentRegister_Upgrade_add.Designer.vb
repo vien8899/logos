@@ -397,7 +397,7 @@ Partial Class FrmStudentRegister_Upgrade_add
         Me.txt_subject.TabIndex = 10
         Me.txt_subject.WaterMark = "ເລືອກວິຊາລົງທະບຽນອັບເກຣດ"
         Me.txt_subject.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_subject.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_subject.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_subject.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_course
@@ -409,7 +409,7 @@ Partial Class FrmStudentRegister_Upgrade_add
         Me.txt_course.TabIndex = 10
         Me.txt_course.WaterMark = "ເລືອກຫຼັກສູດ-ສາຂາຮຽນ"
         Me.txt_course.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_course.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_name
@@ -423,7 +423,7 @@ Partial Class FrmStudentRegister_Upgrade_add
         Me.txt_name.TabIndex = 10
         Me.txt_name.WaterMark = "ຊື່ ແລະ ນາມສະກຸນພາສາລາວ..."
         Me.txt_name.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_name.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_std_code
@@ -435,7 +435,7 @@ Partial Class FrmStudentRegister_Upgrade_add
         Me.txt_std_code.TabIndex = 0
         Me.txt_std_code.WaterMark = "ຄົ້ນຫາລະຫັດນັກສຶກສາ"
         Me.txt_std_code.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_std_code.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_std_code.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_std_code.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'Panel4
@@ -712,7 +712,7 @@ Partial Class FrmStudentRegister_Upgrade_add
         Me.txt_phone.TabIndex = 10
         Me.txt_phone.WaterMark = "ເບີໂທນັກສຶກສາ..."
         Me.txt_phone.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_phone.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'label1
@@ -741,13 +741,13 @@ Partial Class FrmStudentRegister_Upgrade_add
         Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_save.FlatAppearance.BorderSize = 0
-        Me.btn_save.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_save.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_save.Image = Global.LOGOS_SYS.My.Resources.Resources.printYellow55
-        Me.btn_save.Location = New System.Drawing.Point(260, 576)
+        Me.btn_save.Location = New System.Drawing.Point(239, 576)
         Me.btn_save.Name = "btn_save"
-        Me.btn_save.Size = New System.Drawing.Size(173, 69)
+        Me.btn_save.Size = New System.Drawing.Size(194, 69)
         Me.btn_save.TabIndex = 7
-        Me.btn_save.Text = "Save && Print"
+        Me.btn_save.Text = "ບັນທຶກ-ພິມບິນ"
         Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_save.UseVisualStyleBackColor = False
         '
@@ -757,13 +757,13 @@ Partial Class FrmStudentRegister_Upgrade_add
         Me.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_cancel.FlatAppearance.BorderSize = 0
-        Me.btn_cancel.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancel.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_cancel.Image = CType(resources.GetObject("btn_cancel.Image"), System.Drawing.Image)
         Me.btn_cancel.Location = New System.Drawing.Point(451, 576)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(136, 69)
         Me.btn_cancel.TabIndex = 8
-        Me.btn_cancel.Text = "Cancel"
+        Me.btn_cancel.Text = "ຍົກເລີກ"
         Me.btn_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_cancel.UseVisualStyleBackColor = False
         '
@@ -829,7 +829,7 @@ Partial Class FrmStudentRegister_Upgrade_add
         Me.BarLargeButtonItem1.Id = 1
         Me.BarLargeButtonItem1.Name = "BarLargeButtonItem1"
         '
-        'FrmStudentRegister_Upgrade
+        'FrmStudentRegister_Upgrade_add
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 27.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -840,7 +840,7 @@ Partial Class FrmStudentRegister_Upgrade_add
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "FrmStudentRegister_Upgrade"
+        Me.Name = "FrmStudentRegister_Upgrade_add"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -45,7 +45,7 @@
         Sql &= " parent_name ,parent_contact ,course_id ,current_term_id ,class_id ,start_year ,end_year ,"
         Sql &= " create_date ,student_status ,last_update ,user_update ,course_des_la ,course_des_en ,"
         Sql &= " scheme_id ,scheme_des_la ,scheme_des_en ,max_term_id_reg ,get_current_class_id ,current_sokhien ,"
-        Sql &= " get_current_term_id ,max_term_reg ,current_class ,current_year ,max_term_list_id_reg, title_la, title_en "
+        Sql &= " get_current_term_id ,max_term_reg ,current_class ,current_year ,max_term_list_id_reg, title_la, title_en, seasion_part "
         Sql &= " FROM view_std_list"
         Sql &= " WHERE(start_year <= " & curyear & ")  AND (end_year>= " & curyear & ") "
         Sql &= ct_course & ct_search
@@ -60,7 +60,8 @@
 
                 .Rows.Add(dt.Rows(i).Item("student_id"), (i + 1), dt.Rows(i).Item("student_code"), sex, sex & dt.Rows(i).Item("student_fullname_la"), dt.Rows(i).Item("student_fullname_en"), _
                           dt.Rows(i).Item("date_of_birth"), dt.Rows(i).Item("phone_number"), (dt.Rows(i).Item("scheme_des_la") & "-[" & dt.Rows(i).Item("course_des_la") & "]"), _
-                          dt.Rows(i).Item("max_term_reg"), dt.Rows(i).Item("current_class"), dt.Rows(i).Item("current_sokhien"), dt.Rows(i).Item("current_year"), dt.Rows(i).Item("course_id"), dt.Rows(i).Item("parent_name"), dt.Rows(i).Item("parent_contact"))
+                          dt.Rows(i).Item("max_term_reg"), dt.Rows(i).Item("current_class"), dt.Rows(i).Item("current_sokhien"), dt.Rows(i).Item("current_year"), _
+                          dt.Rows(i).Item("course_id"), dt.Rows(i).Item("parent_name"), dt.Rows(i).Item("parent_contact"), dt.Rows(i).Item("seasion_part"))
             Next
 
         End With
@@ -78,7 +79,8 @@
         End If
     End Sub
 
-    Public get_student_id, get_std_code, get_student_name_la, get_student_name_en, get_course_id, get_full_course, get_birth_date, get_telephone, get_sex, get_parent_name, get_parent_contact As String
+    Public get_student_id, get_std_code, get_student_name_la, get_student_name_en, get_course_id, get_full_course, get_birth_date, _
+        get_telephone, get_sex, get_parent_name, get_parent_contact, get_class, get_year, get_sokhien, get_seasion As String
     Private Sub Datagridview1_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles Datagridview1.CellMouseClick
         If Datagridview1.RowCount > 0 Then
             get_student_id = Datagridview1.CurrentRow.Cells(0).Value.ToString()
@@ -92,6 +94,10 @@
             get_telephone = Datagridview1.CurrentRow.Cells(7).Value.ToString()
             get_parent_name = Datagridview1.CurrentRow.Cells(14).Value.ToString()
             get_parent_contact = Datagridview1.CurrentRow.Cells(15).Value.ToString()
+            get_class = Datagridview1.CurrentRow.Cells(10).Value.ToString()
+            get_year = Datagridview1.CurrentRow.Cells(12).Value.ToString()
+            get_sokhien = Datagridview1.CurrentRow.Cells(11).Value.ToString()
+            get_seasion = Datagridview1.CurrentRow.Cells(16).Value.ToString()
 
             Me.DialogResult = Windows.Forms.DialogResult.OK
         End If

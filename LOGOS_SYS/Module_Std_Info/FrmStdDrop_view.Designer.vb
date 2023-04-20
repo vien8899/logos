@@ -68,7 +68,6 @@ Partial Class FrmStdDrop_view
         Me.student_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tel_stu = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.sok_year = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.t_ttt = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.g_modify = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.bill_st = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RM = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -111,7 +110,7 @@ Partial Class FrmStdDrop_view
         Me.Datagridview1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Datagridview1.ColumnHeadersHeight = 30
         Me.Datagridview1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.Datagridview1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_edit_record, Me.no, Me.student_name, Me.tel_stu, Me.sok_year, Me.t_ttt, Me.g_modify, Me.bill_st, Me.RM})
+        Me.Datagridview1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_edit_record, Me.no, Me.student_name, Me.tel_stu, Me.sok_year, Me.g_modify, Me.bill_st, Me.RM})
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -268,7 +267,7 @@ Partial Class FrmStdDrop_view
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(138, 55)
         Me.btn_edit.TabIndex = 21
-        Me.btn_edit.Text = "Cancel Drop"
+        Me.btn_edit.Text = "Edit Drop"
         Me.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_edit.UseVisualStyleBackColor = False
         '
@@ -541,17 +540,10 @@ Partial Class FrmStdDrop_view
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.Format = "N0"
         Me.sok_year.DefaultCellStyle = DataGridViewCellStyle3
-        Me.sok_year.HeaderText = "ຢຸດຮຽນເທີມ"
+        Me.sok_year.HeaderText = "ໂຈະການຮຽນແຕ່"
         Me.sok_year.Name = "sok_year"
         Me.sok_year.ReadOnly = True
-        Me.sok_year.Width = 110
-        '
-        't_ttt
-        '
-        Me.t_ttt.HeaderText = "ສົກຮຽນ"
-        Me.t_ttt.Name = "t_ttt"
-        Me.t_ttt.ReadOnly = True
-        Me.t_ttt.Width = 110
+        Me.sok_year.Width = 250
         '
         'g_modify
         '
@@ -571,7 +563,7 @@ Partial Class FrmStdDrop_view
         'RM
         '
         Me.RM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.RM.HeaderText = "ໝາຍເຫດ"
+        Me.RM.HeaderText = "ດ້ວຍຍເຫດຜົນ"
         Me.RM.Name = "RM"
         Me.RM.ReadOnly = True
         '
@@ -632,7 +624,6 @@ Partial Class FrmStdDrop_view
     Friend WithEvents student_name As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents tel_stu As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents sok_year As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents t_ttt As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents g_modify As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents bill_st As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents RM As System.Windows.Forms.DataGridViewTextBoxColumn

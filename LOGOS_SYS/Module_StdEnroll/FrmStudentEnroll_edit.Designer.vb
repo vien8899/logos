@@ -343,13 +343,13 @@ Partial Class FrmStudentEnroll_edit
         Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_save.FlatAppearance.BorderSize = 0
-        Me.btn_save.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_save.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_save.Image = Global.LOGOS_SYS.My.Resources.Resources.Pocket
-        Me.btn_save.Location = New System.Drawing.Point(206, 501)
+        Me.btn_save.Location = New System.Drawing.Point(185, 501)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(128, 69)
         Me.btn_save.TabIndex = 7
-        Me.btn_save.Text = "Save"
+        Me.btn_save.Text = "ບັນທຶກ"
         Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_save.UseVisualStyleBackColor = False
         '
@@ -386,7 +386,7 @@ Partial Class FrmStudentEnroll_edit
         Me.txt_detail.Name = "txt_detail"
         Me.txt_detail.Size = New System.Drawing.Size(459, 112)
         Me.txt_detail.TabIndex = 33
-        Me.txt_detail.Text = "Detail:"
+        Me.txt_detail.Text = "..."
         '
         'label3
         '
@@ -453,7 +453,7 @@ Partial Class FrmStudentEnroll_edit
         Me.txt_phone_parent.TabIndex = 3
         Me.txt_phone_parent.WaterMark = "ເບີໂທຜູ້ປົກຄອງ..."
         Me.txt_phone_parent.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_phone_parent.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_phone_parent.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_phone_parent.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_phone
@@ -464,7 +464,7 @@ Partial Class FrmStudentEnroll_edit
         Me.txt_phone.TabIndex = 2
         Me.txt_phone.WaterMark = "ເບີໂທນັກສຶກສາ..."
         Me.txt_phone.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_phone.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_name
@@ -477,7 +477,7 @@ Partial Class FrmStudentEnroll_edit
         Me.txt_name.TabIndex = 1
         Me.txt_name.WaterMark = "ພິມຊື່ ແລະ ນາມສະກຸນ..."
         Me.txt_name.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_name.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_course
@@ -489,7 +489,7 @@ Partial Class FrmStudentEnroll_edit
         Me.txt_course.TabIndex = 31
         Me.txt_course.WaterMark = "ເລືອກສາຂາຮຽນ"
         Me.txt_course.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_course.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'label1
@@ -538,13 +538,13 @@ Partial Class FrmStudentEnroll_edit
         Me.btn_save_print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btn_save_print.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_save_print.FlatAppearance.BorderSize = 0
-        Me.btn_save_print.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_save_print.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_save_print.Image = Global.LOGOS_SYS.My.Resources.Resources.printYellow55
-        Me.btn_save_print.Location = New System.Drawing.Point(349, 501)
+        Me.btn_save_print.Location = New System.Drawing.Point(328, 501)
         Me.btn_save_print.Name = "btn_save_print"
-        Me.btn_save_print.Size = New System.Drawing.Size(173, 69)
+        Me.btn_save_print.Size = New System.Drawing.Size(196, 69)
         Me.btn_save_print.TabIndex = 7
-        Me.btn_save_print.Text = "Save && Print"
+        Me.btn_save_print.Text = "ບັນທຶກ-ພິມບິນ"
         Me.btn_save_print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_save_print.UseVisualStyleBackColor = False
         '
@@ -554,13 +554,13 @@ Partial Class FrmStudentEnroll_edit
         Me.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_cancel.FlatAppearance.BorderSize = 0
-        Me.btn_cancel.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancel.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_cancel.Image = CType(resources.GetObject("btn_cancel.Image"), System.Drawing.Image)
-        Me.btn_cancel.Location = New System.Drawing.Point(540, 501)
+        Me.btn_cancel.Location = New System.Drawing.Point(536, 501)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(125, 69)
         Me.btn_cancel.TabIndex = 8
-        Me.btn_cancel.Text = "Cancel"
+        Me.btn_cancel.Text = "ຍົກເລີກ"
         Me.btn_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_cancel.UseVisualStyleBackColor = False
         '

@@ -8,6 +8,17 @@ Public Class FrmStudentRegister_Second
         End If
     End Sub
 
+    Private Sub getLearningShiftList(ByVal c As Integer)
+        Sql = "SELECT learning_shift_des, learning_shift_id "
+        Sql &= " FROM tbl_setting_learning_shift WHERE((learning_shift_status <> 0) AND (course_id=" & c & ")) OR (course_id=0) "
+        Sql &= " ORDER BY course_id, learning_shift_id "
+        dt = ExecuteDatable(Sql)
+        cb_learning_time.DataSource = dt
+        cb_learning_time.ValueMember = "learning_shift_id"
+        cb_learning_time.DisplayMember = "learning_shift_des"
+        cb_learning_time.SelectedIndex = 0
+    End Sub
+
     Private Sub FrmUserGroup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_finished = 1
         had_change_val = 0
@@ -92,8 +103,12 @@ Public Class FrmStudentRegister_Second
         'Register
         Dim min_bill As String = ""
         Dim max_bill As String = ""
+        Dim count_chked As Integer = 0
+        Dim text_chked As Integer = 0
         For i As Integer = 0 To Datagridview1.Rows.Count - 1
             If (Datagridview1.Rows(i).Cells(1).Value) = True Then
+                count_chked += 1
+                text_chked &= Datagridview1.Rows(i).Cells(2).Value & "/"
                 BILL_ID = Max_Bill_id("INV-", "tbl_term_register", "bill_id")
                 If (min_bill = "") Then
                     min_bill = BILL_ID
@@ -102,8 +117,8 @@ Public Class FrmStudentRegister_Second
 
                 Call ConnectDB()
                 Dim learn_date As String = Format(CDate(lb_test_date.Text), "yyyy-MM-dd")
-                Sql = "INSERT INTO tbl_term_register(bill_id ,student_id ,term_id ,register_amount ,register_discount ,register_year ,start_learn_date ,register_comment, user_update) "
-                Sql &= " VALUES(@bill_id ,@student_id ,@term_id ,@register_amount ,@register_discount ,@register_year ,@start_learn_date ,@register_comment, @user_update)"
+                Sql = "INSERT INTO tbl_term_register(bill_id ,student_id ,term_id ,register_amount ,register_discount ,register_year ,start_learn_date ,register_comment, user_update, learning_shift_id) "
+                Sql &= " VALUES(@bill_id ,@student_id ,@term_id ,@register_amount ,@register_discount ,@register_year ,@start_learn_date ,@register_comment, @user_update, @learning_shift_id)"
                 cm = New SqlCommand(Sql, conn)
                 cm.Parameters.AddWithValue("bill_id", BILL_ID)
                 cm.Parameters.AddWithValue("student_id", CInt(txt_std_code.Tag))
@@ -114,6 +129,7 @@ Public Class FrmStudentRegister_Second
                 cm.Parameters.AddWithValue("start_learn_date", learn_date)
                 cm.Parameters.AddWithValue("register_comment", cmt)
                 cm.Parameters.AddWithValue("user_update", User_name)
+                cm.Parameters.AddWithValue("learning_shift_id", CInt(cb_learning_time.SelectedValue))
                 cm.ExecuteNonQuery()
 
                 'Get-Payment QTY
@@ -130,9 +146,24 @@ Public Class FrmStudentRegister_Second
                 cm.Parameters.AddWithValue("payment_type", payment_type)
                 cm.Parameters.AddWithValue("receive_by", User_name)
                 cm.Parameters.AddWithValue("receive_id", User_ID)
+                cm.Parameters.AddWithValue("learning_shift_id", CInt(cb_learning_time.SelectedValue))
                 cm.ExecuteNonQuery()
             End If
         Next
+
+        'StudentLog
+        If (count_chked = 1) Then
+            If (CInt(txt_remain.Text) > 0) Then
+                Dim action_detail As String = "ລົງທະບຽນເຂົ້າຮຽນ " & Mid(text_chked, 1, Len(text_chked) - 1) & "(ຕິດໜີ້: " & txt_remain.Text & ")"
+                Call AddStudentLog(CInt(txt_std_code.Tag), action_detail)
+            Else
+                Dim action_detail As String = "ລົງທະບຽນເຂົ້າຮຽນ " & Mid(text_chked, 1, Len(text_chked) - 1)
+                Call AddStudentLog(CInt(txt_std_code.Tag), action_detail)
+            End If
+        Else
+            Dim action_detail As String = "ລົງທະບຽນເຂົ້າຮຽນ " & Mid(text_chked, 1, Len(text_chked) - 1)
+            Call AddStudentLog(CInt(txt_std_code.Tag), action_detail)
+        End If
 
         'MessageBox.Show("Save completed.", "Report", MessageBoxButtons.OK, MessageBoxIcon.Information)
         reg_number_of_term_where = " WHERE(bill_id BETWEEN '" & min_bill & "' AND '" & max_bill & "')"
@@ -381,12 +412,14 @@ Public Class FrmStudentRegister_Second
         End If
     End Sub
 
+    Dim old_learning_id As Integer = 0
     Private Sub SearchingStudent()
         Sql = " SELECT student_id ,student_code ,student_fullname_la ,student_fullname_en ,student_gender ,date_of_birth ,"
         Sql &= " birth_address_la ,birth_address_en ,nationality ,address_la ,address_en ,phone_number ,wa_number ,job_des ,"
         Sql &= " hight_school_name ,hight_school_graduate_year ,parent_name ,parent_contact ,course_id ,current_term_id ,"
         Sql &= " class_id ,start_year ,end_year ,create_date ,student_status ,last_update ,user_update, "
-        Sql &= " (SELECT scheme_des_la+' ('+course_des_la+')' FROM view_course_list WHERE(course_id=tbl_student.course_id)) AS course_des_la "
+        Sql &= " (SELECT scheme_des_la+' ('+course_des_la+')' FROM view_course_list WHERE(course_id=tbl_student.course_id)) AS course_des_la, "
+        Sql &= " (SELECT TOP(1) learning_shift_id FROM tbl_term_register WHERE(student_id=tbl_student.student_id) ORDER BY term_register_id DESC) AS learning_shift_id "
         Sql &= " FROM tbl_student "
         Sql &= " WHERE(student_code LIKE '%" & txt_std_code.Text.Trim & "%') "
         dt = ExecuteDatable(Sql)
@@ -411,6 +444,9 @@ Public Class FrmStudentRegister_Second
                 txt_phone.Text = FrmStudentRegister_Select.get_telephone
                 txt_comment.Text = "--"
                 Call getTermListInCourse(txt_course.Tag, txt_std_code.Tag)
+
+                Call getLearningShiftList(txt_course.Tag)
+                cb_learning_time.SelectedValue = FrmStudentRegister_Select.get_lnsh_id
             End If
         End If
         If (dt.Rows.Count = 1) Then
@@ -429,10 +465,15 @@ Public Class FrmStudentRegister_Second
                 txt_course.Tag = .Item("course_id")
                 txt_course.Text = .Item("course_des_la")
                 txt_comment.Text = "--"
+                old_learning_id = .Item("learning_shift_id")
+
 
                 If (txt_course.Text <> "") Then
                     Call getTermListInCourse(txt_course.Tag, txt_std_code.Tag)
                 End If
+
+                Call getLearningShiftList(txt_course.Tag)
+                cb_learning_time.SelectedValue = old_learning_id
             End With
         End If
 

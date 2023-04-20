@@ -286,6 +286,9 @@
   <data name="folders1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folders1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="print222" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print222.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Debt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Debt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -361,6 +364,9 @@
   <data name="3x4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3x4.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Upgrade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Upgrade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="gear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -376,7 +382,7 @@
   <data name="back50_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back50_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Upgrade" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Upgrade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="print22444" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print22444.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

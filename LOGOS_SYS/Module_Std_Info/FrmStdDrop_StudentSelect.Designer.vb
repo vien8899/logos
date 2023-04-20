@@ -72,6 +72,7 @@ Partial Class FrmStdDrop_StudentSelect
         Me.course_id_g = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PRN = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PNT = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Seasion_Part = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel_Control.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.Datagridview1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -393,7 +394,7 @@ Partial Class FrmStdDrop_StudentSelect
         Me.Datagridview1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Datagridview1.ColumnHeadersHeight = 30
         Me.Datagridview1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.Datagridview1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_std, Me.no, Me.STU_ID, Me.STD_SEX, Me.student_name, Me.STD_NAME_EN, Me.STD_DOB, Me.tel_stu, Me.t_ttt, Me.u_name, Me.Class_Room, Me.SH, Me.Y_HIEN, Me.course_id_g, Me.PRN, Me.PNT})
+        Me.Datagridview1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_std, Me.no, Me.STU_ID, Me.STD_SEX, Me.student_name, Me.STD_NAME_EN, Me.STD_DOB, Me.tel_stu, Me.t_ttt, Me.u_name, Me.Class_Room, Me.SH, Me.Y_HIEN, Me.course_id_g, Me.PRN, Me.PNT, Me.Seasion_Part})
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -531,6 +532,7 @@ Partial Class FrmStdDrop_StudentSelect
         Me.PRN.HeaderText = "ParentName"
         Me.PRN.Name = "PRN"
         Me.PRN.ReadOnly = True
+        Me.PRN.Visible = False
         '
         'PNT
         '
@@ -538,6 +540,13 @@ Partial Class FrmStdDrop_StudentSelect
         Me.PNT.Name = "PNT"
         Me.PNT.ReadOnly = True
         Me.PNT.Visible = False
+        '
+        'Seasion_Part
+        '
+        Me.Seasion_Part.HeaderText = "Seasion_Part"
+        Me.Seasion_Part.Name = "Seasion_Part"
+        Me.Seasion_Part.ReadOnly = True
+        Me.Seasion_Part.Visible = False
         '
         'FrmStdDrop_StudentSelect
         '
@@ -600,4 +609,5 @@ Partial Class FrmStdDrop_StudentSelect
     Friend WithEvents course_id_g As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PRN As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PNT As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Seasion_Part As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

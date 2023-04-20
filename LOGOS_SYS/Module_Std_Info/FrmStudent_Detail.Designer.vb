@@ -118,11 +118,21 @@ Partial Class FrmStudent_Detail
         Me.txt_name = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.txt_std_code = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.Panel_Reg = New System.Windows.Forms.Panel()
+        Me.Panel_Status = New System.Windows.Forms.Panel()
+        Me.rdo_outed = New System.Windows.Forms.RadioButton()
+        Me.rdo_completed = New System.Windows.Forms.RadioButton()
+        Me.rdo_studying = New System.Windows.Forms.RadioButton()
+        Me.txt_will_complete = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.txt_address_en = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.txt_birth_address_en = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.cb_sex = New System.Windows.Forms.ComboBox()
         Me.btn_cancel = New System.Windows.Forms.Button()
         Me.school_year2 = New System.Windows.Forms.NumericUpDown()
         Me.school_year1 = New System.Windows.Forms.NumericUpDown()
+        Me.txt_national_en = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_comment = New ChreneLib.Controls.TextBoxes.CTextBox()
@@ -134,9 +144,11 @@ Partial Class FrmStudent_Detail
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.btn_save = New System.Windows.Forms.Button()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.btn_edit = New System.Windows.Forms.Button()
+        Me.btn_save = New System.Windows.Forms.Button()
         Me.TileItem8 = New DevExpress.XtraEditors.TileItem()
         Me.TileItem7 = New DevExpress.XtraEditors.TileItem()
         Me.TileGroup3 = New DevExpress.XtraEditors.TileGroup()
@@ -162,12 +174,12 @@ Partial Class FrmStudent_Detail
         Me.DataGridViewTextBoxColumn49 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gridview_drop = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SOKHIEN = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DropInYY_Seasion_Sokhien = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gridview_score = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn39 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn38 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -181,29 +193,26 @@ Partial Class FrmStudent_Detail
         Me.DataGridViewTextBoxColumn32 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox_Droping = New System.Windows.Forms.GroupBox()
+        Me.txt_drop_reason = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.txt_drop_date = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.rdo_droping = New System.Windows.Forms.RadioButton()
         Me.rdo_continue = New System.Windows.Forms.RadioButton()
+        Me.txt_drop_remark = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.txt_drop_desc = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.txt_drop_at = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txt_drop_detail = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.txt_drop_sokhien = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.txt_drop_term = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.BarLargeButtonItem1 = New DevExpress.XtraBars.BarLargeButtonItem()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.txt_birth_address_en = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txt_national_en = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.txt_address_en = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.txt_will_complete = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6.SuspendLayout()
         Me.Panel_Reg.SuspendLayout()
+        Me.Panel_Status.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.school_year2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.school_year1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -290,98 +299,105 @@ Partial Class FrmStudent_Detail
         '
         Me.txt_job.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_job.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_job.Location = New System.Drawing.Point(389, 372)
+        Me.txt_job.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_job.Location = New System.Drawing.Point(389, 364)
         Me.txt_job.Name = "txt_job"
         Me.txt_job.ReadOnly = True
-        Me.txt_job.Size = New System.Drawing.Size(236, 34)
+        Me.txt_job.Size = New System.Drawing.Size(236, 32)
         Me.txt_job.TabIndex = 14
         Me.txt_job.WaterMark = "ອາຊີບປະຈຸບັນ"
         Me.txt_job.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_job.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_job.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_job.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_parent_tel
         '
         Me.txt_parent_tel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_parent_tel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_parent_tel.Location = New System.Drawing.Point(439, 411)
+        Me.txt_parent_tel.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_parent_tel.Location = New System.Drawing.Point(439, 399)
         Me.txt_parent_tel.Name = "txt_parent_tel"
         Me.txt_parent_tel.ReadOnly = True
-        Me.txt_parent_tel.Size = New System.Drawing.Size(186, 34)
+        Me.txt_parent_tel.Size = New System.Drawing.Size(186, 32)
         Me.txt_parent_tel.TabIndex = 16
         Me.txt_parent_tel.WaterMark = "ເບີໂທຜູ້ປົກຄອງ"
         Me.txt_parent_tel.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_parent_tel.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_parent_tel.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_parent_tel.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_parent_name
         '
         Me.txt_parent_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_parent_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_parent_name.Location = New System.Drawing.Point(139, 411)
+        Me.txt_parent_name.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_parent_name.Location = New System.Drawing.Point(139, 399)
         Me.txt_parent_name.Name = "txt_parent_name"
         Me.txt_parent_name.ReadOnly = True
-        Me.txt_parent_name.Size = New System.Drawing.Size(294, 34)
+        Me.txt_parent_name.Size = New System.Drawing.Size(294, 32)
         Me.txt_parent_name.TabIndex = 15
         Me.txt_parent_name.WaterMark = "ພໍ່ ຫຼື ແມ່"
         Me.txt_parent_name.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_parent_name.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_parent_name.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_parent_name.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_secondary_from
         '
         Me.txt_secondary_from.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_secondary_from.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_secondary_from.Location = New System.Drawing.Point(139, 372)
+        Me.txt_secondary_from.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_secondary_from.Location = New System.Drawing.Point(139, 364)
         Me.txt_secondary_from.Name = "txt_secondary_from"
         Me.txt_secondary_from.ReadOnly = True
-        Me.txt_secondary_from.Size = New System.Drawing.Size(244, 34)
+        Me.txt_secondary_from.Size = New System.Drawing.Size(244, 32)
         Me.txt_secondary_from.TabIndex = 13
         Me.txt_secondary_from.WaterMark = "ຊື່ໂຮງຮຽນຈົບມັດທະຍົມ"
         Me.txt_secondary_from.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_secondary_from.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_secondary_from.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_secondary_from.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_national_la
         '
         Me.txt_national_la.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_national_la.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_national_la.Location = New System.Drawing.Point(139, 333)
+        Me.txt_national_la.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_national_la.Location = New System.Drawing.Point(139, 329)
         Me.txt_national_la.Name = "txt_national_la"
         Me.txt_national_la.ReadOnly = True
-        Me.txt_national_la.Size = New System.Drawing.Size(244, 34)
+        Me.txt_national_la.Size = New System.Drawing.Size(244, 32)
         Me.txt_national_la.TabIndex = 11
         Me.txt_national_la.WaterMark = "ສັນຊາດພາສາລາວ"
         Me.txt_national_la.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_national_la.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_national_la.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_national_la.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_address_la
         '
         Me.txt_address_la.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_address_la.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_address_la.Location = New System.Drawing.Point(139, 267)
+        Me.txt_address_la.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_address_la.Location = New System.Drawing.Point(139, 265)
         Me.txt_address_la.Name = "txt_address_la"
         Me.txt_address_la.ReadOnly = True
-        Me.txt_address_la.Size = New System.Drawing.Size(486, 34)
+        Me.txt_address_la.Size = New System.Drawing.Size(486, 32)
         Me.txt_address_la.TabIndex = 9
         Me.txt_address_la.WaterMark = "ບ້ານ ເມືອງ ແຂວງ"
         Me.txt_address_la.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_address_la.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_address_la.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_address_la.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_birth_address_la
         '
         Me.txt_birth_address_la.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_birth_address_la.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_birth_address_la.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_birth_address_la.Location = New System.Drawing.Point(139, 201)
         Me.txt_birth_address_la.Name = "txt_birth_address_la"
         Me.txt_birth_address_la.ReadOnly = True
-        Me.txt_birth_address_la.Size = New System.Drawing.Size(486, 34)
+        Me.txt_birth_address_la.Size = New System.Drawing.Size(486, 32)
         Me.txt_birth_address_la.TabIndex = 7
         Me.txt_birth_address_la.WaterMark = "ບ້ານ ເມືອງ ແຂວງ"
         Me.txt_birth_address_la.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_birth_address_la.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_birth_address_la.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_birth_address_la.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'Label21
@@ -389,7 +405,7 @@ Partial Class FrmStudent_Detail
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(235, 492)
+        Me.Label21.Location = New System.Drawing.Point(235, 470)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(72, 28)
         Me.Label21.TabIndex = 39
@@ -400,7 +416,7 @@ Partial Class FrmStudent_Detail
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.Black
-        Me.Label20.Location = New System.Drawing.Point(22, 492)
+        Me.Label20.Location = New System.Drawing.Point(19, 470)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(99, 28)
         Me.Label20.TabIndex = 39
@@ -411,7 +427,7 @@ Partial Class FrmStudent_Detail
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.Black
-        Me.Label18.Location = New System.Drawing.Point(19, 413)
+        Me.Label18.Location = New System.Drawing.Point(19, 401)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(81, 28)
         Me.Label18.TabIndex = 39
@@ -422,7 +438,7 @@ Partial Class FrmStudent_Detail
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(18, 374)
+        Me.Label17.Location = New System.Drawing.Point(18, 366)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(117, 28)
         Me.Label17.TabIndex = 39
@@ -433,7 +449,7 @@ Partial Class FrmStudent_Detail
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(19, 334)
+        Me.Label15.Location = New System.Drawing.Point(19, 330)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(60, 28)
         Me.Label15.TabIndex = 39
@@ -444,7 +460,7 @@ Partial Class FrmStudent_Detail
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(19, 269)
+        Me.Label14.Location = New System.Drawing.Point(19, 267)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(81, 28)
         Me.Label14.TabIndex = 39
@@ -496,13 +512,14 @@ Partial Class FrmStudent_Detail
         Me.btn_print_ref.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_print_ref.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_print_ref.ForeColor = System.Drawing.Color.White
+        Me.btn_print_ref.Image = Global.LOGOS_SYS.My.Resources.Resources.print22444
         Me.btn_print_ref.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_print_ref.Location = New System.Drawing.Point(519, 4)
+        Me.btn_print_ref.Location = New System.Drawing.Point(500, 4)
         Me.btn_print_ref.Name = "btn_print_ref"
-        Me.btn_print_ref.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.btn_print_ref.Size = New System.Drawing.Size(126, 35)
+        Me.btn_print_ref.Size = New System.Drawing.Size(149, 35)
         Me.btn_print_ref.TabIndex = 4
-        Me.btn_print_ref.Text = "ໃບຢັ້ງຢືນນັກສຶກສາ"
+        Me.btn_print_ref.Text = "ພິມຂໍ້ມູນນັກສຶກສາ"
+        Me.btn_print_ref.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_print_ref.UseVisualStyleBackColor = False
         '
         'btn_score_inf
@@ -517,10 +534,10 @@ Partial Class FrmStudent_Detail
         Me.btn_score_inf.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_score_inf.ForeColor = System.Drawing.Color.White
         Me.btn_score_inf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_score_inf.Location = New System.Drawing.Point(127, 4)
+        Me.btn_score_inf.Location = New System.Drawing.Point(125, 4)
         Me.btn_score_inf.Name = "btn_score_inf"
         Me.btn_score_inf.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.btn_score_inf.Size = New System.Drawing.Size(122, 35)
+        Me.btn_score_inf.Size = New System.Drawing.Size(110, 35)
         Me.btn_score_inf.TabIndex = 1
         Me.btn_score_inf.Text = "ເບີ່ງ-ຄະແນນ"
         Me.btn_score_inf.UseVisualStyleBackColor = False
@@ -537,7 +554,7 @@ Partial Class FrmStudent_Detail
         Me.btn_drop_inf.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_drop_inf.ForeColor = System.Drawing.Color.White
         Me.btn_drop_inf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_drop_inf.Location = New System.Drawing.Point(386, 4)
+        Me.btn_drop_inf.Location = New System.Drawing.Point(369, 4)
         Me.btn_drop_inf.Name = "btn_drop_inf"
         Me.btn_drop_inf.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.btn_drop_inf.Size = New System.Drawing.Size(127, 35)
@@ -576,7 +593,7 @@ Partial Class FrmStudent_Detail
         Me.btn_upgrade_inf.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_upgrade_inf.ForeColor = System.Drawing.Color.White
         Me.btn_upgrade_inf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_upgrade_inf.Location = New System.Drawing.Point(255, 4)
+        Me.btn_upgrade_inf.Location = New System.Drawing.Point(239, 4)
         Me.btn_upgrade_inf.Name = "btn_upgrade_inf"
         Me.btn_upgrade_inf.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.btn_upgrade_inf.Size = New System.Drawing.Size(125, 35)
@@ -793,14 +810,15 @@ Partial Class FrmStudent_Detail
         '
         'txt_course
         '
-        Me.txt_course.Location = New System.Drawing.Point(139, 450)
+        Me.txt_course.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_course.Location = New System.Drawing.Point(139, 434)
         Me.txt_course.Name = "txt_course"
         Me.txt_course.ReadOnly = True
-        Me.txt_course.Size = New System.Drawing.Size(486, 34)
+        Me.txt_course.Size = New System.Drawing.Size(486, 32)
         Me.txt_course.TabIndex = 17
         Me.txt_course.WaterMark = "ຫຼັກສູດ-ສາຂາຮຽນ"
         Me.txt_course.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_course.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_course.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_name_en
@@ -808,7 +826,7 @@ Partial Class FrmStudent_Detail
         Me.txt_name_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_name_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.txt_name_en.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_name_en.Location = New System.Drawing.Point(139, 128)
+        Me.txt_name_en.Location = New System.Drawing.Point(139, 132)
         Me.txt_name_en.Name = "txt_name_en"
         Me.txt_name_en.ReadOnly = True
         Me.txt_name_en.Size = New System.Drawing.Size(352, 29)
@@ -822,32 +840,33 @@ Partial Class FrmStudent_Detail
         '
         Me.txt_name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_name.Location = New System.Drawing.Point(207, 89)
+        Me.txt_name.Location = New System.Drawing.Point(207, 93)
         Me.txt_name.Name = "txt_name"
         Me.txt_name.ReadOnly = True
         Me.txt_name.Size = New System.Drawing.Size(284, 34)
         Me.txt_name.TabIndex = 3
         Me.txt_name.WaterMark = "ຊື່ ແລະ ນາມສະກຸນພາສາລາວ..."
         Me.txt_name.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_name.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_name.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_std_code
         '
         Me.txt_std_code.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txt_std_code.Location = New System.Drawing.Point(139, 51)
+        Me.txt_std_code.Location = New System.Drawing.Point(139, 55)
         Me.txt_std_code.Name = "txt_std_code"
         Me.txt_std_code.Size = New System.Drawing.Size(201, 34)
         Me.txt_std_code.TabIndex = 1
         Me.txt_std_code.WaterMark = "ລະຫັດນັກສຶກສາ"
         Me.txt_std_code.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_std_code.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_std_code.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_std_code.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'Panel_Reg
         '
         Me.Panel_Reg.BackColor = System.Drawing.Color.Silver
-        Me.Panel_Reg.Controls.Add(Me.Label19)
+        Me.Panel_Reg.Controls.Add(Me.Label2)
+        Me.Panel_Reg.Controls.Add(Me.Panel_Status)
         Me.Panel_Reg.Controls.Add(Me.txt_will_complete)
         Me.Panel_Reg.Controls.Add(Me.txt_address_en)
         Me.Panel_Reg.Controls.Add(Me.Label16)
@@ -888,9 +907,11 @@ Partial Class FrmStudent_Detail
         Me.Panel_Reg.Controls.Add(Me.Label6)
         Me.Panel_Reg.Controls.Add(Me.Label8)
         Me.Panel_Reg.Controls.Add(Me.Label3)
+        Me.Panel_Reg.Controls.Add(Me.Label22)
         Me.Panel_Reg.Controls.Add(Me.Label11)
-        Me.Panel_Reg.Controls.Add(Me.btn_save)
+        Me.Panel_Reg.Controls.Add(Me.Label19)
         Me.Panel_Reg.Controls.Add(Me.btn_edit)
+        Me.Panel_Reg.Controls.Add(Me.btn_save)
         Me.Panel_Reg.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel_Reg.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel_Reg.Location = New System.Drawing.Point(0, 0)
@@ -898,13 +919,130 @@ Partial Class FrmStudent_Detail
         Me.Panel_Reg.Size = New System.Drawing.Size(641, 675)
         Me.Panel_Reg.TabIndex = 0
         '
+        'Panel_Status
+        '
+        Me.Panel_Status.BackColor = System.Drawing.Color.LightGray
+        Me.Panel_Status.Controls.Add(Me.rdo_outed)
+        Me.Panel_Status.Controls.Add(Me.rdo_completed)
+        Me.Panel_Status.Controls.Add(Me.rdo_studying)
+        Me.Panel_Status.Location = New System.Drawing.Point(139, 506)
+        Me.Panel_Status.Name = "Panel_Status"
+        Me.Panel_Status.Size = New System.Drawing.Size(486, 32)
+        Me.Panel_Status.TabIndex = 68
+        '
+        'rdo_outed
+        '
+        Me.rdo_outed.AutoSize = True
+        Me.rdo_outed.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdo_outed.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.rdo_outed.Location = New System.Drawing.Point(275, 1)
+        Me.rdo_outed.Name = "rdo_outed"
+        Me.rdo_outed.Size = New System.Drawing.Size(162, 29)
+        Me.rdo_outed.TabIndex = 67
+        Me.rdo_outed.TabStop = True
+        Me.rdo_outed.Text = "ອອກຈາກການສຶກສາແລ້ວ"
+        Me.rdo_outed.UseVisualStyleBackColor = True
+        '
+        'rdo_completed
+        '
+        Me.rdo_completed.AutoSize = True
+        Me.rdo_completed.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdo_completed.ForeColor = System.Drawing.Color.DarkGreen
+        Me.rdo_completed.Location = New System.Drawing.Point(132, 1)
+        Me.rdo_completed.Name = "rdo_completed"
+        Me.rdo_completed.Size = New System.Drawing.Size(130, 29)
+        Me.rdo_completed.TabIndex = 67
+        Me.rdo_completed.TabStop = True
+        Me.rdo_completed.Text = "ຈົບການສຶກສາແລ້ວ"
+        Me.rdo_completed.UseVisualStyleBackColor = True
+        '
+        'rdo_studying
+        '
+        Me.rdo_studying.AutoSize = True
+        Me.rdo_studying.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdo_studying.ForeColor = System.Drawing.Color.Blue
+        Me.rdo_studying.Location = New System.Drawing.Point(5, 1)
+        Me.rdo_studying.Name = "rdo_studying"
+        Me.rdo_studying.Size = New System.Drawing.Size(102, 29)
+        Me.rdo_studying.TabIndex = 67
+        Me.rdo_studying.TabStop = True
+        Me.rdo_studying.Text = "ກຳລັງສຶກສາຢູ່"
+        Me.rdo_studying.UseVisualStyleBackColor = True
+        '
+        'txt_will_complete
+        '
+        Me.txt_will_complete.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_will_complete.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_will_complete.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_will_complete.Location = New System.Drawing.Point(495, 470)
+        Me.txt_will_complete.Name = "txt_will_complete"
+        Me.txt_will_complete.ReadOnly = True
+        Me.txt_will_complete.Size = New System.Drawing.Size(130, 29)
+        Me.txt_will_complete.TabIndex = 20
+        Me.txt_will_complete.WaterMark = "dd/MM/yyyy"
+        Me.txt_will_complete.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_will_complete.WaterMarkFont = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_will_complete.WaterMarkForeColor = System.Drawing.Color.Gray
+        '
+        'txt_address_en
+        '
+        Me.txt_address_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_address_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_address_en.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_address_en.Location = New System.Drawing.Point(139, 300)
+        Me.txt_address_en.Name = "txt_address_en"
+        Me.txt_address_en.ReadOnly = True
+        Me.txt_address_en.Size = New System.Drawing.Size(486, 26)
+        Me.txt_address_en.TabIndex = 10
+        Me.txt_address_en.WaterMark = "Village, District, Province"
+        Me.txt_address_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_address_en.WaterMarkFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_address_en.WaterMarkForeColor = System.Drawing.Color.Gray
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.Black
+        Me.Label16.Location = New System.Drawing.Point(21, 302)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(64, 19)
+        Me.Label16.TabIndex = 64
+        Me.Label16.Text = "Address"
+        '
+        'txt_birth_address_en
+        '
+        Me.txt_birth_address_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_birth_address_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_birth_address_en.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_birth_address_en.Location = New System.Drawing.Point(139, 236)
+        Me.txt_birth_address_en.Name = "txt_birth_address_en"
+        Me.txt_birth_address_en.ReadOnly = True
+        Me.txt_birth_address_en.Size = New System.Drawing.Size(486, 26)
+        Me.txt_birth_address_en.TabIndex = 8
+        Me.txt_birth_address_en.WaterMark = "Village, District, Province"
+        Me.txt_birth_address_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_birth_address_en.WaterMarkFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_birth_address_en.WaterMarkForeColor = System.Drawing.Color.Gray
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.Black
+        Me.Label13.Location = New System.Drawing.Point(21, 238)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(86, 19)
+        Me.Label13.TabIndex = 62
+        Me.Label13.Text = "Birth Place"
+        '
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Image = Global.LOGOS_SYS.My.Resources.Resources._3x4
-        Me.PictureBox1.Location = New System.Drawing.Point(501, 51)
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(536, 55)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(124, 146)
+        Me.PictureBox1.Size = New System.Drawing.Size(89, 117)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 60
         Me.PictureBox1.TabStop = False
@@ -916,7 +1054,7 @@ Partial Class FrmStudent_Detail
         Me.cb_sex.Font = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_sex.FormattingEnabled = True
         Me.cb_sex.Items.AddRange(New Object() {"ທ້າວ", "ນາງ"})
-        Me.cb_sex.Location = New System.Drawing.Point(138, 89)
+        Me.cb_sex.Location = New System.Drawing.Point(138, 93)
         Me.cb_sex.Name = "cb_sex"
         Me.cb_sex.Size = New System.Drawing.Size(66, 34)
         Me.cb_sex.TabIndex = 59
@@ -927,44 +1065,61 @@ Partial Class FrmStudent_Detail
         Me.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_cancel.FlatAppearance.BorderSize = 0
-        Me.btn_cancel.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cancel.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_cancel.Image = Global.LOGOS_SYS.My.Resources.Resources.back50_1122
-        Me.btn_cancel.Location = New System.Drawing.Point(297, 594)
+        Me.btn_cancel.Location = New System.Drawing.Point(297, 600)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(136, 69)
         Me.btn_cancel.TabIndex = 23
-        Me.btn_cancel.Text = "Cancel"
+        Me.btn_cancel.Text = "ຍົກເລີກ"
         Me.btn_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_cancel.UseVisualStyleBackColor = False
         '
         'school_year2
         '
-        Me.school_year2.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.school_year2.Location = New System.Drawing.Point(306, 489)
+        Me.school_year2.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.school_year2.Location = New System.Drawing.Point(306, 469)
         Me.school_year2.Maximum = New Decimal(New Integer() {2300, 0, 0, 0})
         Me.school_year2.Name = "school_year2"
-        Me.school_year2.Size = New System.Drawing.Size(87, 35)
+        Me.school_year2.Size = New System.Drawing.Size(85, 32)
         Me.school_year2.TabIndex = 19
         Me.school_year2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.school_year2.Value = New Decimal(New Integer() {2022, 0, 0, 0})
         '
         'school_year1
         '
-        Me.school_year1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.school_year1.Location = New System.Drawing.Point(139, 489)
+        Me.school_year1.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.school_year1.Location = New System.Drawing.Point(139, 469)
         Me.school_year1.Maximum = New Decimal(New Integer() {2100, 0, 0, 0})
         Me.school_year1.Name = "school_year1"
-        Me.school_year1.Size = New System.Drawing.Size(90, 35)
+        Me.school_year1.Size = New System.Drawing.Size(85, 32)
         Me.school_year1.TabIndex = 18
         Me.school_year1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.school_year1.Value = New Decimal(New Integer() {2022, 0, 0, 0})
         '
+        'txt_national_en
+        '
+        Me.txt_national_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_national_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_national_en.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_national_en.Location = New System.Drawing.Point(389, 329)
+        Me.txt_national_en.Name = "txt_national_en"
+        Me.txt_national_en.ReadOnly = True
+        Me.txt_national_en.Size = New System.Drawing.Size(236, 32)
+        Me.txt_national_en.TabIndex = 12
+        Me.txt_national_en.WaterMark = "ສັນຊາດພາສາອັງກິດ"
+        Me.txt_national_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_national_en.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_national_en.WaterMarkForeColor = System.Drawing.Color.Gray
+        '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Enabled = False
-        Me.DateTimePicker1.Location = New System.Drawing.Point(139, 163)
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(139, 165)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 34)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 32)
         Me.DateTimePicker1.TabIndex = 55
         '
         'Label4
@@ -972,7 +1127,7 @@ Partial Class FrmStudent_Detail
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(18, 165)
+        Me.Label4.Location = New System.Drawing.Point(18, 167)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(105, 28)
         Me.Label4.TabIndex = 39
@@ -980,27 +1135,28 @@ Partial Class FrmStudent_Detail
         '
         'txt_comment
         '
-        Me.txt_comment.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_comment.Location = New System.Drawing.Point(139, 528)
+        Me.txt_comment.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_comment.Location = New System.Drawing.Point(139, 541)
         Me.txt_comment.Multiline = True
         Me.txt_comment.Name = "txt_comment"
-        Me.txt_comment.Size = New System.Drawing.Size(486, 56)
+        Me.txt_comment.Size = New System.Drawing.Size(486, 48)
         Me.txt_comment.TabIndex = 21
         Me.txt_comment.WaterMark = "ລາຍລະອຽດເພີ່ມເຕີມ..."
         Me.txt_comment.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_comment.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_comment.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_comment.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'txt_phone
         '
-        Me.txt_phone.Location = New System.Drawing.Point(282, 163)
+        Me.txt_phone.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_phone.Location = New System.Drawing.Point(282, 165)
         Me.txt_phone.Name = "txt_phone"
         Me.txt_phone.ReadOnly = True
-        Me.txt_phone.Size = New System.Drawing.Size(209, 34)
+        Me.txt_phone.Size = New System.Drawing.Size(209, 32)
         Me.txt_phone.TabIndex = 6
         Me.txt_phone.WaterMark = "ເບີໂທລະສັບ..."
         Me.txt_phone.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_phone.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_phone.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'label1
@@ -1018,7 +1174,7 @@ Partial Class FrmStudent_Detail
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(24, 589)
+        Me.Panel1.Location = New System.Drawing.Point(24, 595)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(602, 2)
         Me.Panel1.TabIndex = 24
@@ -1029,13 +1185,13 @@ Partial Class FrmStudent_Detail
         Me.btn_exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_exit.FlatAppearance.BorderSize = 0
-        Me.btn_exit.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_exit.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_exit.Image = CType(resources.GetObject("btn_exit.Image"), System.Drawing.Image)
-        Me.btn_exit.Location = New System.Drawing.Point(506, 594)
+        Me.btn_exit.Location = New System.Drawing.Point(506, 600)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(119, 69)
         Me.btn_exit.TabIndex = 24
-        Me.btn_exit.Text = "Exit"
+        Me.btn_exit.Text = "ອອກ"
         Me.btn_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_exit.UseVisualStyleBackColor = False
         '
@@ -1044,7 +1200,7 @@ Partial Class FrmStudent_Detail
         Me.lb_title.AutoSize = True
         Me.lb_title.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb_title.ForeColor = System.Drawing.Color.Black
-        Me.lb_title.Location = New System.Drawing.Point(18, 91)
+        Me.lb_title.Location = New System.Drawing.Point(18, 95)
         Me.lb_title.Name = "lb_title"
         Me.lb_title.Size = New System.Drawing.Size(107, 28)
         Me.lb_title.TabIndex = 42
@@ -1055,7 +1211,7 @@ Partial Class FrmStudent_Detail
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(18, 53)
+        Me.Label6.Location = New System.Drawing.Point(18, 57)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(110, 28)
         Me.Label6.TabIndex = 39
@@ -1066,7 +1222,7 @@ Partial Class FrmStudent_Detail
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(18, 452)
+        Me.Label8.Location = New System.Drawing.Point(18, 435)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(115, 28)
         Me.Label8.TabIndex = 39
@@ -1077,38 +1233,44 @@ Partial Class FrmStudent_Detail
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(17, 128)
+        Me.Label3.Location = New System.Drawing.Point(17, 131)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(120, 28)
         Me.Label3.TabIndex = 39
         Me.Label3.Text = "ຊື່ເປັນພາສາອັງກິດ"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.Black
+        Me.Label22.Location = New System.Drawing.Point(18, 504)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(120, 28)
+        Me.Label22.TabIndex = 39
+        Me.Label22.Text = "ສະຖານະນັກສຶກສາ"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(19, 534)
+        Me.Label11.Location = New System.Drawing.Point(19, 538)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(112, 28)
         Me.Label11.TabIndex = 39
         Me.Label11.Text = "ໝາຍເຫດເພີ່ມ..."
         '
-        'btn_save
+        'Label19
         '
-        Me.btn_save.BackColor = System.Drawing.Color.White
-        Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_save.FlatAppearance.BorderSize = 0
-        Me.btn_save.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_save.Image = Global.LOGOS_SYS.My.Resources.Resources.Save
-        Me.btn_save.Location = New System.Drawing.Point(139, 594)
-        Me.btn_save.Name = "btn_save"
-        Me.btn_save.Size = New System.Drawing.Size(151, 69)
-        Me.btn_save.TabIndex = 22
-        Me.btn_save.Text = "Click Save"
-        Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_save.UseVisualStyleBackColor = False
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.Black
+        Me.Label19.Location = New System.Drawing.Point(406, 470)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(89, 28)
+        Me.Label19.TabIndex = 66
+        Me.Label19.Text = "ຄາດຮຽນຈົບ"
         '
         'btn_edit
         '
@@ -1116,15 +1278,31 @@ Partial Class FrmStudent_Detail
         Me.btn_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_edit.FlatAppearance.BorderSize = 0
-        Me.btn_edit.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_edit.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_edit.Image = Global.LOGOS_SYS.My.Resources.Resources.PocketEdit
-        Me.btn_edit.Location = New System.Drawing.Point(140, 594)
+        Me.btn_edit.Location = New System.Drawing.Point(140, 600)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(150, 69)
         Me.btn_edit.TabIndex = 0
-        Me.btn_edit.Text = "Click Edit"
+        Me.btn_edit.Text = "ແກ້ໄຂ"
         Me.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_edit.UseVisualStyleBackColor = False
+        '
+        'btn_save
+        '
+        Me.btn_save.BackColor = System.Drawing.Color.White
+        Me.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btn_save.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_save.FlatAppearance.BorderSize = 0
+        Me.btn_save.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_save.Image = Global.LOGOS_SYS.My.Resources.Resources.Save
+        Me.btn_save.Location = New System.Drawing.Point(139, 600)
+        Me.btn_save.Name = "btn_save"
+        Me.btn_save.Size = New System.Drawing.Size(151, 69)
+        Me.btn_save.TabIndex = 22
+        Me.btn_save.Text = "ບັນທຶກ"
+        Me.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_save.UseVisualStyleBackColor = False
         '
         'TileItem8
         '
@@ -1393,7 +1571,7 @@ Partial Class FrmStudent_Detail
         Me.gridview_term.RowHeadersVisible = False
         Me.gridview_term.RowTemplate.Height = 29
         Me.gridview_term.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.gridview_term.Size = New System.Drawing.Size(644, 273)
+        Me.gridview_term.Size = New System.Drawing.Size(644, 620)
         Me.gridview_term.TabIndex = 10
         '
         'DataGridViewTextBoxColumn43
@@ -1485,7 +1663,7 @@ Partial Class FrmStudent_Detail
         Me.gridview_drop.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.gridview_drop.ColumnHeadersHeight = 30
         Me.gridview_drop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.gridview_drop.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn28, Me.SOKHIEN})
+        Me.gridview_drop.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn27, Me.SOKHIEN, Me.DropInYY_Seasion_Sokhien})
         DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle16.Font = New System.Drawing.Font("Noto Sans Lao", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1502,7 +1680,7 @@ Partial Class FrmStudent_Detail
         Me.gridview_drop.RowHeadersVisible = False
         Me.gridview_drop.RowTemplate.Height = 29
         Me.gridview_drop.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.gridview_drop.Size = New System.Drawing.Size(644, 273)
+        Me.gridview_drop.Size = New System.Drawing.Size(644, 301)
         Me.gridview_drop.TabIndex = 7
         '
         'DataGridViewTextBoxColumn22
@@ -1512,14 +1690,6 @@ Partial Class FrmStudent_Detail
         Me.DataGridViewTextBoxColumn22.ReadOnly = True
         Me.DataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
         Me.DataGridViewTextBoxColumn22.Width = 35
-        '
-        'DataGridViewTextBoxColumn23
-        '
-        Me.DataGridViewTextBoxColumn23.HeaderText = "ເທີມ-ຮຽນ"
-        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
-        Me.DataGridViewTextBoxColumn23.ReadOnly = True
-        Me.DataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn23.Width = 140
         '
         'DataGridViewTextBoxColumn24
         '
@@ -1532,15 +1702,8 @@ Partial Class FrmStudent_Detail
         Me.DataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
         Me.DataGridViewTextBoxColumn24.Width = 90
         '
-        'DataGridViewTextBoxColumn27
-        '
-        Me.DataGridViewTextBoxColumn27.HeaderText = "ສະຖານະ"
-        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
-        Me.DataGridViewTextBoxColumn27.ReadOnly = True
-        '
         'DataGridViewTextBoxColumn25
         '
-        Me.DataGridViewTextBoxColumn25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
         DataGridViewCellStyle15.Format = "N0"
         DataGridViewCellStyle15.NullValue = "Numeric"
@@ -1549,20 +1712,37 @@ Partial Class FrmStudent_Detail
         Me.DataGridViewTextBoxColumn25.MaxInputLength = 12
         Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
         Me.DataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn25.Width = 280
         '
-        'DataGridViewTextBoxColumn28
+        'DataGridViewTextBoxColumn23
         '
-        Me.DataGridViewTextBoxColumn28.HeaderText = "ST_ID"
-        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
-        Me.DataGridViewTextBoxColumn28.ReadOnly = True
-        Me.DataGridViewTextBoxColumn28.Visible = False
+        Me.DataGridViewTextBoxColumn23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn23.HeaderText = "ສາເຫດໂຈະຮຽນ"
+        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        Me.DataGridViewTextBoxColumn23.ReadOnly = True
+        Me.DataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn27.HeaderText = "ສະຖານະ"
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.ReadOnly = True
+        Me.DataGridViewTextBoxColumn27.Visible = False
         '
         'SOKHIEN
         '
-        Me.SOKHIEN.HeaderText = "SOKHIEN"
+        Me.SOKHIEN.HeaderText = "REMARK"
         Me.SOKHIEN.Name = "SOKHIEN"
         Me.SOKHIEN.ReadOnly = True
         Me.SOKHIEN.Visible = False
+        '
+        'DropInYY_Seasion_Sokhien
+        '
+        Me.DropInYY_Seasion_Sokhien.HeaderText = "DropInYY_Seasion_Sokhien"
+        Me.DropInYY_Seasion_Sokhien.Name = "DropInYY_Seasion_Sokhien"
+        Me.DropInYY_Seasion_Sokhien.ReadOnly = True
+        Me.DropInYY_Seasion_Sokhien.Visible = False
         '
         'gridview_score
         '
@@ -1602,7 +1782,7 @@ Partial Class FrmStudent_Detail
         Me.gridview_score.RowHeadersVisible = False
         Me.gridview_score.RowTemplate.Height = 29
         Me.gridview_score.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.gridview_score.Size = New System.Drawing.Size(644, 624)
+        Me.gridview_score.Size = New System.Drawing.Size(644, 620)
         Me.gridview_score.TabIndex = 9
         '
         'DataGridViewTextBoxColumn39
@@ -1692,7 +1872,7 @@ Partial Class FrmStudent_Detail
         Me.gridview_upgarde.RowHeadersVisible = False
         Me.gridview_upgarde.RowTemplate.Height = 29
         Me.gridview_upgarde.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.gridview_upgarde.Size = New System.Drawing.Size(644, 624)
+        Me.gridview_upgarde.Size = New System.Drawing.Size(644, 620)
         Me.gridview_upgarde.TabIndex = 12
         '
         'DataGridViewTextBoxColumn29
@@ -1746,29 +1926,43 @@ Partial Class FrmStudent_Detail
         '
         'GroupBox_Droping
         '
+        Me.GroupBox_Droping.Controls.Add(Me.txt_drop_reason)
         Me.GroupBox_Droping.Controls.Add(Me.txt_drop_date)
         Me.GroupBox_Droping.Controls.Add(Me.Panel3)
+        Me.GroupBox_Droping.Controls.Add(Me.txt_drop_remark)
+        Me.GroupBox_Droping.Controls.Add(Me.txt_drop_desc)
+        Me.GroupBox_Droping.Controls.Add(Me.txt_drop_at)
+        Me.GroupBox_Droping.Controls.Add(Me.Label12)
+        Me.GroupBox_Droping.Controls.Add(Me.Label9)
+        Me.GroupBox_Droping.Controls.Add(Me.Label24)
+        Me.GroupBox_Droping.Controls.Add(Me.Label23)
         Me.GroupBox_Droping.Controls.Add(Me.Label7)
         Me.GroupBox_Droping.Controls.Add(Me.Label10)
-        Me.GroupBox_Droping.Controls.Add(Me.Label2)
-        Me.GroupBox_Droping.Controls.Add(Me.txt_drop_detail)
-        Me.GroupBox_Droping.Controls.Add(Me.txt_drop_sokhien)
-        Me.GroupBox_Droping.Controls.Add(Me.txt_drop_term)
-        Me.GroupBox_Droping.Controls.Add(Me.Label9)
-        Me.GroupBox_Droping.Controls.Add(Me.Label12)
         Me.GroupBox_Droping.Location = New System.Drawing.Point(6, 310)
         Me.GroupBox_Droping.Name = "GroupBox_Droping"
-        Me.GroupBox_Droping.Size = New System.Drawing.Size(646, 317)
+        Me.GroupBox_Droping.Size = New System.Drawing.Size(646, 313)
         Me.GroupBox_Droping.TabIndex = 11
         Me.GroupBox_Droping.TabStop = False
         Me.GroupBox_Droping.Text = "ລາຍລະອຽດການຢຸດຮຽນ-ຊົ່ວຄາວ"
         '
+        'txt_drop_reason
+        '
+        Me.txt_drop_reason.Location = New System.Drawing.Point(119, 142)
+        Me.txt_drop_reason.Name = "txt_drop_reason"
+        Me.txt_drop_reason.ReadOnly = True
+        Me.txt_drop_reason.Size = New System.Drawing.Size(521, 29)
+        Me.txt_drop_reason.TabIndex = 58
+        Me.txt_drop_reason.WaterMark = "--"
+        Me.txt_drop_reason.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_drop_reason.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_drop_reason.WaterMarkForeColor = System.Drawing.Color.Gray
+        '
         'txt_drop_date
         '
-        Me.txt_drop_date.Location = New System.Drawing.Point(94, 42)
+        Me.txt_drop_date.Location = New System.Drawing.Point(119, 42)
         Me.txt_drop_date.Name = "txt_drop_date"
         Me.txt_drop_date.ReadOnly = True
-        Me.txt_drop_date.Size = New System.Drawing.Size(137, 29)
+        Me.txt_drop_date.Size = New System.Drawing.Size(139, 29)
         Me.txt_drop_date.TabIndex = 57
         Me.txt_drop_date.WaterMark = "Drop Date"
         Me.txt_drop_date.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
@@ -1781,7 +1975,7 @@ Partial Class FrmStudent_Detail
         Me.Panel3.Controls.Add(Me.rdo_droping)
         Me.Panel3.Controls.Add(Me.rdo_continue)
         Me.Panel3.Enabled = False
-        Me.Panel3.Location = New System.Drawing.Point(465, 76)
+        Me.Panel3.Location = New System.Drawing.Point(465, 41)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(175, 63)
         Me.Panel3.TabIndex = 56
@@ -1810,96 +2004,108 @@ Partial Class FrmStudent_Detail
         Me.rdo_continue.Text = "ເຂົ້າຮຽນປົກກະຕິ"
         Me.rdo_continue.UseVisualStyleBackColor = True
         '
-        'Label7
+        'txt_drop_remark
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(20, 109)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(63, 28)
-        Me.Label7.TabIndex = 42
-        Me.Label7.Text = "ສົກຮຽນ"
+        Me.txt_drop_remark.Location = New System.Drawing.Point(119, 176)
+        Me.txt_drop_remark.Multiline = True
+        Me.txt_drop_remark.Name = "txt_drop_remark"
+        Me.txt_drop_remark.ReadOnly = True
+        Me.txt_drop_remark.Size = New System.Drawing.Size(521, 124)
+        Me.txt_drop_remark.TabIndex = 17
+        Me.txt_drop_remark.WaterMark = "--"
+        Me.txt_drop_remark.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_drop_remark.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_drop_remark.WaterMarkForeColor = System.Drawing.Color.Gray
         '
-        'Label10
+        'txt_drop_desc
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(19, 42)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(69, 28)
-        Me.Label10.TabIndex = 42
-        Me.Label10.Text = "ວັນທີແຈ້ງ"
+        Me.txt_drop_desc.Location = New System.Drawing.Point(119, 109)
+        Me.txt_drop_desc.Name = "txt_drop_desc"
+        Me.txt_drop_desc.ReadOnly = True
+        Me.txt_drop_desc.Size = New System.Drawing.Size(521, 29)
+        Me.txt_drop_desc.TabIndex = 6
+        Me.txt_drop_desc.WaterMark = "--"
+        Me.txt_drop_desc.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_drop_desc.WaterMarkFont = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_drop_desc.WaterMarkForeColor = System.Drawing.Color.Gray
         '
-        'Label2
+        'txt_drop_at
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(19, 74)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 28)
-        Me.Label2.TabIndex = 42
-        Me.Label2.Text = "ເທີມຮຽນ"
-        '
-        'txt_drop_detail
-        '
-        Me.txt_drop_detail.Location = New System.Drawing.Point(24, 170)
-        Me.txt_drop_detail.Multiline = True
-        Me.txt_drop_detail.Name = "txt_drop_detail"
-        Me.txt_drop_detail.Size = New System.Drawing.Size(616, 135)
-        Me.txt_drop_detail.TabIndex = 17
-        Me.txt_drop_detail.WaterMark = "ລາຍລະອຽດເພີ່ມເຕີມ..."
-        Me.txt_drop_detail.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_drop_detail.WaterMarkFont = New System.Drawing.Font("Noto Sans Lao", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_drop_detail.WaterMarkForeColor = System.Drawing.Color.Gray
-        '
-        'txt_drop_sokhien
-        '
-        Me.txt_drop_sokhien.Location = New System.Drawing.Point(94, 110)
-        Me.txt_drop_sokhien.Name = "txt_drop_sokhien"
-        Me.txt_drop_sokhien.ReadOnly = True
-        Me.txt_drop_sokhien.Size = New System.Drawing.Size(343, 29)
-        Me.txt_drop_sokhien.TabIndex = 6
-        Me.txt_drop_sokhien.WaterMark = "Drop Season"
-        Me.txt_drop_sokhien.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_drop_sokhien.WaterMarkFont = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_drop_sokhien.WaterMarkForeColor = System.Drawing.Color.Gray
-        '
-        'txt_drop_term
-        '
-        Me.txt_drop_term.Location = New System.Drawing.Point(94, 76)
-        Me.txt_drop_term.Name = "txt_drop_term"
-        Me.txt_drop_term.ReadOnly = True
-        Me.txt_drop_term.Size = New System.Drawing.Size(343, 29)
-        Me.txt_drop_term.TabIndex = 6
-        Me.txt_drop_term.WaterMark = "Term"
-        Me.txt_drop_term.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_drop_term.WaterMarkFont = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_drop_term.WaterMarkForeColor = System.Drawing.Color.Gray
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(19, 144)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(212, 28)
-        Me.Label9.TabIndex = 42
-        Me.Label9.Text = "ລາຍລະອຽດການຢຸດຮຽນຊົ່ວຄາວ"
+        Me.txt_drop_at.Location = New System.Drawing.Point(119, 75)
+        Me.txt_drop_at.Name = "txt_drop_at"
+        Me.txt_drop_at.ReadOnly = True
+        Me.txt_drop_at.Size = New System.Drawing.Size(340, 29)
+        Me.txt_drop_at.TabIndex = 6
+        Me.txt_drop_at.WaterMark = "--"
+        Me.txt_drop_at.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
+        Me.txt_drop_at.WaterMarkFont = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_drop_at.WaterMarkForeColor = System.Drawing.Color.Gray
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label12.Location = New System.Drawing.Point(460, 50)
+        Me.Label12.Location = New System.Drawing.Point(460, 15)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(62, 28)
         Me.Label12.TabIndex = 39
         Me.Label12.Text = "ສະຖານະ"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(21, 109)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(96, 28)
+        Me.Label9.TabIndex = 59
+        Me.Label9.Text = "ເລີ່ມໂຈະຕັ້ງແຕ່"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label24.Location = New System.Drawing.Point(44, 178)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(73, 28)
+        Me.Label24.TabIndex = 42
+        Me.Label24.Text = "ໝາຍເຫດ"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label23.Location = New System.Drawing.Point(24, 142)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(93, 28)
+        Me.Label23.TabIndex = 42
+        Me.Label23.Text = "ດ້ວຍເຫດຜົນ"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(22, 74)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(95, 28)
+        Me.Label7.TabIndex = 42
+        Me.Label7.Text = "ໂຈະຕອນຮຽນ"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(48, 42)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(69, 28)
+        Me.Label10.TabIndex = 42
+        Me.Label10.Text = "ວັນທີແຈ້ງ"
         '
         'BarLargeButtonItem1
         '
@@ -1911,96 +2117,16 @@ Partial Class FrmStudent_Detail
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'txt_birth_address_en
+        'Label2
         '
-        Me.txt_birth_address_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txt_birth_address_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_birth_address_en.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_birth_address_en.Location = New System.Drawing.Point(139, 238)
-        Me.txt_birth_address_en.Name = "txt_birth_address_en"
-        Me.txt_birth_address_en.ReadOnly = True
-        Me.txt_birth_address_en.Size = New System.Drawing.Size(486, 26)
-        Me.txt_birth_address_en.TabIndex = 8
-        Me.txt_birth_address_en.WaterMark = "Village, District, Province"
-        Me.txt_birth_address_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_birth_address_en.WaterMarkFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_birth_address_en.WaterMarkForeColor = System.Drawing.Color.Gray
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(21, 240)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(86, 19)
-        Me.Label13.TabIndex = 62
-        Me.Label13.Text = "Birth Place"
-        '
-        'txt_national_en
-        '
-        Me.txt_national_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txt_national_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_national_en.Location = New System.Drawing.Point(389, 333)
-        Me.txt_national_en.Name = "txt_national_en"
-        Me.txt_national_en.ReadOnly = True
-        Me.txt_national_en.Size = New System.Drawing.Size(236, 34)
-        Me.txt_national_en.TabIndex = 12
-        Me.txt_national_en.WaterMark = "ສັນຊາດພາສາອັງກິດ"
-        Me.txt_national_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_national_en.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_national_en.WaterMarkForeColor = System.Drawing.Color.Gray
-        '
-        'txt_address_en
-        '
-        Me.txt_address_en.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txt_address_en.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_address_en.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_address_en.Location = New System.Drawing.Point(139, 304)
-        Me.txt_address_en.Name = "txt_address_en"
-        Me.txt_address_en.ReadOnly = True
-        Me.txt_address_en.Size = New System.Drawing.Size(486, 26)
-        Me.txt_address_en.TabIndex = 10
-        Me.txt_address_en.WaterMark = "Village, District, Province"
-        Me.txt_address_en.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_address_en.WaterMarkFont = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_address_en.WaterMarkForeColor = System.Drawing.Color.Gray
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Times New Roman", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(21, 306)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(64, 19)
-        Me.Label16.TabIndex = 64
-        Me.Label16.Text = "Address"
-        '
-        'txt_will_complete
-        '
-        Me.txt_will_complete.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txt_will_complete.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_will_complete.Location = New System.Drawing.Point(465, 490)
-        Me.txt_will_complete.Name = "txt_will_complete"
-        Me.txt_will_complete.ReadOnly = True
-        Me.txt_will_complete.Size = New System.Drawing.Size(160, 34)
-        Me.txt_will_complete.TabIndex = 20
-        Me.txt_will_complete.WaterMark = "dd/MM/yyyy"
-        Me.txt_will_complete.WaterMarkActiveForeColor = System.Drawing.Color.DarkGray
-        Me.txt_will_complete.WaterMarkFont = New System.Drawing.Font("Phetsarath OT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_will_complete.WaterMarkForeColor = System.Drawing.Color.Gray
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Noto Sans Lao", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.Black
-        Me.Label19.Location = New System.Drawing.Point(403, 493)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(59, 28)
-        Me.Label19.TabIndex = 66
-        Me.Label19.Text = "ຄາດຈົບ"
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Blue
+        Me.Label2.Location = New System.Drawing.Point(531, 174)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(102, 16)
+        Me.Label2.TabIndex = 69
+        Me.Label2.Text = "(Size: 3 x 4 Cm)"
         '
         'FrmStudent_Detail
         '
@@ -2022,6 +2148,8 @@ Partial Class FrmStudent_Detail
         Me.Panel6.ResumeLayout(False)
         Me.Panel_Reg.ResumeLayout(False)
         Me.Panel_Reg.PerformLayout()
+        Me.Panel_Status.ResumeLayout(False)
+        Me.Panel_Status.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.school_year2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.school_year1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2145,11 +2273,8 @@ Partial Class FrmStudent_Detail
     Friend WithEvents rdo_continue As System.Windows.Forms.RadioButton
     Private WithEvents Label7 As System.Windows.Forms.Label
     Private WithEvents Label10 As System.Windows.Forms.Label
-    Private WithEvents Label2 As System.Windows.Forms.Label
-    Private WithEvents txt_drop_detail As ChreneLib.Controls.TextBoxes.CTextBox
-    Private WithEvents txt_drop_sokhien As ChreneLib.Controls.TextBoxes.CTextBox
-    Private WithEvents txt_drop_term As ChreneLib.Controls.TextBoxes.CTextBox
-    Private WithEvents Label9 As System.Windows.Forms.Label
+    Private WithEvents txt_drop_remark As ChreneLib.Controls.TextBoxes.CTextBox
+    Private WithEvents txt_drop_at As ChreneLib.Controls.TextBoxes.CTextBox
     Private WithEvents Label12 As System.Windows.Forms.Label
     Private WithEvents txt_drop_date As ChreneLib.Controls.TextBoxes.CTextBox
     Friend WithEvents DataGridViewTextBoxColumn39 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -2163,13 +2288,6 @@ Partial Class FrmStudent_Detail
     Friend WithEvents DataGridViewTextBoxColumn31 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn32 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn33 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn22 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn23 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn24 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn27 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn25 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn28 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents SOKHIEN As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents cb_sex As System.Windows.Forms.ComboBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
@@ -2180,4 +2298,22 @@ Partial Class FrmStudent_Detail
     Private WithEvents txt_national_en As ChreneLib.Controls.TextBoxes.CTextBox
     Private WithEvents Label19 As System.Windows.Forms.Label
     Private WithEvents txt_will_complete As ChreneLib.Controls.TextBoxes.CTextBox
+    Private WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents rdo_studying As System.Windows.Forms.RadioButton
+    Friend WithEvents Panel_Status As System.Windows.Forms.Panel
+    Friend WithEvents rdo_outed As System.Windows.Forms.RadioButton
+    Friend WithEvents rdo_completed As System.Windows.Forms.RadioButton
+    Private WithEvents Label9 As System.Windows.Forms.Label
+    Private WithEvents txt_drop_reason As ChreneLib.Controls.TextBoxes.CTextBox
+    Private WithEvents Label24 As System.Windows.Forms.Label
+    Private WithEvents Label23 As System.Windows.Forms.Label
+    Private WithEvents txt_drop_desc As ChreneLib.Controls.TextBoxes.CTextBox
+    Friend WithEvents DataGridViewTextBoxColumn22 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn24 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn25 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn23 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn27 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SOKHIEN As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DropInYY_Seasion_Sokhien As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

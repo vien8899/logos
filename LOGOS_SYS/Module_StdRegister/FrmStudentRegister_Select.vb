@@ -45,7 +45,8 @@
         Sql &= " parent_name ,parent_contact ,course_id ,current_term_id ,class_id ,start_year ,end_year ,"
         Sql &= " create_date ,student_status ,last_update ,user_update ,course_des_la ,course_des_en ,"
         Sql &= " scheme_id ,scheme_des_la ,scheme_des_en ,max_term_id_reg ,get_current_class_id ,current_sokhien ,"
-        Sql &= " get_current_term_id ,max_term_reg ,current_class ,current_year ,max_term_list_id_reg, title_la, title_en"
+        Sql &= " get_current_term_id ,max_term_reg ,current_class ,current_year ,max_term_list_id_reg, title_la, title_en, "
+        Sql &= " (SELECT TOP(1) learning_shift_id FROM tbl_term_register WHERE(student_id=view_std_list.student_id) ORDER BY term_register_id DESC) AS learning_shift_id "
         Sql &= " FROM view_std_list"
         If (select_student_from = 1) Then 'Student register ຍັງບໍ່ຄົບເທີມທໍ່ນັ້ນ
             Sql &= " WHERE(max_term_list_id_reg < (SELECT MAX(term_list_id) FROM view_term_list WHERE(course_id=view_std_list.course_id) AND (term_status=1))) "
@@ -64,7 +65,7 @@
 
                 .Rows.Add(dt.Rows(i).Item("student_id"), (i + 1), dt.Rows(i).Item("student_code"), sex, sex & dt.Rows(i).Item("student_fullname_la"), dt.Rows(i).Item("student_fullname_en"), _
                           dt.Rows(i).Item("date_of_birth"), dt.Rows(i).Item("phone_number"), (dt.Rows(i).Item("scheme_des_la") & "-[" & dt.Rows(i).Item("course_des_la") & "]"), _
-                          dt.Rows(i).Item("max_term_reg"), dt.Rows(i).Item("current_class"), dt.Rows(i).Item("current_sokhien"), dt.Rows(i).Item("current_year"), dt.Rows(i).Item("course_id"))
+                          dt.Rows(i).Item("max_term_reg"), dt.Rows(i).Item("current_class"), dt.Rows(i).Item("current_sokhien"), dt.Rows(i).Item("current_year"), dt.Rows(i).Item("course_id"), dt.Rows(i).Item("learning_shift_id"))
             Next
 
         End With
@@ -82,7 +83,7 @@
         End If
     End Sub
 
-    Public get_student_id, get_std_code, get_student_name_la, get_student_name_en, get_course_id, get_full_course, get_birth_date, get_telephone, get_sex As String
+    Public get_student_id, get_std_code, get_student_name_la, get_student_name_en, get_course_id, get_lnsh_id, get_full_course, get_birth_date, get_telephone, get_sex As String
     Private Sub Datagridview1_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles Datagridview1.CellMouseClick
         If Datagridview1.RowCount > 0 Then
             get_student_id = Datagridview1.CurrentRow.Cells(0).Value.ToString()
@@ -91,6 +92,7 @@
             get_student_name_la = Datagridview1.CurrentRow.Cells(4).Value.ToString()
             get_student_name_en = Datagridview1.CurrentRow.Cells(5).Value.ToString()
             get_course_id = Datagridview1.CurrentRow.Cells(13).Value.ToString()
+            get_lnsh_id = Datagridview1.CurrentRow.Cells(14).Value.ToString()
             get_full_course = Datagridview1.CurrentRow.Cells(8).Value.ToString()
             get_birth_date = Datagridview1.CurrentRow.Cells(6).Value.ToString()
             get_telephone = Datagridview1.CurrentRow.Cells(7).Value.ToString()

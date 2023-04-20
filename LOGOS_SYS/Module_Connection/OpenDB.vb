@@ -73,6 +73,8 @@ Module Module1
     Public reg_search_where As String = ""
     Public select_student_from As Integer = 1
     Public select_term_where As String = ""
+    Public number_of_term As Integer = 0
+    Public start_year As Integer = 0
 
     Public StrconSQL, servername, dbname, dbuser, dbpass As String
     Public Sub ConnectDB()
@@ -185,6 +187,18 @@ Module Module1
         conn.Close()
     End Function
 
+    Public Sub AddStudentLog(ByVal student_id As Integer, ByVal action_detail As String)
+        Call ConnectDB()
+        Dim sql As String = ""
+        sql = "INSERT INTO tbl_student_log(student_id, action_detail, action_by) "
+        sql &= " VALUES(@student_id, @action_detail, @action_by)"
+        cm = New SqlCommand(sql, conn)
+        cm.Parameters.AddWithValue("student_id", student_id)
+        cm.Parameters.AddWithValue("action_detail", action_detail)
+        cm.Parameters.AddWithValue("action_by", User_name)
+        cm.ExecuteNonQuery()
+        conn.Close()
+    End Sub
 
 End Module
 

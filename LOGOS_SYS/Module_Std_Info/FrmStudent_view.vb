@@ -11,6 +11,9 @@
 
         'Load Data
         load_finishied = 1
+        chk_studying.Checked = True
+        chk_completed.Checked = True
+        chk_outed.Checked = False
         cur_year = Format(CDate(getCurrentDate()), "yyyy")
         school_year1.Value = cur_year
         school_year2.Value = cur_year
@@ -54,6 +57,9 @@
         Dim ct_scheme As String = ""
         Dim ct_course As String = ""
         Dim ct_search As String = ""
+        Dim ct_studaying As String = ""
+        Dim ct_completed As String = ""
+        Dim ct_outed As String = ""
 
         If (cb_scheme.SelectedValue <> 0) Then
             ct_scheme = " AND (scheme_id = " & cb_scheme.SelectedValue & ")"
@@ -68,14 +74,24 @@
             ct_search &= " OR (phone_number LIKE '" & txt_search.Text.Trim & "%')) "
         End If
 
+        If (chk_studying.Checked = False) Then
+            ct_studaying = " AND (student_status <> 1)"
+        End If
+        If (chk_completed.Checked = False) Then
+            ct_completed = " AND (student_status <> 2)"
+        End If
+        If (chk_outed.Checked = False) Then
+            ct_outed = " AND (student_status <> 0)"
+        End If
+
         Sql = "SELECT student_id ,student_code ,student_fullname_la ,student_fullname_en ,student_gender ,date_of_birth ,birth_address_la ,"
         Sql &= " birth_address_en ,nationality ,address_la ,address_en ,phone_number ,wa_number ,job_des ,hight_school_name ,"
         Sql &= " hight_school_graduate_year ,parent_name ,parent_contact ,course_id ,current_term_id ,class_id ,start_year ,end_year ,"
         Sql &= " create_date ,student_status ,last_update ,user_update ,course_des_la ,course_des_en ,scheme_id ,scheme_des_la ,scheme_des_en ,"
-        Sql &= " max_term_id_reg ,get_current_class_id ,current_sokhien ,get_current_term_id ,max_sokhien ,student_remark,  "
+        Sql &= " number_of_term ,student_remark,  "
         Sql &= " (SELECT term_no+' (' + term_no_la + ')' AS maxt FROM dbo.view_term_list WHERE(term_id = dbo.view_std_list_prepare.max_term_id_reg)) AS max_term_reg, title_la, title_en "
         Sql &= " FROM view_std_list_prepare"
-        Sql &= ct_year & ct_scheme & ct_course & ct_search
+        Sql &= ct_year & ct_scheme & ct_course & ct_search & ct_studaying & ct_completed & ct_outed
         Sql &= " ORDER BY scheme_id, start_year, course_id, student_fullname_la "
         dt = ExecuteDatable(Sql)
         With Datagridview1
@@ -84,35 +100,36 @@
 
                 Dim sex As String = dt.Rows(i).Item("title_la") & ". "
 
-                Dim rm As String = dt.Rows(i).Item("student_remark")
+                Dim rm As String = ""
                 If (dt.Rows(i).Item("student_status") = 0) Then
-                    rm = "ຢຸດຮຽນຊົ່ວຄາວ - " & dt.Rows(i).Item("student_remark")
+                    rm = "ອອກຈາກການຮຽນແລ້ວ"
+                ElseIf (dt.Rows(i).Item("student_status") = 1) Then
+                    rm = "ກຳລັງສຶກສາຢູ່..."
+                Else
+                    rm = "ຈົບການສຶກສາແລ້ວ"
                 End If
 
                 .Rows.Add(dt.Rows(i).Item("student_id"), (i + 1), dt.Rows(i).Item("student_code"), sex & dt.Rows(i).Item("student_fullname_la"), _
                           dt.Rows(i).Item("date_of_birth"), dt.Rows(i).Item("phone_number"), dt.Rows(i).Item("start_year"), _
                          (dt.Rows(i).Item("scheme_des_la") & "-[" & dt.Rows(i).Item("course_des_la") & "]"), dt.Rows(i).Item("max_term_reg"), _
-                          dt.Rows(i).Item("user_update"), dt.Rows(i).Item("last_update"), rm)
-
-                'Color Font
-                If (cur_year > dt.Rows(i).Item("end_year")) Then
-                    .Rows(i).DefaultCellStyle.ForeColor = Color.Green
-                End If
+                          dt.Rows(i).Item("user_update"), dt.Rows(i).Item("last_update"), rm, CInt(dt.Rows(i).Item("number_of_term")))
 
                 'Color Font
                 If (dt.Rows(i).Item("student_status") = 0) Then
                     .Rows(i).DefaultCellStyle.ForeColor = Color.Red
+                ElseIf (dt.Rows(i).Item("student_status") = 1) Then
+                    .Rows(i).DefaultCellStyle.ForeColor = Color.Blue
+                Else
+                    .Rows(i).DefaultCellStyle.ForeColor = Color.Green
                 End If
             Next
 
             If (.RowCount > 0) Then
                 btn_edit.Enabled = True
                 btn_print_score.Enabled = True
-                btn_print_cer.Enabled = True
             Else
                 btn_edit.Enabled = False
                 btn_print_score.Enabled = False
-                btn_print_cer.Enabled = False
             End If
         End With
     End Sub
@@ -148,8 +165,8 @@
         End If
     End Sub
 
-    Private Sub btn_print_Click(sender As Object, e As EventArgs) Handles btn_print_cer.Click
-        BILL_ID = Datagridview1.CurrentRow.Cells(1).Value
+    Private Sub btn_print_Click(sender As Object, e As EventArgs)
+        BILL_ID = DataGridView1.CurrentRow.Cells(1).Value
         reg_number_of_term_where = " WHERE(bill_id='" & BILL_ID & "')"
         rpt_status = 2
         Rpt_OnlyView = 1
@@ -174,8 +191,10 @@
     End Sub
 
     Private Sub btn_debt_payment_Click(sender As Object, e As EventArgs) Handles btn_print_score.Click
-        id_edit = Datagridview1.CurrentRow.Cells(0).Value
-        FrmStudentRegister_RePayment.ShowDialog()
+        id_edit = DataGridView1.CurrentRow.Cells(0).Value
+        number_of_term = DataGridView1.CurrentRow.Cells(12).Value
+        start_year = CInt(DataGridView1.CurrentRow.Cells(12).Value)
+        Frm_Report_Student_PrintOption.ShowDialog()
     End Sub
 
     Private Sub cb_SetClass_Term_SelectedIndexChanged(sender As Object, e As EventArgs)
@@ -233,6 +252,12 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
+    End Sub
+
+    Private Sub chk_studying_CheckedChanged(sender As Object, e As EventArgs) Handles chk_studying.CheckedChanged, chk_completed.CheckedChanged, chk_outed.CheckedChanged
+        If (load_finishied = 0) Then
+            Call LoadData()
+        End If
     End Sub
 
 End Class

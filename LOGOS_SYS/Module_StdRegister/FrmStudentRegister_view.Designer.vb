@@ -47,9 +47,11 @@ Partial Class FrmStudentRegister_view
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmStudentRegister_view))
         Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Datagridview1 = New System.Windows.Forms.DataGridView()
         Me.id_edit_group = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.INV_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -141,19 +143,11 @@ Partial Class FrmStudentRegister_view
         Me.xtraTabPage3 = New DevExpress.XtraTab.XtraTabPage()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CurClass = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridView_SetClass = New System.Windows.Forms.DataGridView()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.chk_haveClass = New System.Windows.Forms.CheckBox()
         Me.txt_SetClass_Sokhien = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.txt_SetClass_Search = New ChreneLib.Controls.TextBoxes.CTextBox()
@@ -173,6 +167,16 @@ Partial Class FrmStudentRegister_view
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.cb_SetClass_Class = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.reg_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CurClass = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.Datagridview1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.maintab, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.maintab.SuspendLayout()
@@ -196,7 +200,7 @@ Partial Class FrmStudentRegister_view
         Me.Panel_Control_Reg.SuspendLayout()
         Me.xtraTabPage3.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView_SetClass, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
@@ -1292,7 +1296,7 @@ Partial Class FrmStudentRegister_view
         'Panel6
         '
         Me.Panel6.Controls.Add(Me.Panel12)
-        Me.Panel6.Controls.Add(Me.DataGridView3)
+        Me.Panel6.Controls.Add(Me.DataGridView_SetClass)
         Me.Panel6.Controls.Add(Me.PictureBox3)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel6.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1310,16 +1314,16 @@ Partial Class FrmStudentRegister_view
         Me.Panel12.Size = New System.Drawing.Size(4, 583)
         Me.Panel12.TabIndex = 27
         '
-        'DataGridView3
+        'DataGridView_SetClass
         '
-        Me.DataGridView3.AllowUserToAddRows = False
-        Me.DataGridView3.AllowUserToDeleteRows = False
-        Me.DataGridView3.AllowUserToResizeColumns = False
-        Me.DataGridView3.AllowUserToResizeRows = False
-        Me.DataGridView3.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.DataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DataGridView_SetClass.AllowUserToAddRows = False
+        Me.DataGridView_SetClass.AllowUserToDeleteRows = False
+        Me.DataGridView_SetClass.AllowUserToResizeColumns = False
+        Me.DataGridView_SetClass.AllowUserToResizeRows = False
+        Me.DataGridView_SetClass.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView_SetClass.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView_SetClass.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.DataGridView_SetClass.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         DataGridViewCellStyle15.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1327,107 +1331,29 @@ Partial Class FrmStudentRegister_view
         DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(198, Byte), Integer), CType(CType(247, Byte), Integer))
         DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
-        Me.DataGridView3.ColumnHeadersHeight = 30
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.CurClass})
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Aquamarine
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView3.DefaultCellStyle = DataGridViewCellStyle18
-        Me.DataGridView3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView3.EnableHeadersVisualStyles = False
-        Me.DataGridView3.Location = New System.Drawing.Point(0, 4)
-        Me.DataGridView3.MultiSelect = False
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.ReadOnly = True
-        Me.DataGridView3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.DataGridView3.RowHeadersVisible = False
-        Me.DataGridView3.RowTemplate.Height = 35
-        Me.DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView3.Size = New System.Drawing.Size(1066, 583)
-        Me.DataGridView3.TabIndex = 25
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn10.HeaderText = "student_id_setclass"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        Me.DataGridViewTextBoxColumn10.Visible = False
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.HeaderText = "ເລືອກ"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        Me.DataGridViewTextBoxColumn15.ReadOnly = True
-        Me.DataGridViewTextBoxColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn15.Width = 60
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.Blue
-        Me.DataGridViewTextBoxColumn16.DefaultCellStyle = DataGridViewCellStyle16
-        Me.DataGridViewTextBoxColumn16.HeaderText = "ລະຫັດນັກສຶກສາ"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
-        Me.DataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn16.Width = 110
-        '
-        'DataGridViewTextBoxColumn17
-        '
-        Me.DataGridViewTextBoxColumn17.HeaderText = "ຊື່ນັກສຶກສາ"
-        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
-        Me.DataGridViewTextBoxColumn17.ReadOnly = True
-        Me.DataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn17.Width = 195
-        '
-        'DataGridViewTextBoxColumn18
-        '
-        Me.DataGridViewTextBoxColumn18.HeaderText = "ເບີໂທລະສັບ"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        Me.DataGridViewTextBoxColumn18.ReadOnly = True
-        Me.DataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        '
-        'DataGridViewTextBoxColumn19
-        '
-        Me.DataGridViewTextBoxColumn19.HeaderText = "ຮຽນຫຼັກສູດ-ສາຂາວິຊາ"
-        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
-        Me.DataGridViewTextBoxColumn19.ReadOnly = True
-        Me.DataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn19.Width = 185
-        '
-        'DataGridViewTextBoxColumn20
-        '
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn20.DefaultCellStyle = DataGridViewCellStyle17
-        Me.DataGridViewTextBoxColumn20.HeaderText = "ສົກຮຽນ"
-        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
-        Me.DataGridViewTextBoxColumn20.ReadOnly = True
-        Me.DataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn20.Width = 110
-        '
-        'DataGridViewTextBoxColumn21
-        '
-        Me.DataGridViewTextBoxColumn21.HeaderText = "ເທີມລົງທະບຽນ"
-        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
-        Me.DataGridViewTextBoxColumn21.ReadOnly = True
-        Me.DataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
-        Me.DataGridViewTextBoxColumn21.Width = 170
-        '
-        'CurClass
-        '
-        Me.CurClass.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.CurClass.HeaderText = "ຫ້ອງຮຽນໃນເທີມ"
-        Me.CurClass.Name = "CurClass"
-        Me.CurClass.ReadOnly = True
-        Me.CurClass.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridView_SetClass.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle15
+        Me.DataGridView_SetClass.ColumnHeadersHeight = 30
+        Me.DataGridView_SetClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView_SetClass.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.reg_id, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21, Me.CurClass})
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Aquamarine
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView_SetClass.DefaultCellStyle = DataGridViewCellStyle20
+        Me.DataGridView_SetClass.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView_SetClass.EnableHeadersVisualStyles = False
+        Me.DataGridView_SetClass.Location = New System.Drawing.Point(0, 4)
+        Me.DataGridView_SetClass.MultiSelect = False
+        Me.DataGridView_SetClass.Name = "DataGridView_SetClass"
+        Me.DataGridView_SetClass.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DataGridView_SetClass.RowHeadersVisible = False
+        Me.DataGridView_SetClass.RowTemplate.Height = 35
+        Me.DataGridView_SetClass.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView_SetClass.Size = New System.Drawing.Size(1066, 583)
+        Me.DataGridView_SetClass.TabIndex = 25
         '
         'PictureBox3
         '
@@ -1455,6 +1381,7 @@ Partial Class FrmStudentRegister_view
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.Silver
+        Me.Panel8.Controls.Add(Me.chk_haveClass)
         Me.Panel8.Controls.Add(Me.txt_SetClass_Sokhien)
         Me.Panel8.Controls.Add(Me.Panel9)
         Me.Panel8.Controls.Add(Me.txt_SetClass_Search)
@@ -1469,8 +1396,19 @@ Partial Class FrmStudentRegister_view
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel8.Location = New System.Drawing.Point(0, 33)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(361, 259)
+        Me.Panel8.Size = New System.Drawing.Size(361, 297)
         Me.Panel8.TabIndex = 0
+        '
+        'chk_haveClass
+        '
+        Me.chk_haveClass.AutoSize = True
+        Me.chk_haveClass.Font = New System.Drawing.Font("Noto Sans Lao", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chk_haveClass.Location = New System.Drawing.Point(114, 158)
+        Me.chk_haveClass.Name = "chk_haveClass"
+        Me.chk_haveClass.Size = New System.Drawing.Size(235, 29)
+        Me.chk_haveClass.TabIndex = 27
+        Me.chk_haveClass.Text = "ລວມທັງນັກສຶກສາທີ່ຈັດຫ້ອງຮຽນແລ້ວ"
+        Me.chk_haveClass.UseVisualStyleBackColor = True
         '
         'txt_SetClass_Sokhien
         '
@@ -1489,7 +1427,7 @@ Partial Class FrmStudentRegister_view
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.Black
-        Me.Panel9.Location = New System.Drawing.Point(13, 158)
+        Me.Panel9.Location = New System.Drawing.Point(13, 194)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(327, 3)
         Me.Panel9.TabIndex = 25
@@ -1515,7 +1453,7 @@ Partial Class FrmStudentRegister_view
         Me.btn_SetClass_Clear.FlatAppearance.BorderSize = 0
         Me.btn_SetClass_Clear.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_SetClass_Clear.Image = Global.LOGOS_SYS.My.Resources.Resources.Del
-        Me.btn_SetClass_Clear.Location = New System.Drawing.Point(188, 169)
+        Me.btn_SetClass_Clear.Location = New System.Drawing.Point(188, 205)
         Me.btn_SetClass_Clear.Name = "btn_SetClass_Clear"
         Me.btn_SetClass_Clear.Size = New System.Drawing.Size(129, 66)
         Me.btn_SetClass_Clear.TabIndex = 4
@@ -1531,7 +1469,7 @@ Partial Class FrmStudentRegister_view
         Me.btn_SetClass_Search.FlatAppearance.BorderSize = 0
         Me.btn_SetClass_Search.Font = New System.Drawing.Font("Noto Sans Lao", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_SetClass_Search.Image = Global.LOGOS_SYS.My.Resources.Resources.Search22
-        Me.btn_SetClass_Search.Location = New System.Drawing.Point(65, 169)
+        Me.btn_SetClass_Search.Location = New System.Drawing.Point(65, 205)
         Me.btn_SetClass_Search.Name = "btn_SetClass_Search"
         Me.btn_SetClass_Search.Size = New System.Drawing.Size(117, 66)
         Me.btn_SetClass_Search.TabIndex = 3
@@ -1635,7 +1573,7 @@ Partial Class FrmStudentRegister_view
         Me.Panel_Control_SetClass.Controls.Add(Me.Label10)
         Me.Panel_Control_SetClass.Controls.Add(Me.btn_SetClass_Confirm)
         Me.Panel_Control_SetClass.Controls.Add(Me.Panel13)
-        Me.Panel_Control_SetClass.Location = New System.Drawing.Point(3, 306)
+        Me.Panel_Control_SetClass.Location = New System.Drawing.Point(3, 336)
         Me.Panel_Control_SetClass.Name = "Panel_Control_SetClass"
         Me.Panel_Control_SetClass.Size = New System.Drawing.Size(358, 237)
         Me.Panel_Control_SetClass.TabIndex = 1
@@ -1701,6 +1639,96 @@ Partial Class FrmStudentRegister_view
         Me.Label8.TabIndex = 24
         Me.Label8.Text = "ເລືອກຫ້ອງ-ຮຽນ"
         '
+        'reg_id
+        '
+        Me.reg_id.HeaderText = "reg_id"
+        Me.reg_id.Name = "reg_id"
+        Me.reg_id.ReadOnly = True
+        Me.reg_id.Visible = False
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn10.HeaderText = "student_id_setclass"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Visible = False
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.HeaderText = "ເລືອກ"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn15.Width = 60
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.Blue
+        Me.DataGridViewTextBoxColumn16.DefaultCellStyle = DataGridViewCellStyle16
+        Me.DataGridViewTextBoxColumn16.HeaderText = "ລະຫັດນັກສຶກສາ"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        Me.DataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn16.Width = 120
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.HeaderText = "ຊື່ນັກສຶກສາ"
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
+        Me.DataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn17.Width = 195
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn18.DefaultCellStyle = DataGridViewCellStyle17
+        Me.DataGridViewTextBoxColumn18.HeaderText = "ເບີໂທລະສັບ"
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = True
+        Me.DataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn18.Width = 120
+        '
+        'DataGridViewTextBoxColumn19
+        '
+        Me.DataGridViewTextBoxColumn19.HeaderText = "ຮຽນຫຼັກສູດ-ສາຂາວິຊາ"
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        Me.DataGridViewTextBoxColumn19.ReadOnly = True
+        Me.DataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn19.Width = 190
+        '
+        'DataGridViewTextBoxColumn20
+        '
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn20.DefaultCellStyle = DataGridViewCellStyle18
+        Me.DataGridViewTextBoxColumn20.HeaderText = "ສົກຮຽນ"
+        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        Me.DataGridViewTextBoxColumn20.ReadOnly = True
+        Me.DataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn20.Width = 110
+        '
+        'DataGridViewTextBoxColumn21
+        '
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridViewTextBoxColumn21.DefaultCellStyle = DataGridViewCellStyle19
+        Me.DataGridViewTextBoxColumn21.HeaderText = "ເທີມລົງທະບຽນ"
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        Me.DataGridViewTextBoxColumn21.ReadOnly = True
+        Me.DataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        Me.DataGridViewTextBoxColumn21.Width = 175
+        '
+        'CurClass
+        '
+        Me.CurClass.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.CurClass.HeaderText = "ຫ້ອງຮຽນໃນເທີມ"
+        Me.CurClass.Name = "CurClass"
+        Me.CurClass.ReadOnly = True
+        Me.CurClass.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
+        '
         'FrmStudentRegister_view
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 27.0!)
@@ -1745,7 +1773,7 @@ Partial Class FrmStudentRegister_view
         Me.Panel_Control_Reg.ResumeLayout(False)
         Me.xtraTabPage3.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView_SetClass, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
@@ -1833,7 +1861,7 @@ Partial Class FrmStudentRegister_view
     Friend WithEvents btn_edit As System.Windows.Forms.Button
     Friend WithEvents btn_debt_payment As System.Windows.Forms.Button
     Friend WithEvents Panel10 As System.Windows.Forms.Panel
-    Public WithEvents DataGridView3 As System.Windows.Forms.DataGridView
+    Public WithEvents DataGridView_SetClass As System.Windows.Forms.DataGridView
     Friend WithEvents txt_SetClass_Sokhien As ChreneLib.Controls.TextBoxes.CTextBox
     Public WithEvents DataGridView2 As System.Windows.Forms.DataGridView
     Friend WithEvents Panel11 As System.Windows.Forms.Panel
@@ -1855,15 +1883,6 @@ Partial Class FrmStudentRegister_view
     Friend WithEvents btn_upg_edit As System.Windows.Forms.Button
     Friend WithEvents btn_upg_print As System.Windows.Forms.Button
     Friend WithEvents btn_upg_new As System.Windows.Forms.Button
-    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn17 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn18 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn19 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn20 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn21 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents CurClass As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Panel12 As System.Windows.Forms.Panel
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -1880,4 +1899,15 @@ Partial Class FrmStudentRegister_view
     Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents student_id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents subject_id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents chk_haveClass As System.Windows.Forms.CheckBox
+    Friend WithEvents reg_id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn21 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CurClass As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
